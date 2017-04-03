@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  1 APR 2017 14:39
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  3 APR 2017 18:42
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1228,152 +1228,171 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 47.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 53.
- (./ealgo.tex
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 15.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 15.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 25.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[1
+ (./intro.tex) [1
 
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
+ (./related.tex) [2]
+(./contribution.tex) (./ealgo.tex
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 15.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 25.
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 49--54
 
-LaTeX Warning: Reference `alg:eclusucb' on page 2 undefined on input line 59.
-
-[2]
-
-LaTeX Warning: Reference `Result:Corollary:1' on page 3 undefined on input line
- 69.
-
-) (./proofTheorem.tex
-Overfull \hbox (49.71338pt too wide) in paragraph at lines 5--6
-[]\OT1/ptm/m/it/10 If $\OML/cmm/m/it/10 T \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 
-81\OML/cmm/m/it/10 K[]$\OT1/ptm/m/it/10 , $\OML/cmm/m/it/10   \OT1/cmr/m/n/10 =
- []$\OT1/ptm/m/it/10 , $\OML/cmm/m/it/10 ^^Z \OT1/cmr/m/n/10 = []$ \OT1/ptm/m/i
-t/10 and $\OML/cmm/m/it/10 m \OMS/cmsy/m/n/10 ^^T [] [][]\OT1/cmr/m/n/10 ([])$\
-OT1/ptm/m/it/10 , then $[] \OMS/cmsy/m/n/10 ^^T
  []
 
-
-Overfull \hbox (120.98477pt too wide) in paragraph at lines 33--33
+[4]) (./proofTheorem.tex [5]
+Overfull \hbox (120.98477pt too wide) in paragraph at lines 34--34
 [] 
  []
-
-[3]
-
-LaTeX Warning: Reference `Result:Theorem:1' on page 4 undefined on input line 3
-4.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 44.
 
-LaTeX Warning: Reference `Result:Theorem:1' on page 4 undefined on input line 5
-2.
+LaTeX Warning: Reference `Result:Theorem:1' on page 6 undefined on input line 4
+6.
 
 
-Overfull \hbox (122.42235pt too wide) in paragraph at lines 66--66
+Overfull \hbox (122.42235pt too wide) in paragraph at lines 60--60
 [] 
  []
 
-[4]
-Overfull \hbox (7.11034pt too wide) in paragraph at lines 86--86
+[6]
+Overfull \hbox (7.11034pt too wide) in paragraph at lines 76--76
 [] 
  []
 
-[5]
+[7] [8]
 
-LaTeX Warning: Reference `Result:Theorem:1' on page 6 undefined on input line 1
-72.
-
-
-Underfull \vbox (badness 1755) has occurred while \output is active []
-
- [6]
-
-LaTeX Warning: Reference `Result:Theorem:1' on page 7 undefined on input line 1
-79.
+LaTeX Warning: Reference `Result:Theorem:1' on page 9 undefined on input line 1
+69.
 
 
-Package natbib Warning: Citation `auer2002nonstochastic' on page 7 undefined on
- input line 209.
+LaTeX Warning: Reference `Result:Theorem:1' on page 9 undefined on input line 1
+76.
+
+[9]
+
+LaTeX Warning: Reference `Result:Theorem:1' on page 10 undefined on input line 
+226.
 
 
-Package natbib Warning: Citation `bubeck2011pure' on page 7 undefined on input 
-line 209.
+LaTeX Warning: Reference `Result:Theorem:1' on page 10 undefined on input line 
+233.
+
+[10]) (./expts.tex
+
+LaTeX Warning: Reference `Result:Corollary:2' on page 11 undefined on input lin
+e 1.
+
+PGFPlots: reading {results/NewExpt/Expt1/UCBV01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt1/EUCBV01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt1/KLUCB01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt1/MOSS01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt1/DMED01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt1/UCB01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt1/TS02_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt1/OCUCB01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt1/BU01_comp_subsampled.txt}
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]\OT1/ptm/m/n/9 (a) Expt-$\OT1/cmr/m/n/9 1$\OT1/ptm/m/n/9 : $\OT1/cmr/m/n/9 20
+$ \OT1/ptm/m/n/9 Bernoulli-
+ []
+
+PGFPlots: reading {results/NewExpt/Expt2_2/UCB01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2_2/NEclUCB01_new_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2_2/MOSS01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2_2/OCUCB01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2_2/MedElim_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2_2/UCBR01_comp_subsampled.txt}
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11]
+Overfull \hbox (7.16833pt too wide) in paragraph at lines 88--89
+\OT1/ptm/m/n/10 sian re-ward dis-tri-bu-tions with ex-pected re-wards of the ar
+ms $\OML/cmm/m/it/10 r[] \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1
+$\OT1/ptm/m/n/10 , $\OML/cmm/m/it/10 r[] \OT1/cmr/m/n/10 =
+ []
+
+PGFPlots: reading {results/NewExpt/Expt3_1/plotFinalMOSS20_100.txt}
+PGFPlots: reading {results/NewExpt/Expt3_1/plotFinalEclUCB20_100.txt}
+PGFPlots: reading {results/NewExpt/Expt3_1/plotFinalOCUCB20_100.txt}
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
+[]\OT1/ptm/m/n/9 (a) Expt-$\OT1/cmr/m/n/9 3$\OT1/ptm/m/n/9 : $\OT1/cmr/m/n/9 20
+$ \OT1/ptm/m/n/9 to $\OT1/cmr/m/n/9 100$
+ []
+
+PGFPlots: reading {results/NewExpt/Expt4/plotFinalEclUCB012.txt}
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+
+LaTeX Warning: Reference `App:MoreExp' on page 13 undefined on input line 162.
+
+) (./Conclusion.tex) [13] (./EUCBV.bbl) [14
 
 
-Package natbib Warning: Citation `auer2002finite' on page 7 undefined on input 
-line 209.
-
-
-Package natbib Warning: Citation `mannor2004sample' on page 7 undefined on inpu
-t line 214.
-
-[7]
-
-LaTeX Warning: Reference `Result:Theorem:1' on page 8 undefined on input line 2
-18.
-
-
-LaTeX Warning: Reference `Result:Theorem:1' on page 8 undefined on input line 2
-25.
-
-) [8] (./EUCBV.bbl) [9
-
-
-]
-
-Package natbib Warning: There were undefined citations.
-
-(./EUCBV.aux)
+] (./EUCBV.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 22425 strings out of 493848
- 454294 string characters out of 1152823
- 593337 words of memory out of 3000000
- 25117 multiletter control sequences out of 15000+50000
- 29047 words of font info for 69 fonts, out of 3000000 for 9000
+ 22833 strings out of 493848
+ 463482 string characters out of 1152823
+ 672161 words of memory out of 3000000
+ 25427 multiletter control sequences out of 15000+50000
+ 42288 words of font info for 98 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 63i,15n,63p,1174b,484s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,27n,75p,1421b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
 ve/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-texlive/fonts/t
 ype1/public/amsfonts/cmextra/cmbsy5.pfb></usr/share/texmf-texlive/fonts/type1/p
 ublic/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
 nts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra
 /cmex9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/
-texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texliv
-e/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type
-1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
-fonts/cm/cmmib10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmex
-tra/cmmib5.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cm
-mib7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texm
-f-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fon
-ts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/publ
-ic/amsfonts/cm/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy5.pfb
-></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share
-/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-texli
-ve/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/typ
-e1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-texlive/fonts/type1/urw
-/courier/ucrr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb>
-</usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-t
-exlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/u
-rw/times/utmri8a.pfb>
-Output written on EUCBV.pdf (9 pages, 350471 bytes).
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/typ
+e1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public/am
+sfonts/cm/cmmi9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
+mib10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cmmib5.
+pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></
+usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/te
+xmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/
+fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfont
+s/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr9.pfb
+></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symb
+ols/msbm10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/ms
+bm7.pfb></usr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb></usr/shar
+e/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/font
+s/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/u
+tmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on EUCBV.pdf (14 pages, 441174 bytes).
 PDF statistics:
- 238 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
+ 385 PDF objects out of 1000 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

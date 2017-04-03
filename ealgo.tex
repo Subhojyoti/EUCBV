@@ -13,27 +13,27 @@
 
 \begin{algorithm}[!h]
 \caption{EUCBV}
-\label{alg:eucbV}
+\label{alg:eucbv}
 \begin{algorithmic}
 \State {\bf Input:} Time horizon $T$, exploration parameters $\rho$ and $\psi$.
-\State {\bf Initialization:} Set $m:=0$, $B_{0}:=A$, $\epsilon_{0}:=1$, $M=\big \lfloor \frac{1}{2}\log_{2} \frac{T}{e}\big\rfloor$, $n_{0}=\bigg\lceil\frac{2\log{(\psi T\epsilon_{0}^{2})}}{\epsilon_{0}}\bigg\rceil$ and  $N_{0}=Kn_{0}$.
+\State {\bf Initialization:} Set $m:=0$, $B_{0}:=A$, $\epsilon_{0}:=1$, $M=\big \lfloor \frac{1}{2}\log_{2} \frac{T}{e}\big\rfloor$, $n_{0}=\bigg\lceil\frac{\log{(\psi T\epsilon_{0}^{2})}}{2\epsilon_{0}}\bigg\rceil$ and  $N_{0}=Kn_{0}$.
 \State Pull each arm once
 \For{$t=K+1,..,T$}	
-\State Pull arm $i\in \argmax_{j\in B_{m}}\bigg\lbrace \hat{r}_{j} + \sqrt{\frac{\rho\log{(\psi T\epsilon_{m}^{2})}}{4 z_{j}}+ \frac{\log{(\psi T\epsilon_{m}^{2})}}{4 z_{j}}} \bigg\rbrace$, where $z_j$ is the number of times arm $j$ has been pulled
+\State Pull arm $i\in \argmax_{j\in B_{m}}\bigg\lbrace \hat{r}_{j} + \sqrt{\frac{\rho\hat{v}_{i}\log{(\psi T\epsilon_{m}^{2})}}{4 z_{j}}+ \frac{\log{(\psi T\epsilon_{m})}}{4 z_{j}}} \bigg\rbrace$, where $z_j$ is the number of times arm $j$ has been pulled
 \State $t:=t+1$
 \ArmElim
-\State For each arm $i \in B_{m}$ if
+\State For each arm $i \in B_{m}$, remove arm $i$ from $B_{m}$ if,
 \begin{align*}
-& \hat{r}_{i} + \sqrt{\frac{\rho\log{(\psi T\epsilon_{m}^{2})}}{4 n_{m}} + \frac{\log{(\psi T\epsilon_{m}^{2})}}{4 n_{m}}} < \max_{{j}\in B_{m}}\bigg\lbrace\hat{r}_{j} -\sqrt{\frac{\rho\log{(\psi T\epsilon_{m}^{2})}}{4 n_{m}} + \frac{\log{(\psi T\epsilon_{m}^{2})}}{4 n_{m}}} \bigg\rbrace
+& \hat{r}_{i} + \sqrt{\frac{\rho\hat{v}_{i}\log{(\psi T\epsilon_{m})}}{4 n_{m}} + \frac{\log{(\psi T\epsilon_{m})}}{4 n_{m}}} < \max_{{j}\in B_{m}}\bigg\lbrace\hat{r}_{j} -\sqrt{\frac{\rho\hat{v}_{i}\log{(\psi T\epsilon_{m})}}{4 n_{m}} + \frac{\log{(\psi T\epsilon_{m})}}{4 n_{m}}} \bigg\rbrace
 \end{align*}
-\State $|B_{m}|:=|B_{m}|-1$
+%\State $|B_{m}|:=|B_{m}|-1$
 \EndArmElim
 
 \If{$t\geq N_{m}$ and $m\leq M$}
 \ResParam
 \State $\epsilon_{m+1}:=\frac{\epsilon_{m}}{2}$\vspace{0.5ex}
 \State $B_{m+1}:=B_{m}$
-\State $n_{m+1}:=\bigg\lceil\frac{2\log{(\psi T\epsilon_{m+1}^{2})}}{\epsilon_{m+1}}\bigg\rceil$
+\State $n_{m+1}:=\bigg\lceil\frac{\log{(\psi T\epsilon_{m+1}^{2})}}{2\epsilon_{m+1}^{2}}\bigg\rceil$
 \State $N_{m+1}:=t+|B_{m+1}| n_{m+1}$
 \State $m:=m+1$
 \EndResParam
@@ -44,29 +44,18 @@
 %\vspace*{-0.42em}
 \end{algorithm}
 %\vspace*{-0.42em}
-\textbf{2.1 Notations:} We denote the set of arms by $A$, with the individual arms labeled $i, i=1,\ldots,K$. We denote an arbitrary round of EClusUCB by $m$. We denote an arbitrary cluster by $s_{k}$, the subset of arms within the cluster $s_k$ by  $A_{s_{k}}$ and the set of clusters by $S$ with $|S|=p\leq K$. Here $p$ is a pre-specified limit for the number of clusters.
-For simplicity, we assume that the optimal arm is unique and denote it by ${*}$, with $s^{*}$ denoting the corresponding cluster. The true best arm in a cluster $s_{k}$ is denoted by $a_{max_{s_{k}}}$.  
-We denote the sample mean of the rewards seen so far for arm $i$ by $\hat{r_i}$ and for the true best arm within a cluster $s_k$ by $\hat{r}_{a_{\max_{s_{k}}}}$. $z_i$ is the number of times an arm $i$ has been pulled. We assume the rewards of all arms are bounded in $[0,1]$.
+\textbf{2.1 Notations:} We denote the set of arms by $\A$, with the individual arms labeled $i, i=1,\ldots,K$. We denote an arbitrary round of EUCBV by $m$. For simplicity, we assume that the optimal arm is unique and denote it by ${*}$. We denote the sample mean of the rewards for an arm $i$ at time instant $t$ by $\hat{r}_{i}(t)=\frac{1}{n_{i}(t)}\sum_{z=1}^{n_i(t)} X_{i,z}$, where $X_{i,z}$ is the reward sample received when arm $i$ is pulled for the $z$-th time. $z_i(t)$ is the number of times an arm $i$ has been pulled till timestep $t$. We denote the variance of an arm by $\sigma_i^{2}$ while $\hat{v}_{i}(t)$ is the estimated variance, i.e., $\hat{v}_{i}(t)=\frac{1}{n_i(t)}\sum_{z=1}^{n_{i}(t)}(X_{i,z}-\hat{r}_{i})^{2}$. Whenever there is no ambiguity about the underlaying  time index $t$, for simplicity we neglect $t$ from the notations and simply use  $\hat{r}_i, \hat{v}_i,$ and $n_i$ to denote the respective quantities. We assume the rewards of all arms are bounded in $[0,1]$.
 
-\textbf{2.2 The algorithm.} As mentioned in a recent work \cite{liu2016modification}, UCB-Improved has two shortcomings: 	\\
+\textbf{2.2 The algorithm:} The authors in a recent work \cite{liu2016modification} identified two major problems with UCB-Improved: 	\\
 \begin{inparaenum}[\bfseries(i)]
-\item A significant number of pulls are spent in early exploration, since each round $m$ of UCB-Improved involves pulling every arm an identical $n_{m}=\left\lceil \frac{ 2\log(T\epsilon_{m})}{\epsilon_{m}} \right\rceil$ number of times. The quantity $\epsilon_{m}$ is initialized to $1$ and halved after every round.\\
-\item In UCB-Improved, arms are eliminated conservatively, i.e, only after $\epsilon_{m}<\frac{\Delta_{i}}{2}$, the sub-optimal arm $i$ is discarded with high probability. This is disadvantageous when $K$ is large and the gaps are identical ($r_{1}=r_{2}=\cdots=r_{K-1}<r^{*}$) and small.\\
+\item Early exploration: Since UCB-Improved pulls each arm equal number of times in each round, a significant number of pulls is wasted in initial explorations. For any round $m$ UCB-Improved pulls all arms $n_{m}=\left\lceil \frac{ 2\log(T\epsilon_{m})}{\epsilon_{m}} \right\rceil$ number of times. The quantity $\epsilon_{m}$ is initialized to $1$ and halved after every round.\\
+\item Conservative arm-elimination: In UCB-Improved, arms are eliminated conservatively, i.e, only after $\epsilon_{m}<\frac{\Delta_{i}}{2}$, the sub-optimal arm $i$ is discarded with high probability. In the worst case scenario when $K$ is large and the gaps are identical ($r_{1}=r_{2}=\cdots=r_{K-1}<r^{*}$) and small this is very disadvantageous.\\
 \end{inparaenum}
-To reduce early exploration, the number of pulls $n_m$ allocated to each arm per round in EClusUCB is lower than that of UCB-Improved and also that of Median-Elimination, which used $n_m=\frac{4}{\epsilon}\log\big(\frac{3}{\delta}\big)$, where $\epsilon,\delta$ are confidence parameters.
-To handle the second problem mentioned above, EClusUCB partitions the larger problem into several small sub-problems using clustering and then performs local exploration aggressively to eliminate sub-optimal arms within each clusters with high probability.
 
-As described in the pseudocode in Algorithm~\ref{alg:eclusucb}, EClusUCB begins with an initial clustering of arms that is performed by random uniform allocation. The set of clusters $S$ thus obtained satisfies $|S|=p$, with individual clusters having a size that is bounded above by $\ell=\left\lceil \frac{K}{p} \right\rceil$.
-Each timestep of EClusUCB involves both individual arm as well as cluster elimination conditions. These elimination conditions are inspired by UCB-Improved. Notice that, unlike UCB-Improved, there is no longer a single point of reference based on which we are eliminating arms. Instead we now have as many reference points to eliminate arms as number of clusters formed. 
-%Further, the exploration factors $\rho_{a}\in (0,1]$ and $\rho_{s}\in (0,1]$ governing the arm and cluster elimination conditions, respectively, are relatively more aggressive than that in UCB-Improved. 
-In EClusUCB we also introduce the idea of optimistic greedy sampling similar to \citet{liu2016modification} which they used to modify the UCB-Improved algorithm. In optimistic greedy sampling, we only sample the arm with the highest upper confidence bound in each timestep. We further modify the idea by introducing clustering and arm elimination parameters. EClusUCB checks arm and cluster elimination conditions in every timestep and update parameters when a round is complete. It divides each round into $|B_{m}|n_{m}$ timesteps so that each surviving arms can be allocated atmost $n_{m}$ pulls. The exploration regulatory factor $\psi$ governing the arm and cluster elimination conditions in EClusUCB is more aggressive than that in UCB-Improved. With appropriate choices of $\psi$, $\rho_a$ and $\rho_s$, we can achieve aggressive elimination even when the gaps $\Delta_i$ are small and $K$ is large. Also we use different exploration regulatory factor than \citet{liu2016modification} and we come up with a cumulative regret bound whereas \citet{liu2016modification} only gives simple regret bound for the CCB algorithm. 
+To reduce early exploration, the number of pulls $n_m$ allocated to each arm per round in EUCBV is lower than that of UCB-Improved and also that of Median-Elimination, which used $n_m=\frac{4}{\epsilon}\log\big(\frac{3}{\delta}\big)$, where $\epsilon,\delta$ are confidence parameters. As described in the pseudocode in Algorithm~\ref{alg:eucbv}, each timestep of EUCBV involves both individual arm as well as cluster elimination conditions. In EUCBV we also introduce the idea of optimistic greedy sampling similar to \citet{liu2016modification} which they used to modify the UCB-Improved algorithm. In optimistic greedy sampling, we only sample the arm with the highest upper confidence bound in each timestep. EUCBV update parameters when a round is complete. It divides each round into $|B_{m}|n_{m}$ timesteps so that each surviving arms can be allocated atmost $n_{m}$ pulls. The exploration regulatory factor $\psi$ governing the arm and cluster elimination conditions in EUCBV is more aggressive than that in UCB-Improved. With appropriate choices of $\psi$ and $\rho$, we can achieve aggressive elimination even when the gaps $\Delta_i$ are small and $K$ is large. 
+%Also we use different exploration regulatory factor than \citet{liu2016modification} and we come up with a cumulative regret bound whereas \citet{liu2016modification} only gives simple regret bound for the CCB algorithm. 
 
-
-%and the gaps $\Delta_i$ are small, it is efficient to remove sub-optimal arms quickly. 
-
-In \citet{liu2016modification}, the authors recommend incorporating a factor of $d_i$ inside the log-term of the UCB values, i.e., $\max \lbrace\hat{r}_{i}+\sqrt{\frac{d_{i}\log T{\epsilon}_{m}}{2n_{m}}}\rbrace$. 
-The authors there examine the following choices for $d_i$: $\frac{T}{z_{i}}$, $\frac{\sqrt{T}}{z_{i}}$ and $\frac{\log T}{z_{i}}$, where $z_{i}$ is the number of times an arm ${i}$ has been sampled.
-Unlike \citet{liu2016modification}, we employ cluster as well as arm elimination and establish from a theoretical analysis that the choice $\psi=\frac{T}{196\log (K)}$ helps in achieving a better gap-dependent regret upper bound for EClusUCB as compared to UCB-Improved and MOSS (Corollary \ref{Result:Corollary:1}). 
+In \citet{liu2016modification}, the authors also recommend incorporating an exploration regulatory factor $d_i$ inside the log-term of the UCB values, i.e., $\max \lbrace\hat{r}_{i}+\sqrt{\frac{d_{i}\log T{\epsilon}_{m}}{2n_{m}}}\rbrace$. The authors choices for $d_i$ include $\frac{T}{z_{i}}$, $\frac{\sqrt{T}}{z_{i}}$ and $\frac{\log T}{z_{i}}$, where $z_{i}$ is the number of times an arm ${i}$ has been pulled. Unlike \citet{liu2016modification}, we employ a different exploration regulatory factor $\psi=\dfrac{T}{K^2}$ and we derive a cumulative regret bound as opposed to the simple regret bound derived in \citet{liu2016modification}.
 
 	
 

@@ -1,8 +1,11 @@
 
-\subsection{Proof of Lemma 1}
+\subsection{Lemma 1}
 \begin{lemma}
 \label{proofTheorem:Lemma:1}
-If $T\geq 81K^{2.7}$, $\psi=\dfrac{T}{81 K^2}$, $\rho=\dfrac{1}{2}$ and $m\leq \dfrac{1}{2} \log_2(\dfrac{T}{e}) $, then $\dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} \leq 1$. 
+If $T\geq 81K^{2.7}$, $\psi=\dfrac{T}{81 K^2}$, $\rho=\dfrac{1}{2}$ and $m\leq \dfrac{1}{2} \log_2(\dfrac{T}{e}) $, then,
+\begin{align*}
+\dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} \leq 1
+\end{align*}
 \end{lemma}
 
 \begin{proof}
@@ -17,22 +20,19 @@ We are going to prove this by contradiction. Let's say,
  &\Rightarrow 1.25 \log(T) + 2\log 9K - 1.25 \geq 2\log (T)\\
  &\Rightarrow 2\log K \geq 0.75 \log T + 1.25 -2\log 9
 \end{align*}
-
 But, for $T\geq 81 K^{2.7}$, this is clearly not possible. Hence, $\dfrac{m \log(2)}{\log(\psi T) - 2m\log( 2)} \leq 1$.
-
 \end{proof}
 
-\subsection{Proof of Theorem 1}
+\subsection{Theorem 1}
 
 \begin{theorem}
 \label{proofTheorem:Prop:1}
-The regret $R_T$ for EClusUCB-AE satisfies
+The regret $R_T$ for EUCBV satisfies
 \begin{align*}
 &\E [R_{T}]\leq \sum\limits_{\substack{i\in A\\\Delta_{i} > b}}\bigg\lbrace\frac{C_{1}(\rho_{a})T^{1-\rho_{a}}}{\Delta_{i}^{4\rho_{a}-1}} + \Delta_{i}+\frac{32\rho_{a}\log{(\frac{\psi  T\Delta_{i}^{4}}{16\rho_{a}^{2}})}}{\Delta_{i}}
  +  \frac{C_{2}(\rho_{a})T^{1-\rho_{a}}}{\Delta_{i}^{4\rho_{a} -1}}  \bigg \rbrace +\sum\limits_{\substack{i\in A\\0 <\Delta_{i}\leq b}}\frac{C_{2}(\rho_{a})T^{1-\rho_{a}}}{b^{4\rho_{a} -1}}  + \max_{\substack{i\in A: \\ \Delta_{i}\leq b}}\Delta_{i}T,
 \end{align*}
-for all $b\geq\sqrt{\frac{e}{T}}$. In the above, $C_1, C_2$ are as defined in Theorem \ref{Result:Theorem:1}.
-% (x) = \frac{2^{1+4x}x^{2x}}{\psi^{x}}$,  $C_2(x) = \frac{2^{2x+\frac{3}{2}}x^{2x}}{\psi^{x}}$, $\rho_{a}=\frac{1}{2}$ is the arm elimination parameter, $\psi=K^{2}T$ is the exploration regulatory factor, $p$ is the number of clusters and $T$ is the horizon.
+for all $b\geq\sqrt{\frac{e}{T}}$. In the above, $C_1(x) = \frac{2^{1+x}.9^{x}}{\psi^{x}}$ and $C_2(x) = \frac{2^{\frac{\rho}{2}+\frac{5}{4}}.3^{x+\frac{1}{2}}}{\psi^{x}}$.
 \end{theorem}
 
 
@@ -43,12 +43,6 @@ Let, for each sub-optimal arm ${i}$, $m_{i}=\min{\lbrace m|\sqrt{\rho} < \dfrac{
 
 \subsection*{Case $a$: \textit{Some sub-optimal arm ${i}$ is not eliminated in round $m_{i}$ or before and the optimal arm ${*}\in B_{m_{i}}$}}
 
- %In arm elimination condition, given the choice of confidence interval $c_{m_{i}}=\sqrt{\dfrac{\rho_{a}\log (\psi T\epsilon_{m_{i}}^{2})}{2 n_{m_{i}}}}$, we want to bound the probability of the event $\hat{r}_{i}+c_{m_{i}}\geq \hat{r}^{*}-c_{m_{i}}$. 
-%In this proof we will consider $w_{s_{i}}=1$ and $\psi=1$. 
-%Later, we will discuss how different values of $w_{s_{i}}$ actually effects the regret bound.
-%with a more tighter event of $ \hat{r}_{i} + \sqrt{w_{s_{i}}}c_{m} \leq \hat{r}^{*} - \sqrt{w_{s_{i}}}c_{m}$ which will result in faster elimination of arms within a cluster, given the choice of $c_{m}$ and $w_{s_{i}}$.
-%Now, $c_{m_{i}}=\sqrt{\dfrac{\rho_{a}\log (\psi T\epsilon_{m_{i}}^{2})}{2 n_{m_{i}}}}$.
-  
 	Following the steps of Theorem \ref{Result:Theorem:1} Case $a1$, an arbitrary sub-optimal arm ${i}\in A^{'}$ can get eliminated only when the event,
 	\begin{align}
 	\hat{r}_{i}  \le r_{i} + c_{m_i} \text{ and } \label{eq:appA:armelim-casea}
@@ -65,10 +59,6 @@ Let, for each sub-optimal arm ${i}$, $m_{i}=\min{\lbrace m|\sqrt{\rho} < \dfrac{
 	 & < \dfrac{\Delta_{i}}{3} %\text{, as $\rho \in (0,\frac{1}{2}]$}.
 	\end{align*}
   
-%\leq\dfrac{\epsilon_{m}\sqrt{\ell_{m}}}{2\sqrt{w\ell_{m}}}\leq \dfrac{\epsilon_{m}}{2\sqrt{w}}$.
-%  But in $\xi_{1}$, $\ell_{m}=2^{m}$.
-%  Hence, $c\leq \dfrac{\epsilon_{m} 2^{m/2}}{4}$.
-%  Also in the $m_i$-th round $n_{m_i}\leq n_{m_{*}}$ as $*\in B_{m}$ and so $c^{*}\leq c_{i}$. 
   Again, for ${i} \in A^{'}$, 
   \begin{align*}
 \hat{r}_{i} + c_{m_i}&\leq r_{i} + 2c_{m_i} 
@@ -84,13 +74,10 @@ Let, for each sub-optimal arm ${i}$, $m_{i}=\min{\lbrace m|\sqrt{\rho} < \dfrac{
 \leq \exp(-2 * \dfrac{\rho\log (\psi T\epsilon_{m_{i}})}{2 n_{m_{i}}} *n_{m_{i}})
 \leq \dfrac{1}{(\psi T\epsilon_{m_{i}})^{\rho}}   
   \end{align*}
- 
-%$\leq \bigg(\dfrac{1}{4\psi T\epsilon_{m}^{2}}\bigg)^{D}$, as $\ell_{m}-1\leq D$
-% \hspace*{2em}
+
  
 Similarly, $\mathbb{P}\lbrace\hat{r}^{*}\leq r^{*} - c_{m_i}\rbrace\leq \dfrac{1}{(\psi  T\epsilon_{m_{i}})^{\rho}}$. Summing the two up, the probability that a sub-optimal arm ${i}$ is not eliminated on or before $m_{i}$-th round is  $\bigg(\dfrac{2}{(\psi T\epsilon_{m_{i}})^{\rho}} \bigg)$.
-% or $\bigg(\dfrac{2}{(\psi T\epsilon_{m_{i}}^{2})^{y}}\bigg)$ where $y=\dfrac{\rho +\frac{1}{2}}{2}$.
- 
+
 Summing up over all arms in $A^{'}$ and bounding the regret for each arm $i\in A^{'}$ trivially by $T\Delta_{i}$, we obtain
    \begin{align*}
 &\sum_{i\in A^{'}}\bigg(\dfrac{2T\Delta_{i}}{(\psi T\epsilon_{m_{i}})^{\rho}}\bigg)
@@ -166,9 +153,19 @@ Summing up \textbf{Case a} and \textbf{Case b}, the total regret is given by,
  
 \end{proof}
 
-\subsection{Proof of Corollary 1}
-\label{App:Proof:Corollary:1}
+\subsection{Corollary 1}
+
+\begin{corollary}[\textbf{\textit{Gap-dependent bound}}]
+\label{Result:Corollary:1}
+With $\psi=\frac{T}{K^2}$ and $\rho=\frac{1}{2}$, we have the following gap-dependent bound for the regret of EUCBV:
+\begin{align*}
+\E [R_T] & \sum_{i\in A:\Delta_{i} > b}\bigg\lbrace 17 K + \dfrac{82\log{(\dfrac{T\Delta_{i}^{2}}{ K})}}{\Delta_{i}}\bigg\rbrace 
+ + \max\limits_{i\in A:\Delta_{i}\leq b}\Delta_{i}T 
+	\end{align*} 
+\end{corollary}
+
 \begin{proof}
+\label{Proof:Corollary:1}
 Here we take $\psi=\dfrac{T}{(K)^2}$ and $\rho=\dfrac{1}{2}$. Taking into account Theorem \ref{Result:Theorem:1} below for all $b\geq \sqrt{\dfrac{e}{T}}$
 
 \begin{align*}
@@ -203,9 +200,20 @@ and putting the parameter values in the above Theorem \ref{Result:Theorem:1} res
 
 
 
-\subsection{Proof of Corollary 2}
-\label{App:Proof:Corollary:2}
+\subsection{Corollary 2}
+
+\begin{corollary}[\textbf{\textit{Gap-dependent bound}}]
+\label{Result:Corollary:1}
+With $\psi=\frac{T}{K^2}$ and $\rho=\frac{1}{2}$, we have the following gap-independent bound for the regret of EUCBV:
+\begin{align*}
+\E[R_{T}] & \leq 26 K^2 + 82\sqrt{KT}
+	\end{align*} 
+\end{corollary}
+
+
+
 \begin{proof}
+\label{Proof:Corollary:2}
 As stated in \citet{auer2010ucb}, we can have a bound on regret of the order of $\sqrt{KT\log K}$ in non-stochastic MAB setting. This is shown in Exp4\cite{auer2002nonstochastic} algorithm. Also we know from \citet{bubeck2011pure} that the function $x\in [0,1]\mapsto x\exp(-Cx^2)$ is  decreasing on $\left[\dfrac{1}{\sqrt{2C}},1\right ]$ for any $C>0$. So, taking $C=\left\lfloor \dfrac{T}{e}\right\rfloor$ and similarly, by choosing  $\Delta_{i}=\Delta=\sqrt{\dfrac{K\log K}{T}}>\sqrt{\dfrac{e}{T}}$ for all ${i:i\neq *}\in A$, in the bound of UCB1\cite{auer2002finite} we get,
 
 \begin{align*}
