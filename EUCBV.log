@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  4 APR 2017 19:10
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  4 APR 2017 22:46
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1235,17 +1235,17 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
- (./related.tex) (./contribution.tex [2]) (./ealgo.tex
+ (./related.tex) (./contribution.tex [2]) [3] (./ealgo.tex
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 15.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 25.
 
-Overfull \hbox (8.69214pt too wide) in paragraph at lines 28--28
+Overfull \hbox (9.43593pt too wide) in paragraph at lines 28--28
 [] 
  []
 
-[3] [4]) (./results.tex [5]
+[4]) (./results.tex [5]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 30.
 )
@@ -1277,59 +1277,55 @@ PGFPlots: reading {results/NewExpt/Expt1/UCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/TS02_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/OCUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/BU01_comp_subsampled.txt}
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--42
-[]\OT1/ptm/m/n/9 (a) Expt-$\OT1/cmr/m/n/9 1$\OT1/ptm/m/n/9 : $\OT1/cmr/m/n/9 20
-$ \OT1/ptm/m/n/9 Bernoulli-
- []
-
 PGFPlots: reading {results/NewExpt/Expt2_2/UCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2_2/EUCBV01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2_2/MOSS01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2_2/OCUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2_2/MedElim_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2_2/UCBR01_comp_subsampled.txt}
-[13]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Overfull \hbox (7.16833pt too wide) in paragraph at lines 87--88
 \OT1/ptm/m/n/10 sian re-ward dis-tri-bu-tions with ex-pected re-wards of the ar
 ms $\OML/cmm/m/it/10 r[] \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1
 $\OT1/ptm/m/n/10 , $\OML/cmm/m/it/10 r[] \OT1/cmr/m/n/10 =
  []
 
-PGFPlots: reading {results/NewExpt/Expt3_1/plotFinalMOSS20_100.txt}
-PGFPlots: reading {results/NewExpt/Expt3_1/plotFinalEclUCB20_100.txt}
-PGFPlots: reading {results/NewExpt/Expt3_1/plotFinalOCUCB20_100.txt}
+PGFPlots: reading {results/NewExpt/Expt3/plotFinalMOSS20_100.txt}
+PGFPlots: reading {results/NewExpt/Expt3/plotFinalEUCBV20_100.txt}
+PGFPlots: reading {results/NewExpt/Expt3/plotFinalOCUCB20_100.txt}
 
 Underfull \hbox (badness 10000) in paragraph at lines 117--117
 []\OT1/ptm/m/n/9 (a) Expt-$\OT1/cmr/m/n/9 3$\OT1/ptm/m/n/9 : $\OT1/cmr/m/n/9 20
-$ \OT1/ptm/m/n/9 to $\OT1/cmr/m/n/9 100$
+$ \OT1/ptm/m/n/9 to $\OT1/cmr/m/n/9 100$ \OT1/ptm/m/n/9 Bernoulli-
  []
 
-PGFPlots: reading {results/NewExpt/Expt4/plotFinalEclUCB012.txt}
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
 
-LaTeX Warning: Reference `App:MoreExp' on page 14 undefined on input line 161.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14]) (./Conclusion.tex) [15] (./EUCBV.bbl) [16
+[13]) (./Conclusion.tex)
+Underfull \vbox (badness 2875) has occurred while \output is active []
+
+ [14]
+[15] (./EUCBV.bbl) [16
 
 
 ] (./EUCBV.aux)
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 22843 strings out of 493848
- 463441 string characters out of 1152823
- 643918 words of memory out of 3000000
- 25426 multiletter control sequences out of 15000+50000
- 42288 words of font info for 98 fonts, out of 3000000 for 9000
+ 22813 strings out of 493848
+ 462849 string characters out of 1152823
+ 658307 words of memory out of 3000000
+ 25401 multiletter control sequences out of 15000+50000
+ 41210 words of font info for 97 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 63i,27n,75p,1428b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,27n,75p,1425b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
 ve/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-texlive/fonts/t
 ype1/public/amsfonts/cmextra/cmbsy5.pfb></usr/share/texmf-texlive/fonts/type1/p
@@ -1358,9 +1354,9 @@ bm10.pfb></usr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb></usr/sha
 re/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fon
 ts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/
 utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EUCBV.pdf (16 pages, 453533 bytes).
+Output written on EUCBV.pdf (16 pages, 446589 bytes).
 PDF statistics:
- 418 PDF objects out of 1000 (max. 8388607)
- 84 named destinations out of 1000 (max. 500000)
+ 417 PDF objects out of 1000 (max. 8388607)
+ 83 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
