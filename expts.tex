@@ -1,4 +1,4 @@
-We conduct an empirical performance using cumulative regret as the metric. We implement the following algorithms:  KL-UCB\cite{garivier2011kl}, DMED\cite{honda2010asymptotically}, MOSS\cite{audibert2009minimax}, UCB1\cite{auer2002finite}, UCB-Improved\cite{auer2010ucb}, Median Elimination\cite{even2006action}, Thompson Sampling(TS)\cite{agrawal2011analysis}, OCUCB\cite{lattimore2015optimally}, Bayes-UCB(BU)\cite{kaufmann2012bayesian} and UCB-V\cite{audibert2009exploration}\footnote{The implementation for KL-UCB, Bayes-UCB and DMED were taken from \cite{CapGarKau12}}. The parameters of EClusUCB algorithm for all the experiments are set as follows: $\psi=\frac{T}{196 \log K}$, $\rho_{s}=0.5$, $\rho_{a}=0.5$ and $p=\lceil\frac{K}{\log K}\rceil$ (as in Corollary \ref{Result:Corollary:2}).
+We conduct an empirical performance using cumulative regret as the metric. We implement the following algorithms:  KL-UCB\cite{garivier2011kl}, DMED\cite{honda2010asymptotically}, MOSS\cite{audibert2009minimax}, UCB1\cite{auer2002finite}, UCB-Improved\cite{auer2010ucb}, Median Elimination\cite{even2006action}, Thompson Sampling(TS)\cite{agrawal2011analysis}, OCUCB\cite{lattimore2015optimally}, Bayes-UCB(BU)\cite{kaufmann2012bayesian} and UCB-V\cite{audibert2009exploration}\footnote{The implementation for KL-UCB, Bayes-UCB and DMED were taken from \cite{CapGarKau12}}. The parameters of EUCBV algorithm for all the experiments are set as follows: $\psi=\frac{T}{K^2}$ and $\rho =0.5$ (as in Corollary \ref{Result:Corollary:2}).
 %whereas for ClusUCB(Aggressive)$\big/$EClusUCB(Aggressive) or ClusUCBA$\big/$EClusUCBA algorithm the parameters are set as $\psi=\log T$, $\rho_{s}=0.5$, $\rho_{a}=0.5$ and $p=\lceil\frac{K}{\log K}\rceil$. We can clearly see that EClusUCBA has a lower exploration regulatory factor and conducts less exploration and is a riskier algorithm than EClusUCB.
 
 \begin{figure}[!h]
@@ -60,14 +60,14 @@ We conduct an empirical performance using cumulative regret as the metric. We im
       	% UCB
         \addplot table{results/NewExpt/Expt2_2/UCB01_comp_subsampled.txt};
 		%\addplot table{results/NewExpt/Expt2_2/clUCB01_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt2_2/NEclUCB01_new_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt2_2/EUCBV01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt2_2/MOSS01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt2_2/OCUCB01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt2_2/MedElim_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt2_2/UCBR01_comp_subsampled.txt};
 		%\addplot table{results/NewExpt/Expt2_2/EclUCB01_p_1_comp_subsampled.txt};
 		%\legend{UCB1,ClusUCB,Med-Elim,MOSS,OCUCB,EClusUCB,UCB-Imp}
-		\legend{UCB1,EClusUCB,MOSS,OCUCB,Med-Elim,UCB-Imp}
+		\legend{UCB1,EUCBV,MOSS,OCUCB,Med-Elim,UCB-Imp}
       	\end{axis}
       	\end{tikzpicture}
    		\label{fig:2}
@@ -82,8 +82,7 @@ We conduct an empirical performance using cumulative regret as the metric. We im
 
 \textbf{First experiment:} This is conducted over a testbed of $20$ arms in an environment involving Bernoulli reward distributions with expected rewards of the arms $r_{i_{{i}\neq {*}}}=0.07$ and $r^{*}=0.1$. These type of cases are frequently encountered in web-advertising domain. The horizon $T$ is set to $60000$. 
 %After limited exploratory experimentation the number of clusters $p$ for ClusUCB is set to $4$. 
-The regret is averaged over $100$ independent runs and is shown in Figure \ref{fig:1}. EClusUCB, MOSS, UCB1, UCB-V, KL-UCB, TS, BU and DMED are run in this experimental setup and we observe that EClusUCB performs better than all the aforementioned algorithms except TS. Because of the small gaps and short horizon $T$, we do not implement UCB-Improved and Median Elimination on this test-case. 
-%We also observe that in this case the cumulative regret of EClusUCB and TS are almost similar to each other.
+The regret is averaged over $100$ independent runs and is shown in Figure \ref{fig:1}. EUCBV, MOSS, UCB1, UCB-V, KL-UCB, TS, BU and DMED are run in this experimental setup and we observe that EUCBV performs better than all the aforementioned algorithms. Because of the small gaps and short horizon $T$, we do not implement UCB-Improved and Median Elimination on this test-case. 
 
 \textbf{Second experiment:} This is conducted over a testbed of $100$ arms involving Gaussian reward distributions with expected rewards of the arms $r_{i_{{i}\neq {*}:1-33}}=0.1$, $r_{i_{{i}\neq {*}:34-99}}=0.6$ and $r^{*}_{i=100}=0.9$ with variance set at $\sigma_{i}^{2} = 0.3,\forall i\in A$. The horizon $T$ is set for a large duration of $2\times 10^{5}$ and the regret is averaged over $100$ independent runs and is shown in Figure \ref{fig:2}. From the results in Figure \ref{fig:2}, we observe that EClusUCB outperforms MOSS, UCB1, UCB-Improved and Median-Elimination($\epsilon=0.1,\delta=0.1$). Also the performance of UCB-Improved is poor in comparison to other algorithms, which is probably because of pulls wasted in initial exploration whereas EClusUCB with the choice of $\psi, \rho_{a}$ and $\rho_{s}$ performs much better.
 
