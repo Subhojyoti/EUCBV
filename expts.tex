@@ -4,12 +4,11 @@ In this section we conduct an extensive empirical evaluation of EUCBV against se
     \centering
     \begin{tabular}{cc}
     \setlength{\tabcolsep}{0.1pt}
-    \subfigure[0.25\textwidth][Expt-$1$: $20$ Bernoulli-distributed arms.]
-    %with $r_{i_{{i}\neq {*}}}=0.07$ and $r^{*}=0.1$
+    \subfigure[0.25\textwidth][Expt-$1$: $20$ Bernoulli-distributed arms with $r_{i_{{i}\neq {*}}}=0.07$ and $r^{*}=0.1$]
     {
     		\pgfplotsset{
-		tick label style={font=\Huge},
-		label style={font=\Huge},
+		tick label style={font=\Large},
+		label style={font=\Large},
 		legend style={font=\Large},
 		ylabel style={yshift=32pt},
 		%legend style={legendshift=32pt},
@@ -40,12 +39,11 @@ In this section we conduct an extensive empirical evaluation of EUCBV against se
   		\label{fig:1}
     }
     &
-    \subfigure[0.25\textwidth][Expt-$2$: $100$ Gaussian-distributed arms. ]
-    %with $r_{i_{{i}\neq {*}:1-33}}=0.1$, $r_{i_{{i}\neq {*}:34-99}}=0.6$, $r^{*}_{i=100}=0.9$ and $\sigma_{i=1:100}^{2} = 0.3$
+    \subfigure[0.25\textwidth][Expt-$2$: $100$ Gaussian-distributed arms with $r_{i_{{i}\neq {*}:1-33}}=0.1$, $r_{i_{{i}\neq {*}:34-99}}=0.6$, $r^{*}_{i=100}=0.9$ and $\sigma_{i=1:100}^{2} = 0.3$]
     {
     		\pgfplotsset{
-		tick label style={font=\Huge},
-		label style={font=\Huge},
+		tick label style={font=\Large},
+		label style={font=\Large},
 		legend style={font=\Large},
 		}
         \begin{tikzpicture}[scale=0.5]
@@ -79,21 +77,19 @@ In this section we conduct an extensive empirical evaluation of EUCBV against se
 % For the purpose of performance comparison
 
 
-\textbf{First experiment:} This is conducted over a testbed of $20$ arms in an environment involving Bernoulli reward distributions with expected rewards of the arms $r_{i_{{i}\neq {*}}}=0.07$ and $r^{*}=0.1$. These type of cases are frequently encountered in web-advertising domain. The horizon $T$ is set to $60000$. 
-%After limited exploratory experimentation the number of clusters $p$ for ClusUCB is set to $4$. 
-The regret is averaged over $100$ independent runs and is shown in Figure \ref{fig:1}. EUCBV, MOSS, UCB1, UCB-V, KL-UCB, TS, BU and DMED are run in this experimental setup and we observe that EUCBV performs better than all the aforementioned algorithms. Because of the small gaps and short horizon $T$, we do not implement UCB-Improved and Median Elimination on this test-case. 
+\textbf{First experiment:} This experiment is conducted to observe the performance of EUCBV over a short horizon. The horizon $T$ is set to $60000$. These type of cases are frequently encountered in web-advertising domain. The testbed comprises of $20$ Bernoulli distributed arms with expected rewards of the arms as $r_{i_{{i}\neq {*}}}=0.07$ and $r^{*}=0.1$. The regret is averaged over $100$ independent runs and is shown in Figure \ref{fig:1}. EUCBV, MOSS, UCB1, UCB-V, KL-UCB, TS, BU and DMED are run in this experimental setup. Here not only we observe that EUCBV performs better than all the non-variance based  algorithms like MOSS, OCUCB, UCB-Improved and UCB1 but it also outperforms UCBV because of the choice of the exploration parameters. Because of the small gaps and short horizon $T$, we do not implement UCB-Improved and Median Elimination on this test-case. 
 
-\textbf{Second experiment:} This is conducted over a testbed of $100$ arms involving Gaussian reward distributions with expected rewards of the arms $r_{i_{{i}\neq {*}:1-33}}=0.1$, $r_{i_{{i}\neq {*}:34-99}}=0.6$ and $r^{*}_{i=100}=0.9$ with variance set at $\sigma_{i}^{2} = 0.3,\forall i\in A$. The horizon $T$ is set for a large duration of $2\times 10^{5}$ and the regret is averaged over $100$ independent runs and is shown in Figure \ref{fig:2}. From the results in Figure \ref{fig:2}, we observe that EClusUCB outperforms MOSS, UCB1, UCB-Improved and Median-Elimination($\epsilon=0.1,\delta=0.1$). Also the performance of UCB-Improved is poor in comparison to other algorithms, which is probably because of pulls wasted in initial exploration whereas EClusUCB with the choice of $\psi, \rho_{a}$ and $\rho_{s}$ performs much better.
+\textbf{Second experiment:} This experiment is conducted on a large horizon and over a large set of arms.    The horizon $T$ is set for a large duration of $2\times 10^{5}$. This testbed comprises of $100$ arms involving Gaussian reward distributions with expected rewards of the arms $r_{i_{{i}\neq {*}:1-33}}=0.1$, $r_{i_{{i}\neq {*}:34-99}}=0.6$, $r^{*}_{i=100}=0.9$ and variance set at $\sigma_{i}^{2} = 0.3,\forall i\in \A$. The regret is averaged over $100$ independent runs and is shown in Figure \ref{fig:2}. From the results in Figure \ref{fig:2}, we observe that EUCBV outperforms all the non-variance based algorithms MOSS, OCUCB, UCB1, UCB-Improved and Median-Elimination($\epsilon=0.1,\delta=0.1$). 
+%Also the performance of UCB-Improved is poor in comparison to other algorithms, which is probably because of pulls wasted in initial exploration whereas EUCBV with the choice of $\psi$ and $\rho$ performs much better.
 
 \begin{figure}[!h]
     \centering
     \begin{tabular}{cc}
-    \subfigure[0.32\textwidth][Expt-$3$: $20$ to $100$ Bernoulli-distributed arms. ]
-    %with $r_{i_{{i}\neq {*}}}=0.05$ and $r^{*}=0.1$
+    \subfigure[0.25\textwidth][Expt-$3$: $20$ to $100$ Bernoulli-distributed arms with $r_{i_{{i}\neq {*}}}=0.05$ and $r^{*}=0.1$]
     {
     	\pgfplotsset{
-		tick label style={font=\Huge},
-		label style={font=\Huge},
+		tick label style={font=\Large},
+		label style={font=\Large},
 		legend style={font=\Large},
 		ylabel style={yshift=32pt},
 		}
@@ -152,7 +148,6 @@ The regret is averaged over $100$ independent runs and is shown in Figure \ref{f
     \vspace*{-1em}
 \end{figure}
 %\vspace*{-0.5em}
-\textbf{Third experiment:} This is conducted over a testbed of $20-100$ (interval of $10$) arms with Bernoulli reward distributions, where the expected rewards of the arms are $r_{i_{{i}\neq {*}}}=0.05$ and $r^{*}=0.1$. For each of these testbeds of $20-100$ arms, we report the cumulative regret over a large horizon $T=10^{5} + K_{20:100}^{3}$ timesteps averaged over $100$ independent runs. We report the performance of MOSS, OCUCB and EClusUCB only over this uniform gap setup. Algorithms like Thompson Sampling or Bayes-UCB are too slow to be run for such large $K$ (see \citet{lattimore2015optimally}). From the results in Figure \ref{fig:3}, it is evident that the growth of regret for EClusUCB is lower than that of OCUCB and nearly same as MOSS. This corroborates the finding of \citet{lattimore2015optimally} which states that MOSS breaks down only when the number of arms are exceptionally large or the horizon is unreasonably high and gaps are very small. We consistently see that in uniform gap testcases EClusUCB outperforms  OCUCB.
+\textbf{Third experiment:} This experiment is conducted to show the stability and performance of EUCBV over a very large horizon and over a large number of arms. Please note that algorithms like Thompson Sampling or Bayes-UCB are too slow to be run for such large arms (see \citet{lattimore2015optimally}) and  over such large horizon. The horizon is set at $T=10^{5} + K_{20:100}^{3}$ timesteps. This testbed comprises of $20-100$ (interval of $10$) arms with Bernoulli reward distributions, where the expected rewards of the arms are $r_{i_{{i}\neq {*}}}=0.05$ and $r^{*}=0.1$. For each of these testbeds of $20-100$ arms, we report the cumulative regret averaged over $100$ independent runs. We report the performance of MOSS, OCUCB and EUCBV only over this uniform gap setup. From the results in Figure \ref{fig:3}, it is evident that the growth of regret for EUCBV  is much lower than that of OCUCB and MOSS. This also corroborates the finding of \citet{lattimore2015optimally} which states that MOSS breaks down only when the number of arms are exceptionally large or the horizon is unreasonably high and gaps are very small. We consistently see that in uniform gap testcases EUCBV outperforms OCUCB.
 
-%\textbf{Fourth experiment:} This is conducted to show that our choice of $p=\lceil\frac{K}{\log K}\rceil$ which we use to reduce the elimination error, is indeed close to optimal. The experiment is performed over a testbed having $30$ Bernoulli-distributed arms with $r_{i_{:{{i}\neq {*}}}}=0.07,\forall i\in A$ and $r^{*}=0.1$ averaged over 100 independent runs for each cluster. In Figure \ref{fig:4}, we report the cumulative regret over $T=80000$ timesteps averaged over $100$ independent runs plotted against the number of clusters $p=1$ to $\frac{K}{2}$ (so that each cluster have exactly two arms). We see that for $p=\lceil\frac{K}{\log K}\rceil=9$, the cumulative regret of EClusuCB is almost the lowest over the entire range of clusters considered. The lowest is reached for $\frac{K}{2}=15$, but this would increase the elimination error of EClusUCB in our theoretical analysis. So, the choice of $p=\lceil\frac{K}{\log K}\rceil$ helps to balance both theoretical and empirical performance of EClusUCB. Also $p=1$ gives us EClusUCB-AE and we can clearly see that its cumulative regret is the highest among all the clusters considered showing clearly that clustering indeed has some benefits. Its poor performance stems from the fact that it eliminates optimal arm in many of the runs as opposed to EClusUCB. More experiments are shown in Appendix \ref{App:MoreExp}.
-%
+
