@@ -50,6 +50,7 @@ Again, in the $m_i$-th round a sub-optimal arm ${i} \in \A^{'}$ gets eliminated 
  \leq \hat{r}^{*} - c^{*}
   \end{align*}
 	\noindent
+	Thus, the probability that a bad arm is not eliminated correctly in the $m_i$-th round (or before) is given by ,
 \begin{align}
 \mathbb{P}(\hat{r}_{i}> r_{i} + c_{i})
 &\leq \mathbb{P}\left( \hat{r}_{i} > r_{i}+ \bar{c}_i\right) 
@@ -259,9 +260,9 @@ and putting the parameter values in the above Theorem \ref{Result:Theorem:1} res
 	For the term regarding number of pulls,
 	\begin{align*}
 	\sum_{i\in \A :\Delta_{i} > b}\dfrac{41\log{(\psi T\Delta_{i}^{4})}}{\Delta_{i}} &= \dfrac{41K\sqrt{T}\log{(T^{2}\dfrac{K^{2}(\log K)^{2}}{T^{2} K^2})}}{\sqrt{K\log K}} \leq  \dfrac{82\sqrt{KT}\log{(\log K)}}{\sqrt{\log K}}\\
-	&\leq 82\sqrt{KT} \text{ ,   as $\dfrac{\log{(\log K)}}{\sqrt{\log K}}\leq 1$ for $K\geq 3$}
+	&\leq 82\sqrt{KT} \text{ ,   as $\dfrac{\log{(\log K)}}{\sqrt{\log K}}\leq 1$}
 	\end{align*}		
-	
+	%for $K\geq 3$
  	Lastly we can bound the error terms as, 
 	\begin{align*}
 	\sum\limits_{i\in \A :0\leq\Delta_{i}\leq b}\bigg(\dfrac{T^{1-\rho }2^{\frac{\rho}{2} +\frac{9}{4}}}{\psi^{\rho }\Delta_{i}^{2\rho -1}} \bigg)=K\bigg(\dfrac{T^{1-\frac{1}{2}}2^{\frac{1}{4}+\frac{9}{4}}}{{(\frac{T}{K^2})^{\frac{1}{2}}}{(\Delta_{i})^{2*\frac{1}{2}-1}}} \bigg) < 17 K^2

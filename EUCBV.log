@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  5 APR 2017 11:39
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  5 APR 2017 16:03
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1255,7 +1255,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
  []
 
 [7] [8]
-Overfull \hbox (5.83665pt too wide) in paragraph at lines 114--116
+Overfull \hbox (5.83665pt too wide) in paragraph at lines 115--117
 \OT1/ptm/m/n/10 where in-equal-ity $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr
 /m/n/10 )$ \OT1/ptm/m/n/10 is ob-tained us-ing ([]3[]), while $\OT1/cmr/m/n/10 
 (\OML/cmm/m/it/10 b\OT1/cmr/m/n/10 )$ \OT1/ptm/m/n/10 fol-lows from the Chernof
@@ -1308,10 +1308,10 @@ Underfull \vbox (badness 1137) has occurred while \output is active []
 
 ] (./EUCBV.aux) ) 
 Here is how much of TeX's memory you used:
- 22803 strings out of 493848
- 462730 string characters out of 1152823
- 659811 words of memory out of 3000000
- 25392 multiletter control sequences out of 15000+50000
+ 22805 strings out of 493848
+ 462780 string characters out of 1152823
+ 658287 words of memory out of 3000000
+ 25394 multiletter control sequences out of 15000+50000
  36532 words of font info for 83 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  63i,27n,75p,1582b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1344,7 +1344,7 @@ a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/te
 xmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on EUCBV.pdf (16 pages, 450801 bytes).
+Output written on EUCBV.pdf (16 pages, 450672 bytes).
 PDF statistics:
  427 PDF objects out of 1000 (max. 8388607)
  83 named destinations out of 1000 (max. 500000)
