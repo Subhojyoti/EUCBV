@@ -130,10 +130,11 @@ In this section we conduct an extensive empirical evaluation of EUCBV against se
   		legend style={at={(0.5,1.3)},anchor=north, legend columns=3} ]
       	% UCB
 		\addplot table{results/NewExpt/Expt4/UCBV01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt4/EUCBV01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt4/MOSS01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt4/OCUCB01_comp_subsampled.txt};
       	%\legend{EClusUCBA,AClusUCBA,EClusUCB,AClusUCB} 
-      	\legend{UCBV,MOSS,OCUCB} 
+      	\legend{UCBV,EUCBV,MOSS,OCUCB} 
       	\end{axis}
       	\end{tikzpicture}
   		\label{fig:4}
