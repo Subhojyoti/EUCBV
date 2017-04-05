@@ -1,21 +1,22 @@
 \subsection{Proof of Lemma 1}
+\label{sec:proofTheorem:Lemma1}
 \begin{proof}
 We are going to prove this by contradiction. Let's say,
 \begin{align*}
  & \dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} \geq 1 \\
  &\Rightarrow \rho m \log(2) \geq \log(\psi T) - 2m\log( 2) \\
- &\Rightarrow \rho m \log(2) \geq 2\log(\frac{T}{9K}) - 2m\log( 2) \text{ , as $\psi=\dfrac{T}{81K^2}$ }\\
- &\Rightarrow 2.5 m \log(2) + 2\log(9K) \geq 2\log(T) \text{ , as $\rho=\dfrac{1}{2}$}\\
- &\Rightarrow 1.25 \log(2) \log_2(\dfrac{T}{e}) + 2\log(9K) \geq 2\log(T) \text{ , as $m\leq \dfrac{1}{2} \log_2(\dfrac{T}{e}) $ }\\
- &\Rightarrow \dfrac{1.25 \log (2) \log (\dfrac{T}{e})}{\log(2)} + 2\log(9K) \geq 2\log(T)\\
- &\Rightarrow 1.25 \log(T) + 2\log 9K - 1.25 \geq 2\log (T)\\
- &\Rightarrow 2\log K \geq 0.75 \log T + 1.25 -2\log 9
+ &\Rightarrow \rho m \log(2) \geq 2\log(\frac{T}{K}) - 2m\log( 2) \text{ , as $\psi=\dfrac{T}{K^2}$ }\\
+ &\Rightarrow 2.5 m \log(2) + 2\log(K) \geq 2\log(T) \text{ , as $\rho=\dfrac{1}{2}$}\\
+ &\Rightarrow 1.25 \log(2) \log_2(\dfrac{T}{e}) + 2\log(K) \geq 2\log(T) \text{ , as $m\leq \dfrac{1}{2} \log_2(\dfrac{T}{e}) $ }\\
+ &\Rightarrow \dfrac{1.25 \log (2) \log (\dfrac{T}{e})}{\log(2)} + 2\log(K) \geq 2\log(T)\\
+ &\Rightarrow 1.25 \log(T) + 2\log K - 1.25 \geq 2\log (T)\\
+ &\Rightarrow 2\log K \geq 0.75 \log T + 1.25 
 \end{align*}
-But, for $T\geq 81 K^{2.7}$, this is clearly not possible. Hence, $\dfrac{m \log(2)}{\log(\psi T) - 2m\log( 2)} \leq 1$.
+But, for $T\geq K^{2.7}$, this is clearly not possible. Hence, $\dfrac{m \log(2)}{\log(\psi T) - 2m\log( 2)} \leq 1$.
 \end{proof}
 
 \subsection{Proof of Theorem 1}
-
+\label{sec:proofTheorem:Theorem1}
 \begin{proof}
 Let, for each sub-optimal arm ${i}$, $m_{i}=\min{\lbrace m|\sqrt{2\epsilon_{m_i}} < \dfrac{\Delta_{i}}{3} \rbrace}$. Also $\rho\in (0,1]$ is a constant in this proof. Let $\A^{'}=\lbrace i\in \A: \Delta_{i} > b \rbrace$ and $\A^{''}=\lbrace i\in \A: \Delta_{i} > 0 \rbrace$. Also $z_{i}$ denotes total number of times an arm $i$ has been pulled. In the $m$-th round, $n_{m}$ denotes the number of pulls allocated to the surviving arms in $B_{m}$. \\
 \subsection*{Case $a$: \textit{Some sub-optimal arm ${i}$ is not eliminated in round $m_{i}$ or before and the optimal arm ${*}\in B_{m_{i}}$} and $c_i \leq c^*$}
@@ -192,7 +193,7 @@ Summing up \textbf{Case a} and \textbf{Case b}, the total regret is given by,
 \end{proof}
 
 \subsection{Proof of Corollary 1}
-
+\label{sec:proofTheorem:Corollary1}
 \begin{proof}
 \label{Proof:Corollary:1}
 Here we take $\psi=\dfrac{T}{(K)^2}$ and $\rho=\dfrac{1}{2}$. Taking into account Theorem \ref{Result:Theorem:1} below for all $b\geq \sqrt{\dfrac{e}{T}}$
@@ -230,6 +231,7 @@ and putting the parameter values in the above Theorem \ref{Result:Theorem:1} res
 
 
 \subsection{Proof of Corollary 2}
+\label{sec:proofTheorem:Corollary2}
 \begin{proof}
 \label{Proof:Corollary:2}
 As stated in \citet{auer2010ucb}, we can have a bound on regret of the order of $\sqrt{KT\log K}$ in non-stochastic MAB setting. This is shown in Exp4\cite{auer2002nonstochastic} algorithm. Also we know from \citet{bubeck2011pure} that the function $x\in [0,1]\mapsto x\exp(-Cx^2)$ is  decreasing on $\left[\dfrac{1}{\sqrt{2C}},1\right ]$ for any $C>0$. So, taking $C=\left\lfloor \dfrac{T}{e}\right\rfloor$ and similarly, by choosing  $\Delta_{i}=\Delta=\sqrt{\dfrac{K\log K}{T}}>\sqrt{\dfrac{e}{T}}$ for all ${i:i\neq *}\in \A $, in the bound of UCB1\cite{auer2002finite} we get,

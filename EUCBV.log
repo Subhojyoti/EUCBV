@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  5 APR 2017 09:42
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  5 APR 2017 11:19
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1235,7 +1235,8 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
- (./related.tex) (./contribution.tex [2]) [3] (./ealgo.tex
+ (./related.tex) [2]
+(./contribution.tex [3]) (./ealgo.tex
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 15.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
@@ -1245,29 +1246,23 @@ Overfull \hbox (9.43593pt too wide) in paragraph at lines 28--28
 [] 
  []
 
-[4]) (./results.tex
+[4]) (./results.tex [5]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 30.
- [5])
-Overfull \hbox (11.05432pt too wide) in paragraph at lines 51--73
-[]\OT1/ptm/m/n/10 Here, in the gap-independent bound of EU-CBV the most sig-nif
--i-cant term is $\OML/cmm/m/it/10 O []$
- []
-
-(./proofTheorem.tex [6]
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 37.
+) [6] (./proofTheorem.tex
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-[7]
-Overfull \hbox (5.83665pt too wide) in paragraph at lines 113--115
+[7] [8]
+Overfull \hbox (5.83665pt too wide) in paragraph at lines 114--116
 \OT1/ptm/m/n/10 where in-equal-ity $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr
 /m/n/10 )$ \OT1/ptm/m/n/10 is ob-tained us-ing ([]3[]), while $\OT1/cmr/m/n/10 
 (\OML/cmm/m/it/10 b\OT1/cmr/m/n/10 )$ \OT1/ptm/m/n/10 fol-lows from the Chernof
 f-Hoeffding
  []
 
-[8] [9] [10] [11]) (./expts.tex [12]
+[9] [10] [11] [12]) (./expts.tex
 PGFPlots: reading {results/NewExpt/Expt1/UCBV01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/EUCBV01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/KLUCB01_comp_subsampled.txt}
@@ -1289,7 +1284,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--71
  :\OT1/cmr/m/n/9 1$\OT1/ptm/m/n/9 ,
  []
 
-[13]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 PGFPlots: reading {results/NewExpt/Expt3/plotFinalMOSS20_100.txt}
 PGFPlots: reading {results/NewExpt/Expt3/plotFinalEUCBV20_100.txt}
 PGFPlots: reading {results/NewExpt/Expt3/plotFinalOCUCB20_100.txt}
@@ -1299,18 +1296,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--112
 $ \OT1/ptm/m/n/9 to $\OT1/cmr/m/n/9 100$ \OT1/ptm/m/n/9 Bernoulli-
  []
 
-) (./Conclusion.tex) [14] [15] (./EUCBV.bbl) [16
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13]
+Underfull \vbox (badness 1137) has occurred while \output is active []
+
+ [14])
+(./Conclusion.tex) [15] (./EUCBV.bbl) [16
 
 
 ] (./EUCBV.aux) ) 
 Here is how much of TeX's memory you used:
- 22799 strings out of 493848
- 462620 string characters out of 1152823
- 640806 words of memory out of 3000000
- 25388 multiletter control sequences out of 15000+50000
+ 22803 strings out of 493848
+ 462730 string characters out of 1152823
+ 659811 words of memory out of 3000000
+ 25392 multiletter control sequences out of 15000+50000
  36532 words of font info for 83 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 63i,27n,75p,1425b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,27n,75p,1582b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/sh
 are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-
 texlive/fonts/type1/public/amsfonts/cmextra/cmbsy5.pfb></usr/share/texmf-texliv
@@ -1340,9 +1344,9 @@ a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/te
 xmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on EUCBV.pdf (16 pages, 448538 bytes).
+Output written on EUCBV.pdf (16 pages, 450795 bytes).
 PDF statistics:
- 420 PDF objects out of 1000 (max. 8388607)
+ 427 PDF objects out of 1000 (max. 8388607)
  83 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
