@@ -5,10 +5,10 @@ We are going to prove this by contradiction. Let's say,
 \begin{align*}
  & \dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} \geq 1 \\
  &\Rightarrow \rho m \log(2) \geq \log(\psi T) - 2m\log( 2) \\
- &\Rightarrow \rho m \log(2) \geq 2\log(\frac{T}{K}) - 2m\log( 2) \text{ , as $\psi=\dfrac{T}{K^2}$ }\\
- &\Rightarrow 2.5 m \log(2) + 2\log(K) \geq 2\log(T) \text{ , as $\rho=\dfrac{1}{2}$}\\
- &\Rightarrow 1.25 \log(2) \log_2(\dfrac{T}{e}) + 2\log(K) \geq 2\log(T) \text{ , as $m\leq \dfrac{1}{2} \log_2(\dfrac{T}{e}) $ }\\
- &\Rightarrow \dfrac{1.25 \log (2) \log (\dfrac{T}{e})}{\log(2)} + 2\log(K) \geq 2\log(T)\\
+ &\Rightarrow \rho m \log(2) \geq 2\log(\frac{T}{K}) - 2m\log( 2) \text{ , as $\psi=\frac{T}{K^2}$ }\\
+ &\Rightarrow 2.5 m \log(2) + 2\log(K) \geq 2\log(T) \text{ , as $\rho=\frac{1}{2}$}\\
+ &\Rightarrow 1.25 \log(2) \log_2(\frac{T}{e}) + 2\log(K) \geq 2\log(T) \text{ , as $m\leq \frac{1}{2} \log_2(\frac{T}{e}) $ }\\
+ &\Rightarrow \dfrac{1.25 \log (2) \log (\frac{T}{e})}{\log(2)} + 2\log(K) \geq 2\log(T)\\
  &\Rightarrow 1.25 \log(T) + 2\log K - 1.25 \geq 2\log (T)\\
  &\Rightarrow 2\log K \geq 0.75 \log T + 1.25 
 \end{align*}
@@ -197,14 +197,19 @@ Summing up \textbf{Case a} and \textbf{Case b}, the total regret is given by,
 \label{sec:proofTheorem:Corollary1}
 \begin{proof}
 \label{Proof:Corollary:1}
-Here we take $\psi=\dfrac{T}{(K)^2}$ and $\rho=\dfrac{1}{2}$. Taking into account Theorem \ref{Result:Theorem:1} below for all $b\geq \sqrt{\dfrac{e}{T}}$
-
+For proving this corollary we first state the result of Theorem \ref{Result:Theorem:1} below, 
+	
 \begin{align*}
 \E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) + \bigg(\Delta_{i}+\dfrac{41\log{(\psi  T\Delta_{i}^{4})}}{\Delta_{i}}\bigg) + \bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)\bigg \rbrace\\ 
   & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b}\bigg(\dfrac{C_{2}(\rho)T^{1-\rho}}{b^{2\rho -1}} \bigg) + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T
-\end{align*}
+\end{align*} 
 
-and putting the parameter values in the above Theorem \ref{Result:Theorem:1} result,
+%\begin{align*}
+%\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) + \bigg(\Delta_{i}+\dfrac{41\log{(\psi  T\Delta_{i}^{4})}}{\Delta_{i}}\bigg) + \bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)\bigg \rbrace\\ 
+%  & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b}\bigg(\dfrac{C_{2}(\rho)T^{1-\rho}}{b^{2\rho -1}} \bigg) + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T
+%\end{align*}
+
+After putting the parameter values $\psi=\dfrac{T}{(K)^2}$ and $\rho=\dfrac{1}{2}$ in the above Theorem \ref{Result:Theorem:1} result we get,
 	\begin{align*}
 	\sum_{i\in \A :\Delta_{i} > b}\bigg(\dfrac{T^{1-\rho}}{\psi^{\rho}\Delta_{i}^{2\rho -1}} \bigg) &= \sum_{i\in \A :\Delta_{i} > b}\bigg(\dfrac{T^{1-\frac{1}{2}}2^{2+\frac{1}{2}}.9^{\frac{1}{2}}}{(\frac{T}{( K)^2})^{\frac{1}{2}}\Delta_{i}^{2.\frac{1}{2}-1}} \bigg) = \sum_{i\in \A :\Delta_{i} > b} 17 K 
 	\end{align*}
@@ -235,23 +240,34 @@ and putting the parameter values in the above Theorem \ref{Result:Theorem:1} res
 \label{sec:proofTheorem:Corollary2}
 \begin{proof}
 \label{Proof:Corollary:2}
-As stated in \citet{auer2010ucb}, we can have a bound on regret of the order of $\sqrt{KT\log K}$ in non-stochastic MAB setting. This is shown in Exp4\cite{auer2002nonstochastic} algorithm. Also we know from \citet{bubeck2011pure} that the function $x\in [0,1]\mapsto x\exp(-Cx^2)$ is  decreasing on $\left[\dfrac{1}{\sqrt{2C}},1\right ]$ for any $C>0$. So, taking $C=\left\lfloor \dfrac{T}{e}\right\rfloor$ and similarly, by choosing  $\Delta_{i}=\Delta=\sqrt{\dfrac{K\log K}{T}}>\sqrt{\dfrac{e}{T}}$ for all ${i:i\neq *}\in \A $, in the bound of UCB1\cite{auer2002finite} we get,
+In the non-stochastic scenario \cite{auer2002nonstochastic} showed that the bound on the cumulative regret can be $O\left(\sqrt{KT\log K}\right)$. But UCB1 suffered from a regret of order of  $O\left(\sqrt{KT\log t}\right)$  which is clearly improvable. Also we know from \citet{bubeck2011pure} that the function $x\in [0,1]\mapsto x\exp(-Cx^2)$ is  decreasing on $\left[\frac{1}{\sqrt{2C}},1\right ]$ for any $C>0$. So, we take $C=\left\lfloor \frac{T}{e}\right\rfloor$ and choose  $\Delta_{i}=\Delta=\sqrt{\frac{K\log K}{T}}>\sqrt{\frac{e}{T}}$ for all ${i:i\neq *}\in \A $.
 
-\begin{align*}
-\sum_{i:r_{i}<r^{*}}const \dfrac{\log T}{\Delta_{i}}=\dfrac{\sqrt{KT}\log T}{\sqrt{\log K}}
-\end{align*}
-So, this bound is worse than the non-stochastic setting and is clearly improvable and an upper bound regret of $\sqrt{KT}$ is possible as shown in \citet{audibert2009minimax} for MOSS which is consistent with the lower bound as proposed by Mannor and Tsitsiklis\cite{mannor2004sample}.
 
-	Hence, we take $b\approx\sqrt{\dfrac{K\log K}{T}} > \sqrt{\dfrac{e}{T}}$(the minimum value for $b$), $\psi=\dfrac{T}{K^2}$ and $\rho=\dfrac{1}{2}$.
+%As stated in \citet{auer2010ucb}, we can have a bound on regret of the order of $\sqrt{KT\log K}$ in non-stochastic MAB setting. This is shown in Exp4\cite{auer2002nonstochastic} algorithm. Also we know from \citet{bubeck2011pure} that the function $x\in [0,1]\mapsto x\exp(-Cx^2)$ is  decreasing on $\left[\frac{1}{\sqrt{2C}},1\right ]$ for any $C>0$. So, taking $C=\left\lfloor \frac{T}{e}\right\rfloor$ and similarly, by choosing  $\Delta_{i}=\Delta=\sqrt{\frac{K\log K}{T}}>\sqrt{\frac{e}{T}}$ for all ${i:i\neq *}\in \A $, in the bound of UCB1\cite{auer2002finite} we get,
+
+%\begin{align*}
+%\sum_{i:r_{i}<r^{*}}const \dfrac{\log T}{\Delta_{i}}=\dfrac{\sqrt{KT}\log T}{\sqrt{\log K}}
+%\end{align*}
+%So, this bound is worse than the non-stochastic setting and is clearly improvable and an upper bound regret of $\sqrt{KT}$ is possible as shown in \citet{audibert2009minimax} for MOSS which is consistent with the lower bound as proposed by Mannor and Tsitsiklis\cite{mannor2004sample}.
+%
+%	Hence, we take $b\approx\sqrt{\dfrac{K\log K}{T}} > \sqrt{\dfrac{e}{T}}$(the minimum value for $b$), $\psi=\dfrac{T}{K^2}$ and $\rho=\dfrac{1}{2}$.
 	
-	Taking into account Theorem \ref{Result:Theorem:1} below for all $b\geq \sqrt{\dfrac{e}{T}}$,
-
+	We again state the result of Theorem \ref{Result:Theorem:1} below, 
+	
 \begin{align*}
 \E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) + \bigg(\Delta_{i}+\dfrac{41\log{(\psi  T\Delta_{i}^{4})}}{\Delta_{i}}\bigg) + \bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)\bigg \rbrace\\ 
   & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b}\bigg(\dfrac{C_{2}(\rho)T^{1-\rho}}{b^{2\rho -1}} \bigg) + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T
 \end{align*}
+%
+%	
+%	Taking into account Theorem \ref{Result:Theorem:1} for all $b\geq \sqrt{\dfrac{e}{T}}$,
+%
+%\begin{align*}
+%\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) + \bigg(\Delta_{i}+\dfrac{41\log{(\psi  T\Delta_{i}^{4})}}{\Delta_{i}}\bigg) + \bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)\bigg \rbrace\\ 
+%  & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b}\bigg(\dfrac{C_{2}(\rho)T^{1-\rho}}{b^{2\rho -1}} \bigg) + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T
+%\end{align*}
 
-and putting the parameter values in the above Theorem \ref{Result:Theorem:1} result,
+Putting the parameter values $\psi=\frac{T}{K^2}$ and $\rho=\frac{1}{2}$ in the result of above Theorem \ref{Result:Theorem:1} we get,
 	\begin{align*}
 	\sum_{i\in \A :\Delta_{i} > b}\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) &= \sum_{i\in \A :\Delta_{i} > b}\bigg(\dfrac{T^{1-\frac{1}{2}}2^{2+\frac{1}{2}}.9^{\frac{1}{2}}}{(\frac{T}{( K)^2})^{\frac{1}{2}}\Delta_{i}^{2.\frac{1}{2}-1}} \bigg) \leq 17 K^2
 	\end{align*}

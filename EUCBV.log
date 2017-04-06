@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  6 APR 2017 15:10
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  6 APR 2017 17:54
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1244,7 +1244,7 @@ Overfull \hbox (9.43593pt too wide) in paragraph at lines 28--28
 [4]) (./results.tex [5]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 37.
-) [6] (./proofTheorem.tex
+ [6]) (./proofTheorem.tex
 Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
@@ -1295,14 +1295,7 @@ PGFPlots: reading {results/NewExpt/Expt4/UCBV01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/EUCBV01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/MOSS01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/OCUCB01_comp_subsampled.txt}
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[13]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14])
-(./Conclusion.tex) [15] (./EUCBV.bbl
+[13] [14]) (./Conclusion.tex) [15] (./EUCBV.bbl
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 59.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
@@ -1314,7 +1307,7 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 Here is how much of TeX's memory you used:
  22827 strings out of 493848
  463364 string characters out of 1152823
- 682033 words of memory out of 3000000
+ 683053 words of memory out of 3000000
  25415 multiletter control sequences out of 15000+50000
  36017 words of font info for 81 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
@@ -1348,9 +1341,9 @@ a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/te
 xmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on EUCBV.pdf (16 pages, 452312 bytes).
+Output written on EUCBV.pdf (16 pages, 452638 bytes).
 PDF statistics:
- 414 PDF objects out of 1000 (max. 8388607)
+ 413 PDF objects out of 1000 (max. 8388607)
  84 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
