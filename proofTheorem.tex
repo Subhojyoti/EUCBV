@@ -67,7 +67,6 @@ Note that, substituting $ z_i = n_{m_i} \geq \frac{\log{(\psi T\epsilon_{m_{i}})
 \leq \sqrt{\dfrac{\rho\epsilon_{m_{i}}(\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 1)}{2}}\leq \sqrt{ \epsilon_{m_{i}}}.
 \label{si_bar_equn}
 \end{align}
-
 %The first term in the LHS of (\ref{eq:prob_eq2}) can be bounded using the Bernstein inequality as below:
 %\begin{align}
 %&\mathbb{P}\left( \hat{r}_{i} > r_{i}+ \bar{c}_i\right)\nonumber 
@@ -82,7 +81,6 @@ Note that, substituting $ z_i = n_{m_i} \geq \frac{\log{(\psi T\epsilon_{m_{i}})
 %\end{align}
 %where, for simplicity, we have used $\alpha_i$ to denoted the exponent in the inequality $(a)$.
 %Also, note that $(a)$ is obtained by using  $\psi_{m_i}=\frac{T\epsilon_{m_i}}{128a^{2}}$, where $a=(\log(\frac{3}{16} K\log K))$.
-
 The first term in the LHS of (\ref{eq:prob_eq2}) can be bounded using the Chernoff-Hoeffding bound as below:
 \begin{align}
 &\mathbb{P}\left( \hat{r}_{i} > r_{i}+ \bar{c}_i\right)\nonumber 
@@ -182,9 +180,12 @@ Summing over all arms in $\A^{'}$ the total regret is given by,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 & = \sum_{i\in \A^{'}}\bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_{2}(\rho)T^{1-\rho}}{b^{2\rho -1}} \bigg) \text{, where } C_2(x) = \frac{2^{\frac{\rho}{2}+\frac{9}{4}}.3^{x+\frac{1}{2}}}{\psi^{x}}
 \end{align*}
-
-%\text{, since } \sqrt{\rho_{a}\epsilon_{m}}<\dfrac{\Delta_{i}}{2}
-
+%\subsection*{Case $c$: \textit{Some sub-optimal arm ${i}$ is not eliminated in round $m_{i}$ or before and the optimal arm ${*}\in B_{m_{i}}$} and $c_i > c^*$}
+%
+%In this case, the sub-optimal arm will not be eliminated and pulled not more than $z_{i} < \bigg\lceil\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}\bigg\rceil$. This case is similar to case $b1$ and we can bound the regret by,
+%\begin{align*}
+%\sum_{i\in \A^{'}}\bigg(\Delta_{i} +\dfrac{41\log{(\psi T\Delta_{i}^{4}})}{\Delta_{i}}\bigg)
+%\end{align*}
  
 Summing up \textbf{Case a} and \textbf{Case b}, the total regret is given by,
 \begin{align*}

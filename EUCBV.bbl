@@ -91,10 +91,4 @@ Liu, Y.-C. and Tsuruoka, Y. (2016).
   exploration in monte-carlo tree search.
 \newblock {\em Theoretical Computer Science}.
 
-\bibitem[Mannor and Tsitsiklis, 2004]{mannor2004sample}
-Mannor, S. and Tsitsiklis, J.~N. (2004).
-\newblock The sample complexity of exploration in the multi-armed bandit
-  problem.
-\newblock {\em Journal of Machine Learning Research}, 5(Jun):623--648.
-
 \end{thebibliography}
