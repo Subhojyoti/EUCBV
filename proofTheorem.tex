@@ -98,9 +98,9 @@ where, $(a)$ occurs because $(\sigma_{i}^{2}+\sqrt{\rho\epsilon_{m_{i}}} + 1) \g
  
 The second term in the LHS of (\ref{eq:prob_eq2}) can be simplified as follows:
 \begin{align}
-&\mathbb{P}\bigg\lbrace \hat{v}_{i}\geq \sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}}\bigg\rbrace\nonumber\\
+&\mathbb{P}\bigg\lbrace \hat{v}_{i}\geq \sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}}\bigg\rbrace\nonumber
 %%%%%%%%%%%%%%%%%%
-&\leq \mathbb{P}\bigg\lbrace \dfrac{1}{n_{i}}\sum_{t=1}^{n_{i}}(X_{i,t}-r_{i})^{2}-(\hat{r}_{i}-r_{i})^{2}\geq \sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}}\bigg\rbrace\nonumber\\
+\leq \mathbb{P}\bigg\lbrace \dfrac{1}{n_{i}}\sum_{t=1}^{n_{i}}(X_{i,t}-r_{i})^{2}-(\hat{r}_{i}-r_{i})^{2}\geq \sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}}\bigg\rbrace\nonumber\\
 %%%%%%%%%%%%%%%%%%
 &\leq \mathbb{P}\bigg\lbrace \dfrac{\sum_{t=1}^{n_{i}}(X_{i,t}-r_{i})^{2}}{n_{i}}\geq \sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} \bigg\rbrace\nonumber\\
 %%%%%%%%%%%%%%%%%%
@@ -210,7 +210,7 @@ For proving this corollary we first state the result of Theorem \ref{Result:Theo
 %  & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b}\bigg(\dfrac{C_{2}(\rho)T^{1-\rho}}{b^{2\rho -1}} \bigg) + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T
 %\end{align*}
 
-After putting the parameter values $\psi=\dfrac{T}{(K)^2}$ and $\rho=\dfrac{1}{2}$ in the above Theorem \ref{Result:Theorem:1} result we get,
+After putting the parameter values $\psi=\frac{T}{K^2}$ and $\rho=\frac{1}{2}$ in the above Theorem \ref{Result:Theorem:1} result we get,
 	\begin{align*}
 	\sum_{i\in \A :\Delta_{i} > b}\bigg(\dfrac{T^{1-\rho}}{\psi^{\rho}\Delta_{i}^{2\rho -1}} \bigg) &= \sum_{i\in \A :\Delta_{i} > b}\bigg(\dfrac{T^{1-\frac{1}{2}}2^{2+\frac{1}{2}}.9^{\frac{1}{2}}}{(\frac{T}{( K)^2})^{\frac{1}{2}}\Delta_{i}^{2.\frac{1}{2}-1}} \bigg) = \sum_{i\in \A :\Delta_{i} > b} 17 K 
 	\end{align*}
