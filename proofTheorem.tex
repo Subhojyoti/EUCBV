@@ -83,14 +83,14 @@ Note that, substituting $ z_i = n_{m_i} \geq \frac{\log{(\psi T\epsilon_{m_{i}})
 %Also, note that $(a)$ is obtained by using  $\psi_{m_i}=\frac{T\epsilon_{m_i}}{128a^{2}}$, where $a=(\log(\frac{3}{16} K\log K))$.
 The first term in the LHS of (\ref{eq:prob_eq2}) can be bounded using the Chernoff-Hoeffding bound as below:
 \begin{align}
-&\mathbb{P}\left( \hat{r}_{i} > r_{i}+ \bar{c}_i\right)\nonumber 
-\le \exp\left(- (\bar{c}_i)^2 z_i \right)\nonumber \\
+\mathbb{P}\left( \hat{r}_{i} > r_{i}+ \bar{c}_i\right)\nonumber 
+\le \exp\left(- (\bar{c}_i)^2 z_i \right)\nonumber 
 %%%%%%%%%%%%%%%
-& \le \exp\left(- \rho (\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 1)\log(\psi  T\epsilon_{m_{i}})\right)\nonumber \\
+ &\le \exp\left(- \rho (\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 1)\log(\psi  T\epsilon_{m_{i}})\right)\nonumber \\
 %%%%%%%%%%%%%%%
 & \overset{(a)}{\leq} \exp\left(- \rho \log(\psi  T\epsilon_{m_{i}})\right) 
 %%%%%%%%%%%%%%%
-= \dfrac{1}{(\psi  T\epsilon_{m_{i}})^{\rho}}
+\le \dfrac{1}{(\psi  T\epsilon_{m_{i}})^{\rho}}
 \label{lhs1_equn}
 \end{align}
 where, $(a)$ occurs because $(\sigma_{i}^{2}+\sqrt{\rho\epsilon_{m_{i}}} + 1) \geq 1$.
