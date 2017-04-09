@@ -5,14 +5,14 @@ We are going to prove this by contradiction. Let's say,
 \begin{align*}
  & \dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} \geq 1 \\
  &\Rightarrow \rho m \log(2) \geq \log(\psi T) - 2m\log( 2) \\
- &\Rightarrow \rho m \log(2) \geq 2\log(\frac{T}{K}) - 2m\log( 2) \text{ , as $\psi=\frac{T}{K^2}$ }\\
- &\Rightarrow 2.5 m \log(2) + 2\log(K) \geq 2\log(T) \text{ , as $\rho=\frac{1}{2}$}\\
- &\Rightarrow 1.25 \log(2) \log_2(\frac{T}{e}) + 2\log(K) \geq 2\log(T) \text{ , as $m\leq \frac{1}{2} \log_2(\frac{T}{e}) $ }\\
+ &\Rightarrow \rho m \log(2) \overset{(a)}{\geq} 2\log(\frac{T}{K}) - 2m\log( 2) \\
+ &\Rightarrow 2.5 m \log(2) + 2\log(K) \overset{(b)}{\geq} 2\log(T) \\
+ &\Rightarrow 1.25 \log(2) \log_2(\frac{T}{e}) + 2\log(K) \overset{(c)}{\geq} 2\log(T) \\
  &\Rightarrow \dfrac{1.25 \log (2) \log (\frac{T}{e})}{\log(2)} + 2\log(K) \geq 2\log(T)\\
  &\Rightarrow 1.25 \log(T) + 2\log K - 1.25 \geq 2\log (T)\\
  &\Rightarrow 2\log K \geq 0.75 \log T + 1.25 
 \end{align*}
-But, for $T\geq K^{2.67}$, this is clearly not possible. Hence, $\dfrac{m \log(2)}{\log(\psi T) - 2m\log( 2)} \leq 1$.
+In the above inequalities, $(a)$ happens because $\psi=\frac{T}{K^2}$, $(b)$ occurs as $\rho=\frac{1}{2}$ and $(c)$ happens because $m\leq \frac{1}{2} \log_2(\frac{T}{e})$. But, for $T\geq K^{2.67}$, we can see that $2\log K \geq 0.75 \log T + 1.25$ is clearly not possible. Hence, $\dfrac{m \log(2)}{\log(\psi T) - 2m\log( 2)} \leq 1$.
 \end{proof}
 
 \subsection{Proof of Theorem 1}
@@ -150,7 +150,7 @@ So, the total contribution of ${i}$  till round $m_{i}$ is given by,
 \begin{align*}
 &\Delta_{i}\bigg\lceil\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}\bigg\rceil
 \leq\Delta_{i}\bigg\lceil\dfrac{\log{(\psi T(\dfrac{\Delta_{i}}{4 \times 81})^{4})}}{2(\dfrac{\Delta_{i}}{3\sqrt{2}})^{2}}\bigg\rceil \text{, since } \sqrt{2\epsilon_{m_{i}}} < \dfrac{\Delta_{i}}{3}\\
-&\leq\Delta_{i}\bigg(1+\dfrac{9\log{(\psi T(\dfrac{\Delta_{i}^{4}}{162})}}{\Delta_{i}^{2}}\bigg)
+&\leq\Delta_{i}\bigg(1+\dfrac{9\log{(\psi T(\dfrac{\Delta_{i}^{4}}{324})}}{\Delta_{i}^{2}}\bigg)
 \approx\Delta_{i}\bigg(1+\dfrac{9\log{(\psi T\Delta_{i}^{4})}}{\Delta_{i}^{2}}\bigg)
 \end{align*} 
  
@@ -276,7 +276,7 @@ Putting the parameter values $\psi=\frac{T}{K^2}$ and $\rho=\frac{1}{2}$ in the 
 	
 	For the term regarding number of pulls,
 	\begin{align*}
-	\sum_{i\in \A :\Delta_{i} > b}\dfrac{41\log{(\psi T\Delta_{i}^{4})}}{\Delta_{i}} &= \dfrac{9K\sqrt{T}\log{(T^{2}\dfrac{K^{2}(\log K)^{2}}{T^{2} K^2})}}{\sqrt{K\log K}} \leq  \dfrac{18\sqrt{KT}\log{(\log K)}}{\sqrt{\log K}}\\
+	\sum_{i\in \A :\Delta_{i} > b}\dfrac{9\log{(\psi T\Delta_{i}^{4})}}{\Delta_{i}} &= \dfrac{9K\sqrt{T}\log{(T^{2}\dfrac{K^{2}(\log K)^{2}}{T^{2} K^2})}}{\sqrt{K\log K}} \leq  \dfrac{18\sqrt{KT}\log{(\log K)}}{\sqrt{\log K}}\\
 	&\leq 18\sqrt{KT} \text{ ,   as $\dfrac{\log{(\log K)}}{\sqrt{\log K}}\leq 1$}
 	\end{align*}		
 	%for $K\geq 3$
