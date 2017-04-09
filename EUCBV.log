@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  8 APR 2017 18:39
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  9 APR 2017 10:11
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1241,15 +1241,20 @@ Overfull \hbox (9.43593pt too wide) in paragraph at lines 28--28
 [] 
  []
 
-[4]) (./results.tex [5]
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 49--57
+
+ []
+
+) (./results.tex [5]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 37.
- [6]) (./proofTheorem.tex
+ [6]) (./proofTheorem.tex [7]
 Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-[7] [8]
+[8]
 Overfull \hbox (5.83665pt too wide) in paragraph at lines 113--115
 \OT1/ptm/m/n/10 where in-equal-ity $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr
 /m/n/10 )$ \OT1/ptm/m/n/10 is ob-tained us-ing ([]3[]), while $\OT1/cmr/m/n/10 
@@ -1326,7 +1331,7 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 Here is how much of TeX's memory you used:
  22825 strings out of 493848
  463351 string characters out of 1152823
- 644657 words of memory out of 3000000
+ 646749 words of memory out of 3000000
  25414 multiletter control sequences out of 15000+50000
  36017 words of font info for 81 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
@@ -1360,9 +1365,9 @@ a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/te
 xmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on EUCBV.pdf (16 pages, 453575 bytes).
+Output written on EUCBV.pdf (16 pages, 454137 bytes).
 PDF statistics:
- 412 PDF objects out of 1000 (max. 8388607)
+ 414 PDF objects out of 1000 (max. 8388607)
  83 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
