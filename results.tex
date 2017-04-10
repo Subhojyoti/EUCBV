@@ -4,9 +4,9 @@ A technical lemma used to prove Theorem \ref{Result:Theorem:1} is presented belo
 
 \begin{lemma}
 \label{results:Lemma:1}
-If $T\geq K^{2.67}$, $\psi=\dfrac{T}{ K^2}$, $\rho=\dfrac{1}{2}$ and $m\leq \dfrac{1}{2} \log_2(\dfrac{T}{e}) $, then,
+If $T\geq K^{2.4}$, $\psi=\dfrac{T}{ K^2}$, $\rho=\dfrac{1}{2}$ and $m\leq \dfrac{1}{2} \log_2(\dfrac{T}{e}) $, then,
 \begin{align*}
-\dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} \leq 1
+\dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} \leq \frac{3}{2}
 \end{align*}
 \end{lemma}
 
@@ -19,7 +19,7 @@ We present below the main theorem of the paper which establishes the regret uppe
 \subsection{Main Theorem}
 \begin{theorem}
 \label{Result:Theorem:1}
-For $T\geq K^{2.67}$, the regret $R_T$ for EUCBV satisfies
+For $T\geq K^{2.4}$, the regret $R_T$ for EUCBV satisfies
 \begin{align*}
  \E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) + \bigg(\Delta_{i}+\dfrac{9\log{(\psi  T\Delta_{i}^{4})}}{\Delta_{i}}\bigg) + \bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)\bigg \rbrace \\ 
  %%%%%%%%%%%%%%%%

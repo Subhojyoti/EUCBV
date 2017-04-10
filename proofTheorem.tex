@@ -3,16 +3,16 @@
 \begin{proof}
 We are going to prove this by contradiction. Let's say,
 \begin{align*}
- & \dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} \geq 1 \\
- &\Rightarrow \rho m \log(2) \geq \log(\psi T) - 2m\log( 2) \\
- &\Rightarrow \rho m \log(2) \overset{(a)}{\geq} 2\log(\frac{T}{K}) - 2m\log( 2) \\
- &\Rightarrow 2.5 m \log(2) + 2\log(K) \overset{(b)}{\geq} 2\log(T) \\
- &\Rightarrow 1.25 \log(2) \log_2(\frac{T}{e}) + 2\log(K) \overset{(c)}{\geq} 2\log(T) \\
- &\Rightarrow \dfrac{1.25 \log (2) \log (\frac{T}{e})}{\log(2)} + 2\log(K) \geq 2\log(T)\\
- &\Rightarrow 1.25 \log(T) + 2\log K - 1.25 \geq 2\log (T)\\
- &\Rightarrow 2\log K \geq 0.75 \log T + 1.25 
+ & \dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} \geq \frac{3}{2} \\
+ &\Rightarrow 2\rho m \log(2) \geq 3\log(\psi T) - 6m\log( 2) \\
+ &\Rightarrow 2\rho m \log(2) \overset{(a)}{\geq} 6\log(\frac{T}{K}) - 6m\log( 2) \\
+ &\Rightarrow 7 m \log(2) + 6\log(K) \overset{(b)}{\geq} 6\log(T) \\
+ &\Rightarrow 3.5 \log(2) \log_2(\frac{T}{e}) + 6\log(K) \overset{(c)}{\geq} 6\log(T) \\
+ &\Rightarrow \dfrac{3.5 \log (2) \log (\frac{T}{e})}{\log(2)} + 6\log(K) \geq 6\log(T)\\
+ &\Rightarrow 3.5 \log(T) + 6\log K - 3.5 \geq 6\log (T)\\
+ &\Rightarrow 6\log K \geq 2.5 \log T + 3.5 
 \end{align*}
-In the above inequalities, $(a)$ happens because $\psi=\frac{T}{K^2}$, $(b)$ occurs as $\rho=\frac{1}{2}$ and $(c)$ happens because $m\leq \frac{1}{2} \log_2(\frac{T}{e})$. But, for $T\geq K^{2.67}$, we can see that $2\log K \geq 0.75 \log T + 1.25$ is clearly not possible. Hence, $\dfrac{m \log(2)}{\log(\psi T) - 2m\log( 2)} \leq 1$.
+In the above inequalities, $(a)$ happens because $\psi=\frac{T}{K^2}$, $(b)$ occurs as $\rho=\frac{1}{2}$ and $(c)$ happens because $m\leq \frac{1}{2} \log_2(\frac{T}{e})$. But, for $T\geq K^{2.4}$, we can see that $6\log K \geq 2.5 \log T + 3.5$ is clearly not possible. Hence, $\dfrac{m \log(2)}{\log(\psi T) - 2m\log( 2)} \leq \dfrac{3}{2}$.
 \end{proof}
 
 \subsection{Proof of Theorem 1}
@@ -36,7 +36,7 @@ takes place. So to bound the regret we need to bound the probability of the comp
 	%%%%%%%%%%%%%%%%%%%%%%%%%%
 	&\leq \sqrt{\rho\epsilon_{m_{i}} + \dfrac{\rho\epsilon_{m_i}\log(2^{m_i})}{\log(\psi T) - \log( 2^{2m_i})}}  \leq \sqrt{\rho\epsilon_{m_{i}} + \dfrac{\rho\epsilon_{m_i}m_i \log(2)}{\log(\psi T) - 2m_i\log( 2)}} \\ 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%
-	 & \overset{(b)}{\leq} \sqrt{\rho\epsilon_{m_{i}} + \epsilon_{m_i}} 
+	 & \overset{(b)}{\leq} \sqrt{\rho\epsilon_{m_{i}} + \frac{3}{2}\epsilon_{m_i}} 
 	  < \sqrt{2\epsilon_{m_i}} 
 	  < \dfrac{\Delta_{i}}{3} 
 	\end{align*}
