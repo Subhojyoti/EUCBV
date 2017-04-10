@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  10 APR 2017 14:11
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  10 APR 2017 14:18
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1344,7 +1344,7 @@ Here is how much of TeX's memory you used:
  25414 multiletter control sequences out of 15000+50000
  36017 words of font info for 81 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 63i,27n,75p,1681b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,27n,75p,1680b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/sh
 are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-
 texlive/fonts/type1/public/amsfonts/cmextra/cmbsy5.pfb></usr/share/texmf-texliv
@@ -1374,7 +1374,7 @@ a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/te
 xmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on EUCBV.pdf (16 pages, 453777 bytes).
+Output written on EUCBV.pdf (16 pages, 453421 bytes).
 PDF statistics:
  412 PDF objects out of 1000 (max. 8388607)
  83 named destinations out of 1000 (max. 500000)
