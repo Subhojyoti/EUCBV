@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  11 APR 2017 15:56
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  12 APR 2017 00:11
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1231,11 +1231,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
  (./related.tex) [2]
-(./contribution.tex
-Underfull \vbox (badness 1253) has occurred while \output is active []
-
- [3])
-(./ealgo.tex
+(./contribution.tex [3]) (./ealgo.tex
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 15.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
@@ -1338,13 +1334,13 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 
 ] (./EUCBV.aux) ) 
 Here is how much of TeX's memory you used:
- 22825 strings out of 493848
- 463351 string characters out of 1152823
- 686258 words of memory out of 3000000
- 25414 multiletter control sequences out of 15000+50000
+ 22837 strings out of 493848
+ 463670 string characters out of 1152823
+ 686359 words of memory out of 3000000
+ 25423 multiletter control sequences out of 15000+50000
  36017 words of font info for 81 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 63i,27n,75p,1680b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,27n,75p,1821b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/sh
 are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-
 texlive/fonts/type1/public/amsfonts/cmextra/cmbsy5.pfb></usr/share/texmf-texliv
@@ -1374,9 +1370,9 @@ a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/te
 xmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on EUCBV.pdf (16 pages, 453480 bytes).
+Output written on EUCBV.pdf (16 pages, 455941 bytes).
 PDF statistics:
- 412 PDF objects out of 1000 (max. 8388607)
- 83 named destinations out of 1000 (max. 500000)
+ 424 PDF objects out of 1000 (max. 8388607)
+ 86 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

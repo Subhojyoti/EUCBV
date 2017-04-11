@@ -13,13 +13,13 @@ Audibert, J.-Y. and Bubeck, S. (2009).
 \bibitem[Audibert and Bubeck, 2010]{audibert2010best}
 Audibert, J.-Y. and Bubeck, S. (2010).
 \newblock Best arm identification in multi-armed bandits.
-\newblock In {\em COLT-23th Conference on Learning Theory-2010}, pages 13--p.
+\newblock In {\em COLT-23th COLT-2010}, pages 13--p.
 
 \bibitem[Audibert et~al., 2009]{audibert2009exploration}
 Audibert, J.-Y., Munos, R., and Szepesv{\'a}ri, C. (2009).
 \newblock Exploration--exploitation tradeoff using variance estimates in
   multi-armed bandits.
-\newblock {\em Theoretical Computer Science}, 410(19):1876--1902.
+\newblock {\em TCS}, 410(19):1876--1902.
 
 \bibitem[Auer et~al., 2002a]{auer2002finite}
 Auer, P., Cesa-Bianchi, N., and Fischer, P. (2002a).
@@ -29,7 +29,7 @@ Auer, P., Cesa-Bianchi, N., and Fischer, P. (2002a).
 \bibitem[Auer et~al., 2002b]{auer2002nonstochastic}
 Auer, P., Cesa-Bianchi, N., Freund, Y., and Schapire, R.~E. (2002b).
 \newblock The nonstochastic multiarmed bandit problem.
-\newblock {\em SIAM Journal on Computing}, 32(1):48--77.
+\newblock {\em SICOMP}, 32(1):48--77.
 
 \bibitem[Auer and Ortner, 2010]{auer2010ucb}
 Auer, P. and Ortner, R. (2010).
@@ -51,7 +51,7 @@ Bubeck, S., Cesa-Bianchi, N., and Lugosi, G. (2012).
 \bibitem[Bubeck et~al., 2011]{bubeck2011pure}
 Bubeck, S., Munos, R., and Stoltz, G. (2011).
 \newblock Pure exploration in finitely-armed and continuous-armed bandits.
-\newblock {\em Theoretical Computer Science}, 412(19):1832--1852.
+\newblock {\em TCS}, 412(19):1832--1852.
 
 \bibitem[Cappe et~al., 2012]{CapGarKau12}
 Cappe, O., Garivier, A., and Kaufmann, E. (2012).
@@ -62,7 +62,7 @@ Cappe, O., Garivier, A., and Kaufmann, E. (2012).
 Even-Dar, E., Mannor, S., and Mansour, Y. (2006).
 \newblock Action elimination and stopping conditions for the multi-armed bandit
   and reinforcement learning problems.
-\newblock {\em The Journal of Machine Learning Research}, 7:1079--1105.
+\newblock {\em JMLR}, 7:1079--1105.
 
 \bibitem[Garivier and Capp{\'e}, 2011]{garivier2011kl}
 Garivier, A. and Capp{\'e}, O. (2011).
@@ -80,6 +80,11 @@ Kaufmann, E., Capp{\'e}, O., and Garivier, A. (2012).
 \newblock On bayesian upper confidence bounds for bandit problems.
 \newblock In {\em AISTATS}, pages 592--600.
 
+\bibitem[Lai and Robbins, 1985]{lai1985asymptotically}
+Lai, T.~L. and Robbins, H. (1985).
+\newblock Asymptotically efficient adaptive allocation rules.
+\newblock {\em Advances in applied mathematics}, 6(1):4--22.
+
 \bibitem[Lattimore, 2015]{lattimore2015optimally}
 Lattimore, T. (2015).
 \newblock Optimally confident ucb: Improved regret for finite-armed bandits.
@@ -89,6 +94,17 @@ Lattimore, T. (2015).
 Liu, Y.-C. and Tsuruoka, Y. (2016).
 \newblock Modification of improved upper confidence bounds for regulating
   exploration in monte-carlo tree search.
-\newblock {\em Theoretical Computer Science}.
+\newblock {\em TCS}.
+
+\bibitem[Robbins, 1952]{robbins1952some}
+Robbins, H. (1952).
+\newblock Some aspects of the sequential design of experiments.
+\newblock In {\em Herbert Robbins Selected Papers}, pages 169--177. Springer.
+
+\bibitem[Thompson, 1933]{thompson1933likelihood}
+Thompson, W.~R. (1933).
+\newblock On the likelihood that one unknown probability exceeds another in
+  view of the evidence of two samples.
+\newblock {\em Biometrika}, pages 285--294.
 
 \end{thebibliography}
