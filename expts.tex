@@ -1,4 +1,4 @@
-In this section we conduct an extensive empirical evaluation of EUCBV against several other popular bandit algorithms.  We use cumulative regret as the metric of comparison. We implement the following algorithms:  KL-UCB \citep{garivier2011kl}, DMED \citep{honda2010asymptotically}, MOSS \citep{audibert2009minimax}, UCB1 \citep{auer2002finite}, UCB-Improved \citep{auer2010ucb}, Median Elimination \citep{even2006action}, Thompson Sampling(TS) \citep{agrawal2011analysis}, OCUCB \citep{lattimore2015optimally}, Bayes-UCB (BU) \citep{kaufmann2012bayesian} and UCB-V \citep{audibert2009exploration}\footnote{The implementation for KL-UCB, Bayes-UCB and DMED were taken from \citet{CapGarKau12}}. The parameters of EUCBV algorithm for all the experiments are set as follows: $\psi=\frac{T}{K^2}$ and $\rho =0.5$ (as in Corollary \ref{Result:Corollary:2}).
+In this section we conduct extensive empirical evaluation of EUCBV against several other popular bandit algorithms.  We use cumulative regret as the metric of comparison. We implement the following algorithms:  KL-UCB \citep{garivier2011kl}, DMED \citep{honda2010asymptotically}, MOSS \citep{audibert2009minimax}, UCB1 \citep{auer2002finite}, UCB-Improved \citep{auer2010ucb}, Median Elimination \citep{even2006action}, Thompson Sampling(TS) \citep{agrawal2011analysis}, OCUCB \citep{lattimore2015optimally}, Bayes-UCB (BU) \citep{kaufmann2012bayesian} and UCB-V \citep{audibert2009exploration}\footnote{The implementation for KL-UCB, Bayes-UCB and DMED were taken from \citet{CapGarKau12}}. The parameters of EUCBV algorithm for all the experiments are set as follows: $\psi=\frac{T}{K^2}$ and $\rho =0.5$ (as in Corollary \ref{Result:Corollary:2}).
 
 \begin{figure}[!h]
     \centering
@@ -60,11 +60,13 @@ In this section we conduct an extensive empirical evaluation of EUCBV against se
 		\addplot table{results/NewExpt/Expt2_2/EUCBV01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt2_2/MOSS01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt2_2/OCUCB01_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt2_2/MedElim_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt2_2/UCBR01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt2_2/TS01_comp_subsampled.txt};
+		%\addplot table{results/NewExpt/Expt2_2/MedElim_comp_subsampled.txt};
+		%\addplot table{results/NewExpt/Expt2_2/UCBR01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt2_2/UCBV01_comp_subsampled.txt};
-		%\legend{UCB1,ClusUCB,Med-Elim,MOSS,OCUCB,EClusUCB,UCB-Imp}
-		\legend{UCB1,EUCBV,MOSS,OCUCB,Med-Elim,UCB-Imp,UCBV}
+		
+		%\legend{UCB1,EUCBV,MOSS,OCUCB,Med-Elim,UCB-Imp,UCBV}
+		\legend{UCB1,EUCBV,MOSS,OCUCB,TS,UCBV}
       	\end{axis}
       	\end{tikzpicture}
    		\label{fig:2}
@@ -79,7 +81,7 @@ In this section we conduct an extensive empirical evaluation of EUCBV against se
 
 \textbf{First experiment:} This experiment is conducted to observe the performance of EUCBV over a short horizon. The horizon $T$ is set to $60000$. These type of cases are frequently encountered in web-advertising domain. The testbed comprises of $20$ Bernoulli distributed arms with expected rewards of the arms as $r_{i_{{i}\neq {*}}}=0.07$ and $r^{*}=0.1$. The regret is averaged over $100$ independent runs and is shown in Figure \ref{fig:1}. EUCBV, MOSS, UCB1, UCB-V, KL-UCB, TS, BU and DMED are run in this experimental setup. Here not only we observe that EUCBV performs better than all the non-variance based  algorithms like MOSS, OCUCB, UCB-Improved and UCB1 but it also outperforms UCBV because of the choice of the exploration parameters. Because of the small gaps and short horizon $T$, we do not implement UCB-Improved and Median Elimination on this test-case. 
 
-\textbf{Second experiment:} This experiment is conducted on a large horizon and over a large set of arms.    The horizon $T$ is set for a large duration of $2\times 10^{5}$. This testbed comprises of $100$ arms involving Gaussian reward distributions with expected rewards of the arms $r_{1:33}=0.1$, $r_{34:99}=0.6$, $r^{*}_{100}=0.9$ and variance set at $\sigma_{i}^{2} = 0.3,\forall i\in \A$. The regret is averaged over $100$ independent runs and is shown in Figure \ref{fig:2}. From the results in Figure \ref{fig:2}, we observe that EUCBV outperforms all the non-variance based algorithms MOSS, OCUCB, UCB1, UCB-Improved and Median-Elimination($\epsilon=0.1,\delta=0.1$). 
+\textbf{Second experiment:} This experiment is conducted on a large horizon and over a large set of arms.    The horizon $T$ is set for a large duration of $2\times 10^{5}$. This testbed comprises of $100$ arms involving Gaussian reward distributions with expected rewards of the arms $r_{1:33}=0.1$, $r_{34:99}=0.6$, $r^{*}_{100}=0.9$ and variance set at $\sigma_{i}^{2} = 0.3,\forall i\in \A$. The regret is averaged over $100$ independent runs and is shown in Figure \ref{fig:2}. From the results in Figure \ref{fig:2}, we observe that EUCBV outperforms all the non-variance based algorithms MOSS, OCUCB, UCB1, TS, UCB-Improved and Median-Elimination($\epsilon=0.1,\delta=0.1$). The performance of UCB-Improved and Median elimination is very poor in comparison with the other algorithms and their plots are not shown in Figure \ref{fig:2}.
 %Also the performance of UCB-Improved is poor in comparison to other algorithms, which is probably because of pulls wasted in initial exploration whereas EUCBV with the choice of $\psi$ and $\rho$ performs much better.
 
 \begin{figure}[!h]
@@ -129,12 +131,13 @@ In this section we conduct an extensive empirical evaluation of EUCBV against se
         %clip mode=individual,grid,grid style={gray!30},
   		legend style={at={(0.5,1.3)},anchor=north, legend columns=3} ]
       	% UCB
-		\addplot table{results/NewExpt/Expt4/UCBV01_comp_subsampled.txt};
+		%\addplot table{results/NewExpt/Expt4/UCBV01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt4/EUCBV01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt4/MOSS01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt4/OCUCB01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt4/TS01_comp_subsampled.txt};
       	%\legend{EClusUCBA,AClusUCBA,EClusUCB,AClusUCB} 
-      	\legend{UCBV,EUCBV,MOSS,OCUCB} 
+      	\legend{EUCBV,MOSS,OCUCB,TS} 
       	\end{axis}
       	\end{tikzpicture}
   		\label{fig:4}
@@ -149,7 +152,7 @@ In this section we conduct an extensive empirical evaluation of EUCBV against se
 
 %This also corroborates the finding of \citet{lattimore2015optimally} which states that MOSS breaks down only when the number of arms are exceptionally large or the horizon is unreasonably high and gaps are very small. We consistently see that in uniform gap testcases EUCBV outperforms OCUCB.
 
-\textbf{Fourth experiment:} This experiment is conducted on 100 Gaussian distributed arms such that expected rewards of the arms $r_{1:33}=0.4$, $r_{34:99}=0.6$, $r^{*}_{100}=0.9$ and the variance is set as $\sigma_{1:33}^{2}=0.2$, $\sigma_{34:99}^{2}=0.1$,  $\sigma_{100}^{2}=0.4$ and $T=3\times 10^5$. This experiment is conducted to show that in certain environments, when the variance of the optimal arm is higher than other sub-optimal arms, then EUCBV performs exceptionally well. We refer to this setup as Advanced Setting because here the chosen variance values are such that only variance-aware algorithms will perform well because the variance of the optimal arm is chosen to be higher than the other arms and so algorithms that are not variance-aware will spent a significant amount of pulls trying to find the optimal arm. The result is shown in Figure \ref{fig:4}. Predictably EUCBV, which allocates pulls proportional to the variance of the arms, outperforms MOSS and OCUCB. Note that EUCBV by virtue of its aggressive exploration parameters outperforms UCBV even though UCBV is a variance based algorithm.
+\textbf{Fourth experiment:} This experiment is conducted on 100 Gaussian distributed arms such that expected rewards of the arms $r_{1:33}=0.4$, $r_{34:99}=0.6$, $r^{*}_{100}=0.9$ and the variance is set as $\sigma_{1:33}^{2}=0.2$, $\sigma_{34:99}^{2}=0.1$,  $\sigma_{100}^{2}=0.4$ and $T=3\times 10^5$. This experiment is conducted to show that in certain environments, when the variance of the optimal arm is higher than other sub-optimal arms, then EUCBV performs exceptionally well. We refer to this setup as Advanced Setting because here the chosen variance values are such that only variance-aware algorithms will perform well because the variance of the optimal arm is chosen to be higher than the other arms and so algorithms that are not variance-aware will spent a significant amount of pulls trying to find the optimal arm. The result is shown in Figure \ref{fig:4}. Predictably EUCBV, which allocates pulls proportional to the variance of the arms, outperforms TS, MOSS and OCUCB. The plot for UCBV is ommitted from the Figure and its performs very poorly compared to other algorithms. Note that EUCBV by virtue of its aggressive exploration parameters outperforms UCBV even though UCBV is a variance based algorithm.
 
 
 
