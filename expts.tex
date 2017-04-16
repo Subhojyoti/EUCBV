@@ -4,7 +4,8 @@ In this section we conduct extensive empirical evaluation of EUCBV against sever
     \centering
     \begin{tabular}{cc}
     \setlength{\tabcolsep}{0.1pt}
-    \subfigure[0.25\textwidth][Expt-$1$: $20$ Bernoulli-distributed arms with $r_{i_{{i}\neq {*}}}=0.07$ and $r^{*}=0.1$]
+    \subfigure[0.25\textwidth][Expt-$1$: $20$ Bernoulli-distributed arms ]
+    %with $r_{i_{{i}\neq {*}}}=0.07$ and $r^{*}=0.1$
     {
     		\pgfplotsset{
 		tick label style={font=\Large},
@@ -24,13 +25,14 @@ In this section we conduct extensive empirical evaluation of EUCBV against sever
   		legend style={at={(0.5,1.5)},anchor=north, legend columns=3} ]
       	% UCB
 		\addplot table{results/NewExpt/Expt1/UCBV01_comp_subsampled.txt};
-		%\addplot table{results/NewExpt/Expt1/EclUCB01_1_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt1/EUCBV01_comp_subsampled.txt};
+		%\addplot table{results/NewExpt/Expt1/NEUCBV01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt1/KLUCB01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt1/MOSS01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt1/DMED01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt1/UCB01_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt1/TS02_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt1/TS01_comp_subsampled.txt};
+		%\addplot table{results/NewExpt/Expt11/TS01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt1/OCUCB01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt1/BU01_comp_subsampled.txt};
       	\legend{UCB-V,EUCBV,KL-UCB,MOSS,DMED,UCB1,TS,OCUCB,BU}      	
@@ -39,12 +41,14 @@ In this section we conduct extensive empirical evaluation of EUCBV against sever
   		\label{fig:1}
     }
     &
-    \subfigure[0.25\textwidth][Expt-$2$: $100$ Gaussian-distributed arms with $r_{i_{{i}\neq {*}:1-33}}=0.1$, $r_{i_{{i}\neq {*}:34-99}}=0.6$, $r^{*}_{i=100}=0.9$ and $\sigma_{i=1:100}^{2} = 0.3$]
+    \subfigure[0.25\textwidth][Expt-$2$: $100$ Gaussian-distributed arms ]
+    %with $r_{i_{{i}\neq {*}:1-33}}=0.1$, $r_{i_{{i}\neq {*}:34-99}}=0.6$, $r^{*}_{i=100}=0.9$ and $\sigma_{i=1:100}^{2} = 0.3$
     {
     		\pgfplotsset{
 		tick label style={font=\Large},
 		label style={font=\Large},
 		legend style={font=\Large},
+		ylabel style={yshift=32pt},
 		}
         \begin{tikzpicture}[scale=0.5]
         \begin{axis}[
@@ -87,7 +91,8 @@ In this section we conduct extensive empirical evaluation of EUCBV against sever
 \begin{figure}[!h]
     \centering
     \begin{tabular}{cc}
-    \subfigure[0.25\textwidth][Expt-$3$: $20$ to $100$ Bernoulli-distributed arms with $r_{i_{{i}\neq {*}}}=0.05$ and $r^{*}=0.1$]
+    \subfigure[0.25\textwidth][Expt-$3$: $20$ to $100$ Bernoulli-distributed arms]
+    %with $r_{i_{{i}\neq {*}}}=0.05$ and $r^{*}=0.1$
     {
     	\pgfplotsset{
 		tick label style={font=\Large},
@@ -114,7 +119,8 @@ In this section we conduct extensive empirical evaluation of EUCBV against sever
         \label{fig:3}
     }
     &
-    \subfigure[0.25\textwidth][Expt-$4$ (Advanced Setting): $r_{1:33}=0.4$, $r_{34:99}=0.6$, $r^{*}_{100}=0.9$; $\sigma_{1:33}^{2}=0.2$, $\sigma_{34:99}^{2}=0.1$,  $\sigma_{100}^{2}=0.4$]
+    \subfigure[0.25\textwidth][Expt-$4$: Advanced Setting]
+    %: $r_{1:33}=0.4$, $r_{34:99}=0.6$, $r^{*}_{100}=0.9$; $\sigma_{1:33}^{2}=0.2$, $\sigma_{34:99}^{2}=0.1$,  $\sigma_{100}^{2}=0.4$
     {
     		\pgfplotsset{
 		tick label style={font=\Large},
@@ -133,12 +139,12 @@ In this section we conduct extensive empirical evaluation of EUCBV against sever
   		legend style={at={(0.5,1.3)},anchor=north, legend columns=3} ]
       	% UCB
 		%\addplot table{results/NewExpt/Expt4/UCBV01_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt4/EUCBV01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt4/MOSS01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt4/EUCBV01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt4/OCUCB01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt4/TS01_comp_subsampled.txt};
       	%\legend{EClusUCBA,AClusUCBA,EClusUCB,AClusUCB} 
-      	\legend{EUCBV,MOSS,OCUCB,TS} 
+      	\legend{MOSS,EUCBV,OCUCB,TS} 
       	\end{axis}
       	\end{tikzpicture}
   		\label{fig:4}

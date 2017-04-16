@@ -1,31 +1,16 @@
-\subsection{Lemma 1}
 
-A technical lemma used to prove Theorem \ref{Result:Theorem:1} is presented below.
-
-\begin{lemma}
-\label{results:Lemma:1}
-If $T\geq K^{2.4}$, $\psi=\dfrac{T}{ K^2}$, $\rho=\dfrac{1}{2}$ and $m\leq \dfrac{1}{2} \log_2(\dfrac{T}{e}) $, then,
-\begin{align*}
-\dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} \leq \frac{3}{2}
-\end{align*}
-\end{lemma}
-
-\begin{proof}
-The proof is given in Section \ref{sec:proofTheorem:Lemma1}.
-\end{proof}
 
 We present below the main theorem of the paper which establishes the regret upper bound for the EUCBV  algorithm. 
-
 \subsection{Main Theorem}
 \begin{theorem}
 \label{Result:Theorem:1}
-For $T\geq K^{2.4}$, the regret $R_T$ for EUCBV satisfies
+For $T\geq K^{2.4}$, $\rho=\frac{1}{2}$ and $\psi=\frac{T}{K^2}$, the regret $R_T$ for EUCBV satisfies
 \begin{align*}
  \E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) + \bigg(\Delta_{i}+\dfrac{9\log{(\psi  T\Delta_{i}^{4})}}{\Delta_{i}}\bigg) + \bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)\bigg \rbrace \\ 
  %%%%%%%%%%%%%%%%
   & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b}\bigg(\dfrac{C_{2}(\rho)T^{1-\rho}}{b^{2\rho -1}} \bigg) + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T
 \end{align*}
-for all $b\geq\sqrt{\frac{e}{T}}$. In the above, $C_1(x) = \frac{2^{2+x}.9^{x}}{\psi^{x}}$ and $C_2(x) = \frac{2^{\frac{\rho}{2}+\frac{9}{4}}.3^{x+\frac{1}{2}}}{\psi^{x}}$.
+for all $b\geq\sqrt{\frac{e}{T}}$. In the above, $C_1(x) = \frac{2^{2+x}.9^{x}}{\psi^{x}}$ and $C_2(x) = \frac{2^{\frac{x}{2}+\frac{9}{4}}.3^{x+\frac{1}{2}}}{\psi^{x}}$.
 \end{theorem}
 
 \begin{proof}

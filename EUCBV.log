@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  16 APR 2017 12:17
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  16 APR 2017 23:40
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1237,28 +1237,28 @@ put line 15.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 25.
 
-Overfull \hbox (9.43593pt too wide) in paragraph at lines 28--28
-[] 
- []
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--57
+Underfull \hbox (badness 10000) in paragraph at lines 52--60
 
  []
 
-[4]) (./results.tex [5]
+[4]) (./results.tex
+Underfull \vbox (badness 6927) has occurred while \output is active []
+
+ [5]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 37.
- [6]) (./proofTheorem.tex [7]
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 22.
+
+[6]) (./proofTheorem.tex [7]
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
 [8]
-Overfull \hbox (5.83665pt too wide) in paragraph at lines 113--115
+Overfull \hbox (5.83665pt too wide) in paragraph at lines 125--127
 \OT1/ptm/m/n/10 where in-equal-ity $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr
 /m/n/10 )$ \OT1/ptm/m/n/10 is ob-tained us-ing ([]3[]), while $\OT1/cmr/m/n/10 
 (\OML/cmm/m/it/10 b\OT1/cmr/m/n/10 )$ \OT1/ptm/m/n/10 fol-lows from the Chernof
@@ -1272,7 +1272,7 @@ PGFPlots: reading {results/NewExpt/Expt1/KLUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/MOSS01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/DMED01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/UCB01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt1/TS02_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt1/TS01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/OCUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/BU01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2_2/UCB01_comp_subsampled.txt}
@@ -1282,15 +1282,9 @@ PGFPlots: reading {results/NewExpt/Expt2_2/OCUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2_2/TS01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2_2/UCBV01_comp_subsampled.txt}
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--73
+Underfull \hbox (badness 4886) in paragraph at lines 77--77
 []\OT1/ptm/m/n/9 (b) Expt-$\OT1/cmr/m/n/9 2$\OT1/ptm/m/n/9 : $\OT1/cmr/m/n/9 10
-0$ \OT1/ptm/m/n/9 Gaussian-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--73
-\OT1/cmr/m/n/9 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 1$\OT1/ptm/m/n/9 , $\OML/cmm/m/
-it/9 r[] \OT1/cmr/m/n/9 = 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 6$\OT1/ptm/m/n/9 ,
+0$ \OT1/ptm/m/n/9 Gaussian-distributed
  []
 
 
@@ -1302,40 +1296,23 @@ PGFPlots: reading {results/NewExpt/Expt3/plotFinalEUCBV20_100.txt}
 PGFPlots: reading {results/NewExpt/Expt3/plotFinalOCUCB20_100.txt}
 PGFPlots: reading {results/NewExpt/Expt3/plotFinalTS20_100.txt}
 
-Underfull \hbox (badness 1603) in paragraph at lines 115--115
+Underfull \hbox (badness 1603) in paragraph at lines 120--120
 []\OT1/ptm/m/n/9 (a) Expt-$\OT1/cmr/m/n/9 3$\OT1/ptm/m/n/9 : $\OT1/cmr/m/n/9 20
 $ \OT1/ptm/m/n/9 to $\OT1/cmr/m/n/9 100$ \OT1/ptm/m/n/9 Bernoulli-
  []
 
-PGFPlots: reading {results/NewExpt/Expt4/EUCBV01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/MOSS01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt4/EUCBV01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/OCUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/TS01_comp_subsampled.txt}
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--145
-[]\OT1/ptm/m/n/9 (b) Expt-$\OT1/cmr/m/n/9 4$ \OT1/ptm/m/n/9 (Ad-vanced Set-ting
-):
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 3386) in paragraph at lines 145--145
-\OML/cmm/m/it/9 r[] \OT1/cmr/m/n/9 = 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 4$\OT1/pt
-m/m/n/9 , $\OML/cmm/m/it/9 r[] \OT1/cmr/m/n/9 = 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/
-9 6$\OT1/ptm/m/n/9 ,
- []
-
-
-Underfull \hbox (badness 4726) in paragraph at lines 145--145
-\OML/cmm/m/it/9 r[] \OT1/cmr/m/n/9 = 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 9$\OT1/pt
-m/m/n/9 ; $\OML/cmm/m/it/9 ^^[[] \OT1/cmr/m/n/9 = 0\OML/cmm/m/it/9 :\OT1/cmr/m/
-n/9 2$\OT1/ptm/m/n/9 ,
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3895) has occurred while \output is active []
 
  [14]
-Overfull \hbox (1.32372pt too wide) in paragraph at lines 157--158
+Overfull \hbox (1.32372pt too wide) in paragraph at lines 163--164
 []\OT1/ptm/b/n/10 Fourth ex-per-i-ment (Ad-vance Set-ting): \OT1/ptm/m/n/10 Thi
 s ex-per-i-ment is con-ducted on 100 Gaus-
  []
@@ -1350,13 +1327,13 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 
 ] (./EUCBV.aux) ) 
 Here is how much of TeX's memory you used:
- 22837 strings out of 493848
- 463642 string characters out of 1152823
- 685587 words of memory out of 3000000
- 25423 multiletter control sequences out of 15000+50000
+ 22833 strings out of 493848
+ 463557 string characters out of 1152823
+ 677185 words of memory out of 3000000
+ 25422 multiletter control sequences out of 15000+50000
  36017 words of font info for 81 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 63i,27n,75p,1821b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,27n,75p,1819b,1782s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/sh
 are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-
 texlive/fonts/type1/public/amsfonts/cmextra/cmbsy5.pfb></usr/share/texmf-texliv
@@ -1386,9 +1363,9 @@ a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/te
 xmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on EUCBV.pdf (16 pages, 456220 bytes).
+Output written on EUCBV.pdf (16 pages, 452663 bytes).
 PDF statistics:
- 423 PDF objects out of 1000 (max. 8388607)
- 86 named destinations out of 1000 (max. 500000)
+ 421 PDF objects out of 1000 (max. 8388607)
+ 85 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
