@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  16 APR 2017 00:53
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  16 APR 2017 12:17
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1300,8 +1300,9 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 PGFPlots: reading {results/NewExpt/Expt3/plotFinalMOSS20_100.txt}
 PGFPlots: reading {results/NewExpt/Expt3/plotFinalEUCBV20_100.txt}
 PGFPlots: reading {results/NewExpt/Expt3/plotFinalOCUCB20_100.txt}
+PGFPlots: reading {results/NewExpt/Expt3/plotFinalTS20_100.txt}
 
-Underfull \hbox (badness 1603) in paragraph at lines 114--114
+Underfull \hbox (badness 1603) in paragraph at lines 115--115
 []\OT1/ptm/m/n/9 (a) Expt-$\OT1/cmr/m/n/9 3$\OT1/ptm/m/n/9 : $\OT1/cmr/m/n/9 20
 $ \OT1/ptm/m/n/9 to $\OT1/cmr/m/n/9 100$ \OT1/ptm/m/n/9 Bernoulli-
  []
@@ -1311,20 +1312,20 @@ PGFPlots: reading {results/NewExpt/Expt4/MOSS01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/OCUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/TS01_comp_subsampled.txt}
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--144
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
 []\OT1/ptm/m/n/9 (b) Expt-$\OT1/cmr/m/n/9 4$ \OT1/ptm/m/n/9 (Ad-vanced Set-ting
 ):
  []
 
 
-Underfull \hbox (badness 3386) in paragraph at lines 144--144
+Underfull \hbox (badness 3386) in paragraph at lines 145--145
 \OML/cmm/m/it/9 r[] \OT1/cmr/m/n/9 = 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 4$\OT1/pt
 m/m/n/9 , $\OML/cmm/m/it/9 r[] \OT1/cmr/m/n/9 = 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/
 9 6$\OT1/ptm/m/n/9 ,
  []
 
 
-Underfull \hbox (badness 4726) in paragraph at lines 144--144
+Underfull \hbox (badness 4726) in paragraph at lines 145--145
 \OML/cmm/m/it/9 r[] \OT1/cmr/m/n/9 = 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 9$\OT1/pt
 m/m/n/9 ; $\OML/cmm/m/it/9 ^^[[] \OT1/cmr/m/n/9 = 0\OML/cmm/m/it/9 :\OT1/cmr/m/
 n/9 2$\OT1/ptm/m/n/9 ,
@@ -1334,7 +1335,7 @@ n/9 2$\OT1/ptm/m/n/9 ,
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
-Overfull \hbox (1.32372pt too wide) in paragraph at lines 155--156
+Overfull \hbox (1.32372pt too wide) in paragraph at lines 157--158
 []\OT1/ptm/b/n/10 Fourth ex-per-i-ment (Ad-vance Set-ting): \OT1/ptm/m/n/10 Thi
 s ex-per-i-ment is con-ducted on 100 Gaus-
  []
@@ -1349,10 +1350,10 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 
 ] (./EUCBV.aux) ) 
 Here is how much of TeX's memory you used:
- 22834 strings out of 493848
- 463549 string characters out of 1152823
- 682237 words of memory out of 3000000
- 25422 multiletter control sequences out of 15000+50000
+ 22837 strings out of 493848
+ 463642 string characters out of 1152823
+ 685587 words of memory out of 3000000
+ 25423 multiletter control sequences out of 15000+50000
  36017 words of font info for 81 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  63i,27n,75p,1821b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1385,9 +1386,9 @@ a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/te
 xmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on EUCBV.pdf (16 pages, 456257 bytes).
+Output written on EUCBV.pdf (16 pages, 456220 bytes).
 PDF statistics:
- 425 PDF objects out of 1000 (max. 8388607)
+ 423 PDF objects out of 1000 (max. 8388607)
  86 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
