@@ -3,7 +3,7 @@
 A technical lemma used to prove Theorem \ref{Result:Theorem:1} is presented below.
 
 \begin{lemma}
-\label{results:Lemma:1}
+\label{proofTheorem:Lemma:1}
 If $T\geq K^{2.4}$, $\psi=\dfrac{T}{ K^2}$, $\rho=\dfrac{1}{2}$ and $m\leq \dfrac{1}{2} \log_2(\dfrac{T}{e}) $, then,
 \begin{align*}
 \dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} \leq \frac{3}{2}
@@ -52,7 +52,7 @@ takes place. So to bound the regret we need to bound the probability of the comp
 	  < \sqrt{4\epsilon_{m_i}} 
 	  < \dfrac{\Delta_{i}}{4} 
 	\end{align*}
-In the above $(a)$ happens because $\hat{v}_i \in [0,1]$, $\rho \in (0,\frac{1}{2}]$ and $(b)$ occurs by applying the result from Lemma \ref{results:Lemma:1}. Similarly, we can also show that in the $m_i$-th round $c^* < \frac{\Delta_i}{4}$.
+In the above $(a)$ happens because $\hat{v}_i \in [0,1]$, $\rho =\frac{1}{2}$ and $(b)$ occurs by applying the result from Lemma \ref{proofTheorem:Lemma:1}. Similarly, we can also show that in the $m_i$-th round $c^* < \frac{\Delta_i}{4}$.
 Again, in the $m_i$-th round a sub-optimal arm ${i} \in \A^{'}$ gets eliminated as, 
   \begin{align*}
 \hat{r}_{i} + c_{i}&\leq r_{i} + 2c_{i} 
@@ -128,7 +128,7 @@ Summing up over all arms in $\A^{'}$ and bounding the regret for each arm $i\in 
 
 \subsubsection*{Case $b1$: \textit{${*}\in B_{m_{i}}$ and each ${i}\in \A^{'}$ is  eliminated on or before $m_{i}$ } }
 
-Since we are eliminating a sub-optimal arm ${i}$ on or before round $m_{i}$, it is pulled no longer than, 
+	\paragraph*{} Since we are eliminating a sub-optimal arm ${i}$ on or before round $m_{i}$, it is pulled no longer than, 
  \begin{align*}
  z_{i} < \bigg\lceil\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}\bigg\rceil
  \end{align*}

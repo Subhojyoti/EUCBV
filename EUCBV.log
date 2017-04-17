@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  17 APR 2017 18:12
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  17 APR 2017 18:25
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1252,12 +1252,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (./results.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 5.
-
-
-LaTeX Warning: Reference `Result:Lemma:1' on page 6 undefined on input line 23.
-
-
-[6]
+ [6]
 Overfull \hbox (13.93344pt too wide) in paragraph at lines 43--44
 []\OT1/ptm/m/n/10 Next, we spe-cial-ize the re-sult of The-o-rem []1[] in Corol
 -lary []1[] to ob-tain the gap-independent
@@ -1297,11 +1292,7 @@ PGFPlots: reading {results/NewExpt/Expt2/NEUCBV01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2/MOSS01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2/OCUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2/TS01_comp_subsampled.txt}
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[12]
+ [12]
 PGFPlots: reading {results/NewExpt/Expt3/plotFinalMOSS20_100.txt}
 PGFPlots: reading {results/NewExpt/Expt3/plotFinalEUCBV20_100.txt}
 PGFPlots: reading {results/NewExpt/Expt3/plotFinalOCUCB20_100.txt}
@@ -1310,33 +1301,29 @@ PGFPlots: reading {results/NewExpt/Expt4/MOSS01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/NEUCBV01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/OCUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/TS01_comp_subsampled.txt}
+ [13]) (./Conclusion.tex)
+Underfull \vbox (badness 5274) has occurred while \output is active []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13])
-(./Conclusion.tex) [14] (./EUCBV.bbl
+ [14]
+[15] (./EUCBV.bbl
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 59.
-
-(/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
+ (/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)) [15
+))
+[16
 
 
 ] (./EUCBV.aux)
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 22826 strings out of 493848
- 463379 string characters out of 1152823
- 673560 words of memory out of 3000000
- 25420 multiletter control sequences out of 15000+50000
- 37055 words of font info for 83 fonts, out of 3000000 for 9000
+ 22823 strings out of 493848
+ 463332 string characters out of 1152823
+ 675262 words of memory out of 3000000
+ 25415 multiletter control sequences out of 15000+50000
+ 36017 words of font info for 81 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  63i,27n,75p,1773b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
@@ -1366,9 +1353,9 @@ ols/msbm10.pfb></usr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb></u
 sr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texli
 ve/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/
 times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EUCBV.pdf (15 pages, 446453 bytes).
+Output written on EUCBV.pdf (16 pages, 447089 bytes).
 PDF statistics:
- 414 PDF objects out of 1000 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
+ 421 PDF objects out of 1000 (max. 8388607)
+ 79 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
