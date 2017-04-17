@@ -18,7 +18,7 @@
 
 \mainmatter              % start of the contributions
 %
-\title{Efficient UCBV: An Almost Optimal Algorithm using Variance Estimates}
+\title{Efficient-UCBV: An Almost Optimal Algorithm using Variance Estimates}
 %
 \titlerunning{Efficient UCBV}  % abbreviated title (for running head)
 %                                     also used for the TOC unless
@@ -35,7 +35,7 @@ Sudarsanam${}^3$, Balaraman Ravindran${}^1$}
 %
 \institute{${}^1$Department of Computer Science \& Engineering,\\ ${}^2$Department of Electrical Engineering,
 ${}^3$Department of Management Studies,\\ Indian Institute of
-Technology Madras\\
+Technology Madras, Chennai - 600036, India.\\
 %\email{subho@cse.iitm.ac.in}
 }
 %Universit\'{e} de Paris-Sud,
@@ -47,9 +47,9 @@ Technology Madras\\
 \maketitle              % typeset the title of the contribution
 
 \begin{abstract}
-In this paper, we present a novel algorithm for the stochastic multi-armed bandit (MAB) problem. Our proposed Efficient UCB Variance method, referred to as EUCBV is an arm elimination algorithm based on  UCB-Improved and UCBV strategy which takes into account the empirical variance of the arms and along  with aggressive exploration factors eliminate sub-optimal arms. Through a theoretical analysis, we establish that EUCBV achieves a gap-dependent regret upper bound of $O\left( \dfrac{K\log (T\Delta^2 /K)}{\Delta}\right)$ which is better than UCB-Improved, MOSS, UCB1 and UCBV algorithms. EUCBV enjoys an order optimal gap-independent regret bound of $O\left(\sqrt{KT}\right)$  which is same as that of OCUCB and MOSS and better than UCB-Improved, UCB1 and UCBV. Further, numerical experiments on test-cases with small gaps between optimal and sub-optimal mean rewards show that EUCBV owing to its utilization of the variance estimates of the arms results in lower cumulative regret than several popular UCB variants like MOSS, OCUCB as well as Thompson sampling and Bayes-UCB. 
+We propose a novel variant of the UCB algorithm (referred to as Efficient-UCB-Variance (EUCBV)) for minimizing cumulative regret in the sto- chastic multi-armed bandit (MAB) setting. EUCBV incorporates the arm elimination strategy proposed in UCB-Improved \textcolor{blue}{[cite]}, while taking into account the variance estimates to compute the arms' confidence bounds, like in UCBV \textcolor{blue}{[cite]}. Through a theoretical analysis we establish that EUCBV incurs a \emph{gap-dependent} regret bound of {\scriptsize $O\left( \dfrac{K\log (T\Delta^2 /K)}{\Delta}\right)$} after $T$ trails, where $\Delta$ is the gap between a sub-optimal and the optimal arm; the above bound is an improvement over that available for the existing UCB algorithms (e.g.,  UCB1, UCBV, UCB-Improved,  MOSS, and OCUCB). Further, EUCBV incurs a \emph{gap-independent} regret bound of {\scriptsize $O\left(\sqrt{KT}\right)$}  which is better than that of UCB1,  UCBV and UCB-Improved, while being comparable with that of MOSS and OCUCB. Through an extensive numerical study (involving test-cases comprising arms with small gaps) we show that EUCBV significantly outperforms the popular UCB variants (like MOSS, OCUCB, Bayes-UCB, etc.) as well as the (non-UCB based) Thompson sampling algorithm. 
 
-\keywords{Multi-armed Bandits, Cumulative Regret, UCBV, UCB-Improved}
+\keywords{Stochastic multi-armed bandits, cumulative regret, UCB-Improved, UCBV.}
 \end{abstract}
 
 \section{Introduction}
