@@ -38,7 +38,7 @@ An arbitrary sub-optimal arm ${i}\in \A^{'}$ can get eliminated only when the ev
 	\hat{r}_{i} \leq r_{i} + c_{i} \text{ and } \label{eq:armelim-casea}
  	\hat{r}^{*} \geq r^{*} - c^{*}
 	\end{align}
-takes place. So to bound the regret we need to bound the probability of the complementary event of these two conditions. We denote $c_{i} = \sqrt{\frac{\rho (\hat{v}_i + 2) \log (\psi T\epsilon_{m_{i}})}{4 n_{m_i}}}$ for the $i$-th arm. Note that as arm elimination condition is being checked in every timestep, in the $m_i$-th round whenever $n_{m_{i}}=\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$ we have, 
+takes place. So to bound the regret we need to bound the probability of the complementary event of these two conditions. We denote $c_{i} = \sqrt{\frac{\rho (\hat{v}_i + 2) \log (\psi T\epsilon_{m_{i}})}{4 n_{m_i}}}$ for the $i$-th arm. Note that as arm elimination condition is being checked in every timestep, in the $m_i$-th round whenever $z_i \geq n_{m_{i}}=\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$ we have, 
 %any arm $i$ cannot be pulled more than $z_i= n_{m_i}$ times or it will get eliminated. This is because in the $m_i$-th round $n_{m_{i}}=\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$ and putting this in $c_{m_i}$ we get,
 	\begin{align*}
 	c_{i} &\leq \sqrt{\dfrac{\rho (\hat{v}_i + 2)\epsilon_{m_{i}}\log (\psi T\epsilon_{m_{i}})}{2\log(\psi T\epsilon_{m_{i}}^{2})}} \overset{(a)}{\leq} \sqrt{\dfrac{2.\rho\epsilon_{m_{i}}\log (\frac{\psi T\epsilon_{m_{i}}^{2}}{\epsilon_{m_{i}}})}{\log(\psi T\epsilon_{m_{i}}^{2})}} \\
@@ -83,7 +83,7 @@ Note that, substituting $ n_{m_i} \geq \frac{\log{(\psi T\epsilon_{m_{i}})}}{2\e
 The first term in the LHS of (\ref{eq:prob_eq2}) can be bounded using the Chernoff-Hoeffding bound as below:
 \begin{align}
 \mathbb{P}\left( \hat{r}_{i} > r_{i}+ \bar{c}_i\right)\nonumber 
-\le \exp\left(- (\bar{c}_i)^2 n_{m_i} \right)\nonumber 
+\le \exp\left(- (\bar{c}_i)^2 z_{i} \right)\nonumber 
 %%%%%%%%%%%%%%%
  &\le \exp\left(- \rho (\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 2)\log(\psi  T\epsilon_{m_{i}})\right)\nonumber \\
 %%%%%%%%%%%%%%%
