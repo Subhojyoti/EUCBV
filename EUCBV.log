@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  16 APR 2017 23:40
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  17 APR 2017 15:11
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1246,7 +1246,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--60
  []
 
 [4]) (./results.tex
-Underfull \vbox (badness 6927) has occurred while \output is active []
+Underfull \vbox (badness 7851) has occurred while \output is active []
 
  [5]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
@@ -1267,7 +1267,7 @@ f-Hoeffding
 
 [9] [10] [11] [12]) (./expts.tex
 PGFPlots: reading {results/NewExpt/Expt1/UCBV01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt1/EUCBV01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt11/NEUCBV011_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/KLUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/MOSS01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/DMED01_comp_subsampled.txt}
@@ -1275,14 +1275,13 @@ PGFPlots: reading {results/NewExpt/Expt1/UCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/TS01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/OCUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/BU01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt2_2/UCB01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt2_2/EUCBV01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt2_2/MOSS01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt2_2/OCUCB01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt2_2/TS01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt2_2/UCBV01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2/UCB01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2/NEUCBV01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2/MOSS01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2/OCUCB01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2/TS01_comp_subsampled.txt}
 
-Underfull \hbox (badness 4886) in paragraph at lines 77--77
+Underfull \hbox (badness 4660) in paragraph at lines 77--77
 []\OT1/ptm/m/n/9 (b) Expt-$\OT1/cmr/m/n/9 2$\OT1/ptm/m/n/9 : $\OT1/cmr/m/n/9 10
 0$ \OT1/ptm/m/n/9 Gaussian-distributed
  []
@@ -1302,16 +1301,10 @@ $ \OT1/ptm/m/n/9 to $\OT1/cmr/m/n/9 100$ \OT1/ptm/m/n/9 Bernoulli-
  []
 
 PGFPlots: reading {results/NewExpt/Expt4/MOSS01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt4/EUCBV01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt4/NEUCBV01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/OCUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/TS01_comp_subsampled.txt}
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \vbox (badness 3895) has occurred while \output is active []
-
- [14]
+[14]
 Overfull \hbox (1.32372pt too wide) in paragraph at lines 163--164
 []\OT1/ptm/b/n/10 Fourth ex-per-i-ment (Ad-vance Set-ting): \OT1/ptm/m/n/10 Thi
 s ex-per-i-ment is con-ducted on 100 Gaus-
@@ -1328,44 +1321,43 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ] (./EUCBV.aux) ) 
 Here is how much of TeX's memory you used:
  22833 strings out of 493848
- 463557 string characters out of 1152823
- 677185 words of memory out of 3000000
- 25422 multiletter control sequences out of 15000+50000
+ 463525 string characters out of 1152823
+ 681209 words of memory out of 3000000
+ 25419 multiletter control sequences out of 15000+50000
  36017 words of font info for 81 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 63i,27n,75p,1819b,1782s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,27n,75p,1819b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/sh
 are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-
 texlive/fonts/type1/public/amsfonts/cmextra/cmbsy5.pfb></usr/share/texmf-texliv
-e/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/share/texmf-texlive/font
-s/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/pub
-lic/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfont
-s/cmextra/cmex9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
-mi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/te
-xmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/
-fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/
-public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
-nts/cm/cmmib10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextr
-a/cmmib5.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cmmi
-b7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf
--texlive/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-texlive/font
-s/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
-/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-/usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/t
-exmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-texlive
-/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-texlive/fonts/type1
-/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
-onts/symbols/msbm10.pfb></usr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8
-a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/te
-xmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/t
-ype1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri
-8a.pfb>
-Output written on EUCBV.pdf (16 pages, 452663 bytes).
+e/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/typ
+e1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cmextra/cmex9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
+/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.
+pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/sh
+are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/
+type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-texlive/fonts/type1/public
+/amsfonts/cm/cmmib10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
+cmextra/cmmib5.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextr
+a/cmmib7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb
+></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1
+/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
+nts/cm/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/s
+hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-t
+exlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-texlive/fonts
+/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/type1/publi
+c/amsfonts/symbols/msbm10.pfb></usr/share/texmf-texlive/fonts/type1/urw/courier
+/ucrr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/sh
+are/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/f
+onts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times
+/utmri8a.pfb>
+Output written on EUCBV.pdf (16 pages, 447744 bytes).
 PDF statistics:
- 421 PDF objects out of 1000 (max. 8388607)
+ 419 PDF objects out of 1000 (max. 8388607)
  85 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

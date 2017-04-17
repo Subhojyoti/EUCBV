@@ -23,7 +23,7 @@ Next, we specialize the result of Theorem \ref{Result:Theorem:1} in Corollary \r
 \label{Result:Corollary:1}
 With $\psi=\frac{T}{K^2}$ and $\rho=\frac{1}{2}$, we have the following gap-dependent bound for the regret of EUCBV:
 \begin{align*}
-\E [R_T] & \sum_{i\in \A:\Delta_{i} > b}\bigg\lbrace 34 K + \dfrac{18\log{(\dfrac{T\Delta_{i}^{2}}{ K})}}{\Delta_{i}}\bigg\rbrace 
+\E [R_T] & \sum_{i\in \A:\Delta_{i} > b}\bigg\lbrace 96 K + \dfrac{128\log{(\dfrac{T\Delta_{i}^{2}}{ K})}}{\Delta_{i}}\bigg\rbrace 
  + \max\limits_{i\in \A:\Delta_{i}\leq b}\Delta_{i}T 
 	\end{align*} 
 \end{corollary}
@@ -38,7 +38,7 @@ Thus, we clearly see that the most significant term in the gap-dependent bound i
 \label{Result:Corollary:2}
 With $\psi=\frac{T}{K^2}$ and $\rho=\frac{1}{2}$, we have the following gap-independent bound for the regret of EUCBV:
 \begin{align*}
-\E[R_{T}] & \leq 51 K^2 + 18\sqrt{KT}
+\E[R_{T}] & \leq 96 K^2 + 128\sqrt{KT}
 	\end{align*} 
 \end{corollary}
 \begin{proof}

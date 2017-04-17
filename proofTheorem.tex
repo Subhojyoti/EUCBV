@@ -30,29 +30,29 @@ In the above inequalities, $(a)$ happens because $\psi=\frac{T}{K^2}$, $(b)$ occ
 \subsection{Proof of Theorem 1}
 \label{sec:proofTheorem:Theorem1}
 \begin{proof}
-Let, for each sub-optimal arm ${i}$, $m_{i}=\min{\lbrace m|\sqrt{2\epsilon_{m_i}} < \dfrac{\Delta_{i}}{4} \rbrace}$. Let $\A^{'}=\lbrace i\in \A: \Delta_{i} > b \rbrace$ and $\A^{''}=\lbrace i\in \A: \Delta_{i} > 0 \rbrace$. Also $z_{i}$ denotes total number of times an arm $i$ has been pulled. In the $m$-th round, $n_{m}$ denotes the number of pulls allocated to the surviving arms in $B_{m}$. \\
-\subsection*{Case $a$: \textit{Some sub-optimal arm ${i}$ is not eliminated in round $m_{i}$ or before and the optimal arm ${*}\in B_{m_{i}}$} and $c^* \leq c_i$}
+Let, for each sub-optimal arm ${i}$, $m_{i}=\min{\lbrace m|\sqrt{4\epsilon_{m_i}} < \dfrac{\Delta_{i}}{4} \rbrace}$. Let $\A^{'}=\lbrace i\in \A: \Delta_{i} > b \rbrace$ and $\A^{''}=\lbrace i\in \A: \Delta_{i} > 0 \rbrace$. Also $z_{i}$ denotes total number of times an arm $i$ has been pulled. In the $m$-th round, $n_{m}$ denotes the number of pulls allocated to the surviving arms in $B_{m}$. \\
+\subsection*{Case $a$: \textit{Some sub-optimal arm ${i}$ is not eliminated in round $m_{i}$ or before and the optimal arm ${*}\in B_{m_{i}}$}}
 
 An arbitrary sub-optimal arm ${i}\in \A^{'}$ can get eliminated only when the event,
 	\begin{align}
 	\hat{r}_{i} \leq r_{i} + c_{i} \text{ and } \label{eq:armelim-casea}
  	\hat{r}^{*} \geq r^{*} - c^{*}
 	\end{align}
-takes place. So to bound the regret we need to bound the probability of the complementary event of these two conditions. We denote $c_{i} = \sqrt{\frac{\rho (\hat{v}_i + 1) \log (\psi T\epsilon_{m_{i}})}{4 z_{i}}}$ for the $i$-th arm. Note that as arm elimination condition is being checked in every timestep, in the $m_i$-th round whenever $z_i\geq n_{m_{i}}=\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$ we have, 
+takes place. So to bound the regret we need to bound the probability of the complementary event of these two conditions. We denote $c_{i} = \sqrt{\frac{\rho (\hat{v}_i + 2) \log (\psi T\epsilon_{m_{i}})}{4 n_{m_i}}}$ for the $i$-th arm. Note that as arm elimination condition is being checked in every timestep, in the $m_i$-th round whenever $n_{m_{i}}=\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$ we have, 
 %any arm $i$ cannot be pulled more than $z_i= n_{m_i}$ times or it will get eliminated. This is because in the $m_i$-th round $n_{m_{i}}=\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$ and putting this in $c_{m_i}$ we get,
 	\begin{align*}
-	c_{i} &\leq \sqrt{\dfrac{\rho (\hat{v}_i + 1)\epsilon_{m_{i}}\log (\psi T\epsilon_{m_{i}})}{2\log(\psi T\epsilon_{m_{i}}^{2})}} \overset{(a)}{\leq} \sqrt{\dfrac{\rho\epsilon_{m_{i}}\log (\frac{\psi T\epsilon_{m_{i}}^{2}}{\epsilon_{m_{i}}})}{\log(\psi T\epsilon_{m_{i}}^{2})}} \\
+	c_{i} &\leq \sqrt{\dfrac{\rho (\hat{v}_i + 2)\epsilon_{m_{i}}\log (\psi T\epsilon_{m_{i}})}{2\log(\psi T\epsilon_{m_{i}}^{2})}} \overset{(a)}{\leq} \sqrt{\dfrac{2.\rho\epsilon_{m_{i}}\log (\frac{\psi T\epsilon_{m_{i}}^{2}}{\epsilon_{m_{i}}})}{\log(\psi T\epsilon_{m_{i}}^{2})}} \\
 	%%%%%%%%%%%%%%%%%%%%%%%%%%
-	& = \sqrt{\dfrac{\rho\epsilon_{m_{i}}\log (\psi T\epsilon_{m_{i}}^{2}) - \rho\epsilon_{m_{i}}\log (\epsilon_{m_{i}})}{\log(\psi T\epsilon_{m_{i}}^{2})}} 
-	\leq  \sqrt{\rho\epsilon_{m_{i}} - \dfrac{\rho\epsilon_{m_i}\log(\frac{1}{2^{m_i}})}{\log(\psi T \frac{1}{2^{2m_i}})}} \\
+	& = \sqrt{\dfrac{2\rho\epsilon_{m_{i}}\log (\psi T\epsilon_{m_{i}}^{2}) - 2\rho\epsilon_{m_{i}}\log (\epsilon_{m_{i}})}{\log(\psi T\epsilon_{m_{i}}^{2})}} 
+	\leq  \sqrt{2\rho\epsilon_{m_{i}} - \dfrac{2\rho\epsilon_{m_i}\log(\frac{1}{2^{m_i}})}{\log(\psi T \frac{1}{2^{2m_i}})}} \\
 	%%%%%%%%%%%%%%%%%%%%%%%%%%
-	&\leq \sqrt{\rho\epsilon_{m_{i}} + \dfrac{\rho\epsilon_{m_i}\log(2^{m_i})}{\log(\psi T) - \log( 2^{2m_i})}}  \leq \sqrt{\rho\epsilon_{m_{i}} + \dfrac{\rho\epsilon_{m_i}m_i \log(2)}{\log(\psi T) - 2m_i\log( 2)}} \\ 
+	&\leq \sqrt{2\rho\epsilon_{m_{i}} + \dfrac{2\rho\epsilon_{m_i}\log(2^{m_i})}{\log(\psi T) - \log( 2^{2m_i})}}  \leq \sqrt{2\rho\epsilon_{m_{i}} + \dfrac{2\rho\epsilon_{m_i}m_i \log(2)}{\log(\psi T) - 2m_i\log( 2)}} \\ 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%
-	 & \overset{(b)}{\leq} \sqrt{\rho\epsilon_{m_{i}} + \frac{3}{2}\epsilon_{m_i}} 
-	  < \sqrt{2\epsilon_{m_i}} 
+	 & \overset{(b)}{\leq} \sqrt{2\rho\epsilon_{m_{i}} + 2.\frac{3}{2}\epsilon_{m_i}} 
+	  < \sqrt{4\epsilon_{m_i}} 
 	  < \dfrac{\Delta_{i}}{4} 
 	\end{align*}
-In the above $(a)$ happens because $\hat{v}_i \in [0,1]$, $\rho \in (0,\frac{1}{2}]$ and $(b)$ occurs by applying the result from Lemma \ref{results:Lemma:1}.
+In the above $(a)$ happens because $\hat{v}_i \in [0,1]$, $\rho \in (0,\frac{1}{2}]$ and $(b)$ occurs by applying the result from Lemma \ref{results:Lemma:1}. Similarly, we can also show that in the $m_i$-th round $c^* < \frac{\Delta_i}{4}$.
 Again, in the $m_i$-th round a sub-optimal arm ${i} \in \A^{'}$ gets eliminated as, 
   \begin{align*}
 \hat{r}_{i} + c_{i}&\leq r_{i} + 2c_{i} 
@@ -70,13 +70,13 @@ Again, in the $m_i$-th round a sub-optimal arm ${i} \in \A^{'}$ gets eliminated 
 \end{align}
 where 
 \begin{align*}
-\bar{c}_i=\sqrt{\dfrac{\rho (\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 1)\log(\psi T\epsilon_{m_{i}})}{4z_{i}}}
+\bar{c}_i=\sqrt{\dfrac{\rho (\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 2)\log(\psi T\epsilon_{m_{i}})}{4n_{m_i}}}
 \end{align*}
 %\end{small}
-Note that, substituting $ z_i = n_{m_i} \geq \frac{\log{(\psi T\epsilon_{m_{i}})}}{2\epsilon_{m_{i}}}$, $\bar{c}_i$ can be simplified to obtain,
+Note that, substituting $ n_{m_i} \geq \frac{\log{(\psi T\epsilon_{m_{i}})}}{2\epsilon_{m_{i}}}$, $\bar{c}_i$ can be simplified to obtain,
 \begin{align}
 \bar{c}_i
-\leq \sqrt{\dfrac{\rho\epsilon_{m_{i}}(\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 1)}{2}}\leq \sqrt{ \epsilon_{m_{i}}}.
+\leq \sqrt{\dfrac{\rho\epsilon_{m_{i}}(\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 2)}{2}}\leq \sqrt{ \epsilon_{m_{i}}}.
 \label{si_bar_equn}
 \end{align}
 %The first term in the LHS of (\ref{eq:prob_eq2}) can be bounded using the Bernstein inequality as below:
@@ -98,14 +98,14 @@ The first term in the LHS of (\ref{eq:prob_eq2}) can be bounded using the Cherno
 \mathbb{P}\left( \hat{r}_{i} > r_{i}+ \bar{c}_i\right)\nonumber 
 \le \exp\left(- (\bar{c}_i)^2 z_i \right)\nonumber 
 %%%%%%%%%%%%%%%
- &\le \exp\left(- \rho (\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 1)\log(\psi  T\epsilon_{m_{i}})\right)\nonumber \\
+ &\le \exp\left(- \rho (\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 2)\log(\psi  T\epsilon_{m_{i}})\right)\nonumber \\
 %%%%%%%%%%%%%%%
 & \overset{(a)}{\leq} \exp\left(- \rho \log(\psi  T\epsilon_{m_{i}})\right) 
 %%%%%%%%%%%%%%%
 \le \dfrac{1}{(\psi  T\epsilon_{m_{i}})^{\rho}}
 \label{lhs1_equn}
 \end{align}
-where, $(a)$ occurs because $(\sigma_{i}^{2}+\sqrt{\rho\epsilon_{m_{i}}} + 1) \geq 1$.
+where, $(a)$ occurs because $(\sigma_{i}^{2}+\sqrt{\rho\epsilon_{m_{i}}} + 2) \geq 1$.
 
  
 The second term in the LHS of (\ref{eq:prob_eq2}) can be simplified as follows:
@@ -114,9 +114,9 @@ The second term in the LHS of (\ref{eq:prob_eq2}) can be simplified as follows:
 %%%%%%%%%%%%%%%%%%
 \leq \mathbb{P}\bigg\lbrace \dfrac{1}{n_{i}}\sum_{t=1}^{n_{i}}(X_{i,t}-r_{i})^{2}-(\hat{r}_{i}-r_{i})^{2}\geq \sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}}\bigg\rbrace\nonumber\\
 %%%%%%%%%%%%%%%%%%
-&\leq \mathbb{P}\bigg\lbrace \dfrac{\sum_{t=1}^{n_{i}}(X_{i,t}-r_{i})^{2}}{n_{i}}\geq \sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} \bigg\rbrace\nonumber\\
+&\leq \mathbb{P}\bigg\lbrace \dfrac{\sum_{t=1}^{n_{i}}(X_{i,t}-r_{i})^{2}}{n_{i}}\geq \sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} \bigg\rbrace\nonumber
 %%%%%%%%%%%%%%%%%%
-&\overset{(a)}{\leq} \mathbb{P}\bigg\lbrace \dfrac{\sum_{t=1}^{n_{i}}(X_{i,t}-r_{i})^{2}}{n_{i}}\geq \sigma_{i}^{2} + \bar{c}_i\bigg\rbrace \nonumber\\
+\overset{(a)}{\leq} \mathbb{P}\bigg\lbrace \dfrac{\sum_{t=1}^{n_{i}}(X_{i,t}-r_{i})^{2}}{n_{i}}\geq \sigma_{i}^{2} + \bar{c}_i\bigg\rbrace \nonumber\\
 %%%%%%%%%%%%%%%%%%
 &\overset{(b)}{\leq} \exp\left(- \rho (\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 1)\log(\psi  T\epsilon_{m_{i}})\right)
 %%%%%%%%%%%%%%%%%
@@ -143,9 +143,9 @@ Similarly, $\mathbb{P}\lbrace\hat{r}^{*}\leq r^{*} - c^{*}\rbrace \leq \dfrac{2}
 Summing up over all arms in $\A^{'}$ and bounding the regret for each arm $i\in \A^{'}$ trivially by $T\Delta_{i}$, we obtain
    \begin{align*}
 &\sum_{i\in \A^{'}}\bigg(\dfrac{4T\Delta_{i}}{(\psi T\epsilon_{m_{i}})^{\rho}}\bigg)
-\leq\sum_{i\in \A^{'}}\bigg(\dfrac{4T\Delta_{i}}{(\psi T\dfrac{\Delta_{i}^{2}}{2.16})^{\rho}}\bigg)
-\leq \sum_{i\in \A^{'}}\bigg(\dfrac{2^{2+\rho}.16^{\rho}}{\psi^{\rho}\Delta_{i}^{2\rho -1}}\bigg)\\   
-& =\sum_{i\in \A^{'}}\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) \text{, where } C_1(x) = \frac{2^{2+5x}}{\psi^{x}}
+\leq\sum_{i\in \A^{'}}\bigg(\dfrac{4T\Delta_{i}}{(\psi T\dfrac{\Delta_{i}^{2}}{4.16})^{\rho}}\bigg)
+\leq \sum_{i\in \A^{'}}\bigg(\dfrac{2^{2+2\rho}.16^{\rho}}{\psi^{\rho}\Delta_{i}^{2\rho -1}}\bigg)\\   
+& =\sum_{i\in \A^{'}}\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) \text{, where } C_1(x) = \frac{2^{2+6x}}{\psi^{x}}
    \end{align*}
 
 \subsection*{Case $b$: \textit{An arm ${i}\in B_{m_i}$ is eliminated in round $m_{i}$ or before or there is no $*\in B_{m_i}$}}
@@ -161,36 +161,36 @@ Since we are eliminating a sub-optimal arm ${i}$ on or before round $m_{i}$, it 
 So, the total contribution of ${i}$  till round $m_{i}$ is given by, 
 \begin{align*}
 &\Delta_{i}\bigg\lceil\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}\bigg\rceil
-\leq\Delta_{i}\bigg\lceil\dfrac{\log{(\psi T(\dfrac{\Delta_{i}}{4 \times 256})^{4})}}{2(\dfrac{\Delta_{i}}{4\sqrt{2}})^{2}}\bigg\rceil \text{, since } \sqrt{2\epsilon_{m_{i}}} < \dfrac{\Delta_{i}}{4}\\
-&\leq\Delta_{i}\bigg(1+\dfrac{16\log{(\psi T(\dfrac{\Delta_{i}^{4}}{1024})}}{\Delta_{i}^{2}}\bigg)
-\approx\Delta_{i}\bigg(1+\dfrac{16\log{(\psi T\Delta_{i}^{4})}}{\Delta_{i}^{2}}\bigg)
+\leq\Delta_{i}\bigg\lceil\dfrac{\log{(\psi T(\dfrac{\Delta_{i}}{16 \times 256})^{4})}}{2(\dfrac{\Delta_{i}}{4\sqrt{2}})^{2}}\bigg\rceil \text{, since } \sqrt{4\epsilon_{m_{i}}} < \dfrac{\Delta_{i}}{4}\\
+&\leq\Delta_{i}\bigg(1+\dfrac{64\log{(\psi T(\dfrac{\Delta_{i}^{4}}{16384})}}{\Delta_{i}^{2}}\bigg)
+\leq \Delta_{i}\bigg(1+\dfrac{64\log{(\psi T\Delta_{i}^{4})}}{\Delta_{i}^{2}}\bigg)
 \end{align*} 
  
 Summing over all arms in $\A^{'}$ the total regret is given by, 
 \begin{align*}
-\sum_{i\in \A^{'}}\Delta_{i}\bigg(1+\dfrac{16\log{(\psi T\Delta_{i}^{4}})}{\Delta_{i}^{2}}\bigg) = \sum_{i\in \A^{'}}\bigg(\Delta_{i} +\dfrac{16\log{(\psi T\Delta_{i}^{4}})}{\Delta_{i}}\bigg)
+\sum_{i\in \A^{'}}\Delta_{i}\bigg(1+\dfrac{64\log{(\psi T\Delta_{i}^{4}})}{\Delta_{i}^{2}}\bigg) = \sum_{i\in \A^{'}}\bigg(\Delta_{i} +\dfrac{64\log{(\psi T\Delta_{i}^{4}})}{\Delta_{i}}\bigg)
 \end{align*}
 
 \subsubsection*{Case $b2$: \textit{Optimal arm ${*}$ is eliminated by a sub-optimal arm  }}
 
 
-	Firstly, if conditions of Case $a$ holds then the optimal arm ${*}$ will not be eliminated in round $m=m_{*}$ or it will lead to the contradiction that $r_{i}>r^{*}$. In any round $m_{*}$, if the optimal arm ${*}$ gets eliminated then for any round from $1$ to $m_{j}$ all arms ${j}$ such that $m_{j}< m_{*}$ were eliminated according to assumption in Case $a$. Let the arms surviving till $m_{*}$ round be denoted by $\A^{'}$. This leaves any arm $a_{b}$ such that $m_{b}\geq m_{*}$ to still survive and eliminate arm ${*}$ in round $m_{*}$. Let such arms that survive ${*}$ belong to $\A^{''}$. Also maximal regret per step after eliminating ${*}$ is the maximal $\Delta_{j}$ among the remaining arms ${j}$ with $m_{j}\geq m_{*}$.  Let $m_{b}=\min\lbrace m|\sqrt{2\epsilon_{m}}<\dfrac{\Delta_{b}}{4}\rbrace$. Hence, the maximal regret after eliminating the arm ${*}$ is upper bounded by, 
+	Firstly, if conditions of Case $a$ holds then the optimal arm ${*}$ will not be eliminated in round $m=m_{*}$ or it will lead to the contradiction that $r_{i}>r^{*}$. In any round $m_{*}$, if the optimal arm ${*}$ gets eliminated then for any round from $1$ to $m_{j}$ all arms ${j}$ such that $m_{j}< m_{*}$ were eliminated according to assumption in Case $a$. Let the arms surviving till $m_{*}$ round be denoted by $\A^{'}$. This leaves any arm $a_{b}$ such that $m_{b}\geq m_{*}$ to still survive and eliminate arm ${*}$ in round $m_{*}$. Let such arms that survive ${*}$ belong to $\A^{''}$. Also maximal regret per step after eliminating ${*}$ is the maximal $\Delta_{j}$ among the remaining arms ${j}$ with $m_{j}\geq m_{*}$.  Let $m_{b}=\min\lbrace m|\sqrt{4\epsilon_{m}}<\dfrac{\Delta_{b}}{4}\rbrace$. Hence, the maximal regret after eliminating the arm ${*}$ is upper bounded by, 
 \begin{align*}
 &\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{4}{(\psi  T\epsilon_{m_{*}})^{\rho}} \bigg).T\max_{j\in \A^{''}:m_{j}\geq m_{*}}{\Delta}_{j}\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{4\sqrt{2}}{(\psi  T\epsilon_{m_{*}})^{\rho}} \bigg).T.4\sqrt{\epsilon_{m_{*}}}\\
+&\leq\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{4\sqrt{4}}{(\psi  T\epsilon_{m_{*}})^{\rho}} \bigg).T.4\sqrt{\epsilon_{m_{*}}}\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}16\sqrt{2}\bigg(\dfrac{T^{1-\rho}}{\psi^{\rho}\epsilon_{m_{*}}^{\rho-\frac{1}{2}}} \bigg)\\
+&\leq\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}32\bigg(\dfrac{T^{1-\rho}}{\psi^{\rho}\epsilon_{m_{*}}^{\rho-\frac{1}{2}}} \bigg)\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq\sum_{i\in \A^{''}:m_{i}>m_{*}}\sum_{m_{*}=0}^{\min{\lbrace m_{i},m_{b}\rbrace}}\bigg(\dfrac{16\sqrt{2}T^{1-\rho}}{\psi^{\rho}2^{-(\rho -\frac{1}{2})m_{*}}} \bigg)\\
+&\leq\sum_{i\in \A^{''}:m_{i}>m_{*}}\sum_{m_{*}=0}^{\min{\lbrace m_{i},m_{b}\rbrace}}\bigg(\dfrac{32T^{1-\rho}}{\psi^{\rho}2^{-(\rho -\frac{1}{2})m_{*}}} \bigg)\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{16\sqrt{2}T^{1-\rho}}{\psi^{\rho}2^{-(\rho -\frac{1}{2})m_{*}}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{16\sqrt{2}T^{1-\rho }}{\psi^{\rho}2^{-(\rho -\frac{1}{2})m_{b}}} \bigg)\\
+&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{32T^{1-\rho}}{\psi^{\rho}2^{-(\rho -\frac{1}{2})m_{*}}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{32T^{1-\rho }}{\psi^{\rho}2^{-(\rho -\frac{1}{2})m_{b}}} \bigg)\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{16\sqrt{2}T^{1-\rho}*2^{\frac{\rho}{2}-\frac{1}{4}}}{\psi^{\rho}\Delta_{i}^{\rho -\frac{1}{2}}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{16\sqrt{2}T^{1-\rho_{a}}}{\psi^{\rho}b^{\rho -\frac{1}{2}}} \bigg)\\
+&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{32T^{1-\rho}*2^{\frac{\rho}{2}-\frac{1}{4}}}{\psi^{\rho}\Delta_{i}^{\rho -\frac{1}{2}}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{32T^{1-\rho_{a}}}{\psi^{\rho}b^{\rho -\frac{1}{2}}} \bigg)\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{2^{\frac{\rho}{2}+\frac{17}{4}}.T^{1-\rho } }{\psi^{\rho}\Delta_{i}^{2\rho -1}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{2^{\frac{\rho}{2}+\frac{17}{4}}.T^{1-\rho} }{\psi^{\rho }b^{2\rho_{a}-1}} \bigg)\\
+&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{2^{\frac{\rho}{2}+\frac{19}{4}}.T^{1-\rho } }{\psi^{\rho}\Delta_{i}^{2\rho -1}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{2^{\frac{\rho}{2}+\frac{19}{4}}.T^{1-\rho} }{\psi^{\rho }b^{2\rho_{a}-1}} \bigg)\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-& = \sum_{i\in \A^{'}}\bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_{2}(\rho)T^{1-\rho}}{b^{2\rho -1}} \bigg) \text{, where } C_2(x) = \frac{2^{\frac{x}{2}+\frac{17}{4}}}{\psi^{x}}
+& = \sum_{i\in \A^{'}}\bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_{2}(\rho)T^{1-\rho}}{b^{2\rho -1}} \bigg) \text{, where } C_2(x) = \frac{2^{\frac{x}{2}+\frac{19}{4}}}{\psi^{x}}
 \end{align*}
 %\subsection*{Case $c$: \textit{Some sub-optimal arm ${i}$ is not eliminated in round $m_{i}$ or before and the optimal arm ${*}\in B_{m_{i}}$} and $c_i > c^*$}
 %
@@ -201,7 +201,7 @@ Summing over all arms in $\A^{'}$ the total regret is given by,
  
 Summing up \textbf{Case a} and \textbf{Case b}, the total regret is given by,
 \begin{align*}
- \E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) + \bigg(\Delta_{i}+\dfrac{16\log{(\psi  T\Delta_{i}^{4})}}{\Delta_{i}}\bigg) + \bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)\bigg \rbrace\\ 
+ \E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) + \bigg(\Delta_{i}+\dfrac{64\log{(\psi  T\Delta_{i}^{4})}}{\Delta_{i}}\bigg) + \bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)\bigg \rbrace\\ 
   & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b}\bigg(\dfrac{C_{2}(\rho)T^{1-\rho}}{b^{2\rho -1}} \bigg) + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T
 \end{align*}
 \end{proof}
@@ -213,7 +213,7 @@ Summing up \textbf{Case a} and \textbf{Case b}, the total regret is given by,
 For proving this corollary we first state the result of Theorem \ref{Result:Theorem:1} below, 
 	
 \begin{align*}
-\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) + \bigg(\Delta_{i}+\dfrac{16\log{(\psi  T\Delta_{i}^{4})}}{\Delta_{i}}\bigg) + \bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)\bigg \rbrace\\ 
+\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) + \bigg(\Delta_{i}+\dfrac{64\log{(\psi  T\Delta_{i}^{4})}}{\Delta_{i}}\bigg) + \bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)\bigg \rbrace\\ 
   & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b}\bigg(\dfrac{C_{2}(\rho)T^{1-\rho}}{b^{2\rho -1}} \bigg) + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T
 \end{align*} 
 
@@ -224,24 +224,24 @@ For proving this corollary we first state the result of Theorem \ref{Result:Theo
 
 After putting the parameter values $\psi=\frac{T}{K^2}$ and $\rho=\frac{1}{2}$ in the above Theorem \ref{Result:Theorem:1} result we get,
 	\begin{align*}
-	\sum_{i\in \A :\Delta_{i} > b}\bigg(\dfrac{T^{1-\rho}}{\psi^{\rho}\Delta_{i}^{2\rho -1}} \bigg) &= \sum_{i\in \A :\Delta_{i} > b}\bigg(\dfrac{T^{1-\frac{1}{2}}2^{2+\frac{1}{2}}.9^{\frac{1}{2}}}{(\frac{T}{( K)^2})^{\frac{1}{2}}\Delta_{i}^{2.\frac{1}{2}-1}} \bigg) = \sum_{i\in \A :\Delta_{i} > b} 17 K 
+	\sum_{i\in \A :\Delta_{i} > b}\bigg(\dfrac{T^{1-\rho}}{\psi^{\rho}\Delta_{i}^{2\rho -1}} \bigg) &= \sum_{i\in \A :\Delta_{i} > b}\bigg(\dfrac{T^{1-\frac{1}{2}}2^{2+6.\frac{1}{2}}}{(\frac{T}{( K)^2})^{\frac{1}{2}}\Delta_{i}^{2.\frac{1}{2}-1}} \bigg) = \sum_{i\in \A :\Delta_{i} > b} 32 K 
 	\end{align*}
 	
 	
 	For the term involving arm pulls,
 	\begin{align*}
-	\sum_{i\in \A :\Delta_{i} > b}\dfrac{9\log{(\psi T\Delta_{i}^{4})}}{\Delta_{i}}=\sum_{i\in \A :\Delta_{i} > b}\dfrac{18\log{(\dfrac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}
+	\sum_{i\in \A :\Delta_{i} > b}\dfrac{64\log{(\psi T\Delta_{i}^{4})}}{\Delta_{i}}=\sum_{i\in \A :\Delta_{i} > b}\dfrac{128\log{(\dfrac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}
 	%\approx \sum_{i\in A:\Delta_{i} > b}\dfrac{16\log{(T\dfrac{\Delta_{i}^{2}}{\log K})}}{\Delta_{i}}
 	\end{align*}		
 
 	Lastly we can bound the error terms as, 
 	\begin{align*}
-	\sum\limits_{i\in \A :0 < \Delta_{i}\leq b}\bigg(\dfrac{T^{1-\rho}2^{\frac{\rho}{2}+\frac{9}{4}}.3^{\rho +\frac{1}{2}}}{\psi^{\rho }\Delta_{i}^{2\rho -1}} \bigg)= \sum\limits_{i\in \A :0 < \Delta_{i}\leq b} 17 K
+	\sum\limits_{i\in \A :0 < \Delta_{i}\leq b}\bigg(\dfrac{T^{1-\rho}2^{\frac{\rho}{2}+\frac{19}{4}}}{\psi^{\rho }\Delta_{i}^{2\rho -1}} \bigg)= \sum\limits_{i\in \A :0 < \Delta_{i}\leq b} 32 K
 	\end{align*}
 
 	So, the total gap dependent regret bound for using both arm and cluster elimination comes of as
 	\begin{align*}
-	& \sum_{i\in \A :\Delta_{i} > b}\bigg\lbrace 34 K + \dfrac{18\log{(\dfrac{T\Delta_{i}^{2}}{ K})}}{\Delta_{i}}\bigg\rbrace 
+	& \sum_{i\in \A :\Delta_{i} > b}\bigg\lbrace 96 K + \dfrac{128\log{(\dfrac{T\Delta_{i}^{2}}{ K})}}{\Delta_{i}}\bigg\rbrace 
  + \max\limits_{i\in \A :\Delta_{i}\leq b}\Delta_{i}T 
 	\end{align*}
 \end{proof}
@@ -268,7 +268,7 @@ In the non-stochastic scenario \cite{auer2002nonstochastic} showed that the boun
 	We again state the result of Theorem \ref{Result:Theorem:1} below, 
 	
 \begin{align*}
-\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) + \bigg(\Delta_{i}+\dfrac{41\log{(\psi  T\Delta_{i}^{4})}}{\Delta_{i}}\bigg) + \bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)\bigg \rbrace\\ 
+\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) + \bigg(\Delta_{i}+\dfrac{64\log{(\psi  T\Delta_{i}^{4})}}{\Delta_{i}}\bigg) + \bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)\bigg \rbrace\\ 
   & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b}\bigg(\dfrac{C_{2}(\rho)T^{1-\rho}}{b^{2\rho -1}} \bigg) + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T
 \end{align*}
 %
@@ -282,28 +282,28 @@ In the non-stochastic scenario \cite{auer2002nonstochastic} showed that the boun
 
 Putting the parameter values $\psi=\frac{T}{K^2}$ and $\rho=\frac{1}{2}$ in the result of above Theorem \ref{Result:Theorem:1} we get,
 	\begin{align*}
-	\sum_{i\in \A :\Delta_{i} > b}\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) &= \sum_{i\in \A :\Delta_{i} > b}\bigg(\dfrac{T^{1-\frac{1}{2}}2^{2+\frac{1}{2}}.9^{\frac{1}{2}}}{(\frac{T}{( K)^2})^{\frac{1}{2}}\Delta_{i}^{2.\frac{1}{2}-1}} \bigg) \leq 17 K^2
+	\sum_{i\in \A :\Delta_{i} > b}\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) &= \sum_{i\in \A :\Delta_{i} > b}\bigg(\dfrac{T^{1-\frac{1}{2}}2^{2+6.\frac{1}{2}}}{(\frac{T}{( K)^2})^{\frac{1}{2}}\Delta_{i}^{2.\frac{1}{2}-1}} \bigg) \leq 32 K^2
 	\end{align*}
 	 
 	
 	For the term regarding number of pulls,
 	\begin{align*}
-	\sum_{i\in \A :\Delta_{i} > b}\dfrac{9\log{(\psi T\Delta_{i}^{4})}}{\Delta_{i}} &= \dfrac{9K\sqrt{T}\log{(T^{2}\dfrac{K^{2}(\log K)^{2}}{T^{2} K^2})}}{\sqrt{K\log K}} \leq  \dfrac{18\sqrt{KT}\log{(\log K)}}{\sqrt{\log K}}\\
-	&\leq 18\sqrt{KT} \text{ ,   as $\dfrac{\log{(\log K)}}{\sqrt{\log K}}\leq 1$}
+	\sum_{i\in \A :\Delta_{i} > b}\dfrac{64\log{(\psi T\Delta_{i}^{4})}}{\Delta_{i}} &= \dfrac{64K\sqrt{T}\log{(T^{2}\dfrac{K^{2}(\log K)^{2}}{T^{2} K^2})}}{\sqrt{K\log K}} \leq  \dfrac{128\sqrt{KT}\log{(\log K)}}{\sqrt{\log K}}\\
+	&\leq 128\sqrt{KT} \text{ ,   as $\dfrac{\log{(\log K)}}{\sqrt{\log K}}\leq 1$}
 	\end{align*}		
 	%for $K\geq 3$
  	Lastly we can bound the error terms as, 
 	\begin{align*}
-	\sum\limits_{i\in \A :0\leq\Delta_{i}\leq b}\bigg(\dfrac{T^{1-\rho }2^{\frac{\rho}{2} +\frac{9}{4}}}{\psi^{\rho }\Delta_{i}^{2\rho -1}} \bigg)=K\bigg(\dfrac{T^{1-\frac{1}{2}}2^{\frac{1}{4}+\frac{9}{4}}}{{(\frac{T}{K^2})^{\frac{1}{2}}}{(\Delta_{i})^{2*\frac{1}{2}-1}}} \bigg) < 17 K^2
+	\sum\limits_{i\in \A :0\leq\Delta_{i}\leq b}\bigg(\dfrac{T^{1-\rho }2^{\frac{\rho}{2} +\frac{19}{4}}}{\psi^{\rho }\Delta_{i}^{2\rho -1}} \bigg)=K\bigg(\dfrac{T^{1-\frac{1}{2}}2^{\frac{1}{4}+\frac{19}{4}}}{{(\frac{T}{K^2})^{\frac{1}{2}}}{(\Delta_{i})^{2*\frac{1}{2}-1}}} \bigg) < 32 K^2
 	\end{align*}	 	
  	Similarly for the term,
  	\begin{align*}
- 	\bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg) \leq  \sum_{i\in \A : \Delta_{i} > b}\bigg(\dfrac{T^{1-\rho} 2^{\frac{\rho}{2}+\frac{9}{4}}}{(\psi^{\rho})\Delta_{i}^{2\rho -1}} \bigg) < 17  K^2
+ 	\bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg) \leq  \sum_{i\in \A : \Delta_{i} > b}\bigg(\dfrac{T^{1-\rho} 2^{\frac{\rho}{2}+\frac{19}{4}}}{(\psi^{\rho})\Delta_{i}^{2\rho -1}} \bigg) < 32  K^2
 	\end{align*} 	
  	
 	So, the total bound for using both arm and cluster elimination cannot be worse than,
 	
 	\begin{align*}
-	\E[R_{T}]\leq 51 K^2 + 18\sqrt{KT}
+	\E[R_{T}]\leq 96 K^2 + 128\sqrt{KT}
 	\end{align*}		
 \end{proof}

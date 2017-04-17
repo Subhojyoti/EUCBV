@@ -25,7 +25,7 @@ In this section we conduct extensive empirical evaluation of EUCBV against sever
   		legend style={at={(0.5,1.5)},anchor=north, legend columns=3} ]
       	% UCB
 		\addplot table{results/NewExpt/Expt1/UCBV01_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt1/EUCBV01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt11/NEUCBV011_comp_subsampled.txt};
 		%\addplot table{results/NewExpt/Expt1/NEUCBV01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt1/KLUCB01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt1/MOSS01_comp_subsampled.txt};
@@ -59,18 +59,18 @@ In this section we conduct extensive empirical evaluation of EUCBV against sever
        	clip=true,
   		legend style={at={(0.5,1.5)},anchor=north, legend columns=3} ]
       	% UCB
-        \addplot table{results/NewExpt/Expt2_2/UCB01_comp_subsampled.txt};
+        \addplot table{results/NewExpt/Expt2/UCB01_comp_subsampled.txt};
 		%\addplot table{results/NewExpt/Expt2_2/clUCB01_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt2_2/EUCBV01_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt2_2/MOSS01_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt2_2/OCUCB01_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt2_2/TS01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt2/NEUCBV01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt2/MOSS01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt2/OCUCB01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt2/TS01_comp_subsampled.txt};
 		%\addplot table{results/NewExpt/Expt2_2/MedElim_comp_subsampled.txt};
 		%\addplot table{results/NewExpt/Expt2_2/UCBR01_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt2_2/UCBV01_comp_subsampled.txt};
+		%\addplot table{results/NewExpt/Expt2/UCBV01_comp_subsampled.txt};
 		
 		%\legend{UCB1,EUCBV,MOSS,OCUCB,Med-Elim,UCB-Imp,UCBV}
-		\legend{UCB1,EUCBV,MOSS,OCUCB,TS,UCBV}
+		\legend{UCB1,EUCBV,MOSS,OCUCB,TS}
       	\end{axis}
       	\end{tikzpicture}
    		\label{fig:2}
@@ -85,7 +85,7 @@ In this section we conduct extensive empirical evaluation of EUCBV against sever
 
 \textbf{First experiment (Bernoulli with uniform gaps):} This experiment is conducted to observe the performance of EUCBV over a short horizon. The horizon $T$ is set to $60000$. These type of cases are frequently encountered in web-advertising domain. The testbed comprises of $20$ Bernoulli distributed arms with expected rewards of the arms as $r_{i_{{i}\neq {*}}}=0.07$ and $r^{*}=0.1$. The regret is averaged over $100$ independent runs and is shown in Figure \ref{fig:1}. EUCBV, MOSS, UCB1, UCB-V, KL-UCB, TS, BU and DMED are run in this experimental setup. Here not only we observe that EUCBV performs better than all the non-variance based  algorithms like MOSS, OCUCB, UCB-Improved and UCB1 but it also outperforms UCBV because of the choice of the exploration parameters. Because of the small gaps and short horizon $T$, we do not implement UCB-Improved and Median Elimination on this test-case. 
 
-\textbf{Second experiment (Gaussian with different variances):} This experiment is conducted on a large horizon and over a large set of arms.    The horizon $T$ is set for a large duration of $2\times 10^{5}$. This testbed comprises of $100$ arms involving Gaussian reward distributions with expected rewards of the arms $r_{1:33}=0.1$, $r_{34:99}=0.6$, $r^{*}_{100}=0.9$ and variance set at $\sigma_{i}^{2} = 0.3,\forall i\in \A$. The regret is averaged over $100$ independent runs and is shown in Figure \ref{fig:2}. From the results in Figure \ref{fig:2}, we observe that EUCBV outperforms all the non-variance based algorithms MOSS, OCUCB, UCB1, TS, UCB-Improved and Median-Elimination($\epsilon=0.1,\delta=0.1$). The performance of UCB-Improved and Median elimination is very poor in comparison with the other algorithms and their plots are not shown in Figure \ref{fig:2}.
+\textbf{Second experiment (Failure of TS):} This experiment is conducted on a large horizon and over a large set of arms. The horizon $T$ is set for a large duration of $3\times 10^{5}$. This testbed comprises of $100$ arms involving Gaussian reward distributions with expected rewards of the arms $r_{1:33}=0.7$, $r_{34:99}=0.8$ and $r^{*}_{100}=0.9$ with variance set at $\sigma_{1:33}^{2} = 0.7,\sigma_{34:99}^{2} = 0.1$ and $r^{*}_{100}=0.7$. The regret is averaged over $100$ independent runs and is shown in Figure \ref{fig:2}. From the results in Figure \ref{fig:2}, we observe that since the gaps are very small and the variances of the optimal arm and the arms farthest from the optimal arm are the highest, EUCBV outperforms all the non-variance based algorithms MOSS, OCUCB, UCB1, TS, UCB-Improved and Median-Elimination($\epsilon=0.1,\delta=0.1$). The performance of UCBV, UCB-Improved and Median elimination is very poor in comparison with the other algorithms and their plots are not shown in Figure \ref{fig:2}. Note that the performance of TS is poor and this is in line with the observation in \cite{lattimore2015optimally} that the worst case regret of TS when Gaussian prior is used is $\Omega\left( \sqrt{KT\log T}\right)$. 
 %Also the performance of UCB-Improved is poor in comparison to other algorithms, which is probably because of pulls wasted in initial exploration whereas EUCBV with the choice of $\psi$ and $\rho$ performs much better.
 
 \begin{figure}[!h]
@@ -140,7 +140,7 @@ In this section we conduct extensive empirical evaluation of EUCBV against sever
       	% UCB
 		%\addplot table{results/NewExpt/Expt4/UCBV01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt4/MOSS01_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt4/EUCBV01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt4/NEUCBV01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt4/OCUCB01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt4/TS01_comp_subsampled.txt};
       	%\legend{EClusUCBA,AClusUCBA,EClusUCB,AClusUCB} 
