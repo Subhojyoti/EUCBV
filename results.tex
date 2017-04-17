@@ -6,11 +6,11 @@ We present below the main theorem of the paper which establishes the regret uppe
 \label{Result:Theorem:1}
 For $T\geq K^{2.4}$, $\rho=\frac{1}{2}$ and $\psi=\frac{T}{K^2}$, the regret $R_T$ for EUCBV satisfies
 \begin{align*}
- \E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) + \bigg(\Delta_{i}+\dfrac{9\log{(\psi  T\Delta_{i}^{4})}}{\Delta_{i}}\bigg) + \bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)\bigg \rbrace \\ 
+ \E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) + \bigg(\Delta_{i}+\dfrac{32\log{(\psi  T\Delta_{i}^{4})}}{\Delta_{i}}\bigg) + \bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)\bigg \rbrace \\ 
  %%%%%%%%%%%%%%%%
   & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b}\bigg(\dfrac{C_{2}(\rho)T^{1-\rho}}{b^{2\rho -1}} \bigg) + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T
 \end{align*}
-for all $b\geq\sqrt{\frac{e}{T}}$. In the above, $C_1(x) = \frac{2^{2+x}.9^{x}}{\psi^{x}}$ and $C_2(x) = \frac{2^{\frac{x}{2}+\frac{9}{4}}.3^{x+\frac{1}{2}}}{\psi^{x}}$.
+for all $b\geq\sqrt{\frac{e}{T}}$. In the above, $C_1(x) = \frac{2^{2+6x}.9^{x}}{\psi^{x}}$ and $C_2(x) = \frac{2^{\frac{x}{2}+\frac{19}{4}}.3^{x+\frac{1}{2}}}{\psi^{x}}$.
 \end{theorem}
 
 \begin{proof}
@@ -23,7 +23,7 @@ Next, we specialize the result of Theorem \ref{Result:Theorem:1} in Corollary \r
 \label{Result:Corollary:1}
 With $\psi=\frac{T}{K^2}$ and $\rho=\frac{1}{2}$, we have the following gap-dependent bound for the regret of EUCBV:
 \begin{align*}
-\E [R_T] & \sum_{i\in \A:\Delta_{i} > b}\bigg\lbrace 96 K + \dfrac{128\log{(\dfrac{T\Delta_{i}^{2}}{ K})}}{\Delta_{i}}\bigg\rbrace 
+\E [R_T] & \sum_{i\in \A:\Delta_{i} > b}\bigg\lbrace 96 K + \dfrac{64\log{(\dfrac{T\Delta_{i}^{2}}{ K})}}{\Delta_{i}}\bigg\rbrace 
  + \max\limits_{i\in \A:\Delta_{i}\leq b}\Delta_{i}T 
 	\end{align*} 
 \end{corollary}
@@ -38,7 +38,7 @@ Thus, we clearly see that the most significant term in the gap-dependent bound i
 \label{Result:Corollary:2}
 With $\psi=\frac{T}{K^2}$ and $\rho=\frac{1}{2}$, we have the following gap-independent bound for the regret of EUCBV:
 \begin{align*}
-\E[R_{T}] & \leq 96 K^2 + 128\sqrt{KT}
+\E[R_{T}] & \leq 96 K^2 + 64\sqrt{KT}
 	\end{align*} 
 \end{corollary}
 \begin{proof}
