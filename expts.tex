@@ -65,12 +65,15 @@ In this section we conduct extensive empirical evaluations of EUCBV against seve
 		\addplot table{results/NewExpt/Expt2/MOSS01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt2/OCUCB01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt2/TS01_comp_subsampled.txt};
-		%\addplot table{results/NewExpt/Expt2_2/MedElim_comp_subsampled.txt};
-		%\addplot table{results/NewExpt/Expt2_2/UCBR01_comp_subsampled.txt};
-		%\addplot table{results/NewExpt/Expt2/UCBV01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt2/KLUCB01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt2/BU01_comp_subsampled.txt};
+		%\addplot table{results/NewExpt/Expt2/MedElim01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt2/UCBR01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt2/UCBV01_comp_subsampled.txt};
 		
 		%\legend{UCB1,EUCBV,MOSS,OCUCB,Med-Elim,UCB-Imp,UCBV}
-		\legend{UCB1,EUCBV,MOSS,OCUCB,TS}
+		\legend{UCB1,EUCBV,MOSS,OCUCB,TS,KLUCB-Gauss,BU,UCB-Imp,UCBV}
+		%\legend{UCB1,EUCBV,MOSS,OCUCB,TS,KLUCB-Gauss,BU}
       	\end{axis}
       	\end{tikzpicture}
    		\label{fig:2}
@@ -83,15 +86,15 @@ In this section we conduct extensive empirical evaluations of EUCBV against seve
 % For the purpose of performance comparison
 
 
-\textbf{Experiment-1 (Bernoulli with uniform gaps):} This experiment is conducted to observe the performance of EUCBV over a short horizon. The horizon $T$ is set to $60000$. These type of cases are frequently encountered in web-advertising domain. The testbed comprises of $20$ Bernoulli distributed arms with expected rewards of the arms as $r_{i_{{i}\neq {*}}}=0.07$ and $r^{*}=0.1$. The regret is averaged over $100$ independent runs and is shown in Figure \ref{fig:1}. EUCBV, MOSS, UCB1, UCB-V, KL-UCB, TS, BU and DMED are run in this experimental setup. Here not only do we observe that EUCBV performs better than all the non-variance based  algorithms like MOSS, OCUCB, UCB-Improved and UCB1, but it also outperforms UCBV because of the choice of the exploration parameters. Because of the small gaps and short horizon $T$, we do not implement UCB-Improved and Median Elimination on this test-case. 
+\textbf{Experiment-1 (Bernoulli with uniform gaps):} This experiment is conducted to observe the performance of EUCBV over a short horizon. The horizon $T$ is set to $60000$. These type of cases are frequently encountered in web-advertising domain. The testbed comprises of $20$ Bernoulli distributed arms with expected rewards of the arms as $r_{i_{{i}\neq {*}}}=0.07$ and $r^{*}=0.1$. The regret is averaged over $100$ independent runs and is shown in Figure \ref{fig:1}. EUCBV, MOSS, UCB1, UCB-V, KL-UCB, TS, BU and DMED are run in this experimental setup. Here not only do we observe that EUCBV performs better than all the non-variance based  algorithms like MOSS, OCUCB, UCB-Improved and UCB1, but it also outperforms UCBV because of the choice of the exploration parameters. Because of the small gaps and short horizon $T$, we do not implement UCB-Improved and Median Elimination on this test-case. EUCBV is only slightly better than TS in this setting but better than other algorithms like Bayes-UCB and KL-UCB.
 
-\textbf{Experiment-2 (Failure of TS):} This experiment is conducted on a large horizon and over a large set of arms. The horizon $T$ is set for a large duration of $3\times 10^{5}$. This testbed comprises of $100$ arms involving Gaussian reward distributions with expected rewards of the arms $r_{1:33}=0.7$, $r_{34:99}=0.8$ and $r^{*}_{100}=0.9$ with variance set as $\sigma_{1:33}^{2} = 0.7,\sigma_{34:99}^{2} = 0.1$ and $r^{*}_{100}=0.7$. The regret is averaged over $100$ independent runs and is shown in Figure \ref{fig:2}. From the results in Figure \ref{fig:2}, we observe that since the gaps are small and the variances of the optimal arm and the arms farthest from the optimal arm are the highest, EUCBV outperforms all the non-variance based algorithms MOSS, OCUCB, UCB1, TS, UCB-Improved and Median-Elimination($\epsilon=0.1,\delta=0.1$). The performance of UCBV, UCB-Improved and Median elimination is extremely weak in comparison with the other algorithms and their plots are not shown in Figure \ref{fig:2}. Note that the performance of TS is also weak and this is in line with the observation in  \citet{lattimore2015optimally} that the worst case regret of TS when Gaussian prior is used is $\Omega\left( \sqrt{KT\log T}\right)$. Again both Bayes-UCB and KL-UCB-Gauss perform much worse than TS and their plots are omitted from the figure. We omit their plots in order to more clearly show the difference between EUCBV, MOSS and OCUCB.  
+\textbf{Experiment-2 (Failure of TS):} This experiment is conducted on a large horizon and over a large set of arms. The horizon $T$ is set for a large duration of $3\times 10^{5}$. This testbed comprises of $100$ arms involving Gaussian reward distributions with expected rewards of the arms $r_{1:33}=0.7$, $r_{34:99}=0.8$ and $r^{*}_{100}=0.9$ with variance set as $\sigma_{1:33}^{2} = 0.7,\sigma_{34:99}^{2} = 0.1$ and $r^{*}_{100}=0.7$. The regret is averaged over $100$ independent runs and is shown in Figure \ref{fig:2}. From the results in Figure \ref{fig:2}, we observe that since the gaps are small and the variances of the optimal arm and the arms farthest from the optimal arm are the highest, EUCBV outperforms all the non-variance based algorithms MOSS, OCUCB, UCB1, TS, UCB-Improved and Median-Elimination($\epsilon=0.1,\delta=0.1$). The performance of Median elimination is extremely weak in comparison with the other algorithms and its plot is not shown in Figure \ref{fig:2}. We omit its plot in order to more clearly show the difference between EUCBV, MOSS and OCUCB. Also note that the order of magnitude in the y-axis (cumulative regret) is $10^4$. The performance of TS is also weak and this is in line with the observation in  \citet{lattimore2015optimally} that the worst case regret of TS when Gaussian prior is used is $\Omega\left( \sqrt{KT\log T}\right)$. Again both Bayes-UCB and KL-UCB-Gauss perform much worse than TS. 
 %Also the performance of UCB-Improved is poor in comparison to other algorithms, which is probably because of pulls wasted in initial exploration whereas EUCBV with the choice of $\psi$ and $\rho$ performs much better.
 
 \begin{figure}[!h]
     \centering
     \begin{tabular}{cc}
-    \subfigure[0.25\textwidth][Expt-$3$: $20$ to $100$ Bernoulli-distributed arms]
+    \subfigure[0.25\textwidth][Expt-$3$: $20$ to $100$ Gaussian-distributed arms]
     %with $r_{i_{{i}\neq {*}}}=0.05$ and $r^{*}=0.1$
     {
     	\pgfplotsset{
@@ -109,10 +112,10 @@ In this section we conduct extensive empirical evaluations of EUCBV against seve
 		clip=true,
   		legend style={at={(0.5,1.3)},anchor=north, legend columns=3} ]
         % UCB
-		\addplot table{results/NewExpt/Expt3/plotFinalMOSS20_100.txt};
-		\addplot table{results/NewExpt/Expt3/plotFinalEUCBV20_100.txt};
-		\addplot table{results/NewExpt/Expt3/plotFinalOCUCB20_100.txt};
-		\addplot table{results/NewExpt/Expt3/plotFinalTS20_100.txt};
+		\addplot table{results/NewExpt/Expt31/plotFinalMOSS20_100.txt};
+		\addplot table{results/NewExpt/Expt31/plotFinalNEUCBV20_100.txt};
+		\addplot table{results/NewExpt/Expt31/plotFinalOCUCB20_100.txt};
+		\addplot table{results/NewExpt/Expt31/plotFinalTS20_100.txt};
       	\legend{MOSS,EUCBV,OCUCB,TS}
       	\end{axis}
         \end{tikzpicture}
@@ -155,7 +158,7 @@ In this section we conduct extensive empirical evaluations of EUCBV against seve
     \vspace*{-1em}
 \end{figure}
 %\vspace*{-0.5em}
-\textbf{Experiment-3 (Large horizon and uniform gaps):} This experiment is conducted to show the stability and performance of EUCBV over a very large horizon and over a large number of arms. This testbed comprises of $20-100$ (interval of $10$) arms with Bernoulli reward distributions, where the expected rewards of the arms are $r_{i_{{i}\neq {*}}}=0.05$ and $r^{*}=0.1$. For each of these testbeds of $20-100$ arms, we report the cumulative regret averaged over $100$ independent runs. The horizon is set at $T=10^{5} + K_{20:100}^{3}$ timesteps. We report the performance of MOSS, TS, OCUCB and EUCBV only over this uniform gap setup. From the results in Figure \ref{fig:3}, it is evident that the growth of regret for EUCBV  is much lower than that of TS, OCUCB and MOSS. 
+\textbf{Experiment-3 (Gaussian with large horizon and uniform gaps):} This experiment is conducted to show the stability and performance of EUCBV over a very large horizon and over a large number of arms. This testbed comprises of $20-100$ (interval of $10$) arms with Gaussian reward distributions, where the expected rewards of the arms are $r_{i_{{i}\neq {*}}}=0.05$ and $r^{*}=0.1$ and variances are set as $\sigma_{i:i\neq *}^{2}=0.25$ and $\sigma_{*}^{2}=0.7$. For each of these testbeds of $20-100$ arms, we report the cumulative regret averaged over $100$ independent runs. The horizon is set at $T=10^{5} + K_{20:100}^{3}$ timesteps. We report the performance of MOSS, TS, OCUCB and EUCBV only over this uniform gap setup. From the results in Figure \ref{fig:3}, it is evident that the growth of regret for EUCBV  is much lower than that of TS, OCUCB and MOSS. Bayes-UCB and KLUCB are not feasible to be run over such a large horizon as these algorithms are extremely slow in their execution.
 
 %Please note that algorithms like Thompson Sampling or Bayes-UCB are too slow to be run for such large arms (see \citet{lattimore2015optimally}) and  over such large horizon.
 %This also corroborates the finding of \citet{lattimore2015optimally} which states that MOSS breaks down only when the number of arms are exceptionally large or the horizon is unreasonably high and gaps are very small. We consistently see that in uniform gap testcases EUCBV outperforms OCUCB.
