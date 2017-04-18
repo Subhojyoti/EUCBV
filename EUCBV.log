@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  18 APR 2017 15:41
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  18 APR 2017 19:43
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1230,8 +1230,13 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
- (./related.tex [2])
-(./contribution.tex [3]) (./ealgo.tex
+ (./related.tex
+Overfull \hbox (5.76338pt too wide) in paragraph at lines 5--7
+\OT1/ptm/m/n/10 and gap-independent re-gret bounds in the stochas-tic MAB frame
+-work. How-ever, OCUCB
+ []
+
+[2]) (./contribution.tex [3]) (./ealgo.tex
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 15.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
@@ -1245,11 +1250,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--60
 
  []
 
-
-Underfull \vbox (badness 1755) has occurred while \output is active []
-
- [5])
-(./results.tex
+[5]) (./results.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 5.
  [6]
@@ -1264,12 +1265,18 @@ Overfull \hbox (11.05432pt too wide) in paragraph at lines 87--75
 -i-cant term is $\OML/cmm/m/it/10 O []$
  []
 
-(./proofTheorem.tex
+
+Overfull \hbox (5.29286pt too wide) in paragraph at lines 87--75
+\OT1/ptm/m/n/10 which matches the up-per bound of MOSS and OCUCB and is bet-ter
+ than UCB-Improved,
+ []
+
+(./proofTheorem.tex [8]
 Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-[8] [9]
+[9]
 Overfull \hbox (5.83665pt too wide) in paragraph at lines 112--114
 \OT1/ptm/m/n/10 where in-equal-ity $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr
 /m/n/10 )$ \OT1/ptm/m/n/10 is ob-tained us-ing ([]3[]), while $\OT1/cmr/m/n/10 
@@ -1277,7 +1284,7 @@ Overfull \hbox (5.83665pt too wide) in paragraph at lines 112--114
 f-Hoeffding
  []
 
-[10] [11]) (./expts.tex
+[10] [11]) (./expts.tex [12]
 PGFPlots: reading {results/NewExpt/Expt1/UCBV01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt11/NEUCBV011_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/KLUCB01_comp_subsampled.txt}
@@ -1292,7 +1299,7 @@ PGFPlots: reading {results/NewExpt/Expt2/NEUCBV01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2/MOSS01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2/OCUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2/TS01_comp_subsampled.txt}
- [12] [13]
+ [13]
 PGFPlots: reading {results/NewExpt/Expt3/plotFinalMOSS20_100.txt}
 PGFPlots: reading {results/NewExpt/Expt3/plotFinalEUCBV20_100.txt}
 PGFPlots: reading {results/NewExpt/Expt3/plotFinalOCUCB20_100.txt}
@@ -1301,7 +1308,7 @@ PGFPlots: reading {results/NewExpt/Expt4/MOSS01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/NEUCBV01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/OCUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/TS01_comp_subsampled.txt}
-) (./Conclusion.tex) [14] [15] (./EUCBV.bbl
+ [14]) (./Conclusion.tex) [15] (./EUCBV.bbl
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 59.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
@@ -1313,11 +1320,11 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 Here is how much of TeX's memory you used:
  22823 strings out of 493848
  463332 string characters out of 1152823
- 636263 words of memory out of 3000000
+ 635166 words of memory out of 3000000
  25415 multiletter control sequences out of 15000+50000
  36017 words of font info for 81 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 63i,27n,75p,1773b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,27n,75p,1807b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/sh
 are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-
 texlive/fonts/type1/public/amsfonts/cmextra/cmbsy5.pfb></usr/share/texmf-texliv
@@ -1347,9 +1354,9 @@ nts/symbols/msbm10.pfb></usr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8a
 mf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on EUCBV.pdf (16 pages, 456556 bytes).
+Output written on EUCBV.pdf (16 pages, 458020 bytes).
 PDF statistics:
- 429 PDF objects out of 1000 (max. 8388607)
+ 436 PDF objects out of 1000 (max. 8388607)
  79 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
