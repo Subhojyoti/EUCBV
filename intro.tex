@@ -2,7 +2,7 @@ In this paper we deal with the stochastic multi-armed bandit (MAB) setting. In i
 \begin{align*}
 R_{T}=r^{*}T - \sum_{i\in \A} r_{i}z_{i}(T),
 \end{align*}
-where $T$ is the number of timesteps, $z_{i}(T)$ is the number of times the algorithm has chosen arm $i$ up to timestep $T$.
+where $T$ is the number of timesteps, and  $z_{i}(T)$ is the number of times the algorithm has chosen arm $i$ up to timestep $T$.
 The expected regret of an algorithm after $T$ timesteps can be written as,
 \begin{align*}
 \E[R_{T}]= \sum_{i=1}^K \E[z_i (T)] \Delta_i,
