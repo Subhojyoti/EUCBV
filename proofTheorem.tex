@@ -4,7 +4,7 @@ We first present the following technical lemma that is required  to prove the re
 
 \begin{lemma}
 \label{proofTheorem:Lemma:1}
-If $T\geq K^{2.4}$, $\psi=\dfrac{T}{ K^2}$, $\rho=\dfrac{1}{2}$ and $m\leq \dfrac{1}{2} \log_2(\dfrac{T}{e}) $, then,
+If $T\geq K^{2.4}$, $\psi=\dfrac{T}{ K^2}$, $\rho=\dfrac{1}{2}$ and $m\leq \dfrac{1}{2} \log_2\left(\dfrac{T}{e}\right) $, then,
 \begin{align*}
 \dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} \leq \frac{3}{2}
 \end{align*}
@@ -13,24 +13,39 @@ If $T\geq K^{2.4}$, $\psi=\dfrac{T}{ K^2}$, $\rho=\dfrac{1}{2}$ and $m\leq \dfra
 %The proof is given in Section \ref{sec:proofTheorem:Lemma1}.
 %\end{proof}
 \begin{proof}
-We are going to prove this by contradiction. Let's say,
-\begin{align*}
- & \dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} \geq \frac{3}{2} \\
- &\Rightarrow 2\rho m \log(2) \geq 3\log(\psi T) - 6m\log( 2) \\
- &\Rightarrow 2\rho m \log(2) \overset{(a)}{\geq} 6\log(\frac{T}{K}) - 6m\log( 2) \\
- &\Rightarrow 7 m \log(2) + 6\log(K) \overset{(b)}{\geq} 6\log(T) \\
- &\Rightarrow 3.5 \log(2) \log_2(\frac{T}{e}) + 6\log(K) \overset{(c)}{\geq} 6\log(T) \\
- &\Rightarrow \dfrac{3.5 \log (2) \log (\frac{T}{e})}{\log(2)} + 6\log(K) \geq 6\log(T)\\
- &\Rightarrow 3.5 \log(T) + 6\log K - 3.5 \geq 6\log (T)\\
- &\Rightarrow 6\log K \geq 2.5 \log T + 3.5 
-\end{align*}
-In the above inequalities, $(a)$ happens because $\psi=\frac{T}{K^2}$, $(b)$ occurs as $\rho=\frac{1}{2}$ and $(c)$ happens because $m\leq \frac{1}{2} \log_2(\frac{T}{e})$. But, for $T\geq K^{2.4}$, we can see that $6\log K \geq 2.5 \log T + 3.5$ is clearly not possible. Hence, $\dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} \leq \dfrac{3}{2}$.
+The proof is based on contradiction. Suppose
+\begin{eqnarray*}
+\dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} > \frac{3}{2}.
+\end{eqnarray*}
+Then, with $\psi=\dfrac{T}{ K^2}$ and $\rho=\dfrac{1}{2}$, we obtain
+\begin{eqnarray*}
+6\log(K) 
+&>& 6\log(T) - 7m\log(2) \\
+&\overset{(a)}{\ge}& 6\log(T) - \frac{7}{2} \log_2\left(\frac{T}{e}\right) \log(2) \\
+&=& 2.5\log(T) + 3.5 \log_2(e)\log(2)  \\
+&\overset{(b)}{=}& 2.5\log(T) +3.5
+\end{eqnarray*}
+where $(a)$ is obtained using $m\leq \dfrac{1}{2} \log_2\left(\dfrac{T}{e}\right)$, while $(b)$ follows from the identity $\log_2(e)\log(2) =1$. Finally, for $T\ge K^{2.4}$ we obtain, $6\log(K)>6\log(K)+3.5$, which is a contradiction.
+
+%\begin{align*}
+% %& \dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} \geq \frac{3}{2} \\
+% &\Rightarrow 2\rho m \log(2) \geq 3\log(\psi T) - 6m\log( 2) \\
+% &\Rightarrow 2\rho m \log(2) \overset{(a)}{\geq} 6\log(\frac{T}{K}) - 6m\log( 2) \\
+% &\Rightarrow 7 m \log(2) + 6\log(K) \overset{(b)}{\geq} 6\log(T) \\
+% &\Rightarrow 3.5 \log(2) \log_2(\frac{T}{e}) + 6\log(K) \overset{(c)}{\geq} 6\log(T) \\
+% &\Rightarrow \dfrac{3.5 \log (2) \log (\frac{T}{e})}{\log(2)} + 6\log(K) \geq 6\log(T)\\
+% &\Rightarrow 3.5 \log(T) + 6\log K - 3.5 \geq 6\log (T)\\
+% &\Rightarrow 6\log K \geq 2.5 \log T + 3.5 
+%\end{align*}
+%In the above inequalities, $(a)$ happens because $\psi=\frac{T}{K^2}$, $(b)$ occurs as $\rho=\frac{1}{2}$ and $(c)$ happens because $m\leq \frac{1}{2} \log_2(\frac{T}{e})$. But, for $T\geq K^{2.4}$, we can see that $6\log K \geq 2.5 \log T + 3.5$ is clearly not possible. Hence, $\dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} \leq \dfrac{3}{2}$.
 \end{proof}
 
 \subsection*{Proof of Theorem 1}
 \label{sec:proofTheorem:Theorem1}
 \begin{proof}
-Let, for each sub-optimal arm ${i}$, $m_{i}=\min{\lbrace m|\sqrt{4\epsilon_{m_i}} < \dfrac{\Delta_{i}}{4} \rbrace}$. Let $\A^{'}=\lbrace i\in \A: \Delta_{i} > b \rbrace$ and $\A^{''}=\lbrace i\in \A: \Delta_{i} > 0 \rbrace$. Also $z_{i}$ denotes total number of times an arm $i$ has been pulled. In the $m$-th round, $n_{m}$ denotes the number of pulls allocated to the surviving arms in $B_{m}$. \\
+For each sub-optimal arm ${i}\in\mathcal{A}$, let $m_{i}=\min{\left\lbrace m|\sqrt{4\epsilon_{m_i}} < \dfrac{\Delta_{i}}{4}\right\rbrace}$. Also, let $\A^{'}=\lbrace i\in \A: \Delta_{i} > b \rbrace$ and $\A^{''}=\lbrace i\in \A: \Delta_{i} > 0 \rbrace$. 
+% Also $z_{i}$ denotes total number of times an arm $i$ has been pulled. In the $m$-th round, $n_{m}$ denotes the number of pulls allocated to the surviving arms in $B_{m}$. 
+
 \subsection*{Case $a$: \textit{Some sub-optimal arm ${i}$ is not eliminated in round $m_{i}$ or before and the optimal arm ${*}\in B_{m_{i}}$}}
 
 An arbitrary sub-optimal arm ${i}\in \A^{'}$ can get eliminated only when the event,
