@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  19 APR 2017 11:21
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  19 APR 2017 12:17
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1145,14 +1145,7 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \rotheadsize=\dimen220
 \c@nlinenum=\count179
 \TeXr@lab=\toks46
-))
-(/usr/share/texmf-texlive/tex/latex/natbib/natbib.sty
-Package: natbib 2009/07/16 8.31 (PWD, AO)
-\bibhang=\skip72
-\bibsep=\skip73
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count180
-) (./EUCBV.aux)
+)) (./EUCBV.aux)
 \openout1 = `EUCBV.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -1182,7 +1175,7 @@ Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count181
+\c@section@level=\count180
 )
 LaTeX Info: Redefining \ref on input line 12.
 LaTeX Info: Redefining \pageref on input line 12.
@@ -1194,15 +1187,15 @@ LaTeX Info: Redefining \pageref on input line 12.
 \AtBeginShipoutBox=\box88
  (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count182
+\scratchcounter=\count181
 \scratchdimen=\dimen221
 \scratchbox=\box89
-\nofMPsegments=\count183
-\nofMParguments=\count184
+\nofMPsegments=\count182
+\nofMParguments=\count183
 \everyMPshowfont=\toks47
-\MPscratchCnt=\count185
+\MPscratchCnt=\count184
 \MPscratchDim=\dimen222
-\MPnumerator=\count186
+\MPnumerator=\count185
 \everyMPtoPDFconversion=\toks48
 ) ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
@@ -1230,13 +1223,8 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
- (./related.tex
-Overfull \hbox (5.76338pt too wide) in paragraph at lines 5--7
-\OT1/ptm/m/n/10 and gap-independent re-gret bounds in the stochas-tic MAB frame
--work. How-ever, OCUCB
- []
-
-[2]) (./contribution.tex [3]) (./ealgo.tex
+ (./related.tex [2])
+(./contribution.tex [3]) (./ealgo.tex
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 15.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
@@ -1250,13 +1238,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--60
 
  []
 
-[5]) (./results.tex
+
+Underfull \vbox (badness 4193) has occurred while \output is active []
+
+ [5])
+(./results.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 5.
  [6]
 Overfull \hbox (13.93344pt too wide) in paragraph at lines 43--44
 []\OT1/ptm/m/n/10 Next, we spe-cial-ize the re-sult of The-o-rem []1[] in Corol
 -lary []1[] to ob-tain the gap-independent
+ []
+
+
+Overfull \hbox (12.24228pt too wide) in paragraph at lines 61--62
+\OT1/ptm/m/n/10 gret can be $\OML/cmm/m/it/10 O []$\OT1/ptm/m/n/10 . But UCB1 s
+uf-fered from a re-gret of or-der of $\OML/cmm/m/it/10 O []$
  []
 
 [7])
@@ -1271,12 +1269,12 @@ Overfull \hbox (5.29286pt too wide) in paragraph at lines 87--75
  than UCB-Improved,
  []
 
-(./proofTheorem.tex [8]
+(./proofTheorem.tex
 Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-[9]
+[8] [9]
 Overfull \hbox (5.83665pt too wide) in paragraph at lines 112--114
 \OT1/ptm/m/n/10 where in-equal-ity $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr
 /m/n/10 )$ \OT1/ptm/m/n/10 is ob-tained us-ing ([]3[]), while $\OT1/cmr/m/n/10 
@@ -1284,7 +1282,7 @@ Overfull \hbox (5.83665pt too wide) in paragraph at lines 112--114
 f-Hoeffding
  []
 
-[10] [11]) (./expts.tex [12]
+[10] [11]) (./expts.tex
 PGFPlots: reading {results/NewExpt/Expt1/UCBV01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt11/NEUCBV011_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/KLUCB01_comp_subsampled.txt}
@@ -1303,7 +1301,11 @@ PGFPlots: reading {results/NewExpt/Expt2/KLUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2/BU01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2/UCBR01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2/UCBV01_comp_subsampled.txt}
- [13]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[12]
 PGFPlots: reading {results/NewExpt/Expt31/plotFinalMOSS20_100.txt}
 PGFPlots: reading {results/NewExpt/Expt31/plotFinalNEUCBV20_100.txt}
 PGFPlots: reading {results/NewExpt/Expt31/plotFinalOCUCB20_100.txt}
@@ -1312,55 +1314,69 @@ PGFPlots: reading {results/NewExpt/Expt4/MOSS01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/NEUCBV01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/OCUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt4/TS01_comp_subsampled.txt}
- [14]) (./Conclusion.tex) [15] (./EUCBV.bbl
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 59.
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 1082) has occurred while \output is active []
+
+ [13])
+(./Conclusion.tex) [14] [15] (./EUCBV.bbl
+Underfull \hbox (badness 1852) in paragraph at lines 40--42
+[]\OT1/ptm/m/n/9 Bubeck, S., Cesa-Bianchi, N., Lu-gosi, G.: Ban-dits with heavy
+ tail. arXiv preprint
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 49.
 (/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )) [16
 
+] (./EUCBV.aux)
 
-] (./EUCBV.aux) ) 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 22827 strings out of 493848
- 463575 string characters out of 1152823
- 653178 words of memory out of 3000000
- 25417 multiletter control sequences out of 15000+50000
+ 22477 strings out of 493848
+ 458791 string characters out of 1152823
+ 683139 words of memory out of 3000000
+ 25071 multiletter control sequences out of 15000+50000
  36017 words of font info for 81 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 63i,27n,75p,1893b,1782s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/sh
-are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-
-texlive/fonts/type1/public/amsfonts/cmextra/cmbsy5.pfb></usr/share/texmf-texliv
-e/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/typ
-e1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/a
-msfonts/cmextra/cmex7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
-/cmextra/cmex9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
-sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/tex
-mf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/f
-onts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/p
-ublic/amsfonts/cm/cmmi9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
-ts/cm/cmmib10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra
-/cmmib5.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cmmib
-7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-
-texlive/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-texlive/fonts
-/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/public
-/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmr9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/te
-xmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-texlive/
-fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-texlive/fonts/type1/
-public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
-nts/symbols/msbm10.pfb></usr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8a
-.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/tex
-mf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/ty
-pe1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8
-a.pfb>
-Output written on EUCBV.pdf (16 pages, 461653 bytes).
+ 63i,27n,75p,1884b,1782s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-texlive/fonts/t
+ype1/public/amsfonts/cmextra/cmbsy5.pfb></usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
+nts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra
+/cmex7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cmex9.
+pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/s
+hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-
+texlive/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-texlive/font
+s/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/publ
+ic/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
+cm/cmmi9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmib10.p
+fb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cmmib5.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-tex
+live/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/t
+ype1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
+r7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/
+share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf
+-texlive/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-texlive/fon
+ts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-texlive/fonts/type1/pub
+lic/amsfonts/cm/cmsy7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
+/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msb
+m10.pfb></usr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb></usr/shar
+e/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/font
+s/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/u
+tmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on EUCBV.pdf (16 pages, 447211 bytes).
 PDF statistics:
- 435 PDF objects out of 1000 (max. 8388607)
+ 432 PDF objects out of 1000 (max. 8388607)
  79 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

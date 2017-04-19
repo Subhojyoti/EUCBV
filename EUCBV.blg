@@ -1,45 +1,45 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: EUCBV.aux
-The style file: apalike.bst
+The style file: splncs03.bst
 Database file #1: biblio1.bib
 You've used 20 entries,
-            1935 wiz_defined-function locations,
-            588 strings with 6702 characters,
-and the built_in function-call counts, 8148 in all, are:
-= -- 830
-> -- 287
-< -- 18
-+ -- 99
+            2785 wiz_defined-function locations,
+            700 strings with 7417 characters,
+and the built_in function-call counts, 10527 in all, are:
+= -- 911
+> -- 270
+< -- 20
++ -- 115
 - -- 92
-* -- 638
-:= -- 1368
-add.period$ -- 62
+* -- 621
+:= -- 1349
+add.period$ -- 25
 call.type$ -- 20
-change.case$ -- 146
-chr.to.int$ -- 19
+change.case$ -- 117
+chr.to.int$ -- 0
 cite$ -- 20
-duplicate$ -- 340
-empty$ -- 584
-format.name$ -- 130
-if$ -- 1642
-int.to.chr$ -- 2
-int.to.str$ -- 0
-missing$ -- 19
-newline$ -- 103
-num.names$ -- 60
-pop$ -- 136
+duplicate$ -- 954
+empty$ -- 945
+format.name$ -- 109
+if$ -- 2311
+int.to.chr$ -- 0
+int.to.str$ -- 20
+missing$ -- 185
+newline$ -- 65
+num.names$ -- 40
+pop$ -- 335
 preamble$ -- 1
-purify$ -- 146
+purify$ -- 86
 quote$ -- 0
-skip$ -- 271
+skip$ -- 323
 stack$ -- 0
-substring$ -- 591
-swap$ -- 69
-text.length$ -- 6
+substring$ -- 657
+swap$ -- 517
+text.length$ -- 20
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 120
+type$ -- 80
 warning$ -- 0
-while$ -- 72
-width$ -- 0
-write$ -- 257
+while$ -- 99
+width$ -- 22
+write$ -- 198
