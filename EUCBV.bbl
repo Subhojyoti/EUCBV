@@ -36,10 +36,6 @@ Auer, P., Ortner, R.: Ucb revisited: Improved regret bounds for the stochastic
 Bubeck, S., Cesa-Bianchi, N.: Regret analysis of stochastic and nonstochastic
   multi-armed bandit problems. arXiv preprint arXiv:1204.5721  (2012)
 
-\bibitem{bubeck2012bandits}
-Bubeck, S., Cesa-Bianchi, N., Lugosi, G.: Bandits with heavy tail. arXiv
-  preprint arXiv:1209.1727  (2012)
-
 \bibitem{bubeck2011pure}
 Bubeck, S., Munos, R., Stoltz, G.: Pure exploration in finitely-armed and
   continuous-armed bandits. TCS  412(19),  1832--1852 (2011)
