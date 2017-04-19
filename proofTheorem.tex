@@ -129,7 +129,7 @@ The second term in the LHS of (\ref{eq:prob_eq2}) can be simplified as follows:
 \end{align}
 where inequality $(a)$ is obtained using (\ref{si_bar_equn}), while $(b)$ follows from the Bernstein inequality.
   
-Thus, using (\ref{lhs1_equn}) and (\ref{lhs2_equn}) in (\ref{eq:prob_eq2}) we obtain $\mathbb{P}(\hat{r}_{i}> r_{i} + c_{i})\le \dfrac{2}{(\psi  T\epsilon_{m_{i}})^{\rho}}$. Similarly, $\mathbb{P}\lbrace\hat{r}^{*}\leq r^{*} - c^{*}\rbrace \leq \dfrac{2}{(\psi  T\epsilon_{m_{i}})^{\rho}}$. Summing the two up, the probability that a sub-optimal arm ${i}$ is not eliminated on or before $m_{i}$-th round is  $\bigg(\dfrac{4}{(\psi T\epsilon_{m_{i}})^{\rho}} \bigg)$.
+Thus, using (\ref{lhs1_equn}) and (\ref{lhs2_equn}) in (\ref{eq:prob_eq2}) we obtain $\mathbb{P}(\hat{r}_{i}> r_{i} + c_{i})\le \dfrac{2}{(\psi  T\epsilon_{m_{i}})^{\rho}}$. Similarly, $\mathbb{P}\lbrace\hat{r}^{*} < r^{*} - c^{*}\rbrace \leq \dfrac{2}{(\psi  T\epsilon_{m_{i}})^{\rho}}$. Summing the two up, the probability that a sub-optimal arm ${i}$ is not eliminated on or before $m_{i}$-th round is  $\bigg(\dfrac{4}{(\psi T\epsilon_{m_{i}})^{\rho}} \bigg)$.
 
 Summing up over all arms in $\A^{'}$ and bounding the regret for each arm $i\in \A^{'}$ trivially by $T\Delta_{i}$, we obtain
    \begin{align*}

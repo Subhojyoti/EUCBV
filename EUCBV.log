@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.24)  20 APR 2017 00:02
+=======
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  19 APR 2017 23:24
+>>>>>>> origin/master
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1454,6 +1458,7 @@ Package rerunfilecheck Info: File `EUCBV.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  30822 strings out of 493089
  721932 string characters out of 6134842
  1010452 words of memory out of 5000000
@@ -1495,6 +1500,45 @@ fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
 es/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
 Output written on EUCBV.pdf (16 pages, 395089 bytes).
+=======
+ 22474 strings out of 493848
+ 458744 string characters out of 1152823
+ 684200 words of memory out of 3000000
+ 25070 multiletter control sequences out of 15000+50000
+ 36017 words of font info for 81 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 63i,27n,75p,1689b,1782s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/sh
+are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-
+texlive/fonts/type1/public/amsfonts/cmextra/cmbsy5.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/typ
+e1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cmextra/cmex7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
+/cmextra/cmex9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/f
+onts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmmi9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
+ts/cm/cmmib10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra
+/cmmib5.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cmmib
+7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-
+texlive/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-texlive/fonts
+/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/public
+/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmr9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/te
+xmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-texlive/
+fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-texlive/fonts/type1/
+public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
+nts/symbols/msbm10.pfb></usr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8a
+.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/tex
+mf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8
+a.pfb>
+Output written on EUCBV.pdf (16 pages, 447810 bytes).
+>>>>>>> origin/master
 PDF statistics:
  436 PDF objects out of 1000 (max. 8388607)
  325 compressed objects within 4 object streams
