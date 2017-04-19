@@ -1,6 +1,6 @@
 
 
-We present below the main theorem of the paper which establishes the regret upper bound for the EUCBV  algorithm. 
+We present below the main result of the paper which establishes the regret upper bound for the EUCBV  algorithm. 
 \subsection*{Main Theorem}
 \begin{theorem}[\textbf{\textit{Gap-dependent bound}}]
 \label{Result:Theorem:1}
@@ -11,8 +11,8 @@ For $T\geq K^{2.4}$, $\rho=\frac{1}{2}$ and $\psi=\frac{T}{K^2}$, the regret $R_
 %  & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b}\bigg(\dfrac{C_{2}(\rho)T^{1-\rho}}{b^{2\rho -1}} \bigg) + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T
 %\end{align*}
 \begin{align*}
-\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace 64 K + \bigg(\Delta_{i}+\dfrac{64\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\bigg)\bigg \rbrace\\ 
-  & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} 32 K + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T  
+\E [R_{T}] & \leq \sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace 64 K + \bigg(\Delta_{i}+\dfrac{64\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\bigg)\bigg \rbrace \\
+ & \hspace{20mm}+\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} 32 K + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T  
 \end{align*}
 
 for all $b\geq\sqrt{\frac{e}{T}}$. 
@@ -20,7 +20,9 @@ for all $b\geq\sqrt{\frac{e}{T}}$.
 \end{theorem}
 
 \begin{proof}
-The proof comprises of three modules. In the first module we prove the necessary conditions for arm elimination within a specified number of rounds, which is motivated by the technique in \cite{auer2010ucb}. We first refine the proof while breaking down the confidence interval by using Lemma  \ref{proofTheorem:Lemma:1}. Then we combine the approach of \cite{audibert2009exploration} with that of  \cite{auer2010ucb} for removing the estimated variance factor in the confidence interval term for an arm $i$. Note that even though \cite{audibert2009exploration} uses Bernstein inequality to obtain the  bound, we use Chernoff-Hoeffding bound. This is because of our choice of $\rho$ which has to be $\frac{1}{2}$ or it may lead to a regret polynomial in $T$ and usage of Bernstein inequality will force the $\rho$ to take a value higher than $1$. The second module bounds the number of pulls required if an arm is eliminated on or before a particular number of rounds. Note that the number of pulls allocated in a round $m$ for each arm is $n_{m}:=\bigg\lceil\frac{\log{(\psi T\epsilon_{m}^{2})}}{2\epsilon_{m}}\bigg\rceil$ which is much lower than the pulls of each arm required by UCB-Improved or Median-Elimination. The third module deals with bounding the regret given a sub-optimal arm eliminates the optimal arm. The detailed proof is given in Section \ref{sec:proofTheorem:Theorem1}.
+The proof comprises three modules. In the first module we prove the necessary conditions for arm elimination within a specified number of rounds, which is motivated by the technique in \cite{auer2010ucb}. 
+% We refine the proof while breaking down the confidence interval by using Lemma  \ref{proofTheorem:Lemma:1}. 
+Then we combine the approach of \cite{audibert2009exploration} with that of  \cite{auer2010ucb} for removing the estimated variance factor in the confidence interval term for an arm $i$. Note that even though \cite{audibert2009exploration} uses Bernstein inequality to obtain the  bound, we use Chernoff-Hoeffding bound. This is because of our choice of $\rho$ which has to be $\frac{1}{2}$ or it may lead to a regret polynomial in $T$ and usage of Bernstein inequality will force the $\rho$ to take a value higher than $1$. The second module bounds the number of pulls required if an arm is eliminated on or before a particular number of rounds. Note that the number of pulls allocated in a round $m$ for each arm is $n_{m}:=\bigg\lceil\frac{\log{(\psi T\epsilon_{m}^{2})}}{2\epsilon_{m}}\bigg\rceil$ which is much lower than the pulls of each arm required by UCB-Improved or Median-Elimination. The third module deals with bounding the regret given a sub-optimal arm eliminates the optimal arm. The detailed proof is given in Section \ref{sec:proofTheorem:Theorem1}.
 \end{proof}
 
 %Next, we specialize the result of Theorem \ref{Result:Theorem:1} in Corollary \ref{Result:Corollary:1} and Corollary \ref{Result:Corollary:2}.
