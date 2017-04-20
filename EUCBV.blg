@@ -2,6 +2,7 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: EUCBV.aux
 The style file: splncs03.bst
 Database file #1: biblio1.bib
+Warning--I didn't find a database entry for ""
 You've used 19 entries,
             2785 wiz_defined-function locations,
             696 strings with 7279 characters,
@@ -43,3 +44,4 @@ warning$ -- 0
 while$ -- 96
 width$ -- 21
 write$ -- 189
+(There was 1 warning)
