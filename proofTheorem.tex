@@ -43,20 +43,18 @@ where $(a)$ is obtained using $m\leq \dfrac{1}{2} \log_2\left(\dfrac{T}{e}\right
 \subsection*{Proof of Theorem 1}
 \label{sec:proofTheorem:Theorem1}
 \begin{proof}
-For each sub-optimal arm ${i}\in\mathcal{A}$, let $m_{i}=\min{\left\lbrace m|\sqrt{4\epsilon_{m_i}} < \dfrac{\Delta_{i}}{4}\right\rbrace}$. Also, let $\A^{'}=\lbrace i\in \A: \Delta_{i} > b \rbrace$ and $\A^{''}=\lbrace i\in \A: \Delta_{i} > 0 \rbrace$. 
-% Also $z_{i}$ denotes total number of times an arm $i$ has been pulled. In the $m$-th round, $n_{m}$ denotes the number of pulls allocated to the surviving arms in $B_{m}$. 
+For each sub-optimal arm ${i}\in\mathcal{A}$, let $m_{i}=\min{\left\lbrace m|\sqrt{4\epsilon_{m_i}} < \dfrac{\Delta_{i}}{4}\right\rbrace}$. Also, let $\A^{'}=\lbrace i\in \A: \Delta_{i} > b \rbrace$ and $\A^{''}=\lbrace i\in \A: \Delta_{i} > 0 \rbrace$. As in \cite{}, we bound the regret under the following two cases: 
+\begin{itemize}
+\item {Case $(a)$}: some sub-optimal arm ${i}$ is not eliminated in round $m_{i}$ or before and the optimal arm ${*}\in B_{m_{i}}$
+\item {Case $(b)$}: an arm ${i}\in B_{m_i}$ is eliminated in round $m_{i}$ (or before), or there is no optimal arm $*\in B_{m_i}$
+\end{itemize} 
+The details of each case are contained in the following sub-sections.
 
-\subsection*{Case $a$: \textit{Some sub-optimal arm ${i}$ is not eliminated in round $m_{i}$ or before and the optimal arm ${*}\in B_{m_{i}}$}}
 
-An arbitrary sub-optimal arm ${i}\in \A^{'}$ can get eliminated only when the event,
-	\begin{align}
-	\hat{r}_{i} \leq r_{i} + c_{i} \text{ and } \label{eq:armelim-casea}
- 	\hat{r}^{*} \geq r^{*} - c^{*}
-	\end{align}
-takes place. So to bound the regret we need to bound the probability of the complementary event of these two conditions. We denote $c_{i} = \sqrt{\frac{\rho (\hat{v}_i + 2) \log (\psi T\epsilon_{m_{i}})}{4 n_{m_i}}}$ for the $i$-th arm. Note that as arm elimination condition is being checked in every timestep, in the $m_i$-th round whenever $z_i \geq n_{m_{i}}=\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$ we have, 
-%any arm $i$ cannot be pulled more than $z_i= n_{m_i}$ times or it will get eliminated. This is because in the $m_i$-th round $n_{m_{i}}=\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$ and putting this in $c_{m_i}$ we get,
-	\begin{align*}
-	c_{i} &\leq \sqrt{\dfrac{\rho (\hat{v}_i + 2)\epsilon_{m_{i}}\log (\psi T\epsilon_{m_{i}})}{2\log(\psi T\epsilon_{m_{i}}^{2})}} \overset{(a)}{\leq} \sqrt{\dfrac{2.\rho\epsilon_{m_{i}}\log (\frac{\psi T\epsilon_{m_{i}}^{2}}{\epsilon_{m_{i}}})}{\log(\psi T\epsilon_{m_{i}}^{2})}} \\
+\textbf{Case $(a)$:}
+For simplicity, let $c_{i} := \sqrt{\frac{\rho (\hat{v}_i + 2) \log (\psi T\epsilon_{m_{i}})}{4 n_{m_i}}}$ denote the length of the confidence interval corresponding to arm $i$ in round $m_i$. Thus, in round $m_i$ (or before) whenever $z_i = n_{m_{i}}\ge\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$, we obtain
+\begin{align*}
+	c_{i} &\leq \sqrt{\dfrac{\rho (\hat{v}_i + 2)\epsilon_{m_{i}}\log (\psi T\epsilon_{m_{i}})}{2\log(\psi T\epsilon_{m_{i}}^{2})}} \overset{(a)}{\leq} \sqrt{\dfrac{2\rho\epsilon_{m_{i}}\log (\frac{\psi T\epsilon_{m_{i}}^{2}}{\epsilon_{m_{i}}})}{\log(\psi T\epsilon_{m_{i}}^{2})}} \\
 	%%%%%%%%%%%%%%%%%%%%%%%%%%
 	& = \sqrt{\dfrac{2\rho\epsilon_{m_{i}}\log (\psi T\epsilon_{m_{i}}^{2}) - 2\rho\epsilon_{m_{i}}\log (\epsilon_{m_{i}})}{\log(\psi T\epsilon_{m_{i}}^{2})}} 
 	\leq  \sqrt{2\rho\epsilon_{m_{i}} - \dfrac{2\rho\epsilon_{m_i}\log(\frac{1}{2^{m_i}})}{\log(\psi T \frac{1}{2^{2m_i}})}} \\
@@ -67,8 +65,17 @@ takes place. So to bound the regret we need to bound the probability of the comp
 	  < \sqrt{4\epsilon_{m_i}} 
 	  < \dfrac{\Delta_{i}}{4} 
 	\end{align*}
-In the above $(a)$ happens because $\hat{v}_i \in [0,1]$, $\rho =\frac{1}{2}$ and $(b)$ occurs by applying the result from Lemma \ref{proofTheorem:Lemma:1}. Similarly, we can also show that in the $m_i$-th round $c^* < \frac{\Delta_i}{4}$.
-Again, in the $m_i$-th round a sub-optimal arm ${i} \in \A^{'}$ gets eliminated as, 
+In the above simplification, $(a)$ is due to $\hat{v}_i \in [0,1]$, while $(b)$ is obtained using Lemma~\ref{proofTheorem:Lemma:1}. Similarly, it can be shown that $c^* < \frac{\Delta_i}{4}$ in round $m_i$.
+
+Now, the sufficient conditions for arm $i$ to get eliminated by an optimal arm in round $m_i$ is given by
+	\begin{eqnarray}
+	\hat{r}_{i} \leq r_{i} + c_{i} \text{ and } \label{eq:armelim-casea}
+ 	\hat{r}^{*} \geq r^{*} - c^{*}.
+	\end{eqnarray}
+%We denote $c_{i} = \sqrt{\frac{\rho (\hat{v}_i + 2) \log (\psi T\epsilon_{m_{i}})}{4 n_{m_i}}}$ for the $i$-th arm. Note that as arm elimination condition is being checked in every timestep, in the $m_i$-th round whenever $z_i \geq n_{m_{i}}=\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$ we have, 
+%any arm $i$ cannot be pulled more than $z_i= n_{m_i}$ times or it will get eliminated. This is because in the $m_i$-th round $n_{m_{i}}=\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$ and putting this in $c_{m_i}$ we get,
+Indeed, in round $m_i$ suppose (\ref{eq:armelim-casea}) holds, then we have
+%	 
   \begin{align*}
 \hat{r}_{i} + c_{i}&\leq r_{i} + 2c_{i} 
 = r_{i} + 4c_{i} - 2c_{i} \\
@@ -76,8 +83,9 @@ Again, in the $m_i$-th round a sub-optimal arm ${i} \in \A^{'}$ gets eliminated 
  \leq r^{*} -2c^{*} 
  \leq \hat{r}^{*} - c^{*}
   \end{align*}
-	\noindent
-	Thus, the probability that a bad arm is not eliminated correctly in the $m_i$-th round (or before) is given by ,
+  so that a sub-optimal arm ${i} \in \A^{'}$ gets eliminated.	
+Thus, the probability of the complementary event of these two conditions yields a bound on the probability that arm $i$ is not eliminated in round $m_i$. A bound on the complementary of the first condition is given by,
+%Thus, the probability that a bad arm is not eliminated correctly in the $m_i$-th round (or before) is given by ,
 \begin{align}
 \mathbb{P}(\hat{r}_{i}> r_{i} + c_{i})
 &\leq \mathbb{P}\left( \hat{r}_{i} > r_{i}+ \bar{c}_i\right) 
@@ -85,7 +93,7 @@ Again, in the $m_i$-th round a sub-optimal arm ${i} \in \A^{'}$ gets eliminated 
 \end{align}
 where 
 \begin{align*}
-\bar{c}_i=\sqrt{\dfrac{\rho (\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 2)\log(\psi T\epsilon_{m_{i}})}{4n_{m_i}}}
+\bar{c}_i=\sqrt{\dfrac{\rho (\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 2)\log(\psi T\epsilon_{m_{i}})}{4n_{m_i}}}.
 \end{align*}
 %\end{small}
 Note that, substituting $ n_{m_i} \geq \frac{\log{(\psi T\epsilon_{m_{i}})}}{2\epsilon_{m_{i}}}$, $\bar{c}_i$ can be simplified to obtain,
@@ -94,7 +102,7 @@ Note that, substituting $ n_{m_i} \geq \frac{\log{(\psi T\epsilon_{m_{i}})}}{2\e
 \leq \sqrt{\dfrac{\rho\epsilon_{m_{i}}(\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 2)}{2}}\leq \sqrt{ \epsilon_{m_{i}}}.
 \label{si_bar_equn}
 \end{align}
-
+%
 The first term in the LHS of (\ref{eq:prob_eq2}) can be bounded using the Bernstein inequality as below:
 \begin{align}
 \mathbb{P}\left( \hat{r}_{i} > r_{i}+ \bar{c}_i\right)\nonumber 
@@ -129,7 +137,7 @@ The second term in the LHS of (\ref{eq:prob_eq2}) can be simplified as follows:
 \end{align}
 where inequality $(a)$ is obtained using (\ref{si_bar_equn}), while $(b)$ follows from the Bernstein inequality.
   
-Thus, using (\ref{lhs1_equn}) and (\ref{lhs2_equn}) in (\ref{eq:prob_eq2}) we obtain $\mathbb{P}(\hat{r}_{i}> r_{i} + c_{i})\le \dfrac{2}{(\psi  T\epsilon_{m_{i}})^{\rho}}$. Similarly, $\mathbb{P}\lbrace\hat{r}^{*} < r^{*} - c^{*}\rbrace \leq \dfrac{2}{(\psi  T\epsilon_{m_{i}})^{\rho}}$. Summing the two up, the probability that a sub-optimal arm ${i}$ is not eliminated on or before $m_{i}$-th round is  $\bigg(\dfrac{4}{(\psi T\epsilon_{m_{i}})^{\rho}} \bigg)$.
+Thus, using (\ref{lhs1_equn}) and (\ref{lhs2_equn}) in (\ref{eq:prob_eq2}) we obtain $\mathbb{P}(\hat{r}_{i}> r_{i} + c_{i})\le \dfrac{2}{(\psi  T\epsilon_{m_{i}})^{\rho}}$. Similarly, $\mathbb{P}\lbrace\hat{r}^{*} < r^{*} - c^{*}\rbrace \leq \dfrac{2}{(\psi  T\epsilon_{m_{i}})^{\rho}}$. Summing the above two contributions, the probability that a sub-optimal arm ${i}$ is not eliminated on or before $m_{i}$-th round is  $\bigg(\dfrac{4}{(\psi T\epsilon_{m_{i}})^{\rho}} \bigg)$.
 
 Summing up over all arms in $\A^{'}$ and bounding the regret for each arm $i\in \A^{'}$ trivially by $T\Delta_{i}$, we obtain
    \begin{align*}
@@ -139,13 +147,13 @@ Summing up over all arms in $\A^{'}$ and bounding the regret for each arm $i\in 
 & \overset{(a)}{\leq} \sum_{i\in \A^{'}}\bigg(\dfrac{2^{2+1}.16^{\frac{1}{2}}T^{1-\frac{1}{2}}}{(\frac{T}{K^2})^{\frac{1}{2}}\Delta_{i}^{2.\frac{1}{2} -1}}\bigg) = \sum_{i\in \A^{'}}  32 K  
 %& =\sum_{i\in \A^{'}}\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) \text{, where } C_1(x) = \frac{2^{2+6x}}{\psi^{x}}
    \end{align*}
-   Here in $(a)$ we substitute the values of $\rho$ and $\psi$.
+   Here in $(a)$ we substitute the values of $\rho$ and $\psi$.\\
 
-\subsection*{Case $b$: \textit{An arm ${i}\in B_{m_i}$ is eliminated in round $m_{i}$ or before or there is no $*\in B_{m_i}$}}
+\textbf{Case $(b)$:} Here, there are two sub-cases to be considered.
+% \subsection*{Case $b$: \textit{An arm ${i}\in B_{m_i}$ is eliminated in round $m_{i}$ or before or there is no $*\in B_{m_i}$}}
 
-\subsubsection*{Case $b1$: \textit{${*}\in B_{m_{i}}$ and each ${i}\in \A^{'}$ is  eliminated on or before $m_{i}$ } }
-
-	\paragraph*{} Since we are eliminating a sub-optimal arm ${i}$ on or before round $m_{i}$, it is pulled no longer than, 
+\noindent
+\textbf{Case $(b1)$ (\textit{${*}\in B_{m_{i}}$ and each ${i}\in \A^{'}$ is  eliminated on or before $m_{i}$ }): } Since we are eliminating a sub-optimal arm ${i}$ on or before round $m_{i}$, it is pulled no longer than, 
  \begin{align*}
  z_{i} < \bigg\lceil\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}\bigg\rceil
  \end{align*}
@@ -165,12 +173,10 @@ Summing over all arms in $\A^{'}$ the total regret is given by,
 \overset{(a)}{\leq} \sum_{i\in \A^{'}} \Delta_{i}\bigg(1+\dfrac{64\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}^{2}}\bigg)
 \end{align*}
 
-We obtain $(a)$ by substituting the value of $\psi$. 
+We obtain $(a)$ by substituting the value of $\psi$. \\
 
-\subsubsection*{Case $b2$: \textit{Optimal arm ${*}$ is eliminated by a sub-optimal arm  }}
-
-
-	Firstly, if conditions of Case $a$ holds then the optimal arm ${*}$ will not be eliminated in round $m=m_{*}$ or it will lead to the contradiction that $r_{i}>r^{*}$. In any round $m_{*}$, if the optimal arm ${*}$ gets eliminated then for any round from $1$ to $m_{j}$ all arms ${j}$ such that $m_{j}< m_{*}$ were eliminated according to assumption in Case $a$. Let the arms surviving till $m_{*}$ round be denoted by $\A^{'}$. This leaves any arm $a_{b}$ such that $m_{b}\geq m_{*}$ to still survive and eliminate arm ${*}$ in round $m_{*}$. Let such arms that survive ${*}$ belong to $\A^{''}$. Also maximal regret per step after eliminating ${*}$ is the maximal $\Delta_{j}$ among the remaining arms ${j}$ with $m_{j}\geq m_{*}$.  Let $m_{b}=\min\lbrace m|\sqrt{4\epsilon_{m}}<\dfrac{\Delta_{b}}{4}\rbrace$. Hence, the maximal regret after eliminating the arm ${*}$ is upper bounded by, 
+\noindent
+\textbf{Case $(b2)$ (\textit{Optimal arm ${*}$ is eliminated by a sub-optimal arm):  }} Firstly, if conditions of Case $a$ holds then the optimal arm ${*}$ will not be eliminated in round $m=m_{*}$ or it will lead to the contradiction that $r_{i}>r^{*}$. In any round $m_{*}$, if the optimal arm ${*}$ gets eliminated then for any round from $1$ to $m_{j}$ all arms ${j}$ such that $m_{j}< m_{*}$ were eliminated according to assumption in Case $a$. Let the arms surviving till $m_{*}$ round be denoted by $\A^{'}$. This leaves any arm $a_{b}$ such that $m_{b}\geq m_{*}$ to still survive and eliminate arm ${*}$ in round $m_{*}$. Let such arms that survive ${*}$ belong to $\A^{''}$. Also maximal regret per step after eliminating ${*}$ is the maximal $\Delta_{j}$ among the remaining arms ${j}$ with $m_{j}\geq m_{*}$.  Let $m_{b}=\min\left\lbrace m|\sqrt{4\epsilon_{m}}<\dfrac{\Delta_{b}}{4}\right\rbrace$. Hence, the maximal regret after eliminating the arm ${*}$ is upper bounded by, 
 \begin{align*}
 &\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{4}{(\psi  T\epsilon_{m_{*}})^{\rho}} \bigg).T\max_{j\in \A^{''}:m_{j}\geq m_{*}}{\Delta}_{j}\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -192,13 +198,14 @@ We obtain $(a)$ by substituting the value of $\psi$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %& = \sum_{i\in \A^{'}}\bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_{2}(\rho)T^{1-\rho}}{b^{2\rho -1}} \bigg) \text{, where } C_2(x) = \frac{2^{\frac{x}{2}+\frac{19}{4}}}{\psi^{x}}
 \end{align*}
+In the above simplification, $(a)$ is obtained by substituting the values of $\psi$ and $\rho$.
 
-In the above section, $(a)$ is obtained by substituting the values of $\psi$ and $\rho$. Summing up \textbf{Case a} and \textbf{Case b}, the total regret is given by,
+Finally, summing up the regrets in \textbf{Case a} and \textbf{Case b}, the total regret is given by
 \begin{align*}
 % \E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace\bigg(\dfrac{C_{1}(\rho)T^{1-\rho}}{\Delta_{i}^{2\rho -1}}\bigg) + \bigg(\Delta_{i}+\dfrac{32\log{(\psi  T\Delta_{i}^{4})}}{\Delta_{i}}\bigg) + \bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)\bigg \rbrace\\ 
 %  & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b}\bigg(\dfrac{C_{2}(\rho)T^{1-\rho}}{b^{2\rho -1}} \bigg) + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T
 \E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace 64 K + \bigg(\Delta_{i}+\dfrac{64\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\bigg)\bigg \rbrace\\ 
-  & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} 32 K + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T  
+  & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} 32 K + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T.
 \end{align*}
 \end{proof}
 
