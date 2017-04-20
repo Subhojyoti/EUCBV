@@ -72,7 +72,7 @@ In this section we conduct extensive empirical evaluations of EUCBV against seve
 		\addplot table{results/NewExpt/Expt2/UCBV01_comp_subsampled.txt};
 		
 		%\legend{UCB1,EUCBV,MOSS,OCUCB,Med-Elim,UCB-Imp,UCBV}
-		\legend{UCB1,EUCBV,MOSS,OCUCB,TS,KLUCB-Gauss,BU,UCB-Imp,UCBV}
+		\legend{UCB1,EUCBV,MOSS,OCUCB,TS,KL-UCB-Gauss,BU,UCB-Imp,UCBV}
 		%\legend{UCB1,EUCBV,MOSS,OCUCB,TS,KLUCB-Gauss,BU}
       	\end{axis}
       	\end{tikzpicture}
@@ -160,7 +160,7 @@ In this section we conduct extensive empirical evaluations of EUCBV against seve
     \vspace*{-1em}
 \end{figure}
 %\vspace*{-0.5em}
-\textbf{Experiment-3 (Gaussian with large horizon and uniform gaps):} This experiment is conducted to show the stability and performance of EUCBV over a very large horizon and over a large number of arms. This testbed comprises of $20-100$ (interval of $10$) arms with Gaussian reward distributions, where the expected rewards of the arms are $r_{i_{{i}\neq {*}}}=0.05$ and $r^{*}=0.1$ and variances are set as $\sigma_{i:i\neq *}^{2}=0.25$ and $\sigma_{*}^{2}=0.7$. For each of these testbeds of $20-100$ arms, we report the cumulative regret averaged over $100$ independent runs. The horizon is set at $T=10^{5} + K_{20:100}^{3}$ timesteps. We report the performance of MOSS, TS and OCUCB who are the closest competitors of EUCBV over this uniform gap setup. From the results in Figure \ref{fig:3}, it is evident that the growth of regret for EUCBV  is much lower than that of TS, OCUCB and MOSS. Bayes-UCB and KLUCB are not feasible to be run over such a large horizon as these algorithms are extremely slow in their execution.
+\textbf{Experiment-3 (Gaussian with large horizon and uniform gaps):} This experiment is conducted to show the stability and performance of EUCBV over a very large horizon and over a large number of arms. This testbed comprises of $20-100$ (interval of $10$) arms with Gaussian reward distributions, where the expected rewards of the arms are $r_{i_{{i}\neq {*}}}=0.05$ and $r^{*}=0.1$ and variances are set as $\sigma_{i:i\neq *}^{2}=0.25$ and $\sigma_{*}^{2}=0.7$. For each of these testbeds of $20-100$ arms, we report the cumulative regret averaged over $100$ independent runs. The horizon is set at $T=10^{5} + K_{20:100}^{3}$ timesteps. We report the performance of MOSS, TS and OCUCB who are the closest competitors of EUCBV over this uniform gap setup. From the results in Figure \ref{fig:3}, it is evident that the growth of regret for EUCBV  is much lower than that of TS, OCUCB and MOSS. Because of the poor performance of Bayes-UCB and KL-UCB-Gauss in the last two experiments we do not implement them in this setup. Also Bayes-UCB and KL-UCB-Gauss are not feasible to be run over such a large horizon as these algorithms are extremely slow in their execution.
 
 %Please note that algorithms like Thompson Sampling or Bayes-UCB are too slow to be run for such large arms (see \citet{lattimore2015optimally}) and  over such large horizon.
 %This also corroborates the finding of \citet{lattimore2015optimally} which states that MOSS breaks down only when the number of arms are exceptionally large or the horizon is unreasonably high and gaps are very small. We consistently see that in uniform gap testcases EUCBV outperforms OCUCB.

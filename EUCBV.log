@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  20 APR 2017 13:30
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  20 APR 2017 13:45
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1318,12 +1318,18 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Underfull \vbox (badness 2573) has occurred while \output is active []
 
  [13])
-(./Conclusion.tex) [14] [15] (./EUCBV.bbl
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 45.
+(./Conclusion.tex)
+Overfull \hbox (5.41275pt too wide) in paragraph at lines 1--87
+\OT1/ptm/b/n/10 Acknowledgement: \OT1/ptm/m/n/10 This work was fully/partially 
+sup-ported by fund-ing from IIT Madras
+ []
 
-(/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
+[14] [15] (./EUCBV.bbl
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 45.
+ (/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)) [16
+))
+[16
 
 ] (./EUCBV.aux) ) 
 Here is how much of TeX's memory you used:
@@ -1358,7 +1364,7 @@ exmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-texlive/fonts
 /type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utm
 bi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share
 /texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EUCBV.pdf (16 pages, 407126 bytes).
+Output written on EUCBV.pdf (16 pages, 407427 bytes).
 PDF statistics:
  413 PDF objects out of 1000 (max. 8388607)
  72 named destinations out of 1000 (max. 500000)
