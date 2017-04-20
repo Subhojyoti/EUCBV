@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  20 APR 2017 13:45
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  20 APR 2017 13:47
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1214,23 +1214,16 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
-
-Overfull \hbox (13.07869pt too wide) in paragraph at lines 50--51
-\OT1/ptm/m/n/9 that of ex-ist-ing state-of-the-art UCB al-go-rithms (e.g., UCB1
-, UCBV, UCB-Improved,
- []
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
-(./intro.tex [1
+ (./intro.tex [1
 
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
-
-(./related.tex
+ (./related.tex
 Overfull \hbox (0.11394pt too wide) in paragraph at lines 7--9
 \OT1/ptm/m/n/10 This is the best known gap-dependent and gap-independent re-gre
 t bounds in the stochas-
@@ -1364,7 +1357,7 @@ exmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-texlive/fonts
 /type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utm
 bi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share
 /texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EUCBV.pdf (16 pages, 407427 bytes).
+Output written on EUCBV.pdf (16 pages, 407417 bytes).
 PDF statistics:
  413 PDF objects out of 1000 (max. 8388607)
  72 named destinations out of 1000 (max. 500000)
