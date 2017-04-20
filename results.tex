@@ -75,7 +75,7 @@ First, let us recall the result in Theorem \ref{Result:Theorem:1} below:
 
 Now,  with  $\Delta_i =\Delta = \sqrt{\frac{K\log K}{T}}>\sqrt{\frac{e}{T}}$ we obtain,
 	\begin{align*}
-	\sum_{i\in \A :\Delta_{i} > b}\dfrac{64\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}} = \dfrac{64K\sqrt{T}\log{(T\dfrac{K(\log K)}{T K})}}{\sqrt{K\log K}} &\leq  \dfrac{64\sqrt{KT}\log{(\log K)}}{\sqrt{\log K}}\\
+	\sum_{i\in \A :\Delta_{i} > b}\dfrac{64\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}} \leq  \dfrac{64K\sqrt{T}\log{(T\dfrac{K(\log K)}{T K})}}{\sqrt{K\log K}} &\leq  \dfrac{64\sqrt{KT}\log{(\log K)}}{\sqrt{\log K}}\\
 	&\overset{(a)}{\leq} 64\sqrt{KT} 
 	\end{align*}		
 	where $(a)$ follows from the identity $\dfrac{\log{(\log K)}}{\sqrt{\log K}}\leq 1$ for $K\geq 2$. Thus, the total worst case gap-independent bound is given by
