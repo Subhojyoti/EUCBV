@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  20 APR 2017 17:59
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  20 APR 2017 19:26
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1328,11 +1328,11 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 Here is how much of TeX's memory you used:
  22451 strings out of 493848
  458505 string characters out of 1152823
- 684454 words of memory out of 3000000
+ 683484 words of memory out of 3000000
  25061 multiletter control sequences out of 15000+50000
  33260 words of font info for 72 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 63i,27n,75p,1740b,1782s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,27n,75p,1768b,1782s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/sh
 are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-t
 exlive/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texmf-texlive/
@@ -1357,9 +1357,9 @@ exmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-texlive/fonts
 /type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utm
 bi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share
 /texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EUCBV.pdf (16 pages, 407367 bytes).
+Output written on EUCBV.pdf (16 pages, 407227 bytes).
 PDF statistics:
- 413 PDF objects out of 1000 (max. 8388607)
+ 414 PDF objects out of 1000 (max. 8388607)
  72 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
