@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  21 APR 2017 09:14
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  21 APR 2017 09:59
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1281,15 +1281,15 @@ PGFPlots: reading {results/NewExpt/Expt1/UCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/TS01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/OCUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/BU01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt2/UCB01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt2/NEUCBV01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt2/MOSS01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt2/OCUCB01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt2/TS01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt2/KLUCB01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt2/BU01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt2/UCBR01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2/UCBV01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2/NEUCBV01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2/KLUCB01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2/MOSS01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2/UCBR01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2/UCB01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2/TS01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2/OCUCB01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2/BU01_comp_subsampled.txt}
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1326,7 +1326,7 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 Here is how much of TeX's memory you used:
  22452 strings out of 493848
  458516 string characters out of 1152823
- 684432 words of memory out of 3000000
+ 685468 words of memory out of 3000000
  25061 multiletter control sequences out of 15000+50000
  33260 words of font info for 72 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
@@ -1355,7 +1355,7 @@ exmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-texlive/fonts
 /type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utm
 bi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share
 /texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EUCBV.pdf (16 pages, 407890 bytes).
+Output written on EUCBV.pdf (16 pages, 407922 bytes).
 PDF statistics:
  419 PDF objects out of 1000 (max. 8388607)
  73 named destinations out of 1000 (max. 500000)

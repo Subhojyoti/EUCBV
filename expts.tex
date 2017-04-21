@@ -59,21 +59,34 @@ In this section, we conduct extensive empirical evaluations of EUCBV against sev
        	clip=true,
   		legend style={at={(0.5,1.5)},anchor=north, legend columns=3} ]
       	% UCB
-        \addplot table{results/NewExpt/Expt2/UCB01_comp_subsampled.txt};
-		%\addplot table{results/NewExpt/Expt2_2/clUCB01_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt2/NEUCBV01_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt2/MOSS01_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt2/OCUCB01_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt2/TS01_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt2/KLUCB01_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt2/BU01_comp_subsampled.txt};
-		%\addplot table{results/NewExpt/Expt2/MedElim01_comp_subsampled.txt};
-		\addplot table{results/NewExpt/Expt2/UCBR01_comp_subsampled.txt};
 		\addplot table{results/NewExpt/Expt2/UCBV01_comp_subsampled.txt};
-		
-		%\legend{UCB1,EUCBV,MOSS,OCUCB,Med-Elim,UCB-Imp,UCBV}
-		\legend{UCB1,EUCBV,MOSS,OCUCB,TS,KL-UCB-Gauss,BU,UCB-Imp,UCBV}
-		%\legend{UCB1,EUCBV,MOSS,OCUCB,TS,KLUCB-Gauss,BU}
+		\addplot table{results/NewExpt/Expt2/NEUCBV01_comp_subsampled.txt};
+		%\addplot table{results/NewExpt/Expt1/NEUCBV01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt2/KLUCB01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt2/MOSS01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt2/UCBR01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt2/UCB01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt2/TS01_comp_subsampled.txt};
+		%\addplot table{results/NewExpt/Expt11/TS01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt2/OCUCB01_comp_subsampled.txt};
+		\addplot table{results/NewExpt/Expt2/BU01_comp_subsampled.txt};      	
+      	\legend{UCB-V,EUCBV,KL-UCB,MOSS,UCB-Imp,UCB1,TS,OCUCB,BU}
+%      	
+%      	
+%        \addplot table{results/NewExpt/Expt2/UCB01_comp_subsampled.txt};
+%		%\addplot table{results/NewExpt/Expt2_2/clUCB01_comp_subsampled.txt};
+%		\addplot table{results/NewExpt/Expt2/NEUCBV01_comp_subsampled.txt};
+%		\addplot table{results/NewExpt/Expt2/MOSS01_comp_subsampled.txt};
+%		\addplot table{results/NewExpt/Expt2/OCUCB01_comp_subsampled.txt};
+%		\addplot table{results/NewExpt/Expt2/TS01_comp_subsampled.txt};
+%		\addplot table{results/NewExpt/Expt2/KLUCB01_comp_subsampled.txt};
+%		\addplot table{results/NewExpt/Expt2/BU01_comp_subsampled.txt};
+%		%\addplot table{results/NewExpt/Expt2/MedElim01_comp_subsampled.txt};
+%		\addplot table{results/NewExpt/Expt2/UCBR01_comp_subsampled.txt};
+%		\addplot table{results/NewExpt/Expt2/UCBV01_comp_subsampled.txt};
+%		%\legend{UCB1,EUCBV,MOSS,OCUCB,Med-Elim,UCB-Imp,UCBV}
+%		\legend{UCB1,EUCBV,MOSS,OCUCB,TS,KL-UCB-Gauss,BU,UCB-Imp,UCBV}
+%		%\legend{UCB1,EUCBV,MOSS,OCUCB,TS,KLUCB-Gauss,BU}
       	\end{axis}
       	\end{tikzpicture}
    		\label{fig:2}
