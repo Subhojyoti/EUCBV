@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  21 APR 2017 15:43
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  26 APR 2017 11:43
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1330,7 +1330,7 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 Here is how much of TeX's memory you used:
  22452 strings out of 493848
  458516 string characters out of 1152823
- 684406 words of memory out of 3000000
+ 683406 words of memory out of 3000000
  25061 multiletter control sequences out of 15000+50000
  33260 words of font info for 72 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
@@ -1359,9 +1359,9 @@ exmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-texlive/fonts
 /type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utm
 bi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share
 /texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EUCBV.pdf (16 pages, 408244 bytes).
+Output written on EUCBV.pdf (16 pages, 408455 bytes).
 PDF statistics:
- 421 PDF objects out of 1000 (max. 8388607)
+ 423 PDF objects out of 1000 (max. 8388607)
  73 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
