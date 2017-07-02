@@ -89,14 +89,14 @@ If $m_*$ be the first round that the optimal arm $*$ gets eliminated, then we ca
 \end{lemma}
 
 
-The proofs of all the Lemmas can be found in Appendix ~\ref{App:Lemma:1} , ~\ref{App:Lemma:2} , ~\ref{App:Lemma:3}, ~\ref{App:Lemma:4} , ~\ref{App:Lemma:5} , ~\ref{App:Lemma:6} , ~\ref{App:Lemma:7} , ~\ref{App:Lemma:8} and ~\ref{App:Lemma:9} respectively.
+The proofs of lemmas \ref{proofTheorem:Lemma:1} - \ref{proofTheorem:Lemma:9} can be found in Appendix ~\ref{App:Lemma:1}, ~\ref{App:Lemma:2}, ~\ref{App:Lemma:3}, ~\ref{App:Lemma:4}, ~\ref{App:Lemma:5}, ~\ref{App:Lemma:6}, ~\ref{App:Lemma:7}, ~\ref{App:Lemma:8} and ~\ref{App:Lemma:9} respectively.
 
 %The proofs of all the Lemmas can be found in Appendix ~\ref{App:Lemma:1} - Appendix ~\ref{App:Lemma:9} respectively.
 
 \subsection*{Proof of Theorem 1}
 \label{sec:proofTheorem:Theorem1}
 \begin{proof}
-For each sub-optimal arm ${i}\in\mathcal{A}$, let $m_{i}=\min{\left\lbrace m|\sqrt{4\epsilon_{m_i}} < \dfrac{\Delta_{i}}{4}\right\rbrace}$. Also, let $\A^{'}=\lbrace i\in \A: \Delta_{i} > b \rbrace$ and $\A^{''}=\lbrace i\in \A: \Delta_{i} > 0 \rbrace$. Note that as all rewards are bounded in $[0,1]$, it implies that $\sigma_i^2 \leq \frac{1}{4}$. Now, as in \cite{auer2010ucb}, we bound the regret under the following two cases: 
+For each sub-optimal arm ${i}\in\mathcal{A}$, let $m_{i}=\min{\left\lbrace m|\sqrt{4\epsilon_{m_i}} < \frac{\Delta_{i}}{4}\right\rbrace}$. Also, let $\A^{'}=\lbrace i\in \A: \Delta_{i} > b \rbrace$ and $\A^{''}=\lbrace i\in \A: \Delta_{i} > 0 \rbrace$. Note that as all rewards are bounded in $[0,1]$, it implies that $\sigma_i^2 \leq \frac{1}{4}$. Now, as in \cite{auer2010ucb}, we bound the regret under the following two cases: 
 \begin{itemize}
 \item {Case $(a)$}: some sub-optimal arm ${i}$ is not eliminated in round $m_{i}$ or before and the optimal arm ${*}\in B_{m_{i}}$
 \item {Case $(b)$}: an arm ${i}\in B_{m_i}$ is eliminated in round $m_{i}$ (or before), or there is no optimal arm $*\in B_{m_i}$
@@ -106,7 +106,7 @@ The details of each case are contained in the following sub-sections.
 %Note that in in round $m_i$ as $\sqrt{4\epsilon_{m_i}} < \dfrac{\Delta_{i}}{4}$ implies that $\sqrt{4\epsilon_{m_i}} < \dfrac{\Delta_{i}}{4\sigma_i^2}$, since $\sigma_i^2\in (0,1]$
 
 \textbf{Case $(a)$:}
-For simplicity, let $c_{i} := \sqrt{\frac{\rho (\hat{v}_i + 2) \log (\psi T\epsilon_{m_{i}})}{4 n_{m_i}}}$ denote the length of the confidence interval corresponding to arm $i$ in round $m_i$. Thus, in round $m_i$ (or before) whenever $z_i \geq n_{m_{i}}\ge\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$, by applying Lemma \ref{proofTheorem:Lemma:2} we obtain $c_{i} < \dfrac{\Delta_{i}}{4}$.
+For simplicity, let $c_{i} := \sqrt{\frac{\rho (\hat{v}_i + 2) \log (\psi T\epsilon_{m_{i}})}{4 z_{i}}}$ denote the length of the confidence interval corresponding to arm $i$ in round $m_i$. Thus, in round $m_i$ (or before) whenever $z_i \geq n_{m_{i}}\ge\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$, by applying Lemma \ref{proofTheorem:Lemma:2} we obtain $c_{i} < \dfrac{\Delta_{i}}{4}$.
 %\begin{align*}
 %	c_{i} < \dfrac{\Delta_{i}}{4} 
 %\end{align*}
@@ -225,18 +225,18 @@ So, the total contribution of ${i}$  till round $m_{i}$ is given by,
 \overset{(a)}{\leq}    \Delta_{i}\bigg\lceil\dfrac{\log{(\psi T(\dfrac{\Delta_{i}}{16 \times 256})^{4})}}{2(\dfrac{\Delta_{i}}{4\sqrt{4}})^{2}}\bigg\rceil \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 &\leq   \Delta_{i}\bigg(1+\dfrac{32\log{(\psi T(\dfrac{\Delta_{i}^{4}}{16384})}}{\Delta_{i}^{2}}\bigg)
-\leq \Delta_{i}\bigg(1+\dfrac{32\log{(\psi T\Delta_{i}^{4})}}{\Delta_{i}^{2}}\bigg) 
+\leq \Delta_{i}\bigg(1+\dfrac{512\log{(\psi T\Delta_{i}^{4})}}{\Delta_{i}^{2}}\bigg) 
 \end{align*} 
 
-Here, $(a)$ happens because $\sqrt{4\epsilon_{m_{i}}} < \dfrac{\Delta_{i}}{4}$. Summing over all arms in $\A^{'}$ the total regret is given by, 
+Here, $(a)$ happens because $\sqrt{4\epsilon_{m_{i}}} < \frac{\Delta_{i}}{4}$. Summing over all arms in $\A^{'}$ the total regret is given by, 
 \begin{align*}
-&\sum_{i\in \A^{'}}\Delta_{i}\bigg(1+\dfrac{32\log{(\psi T\Delta_{i}^{4}})}{\Delta_{i}^{2}}\bigg) = \sum_{i\in \A^{'}}\bigg(\Delta_{i} +\dfrac{32\log{(\psi T\Delta_{i}^{4}})}{\Delta_{i}}\bigg) \\
+&\sum_{i\in \A^{'}}\Delta_{i}\bigg(1+\dfrac{512\log{(\psi T\Delta_{i}^{4}})}{\Delta_{i}^{2}}\bigg) = \sum_{i\in \A^{'}}\bigg(\Delta_{i} +\dfrac{512\log{(\psi T\Delta_{i}^{4}})}{\Delta_{i}}\bigg) \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\overset{(a)}{\leq} \sum_{i\in \A^{'}} \Delta_{i}\bigg(1+\dfrac{64\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}^{2}}\bigg)\\
+&\overset{(a)}{\leq} \sum_{i\in \A^{'}} \Delta_{i}\bigg(1+\dfrac{1024\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}^{2}}\bigg)\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\overset{(b)}{\leq} \sum_{i\in \A^{'}} \left(\Delta_{i} +\dfrac{16(4\sigma_i^2 + 1)\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\right)\\
+&\overset{(b)}{\leq} \sum_{i\in \A^{'}} \left(\Delta_{i} +\dfrac{64(16\sigma_i^2 + 1)\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\right)\\
 &%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\overset{(c)}{\leq} \sum_{i\in \A^{'}} \left(\Delta_{i} +\dfrac{2\sigma_i^2\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\right)\\
+\overset{(c)}{\leq} \sum_{i\in \A^{'}} \left(\Delta_{i} +\dfrac{4\sigma_i^2\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\right)\\
 \end{align*}
 
 We obtain $(a)$ by substituting the value of $\psi$, $(b)$ from Lemma \ref{proofTheorem:Lemma:7} and $(c)$ from Lemma \ref{proofTheorem:Lemma:8}.\\

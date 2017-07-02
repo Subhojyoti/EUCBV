@@ -1,6 +1,6 @@
 
-\subsection{Proof of Lemma 1}
-\label{App:Lemma:1}
+\subsection{Proof of Lemma 1} \label{App:Lemma:1}
+
 \begin{lemma}
 %\label{proofTheorem:Lemma:1}
 If $T\geq K^{2.4}$, $\psi=\dfrac{T}{ K^2}$, $\rho=\dfrac{1}{2}$ and $m\leq \dfrac{1}{2} \log_2\left(\dfrac{T}{e}\right) $, then,
@@ -130,6 +130,7 @@ Thus, using (\ref{lhs1_equn}) and (\ref{lhs2_equn}) in (\ref{eq:prob_eq3}) we ob
 \hfill $\blacksquare$	
 \end{proof}
 
+
 \subsection{Proof of Lemma 4}
 \label{App:Lemma:4}
 \begin{lemma}
@@ -200,7 +201,7 @@ Following a similar argument as in Lemma \ref{proofTheorem:Lemma:4}, we can show
 \hfill $\blacksquare$	
 \end{proof}
 
-\section{Proof of Lemma 6}
+\subsection{Proof of Lemma 6}
 \label{App:Lemma:6}
 \begin{lemma}
 %\label{proofTheorem:Lemma:5}
@@ -251,18 +252,18 @@ where, $(a)$ occurs because of the inequality $\log T < \sqrt{T}$ and $(b)$ happ
 \subsection{Proof of Lemma 7}
 \label{App:Lemma:7}
 \begin{lemma}
-For all bounded rewards in $[0,1]$, $\dfrac{\Delta_i}{4} \leq \dfrac{\Delta_i}{4\sigma_i^2 + 1} $.
+For all bounded rewards in $[0,1]$, $\dfrac{\Delta_i}{4} \geq \dfrac{\Delta_i}{16\sigma_i^2 + 1} $.
 \end{lemma}
 
 \begin{proof}
 Since all rewards are bounded in $[0,1]$, we know that $\sigma_i^2 \leq \frac{1}{4}$. Hence we can show that,
 \begin{align*}
-\dfrac{\Delta_i}{4\sigma_i^2 + 1} &\leq \dfrac{\Delta_i}{4.\frac{1}{4} + 1}\\
-& \leq \dfrac{\Delta_i}{2}
+\dfrac{\Delta_i}{16\sigma_i^2 + 1} &\leq \dfrac{\Delta_i}{16.\frac{1}{4} + 1}\\
+& \leq \dfrac{\Delta_i}{5}
 \end{align*}
  
-But for all $\Delta_i \in [0,1]$ we know that $\dfrac{\Delta_{i}}{2} \geq \dfrac{\Delta_{i}}{4} $. Hence, 
-$\dfrac{\Delta_i}{4} \leq \dfrac{\Delta_i}{4\sigma_i^2 + 1} $.
+But for all $\Delta_i \in [0,1]$ we know that $\dfrac{\Delta_{i}}{5} \leq \dfrac{\Delta_{i}}{4} $. Hence, 
+$\dfrac{\Delta_i}{4} \leq \dfrac{\Delta_i}{16\sigma_i^2 + 1} $.
 
 \hfill $\blacksquare$	
 \end{proof}
@@ -272,9 +273,9 @@ $\dfrac{\Delta_i}{4} \leq \dfrac{\Delta_i}{4\sigma_i^2 + 1} $.
 \subsection{Proof of Lemma 8}
 \label{App:Lemma:8}
 \begin{lemma}
-For two integer constants $c_1$ and $c_2$, if $c_1 < 8 c_2$ then,
+For two integer constants $c_1$ and $c_2$, if $c_1 < 20 c_2$ then,
 \begin{align*}
-c_1 \dfrac{4\sigma_i^2 + 1}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) < c_2 \dfrac{\sigma_i^2}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg)
+c_1 \dfrac{16\sigma_i^2 + 1}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) < c_2 \dfrac{\sigma_i^2}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg)
 \end{align*}
  
 \end{lemma}
@@ -282,20 +283,20 @@ c_1 \dfrac{4\sigma_i^2 + 1}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) < c
 \begin{proof}
 We again prove this by contradiction. Suppose, 
 \begin{align*}
-c_1 \dfrac{4\sigma_i^2 + 1}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) > c_2 \dfrac{\sigma_i^2}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg)
+c_1 \dfrac{16\sigma_i^2 + 1}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) > c_2 \dfrac{\sigma_i^2}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg)
 \end{align*}
 
 Further reducing the above two terms we can show that, 
 
 \begin{align*}
-& 4c_1\sigma_i^2 + c_1 > c_2\sigma_i^2\\
-& 4c_1.\dfrac{1}{4} + c_1 > \dfrac{c_2}{4}\\
-& 8c_1 > c_2
+& 16c_1\sigma_i^2 + c_1 > c_2\sigma_i^2\\
+& 16c_1.\dfrac{1}{4} + c_1 > \dfrac{c_2}{4}\\
+& 20 c_1 > c_2
 \end{align*}
 
-But, we already know that $8c_1 < c_2$. Hence, 
+But, we already know that $20 c_1 < c_2$. Hence, 
 \begin{align*}
-c_1 \dfrac{4\sigma_i^2 + 1}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) < c_2 \dfrac{\sigma_i^2}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg)
+c_1 \dfrac{16\sigma_i^2 + 1}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) < c_2 \dfrac{\sigma_i^2}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg)
 \end{align*}
 
 \hfill $\blacksquare$	

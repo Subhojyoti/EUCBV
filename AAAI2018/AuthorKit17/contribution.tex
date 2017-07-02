@@ -9,9 +9,9 @@ In this paper we propose the Efficient-UCB-Variance (henceforth referred to as E
 \toprule
 Algorithm  & Gap-Dependent & Gap-Independent \\
 \hline
-EUCBV		& $O\left( \dfrac{K\sigma_{\max}^{2}\log (T\Delta^2 /K)}{\Delta}\right)$ & $O\left(\sigma_{\max}^{2}\sqrt{KT}\right)$\\
+EUCBV		& $O\left( \dfrac{K\sigma_{\max}^{2}\log (\frac{T\Delta^2}{K})}{\Delta}\right)$ & $O\left(\sqrt{KT}\right)$\\
 UCB1        & $O\left( \dfrac{K\log T}{\Delta} \right)$ & $O\left(\sqrt{KT\log T}\right)$ \\%\midrule
-UCBV        & $O\left( \dfrac{K\sigma_{\max}^{2}\log T}{\Delta} \right)$ & $O\left(\sigma_{\max}^{2}\sqrt{KT\log T}\right)$ \\
+UCBV        & $O\left( \dfrac{K\sigma_{\max}^{2}\log T}{\Delta} \right)$ & $O\left(\sqrt{KT\log T}\right)$ \\
 UCB-Imp 		& $O\left( \dfrac{K\log (T\Delta^2)}{\Delta} \right)$ & $O\left(\sqrt{KT\log K}\right)$ \\%\midrule
 MOSS	     	& $O\left( \dfrac{K^2\log (T\Delta^2 /K)}{\Delta}\right)$ & $O\left(\sqrt{KT}\right)$\\%\midrule
 OCUCB     	& $O\left( \dfrac{K\log (T/ H_{i})}{\Delta}\right)$ & $O\left(\sqrt{KT}\right)$\\\midrule
