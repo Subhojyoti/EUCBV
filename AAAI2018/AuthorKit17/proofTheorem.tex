@@ -236,7 +236,7 @@ Here, $(a)$ happens because $\sqrt{4\epsilon_{m_{i}}} < \frac{\Delta_{i}}{4}$. S
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 &\overset{(b)}{\leq} \sum_{i\in \A^{'}} \left(\Delta_{i} +\dfrac{64(16\sigma_i^2 + 1)\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\right)\\
 &%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\overset{(c)}{\leq} \sum_{i\in \A^{'}} \left(\Delta_{i} +\dfrac{4\sigma_i^2\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\right)\\
+\overset{(c)}{\leq} \sum_{i\in \A^{'}} \left(\Delta_{i} +\dfrac{8\sigma_i^2\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\right)\\
 \end{align*}
 
 We obtain $(a)$ by substituting the value of $\psi$, $(b)$ from Lemma \ref{proofTheorem:Lemma:7} and $(c)$ from Lemma \ref{proofTheorem:Lemma:8}.\\
@@ -280,7 +280,7 @@ Again applying Lemma \ref{proofTheorem:Lemma:9} we can show that the above expre
 
 Finally, summing up the regrets in \textbf{Case a} and \textbf{Case b}, the total regret is given by
 \begin{align*}
-\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace \dfrac{C_0 K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} + \bigg(\Delta_{i}+\dfrac{2\sigma_i^2\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\bigg)\bigg \rbrace\\ 
+\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace \dfrac{C_0 K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} + \bigg(\Delta_{i}+\dfrac{8\sigma_i^2\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\bigg)\bigg \rbrace\\ 
   & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T.
 \end{align*}
 
