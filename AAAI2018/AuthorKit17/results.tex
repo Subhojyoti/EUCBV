@@ -4,7 +4,7 @@ The main result of the paper is presented in the following theorem where we esta
 \label{Result:Theorem:1}
 For $T\geq K^{2.4}$, $\rho=\frac{1}{2}$ and $\psi=\frac{T}{K^2}$, the regret $R_T$ for EUCBV satisfies
 \begin{align*}
-\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace \dfrac{C_0 K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} + \bigg(\Delta_{i}+\dfrac{2\sigma_i^2\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\bigg)\bigg \rbrace\\ 
+\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace \dfrac{C_0 K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} + \bigg(\Delta_{i}+\dfrac{8\sigma_i^2\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\bigg)\bigg \rbrace\\ 
   & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T.
 \end{align*}
 
@@ -31,7 +31,7 @@ Next, we specialize the result of Theorem \ref{Result:Theorem:1} in Corollary \r
 When the gaps of all the sub-optimal arms are identical, i.e., $\Delta_i =\Delta = \sqrt{\frac{K\log K}{T}}>\sqrt{\frac{e}{T}}, \forall i\in \A$ and $C_3$ being an integer constant, the
 regret of EUCBV is upper bounded by the following gap-independent expression:
 \begin{align*}
-	\E[R_{T}]\leq  \dfrac{C_3 K^3}{T^{\frac{1}{4}}} + 2\sigma_i^2\sqrt{KT}.
+	\E[R_{T}]\leq  \dfrac{C_3 K^3}{T^{\frac{1}{4}}} + 8\sigma_i^2\sqrt{KT}.
 \end{align*}	
 \end{corollary}
 	
