@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  2 JUL 2017 23:21
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  3 JUL 2017 11:07
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1216,7 +1216,11 @@ Underfull \hbox (badness 2050) in paragraph at lines 52--62
 \OT1/ptm/m/n/10 elim-i-na-tion tech-nique of the UCB-Improved al-go-rithm
  []
 
-) (./results.tex [3]) (./proofTheorem.tex
+) (./results.tex
+Underfull \vbox (badness 1038) has occurred while \output is active []
+
+ [3])
+(./proofTheorem.tex
 Underfull \hbox (badness 1845) in paragraph at lines 24--25
 []\OT1/ptm/m/it/10 If $\OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 
 min\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 m\OMS/cmsy/m/n/10 j[] \OML/cmm/m/it/10 < 
@@ -1481,7 +1485,7 @@ ymbols/msbm10.pfb></usr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb>
 xlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/u
 rw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on EUCBV.pdf (12 pages, 411549 bytes).
+Output written on EUCBV.pdf (12 pages, 411755 bytes).
 PDF statistics:
  480 PDF objects out of 1000 (max. 8388607)
  104 named destinations out of 1000 (max. 500000)
