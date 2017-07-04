@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  3 JUL 2017 11:30
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  4 JUL 2017 18:28
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1221,7 +1221,7 @@ Underfull \vbox (badness 1038) has occurred while \output is active []
 
  [3])
 (./proofTheorem.tex
-Underfull \hbox (badness 1845) in paragraph at lines 24--25
+Underfull \hbox (badness 2096) in paragraph at lines 24--25
 []\OT1/ptm/m/it/10 If $\OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 
 min\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 m\OMS/cmsy/m/n/10 j[] \OML/cmm/m/it/10 < 
 []\OMS/cmsy/m/n/10 g$\OT1/ptm/m/it/10 , $[] \OT1/cmr/m/n/10 =
@@ -1287,13 +1287,13 @@ PGFPlots: reading {results/NewExpt/Expt1/TS01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/OCUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt1/BU01_comp_subsampled.txt}
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--42
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
 []\OT1/ptm/m/n/9 (a) Expt-$\OT1/cmr/m/n/9 1$\OT1/ptm/m/n/9 : $\OT1/cmr/m/n/9 20
 $ \OT1/ptm/m/n/9 Bernoulli-
  []
 
 PGFPlots: reading {results/NewExpt/Expt2/UCBV01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt2/NEUCBV01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt2/EUCBV01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2/KLUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2/MOSS01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2/UCBR01_comp_subsampled.txt}
@@ -1302,40 +1302,36 @@ PGFPlots: reading {results/NewExpt/Expt2/TS01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2/OCUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2/BU01_comp_subsampled.txt}
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
+Underfull \hbox (badness 10000) in paragraph at lines 89--89
 []\OT1/ptm/m/n/9 (b) Expt-$\OT1/cmr/m/n/9 2$\OT1/ptm/m/n/9 : $\OT1/cmr/m/n/9 10
 0$ \OT1/ptm/m/n/9 Gaussian-
  []
 
 
-Overfull \hbox (17.71477pt too wide) in paragraph at lines 5--95
+Overfull \hbox (12.53627pt too wide) in paragraph at lines 5--91
  [][] 
  []
 
 [6]
-PGFPlots: reading {results/NewExpt/Expt41/MOSS01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt41/NEUCBV01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt41/OCUCB01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt41/TS01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt4/UCBV01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt4/EUCBV01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt4/MOSS01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt4/TS01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt4/OCUCB01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt4/BU01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt31/plotFinalMOSS20_100.txt}
 PGFPlots: reading {results/NewExpt/Expt31/plotFinalNEUCBV20_100.txt}
 PGFPlots: reading {results/NewExpt/Expt31/plotFinalOCUCB20_100.txt}
 PGFPlots: reading {results/NewExpt/Expt31/plotFinalTS20_100.txt}
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--168
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
 []\OT1/ptm/m/n/9 (b) Expt-$\OT1/cmr/m/n/9 4$\OT1/ptm/m/n/9 : $\OT1/cmr/m/n/9 20
 $ \OT1/ptm/m/n/9 to $\OT1/cmr/m/n/9 100$
  []
 
 
-Overfull \hbox (4.50249pt too wide) in paragraph at lines 109--172
+Overfull \hbox (4.50179pt too wide) in paragraph at lines 105--167
  [][] 
- []
-
-
-Underfull \hbox (badness 1629) in paragraph at lines 182--183
-[]\OT1/ptm/b/n/10 Experiment-3 (Ad-vanced Set-ting): \OT1/ptm/m/n/10 This ex-pe
-r-i-ment
  []
 
 ) (./Conclusion.tex) [7] (./EUCBV.bbl
@@ -1456,13 +1452,13 @@ Overfull \hbox (42.75949pt too wide) in paragraph at lines 340--340
 
 ] (./EUCBV.aux) ) 
 Here is how much of TeX's memory you used:
- 22255 strings out of 493848
- 456515 string characters out of 1152823
- 666185 words of memory out of 3000000
- 24830 multiletter control sequences out of 15000+50000
+ 22257 strings out of 493848
+ 456617 string characters out of 1152823
+ 664973 words of memory out of 3000000
+ 24834 multiletter control sequences out of 15000+50000
  34270 words of font info for 78 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 63i,27n,75p,1860b,1758s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,27n,75p,1856b,1758s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/sh
 are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-t
 exlive/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texmf-texlive/
@@ -1485,7 +1481,7 @@ ymbols/msbm10.pfb></usr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb>
 xlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/u
 rw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on EUCBV.pdf (12 pages, 413351 bytes).
+Output written on EUCBV.pdf (12 pages, 415294 bytes).
 PDF statistics:
  488 PDF objects out of 1000 (max. 8388607)
  104 named destinations out of 1000 (max. 500000)

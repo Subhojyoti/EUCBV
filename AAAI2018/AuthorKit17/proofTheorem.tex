@@ -21,7 +21,7 @@ If $T\geq K^{2.4}$, $\psi=\frac{T}{ K^2}$, $\rho =\frac{1}{2}$, $m_i = min\lbrac
 
 \begin{lemma}
 \label{proofTheorem:Lemma:3}
-If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \dfrac{\Delta_i}{4} \rbrace $,  $\bar{c}_i=\sqrt{\dfrac{\rho (\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 2)\log(\psi T\epsilon_{m_{i}})}{4z_i}}$ and $n_{m_i} = \frac{\log{(\psi T\epsilon_{m_{i}})}}{2\epsilon_{m_{i}}}$ then we can show that,
+If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \frac{\Delta_i}{4} \rbrace $,  $\bar{c}_i=\sqrt{\frac{\rho (\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 2)\log(\psi T\epsilon_{m_{i}})}{4z_i}}$ and $n_{m_i} = \frac{\log{(\psi T\epsilon_{m_{i}})}}{2\epsilon_{m_{i}}}$ then we can show that,
 \begin{align*}
 \mathbb{P}\left( \hat{r}_{i} > r_{i}+ \bar{c}_i\right) 
 + \mathbb{P}\left( \hat{v}_{i}\geq \sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}}\right) \leq \dfrac{2}{(\psi  T\epsilon_{m_{i}})^{\frac{3\rho}{2}}}
@@ -106,7 +106,7 @@ The details of each case are contained in the following sub-sections.
 %Note that in in round $m_i$ as $\sqrt{4\epsilon_{m_i}} < \dfrac{\Delta_{i}}{4}$ implies that $\sqrt{4\epsilon_{m_i}} < \dfrac{\Delta_{i}}{4\sigma_i^2}$, since $\sigma_i^2\in (0,1]$
 
 \textbf{Case $(a)$:}
-For simplicity, let $c_{i} := \sqrt{\frac{\rho (\hat{v}_i + 2) \log (\psi T\epsilon_{m_{i}})}{4 z_{i}}}$ denote the length of the confidence interval corresponding to arm $i$ in round $m_i$. Thus, in round $m_i$ (or before) whenever $z_i \geq n_{m_{i}}\ge\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$, by applying Lemma \ref{proofTheorem:Lemma:2} we obtain $c_{i} < \dfrac{\Delta_{i}}{4}$.
+For simplicity, let $c_{i} := \sqrt{\frac{\rho (\hat{v}_i + 2) \log (\psi T\epsilon_{m_{i}})}{4 z_{i}}}$ denote the length of the confidence interval corresponding to arm $i$ in round $m_i$. Thus, in round $m_i$ (or before) whenever $z_i \geq n_{m_{i}}\ge\frac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$, by applying Lemma \ref{proofTheorem:Lemma:2} we obtain $c_{i} < \frac{\Delta_{i}}{4}$.
 %\begin{align*}
 %	c_{i} < \dfrac{\Delta_{i}}{4} 
 %\end{align*}
@@ -242,7 +242,7 @@ Here, $(a)$ happens because $\sqrt{4\epsilon_{m_{i}}} < \frac{\Delta_{i}}{4}$. S
 We obtain $(a)$ by substituting the value of $\psi$, $(b)$ from Lemma \ref{proofTheorem:Lemma:7} and $(c)$ from Lemma \ref{proofTheorem:Lemma:8}.\\
 
 \noindent
-\textbf{Case $(b2)$ (\textit{Optimal arm ${*}$ is eliminated by a sub-optimal arm):  }} Firstly, if conditions of Case $a$ holds then the optimal arm ${*}$ will not be eliminated in round $m=m_{*}$ or it will lead to the contradiction that $r_{i}>r^{*}$. In any round $m_{*}$, if the optimal arm ${*}$ gets eliminated then for any round from $1$ to $m_{j}$ all arms ${j}$ such that $m_{j}< m_{*}$ were eliminated according to assumption in Case $a$. Let the arms surviving till $m_{*}$ round be denoted by $\A^{'}$. This leaves any arm $a_{b}$ such that $m_{b}\geq m_{*}$ to still survive and eliminate arm ${*}$ in round $m_{*}$. Let such arms that survive ${*}$ belong to $\A^{''}$. Also maximal regret per step after eliminating ${*}$ is the maximal $\Delta_{j}$ among the remaining arms ${j}$ with $m_{j}\geq m_{*}$.  Let $m_{b}=\min\left\lbrace m|\sqrt{4\epsilon_{m}}<\dfrac{\Delta_{b}}{4}\right\rbrace$. Hence, the maximal regret after eliminating the arm ${*}$ is upper bounded by, 
+\textbf{Case $(b2)$ (\textit{Optimal arm ${*}$ is eliminated by a sub-optimal arm):  }} Firstly, if conditions of Case $a$ holds then the optimal arm ${*}$ will not be eliminated in round $m=m_{*}$ or it will lead to the contradiction that $r_{i}>r^{*}$. In any round $m_{*}$, if the optimal arm ${*}$ gets eliminated then for any round from $1$ to $m_{j}$ all arms ${j}$ such that $m_{j}< m_{*}$ were eliminated according to assumption in Case $a$. Let the arms surviving till $m_{*}$ round be denoted by $\A^{'}$. This leaves any arm $a_{b}$ such that $m_{b}\geq m_{*}$ to still survive and eliminate arm ${*}$ in round $m_{*}$. Let such arms that survive ${*}$ belong to $\A^{''}$. Also maximal regret per step after eliminating ${*}$ is the maximal $\Delta_{j}$ among the remaining arms ${j}$ with $m_{j}\geq m_{*}$.  Let $m_{b}=\min\left\lbrace m|\sqrt{4\epsilon_{m}}<\frac{\Delta_{b}}{4}\right\rbrace$. Hence, the maximal regret after eliminating the arm ${*}$ is upper bounded by, 
 \begin{align*}
 \sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{388 K}{(\psi  T\epsilon_{m_{*}})^{\frac{3\rho}{2}}} \bigg).T\max_{j\in \A^{''}:m_{j}\geq m_{*}}{\Delta}_{j}
 \end{align*}
