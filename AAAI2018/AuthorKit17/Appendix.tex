@@ -106,7 +106,7 @@ The first term in the LHS of (\ref{eq:prob_eq3}) can be bounded using the Bernst
 \le \dfrac{1}{(\psi  T\epsilon_{m_{i}})^{\frac{3\rho}{2}}}
 \label{lhs1_equn}
 \end{align}
-where, $(a)$ is obtained by substituting equation \ref{si_bar_equn} and $(b)$ occurs because for all $\sigma_{i}^2 \in [0,1]$, $\left(\frac{3\sigma_{i}^{2}+3\sqrt{\epsilon_{m_{i}}} + 6}{6\sigma_i^2 + 2\sqrt{\epsilon_{m_i}}}\right) \geq \frac{3}{2}$ .
+where, $(a)$ is obtained by substituting equation \ref{si_bar_equn} and $(b)$ occurs because for all $\sigma_{i}^2 \in [0,\frac{1}{4}]$, $\left(\frac{3\sigma_{i}^{2}+3\sqrt{\epsilon_{m_{i}}} + 6}{6\sigma_i^2 + 2\sqrt{\epsilon_{m_i}}}\right) \geq \frac{3}{2}$ .
 
  
 The second term in the LHS of (\ref{eq:prob_eq2}) can be simplified as follows:
@@ -234,14 +234,14 @@ where, in $(a)$ we substitute the values of $\rho$ and $\psi$ and $(b)$ happens 
 \end{align*}
 
 where, in $(a)$ we substitute the values of $\rho$ and $\psi$. Substituting the values in Equation \ref{eq:contra:1} we get,
-\begin{align*}
-& \dfrac{6K^{\frac{5}{2}}}{T^{\frac{9}{8}}} < \dfrac{6K^4\log T}{T^{\frac{5}{2}}}\\
-& \dfrac{T^{\frac{11}{8}}}{\log T} < K^{\frac{3}{2}}\\
-& \dfrac{T^{\frac{11}{8}}}{\sqrt{T}} \overset{(a)}{<} K^{1.5}\\
-& K^{2.1} \overset{(b)}{<} K^{1.5}
-\end{align*}
+\begin{align}
+& \dfrac{6K^{\frac{5}{2}}}{T^{\frac{9}{8}}} < \dfrac{6K^4\log T}{T^{\frac{5}{2}}}\nonumber\\
+& \dfrac{T^{\frac{11}{8}}}{\log T} < K^{\frac{3}{2}}\nonumber\\
+& \dfrac{T^{\frac{11}{8}}}{\sqrt{T}} \overset{(a)}{<} K^{1.5}\nonumber\\
+& K^{2.1} \overset{(b)}{<} K^{1.5} \label{eq:ineq1}
+\end{align}
 
-where, $(a)$ occurs because of the inequality $\log T < \sqrt{T}$ and $(b)$ happens because of the condition that $T\geq K^{2.4}$. So clearly we can conclude that,
+where, $(a)$ occurs because of the inequality $\log T < \sqrt{T}$ and $(b)$ happens because of the condition that $T\geq K^{2.4}$. But the inequality \ref{eq:ineq1} is not possible for any $K\geq 2$. So clearly we can conclude that,
 \begin{align*}
 \dfrac{6K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}} > \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}}
 \end{align*}
