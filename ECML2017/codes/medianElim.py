@@ -24,14 +24,11 @@ class medianElim(object):
         #print self.means
         
     
-    #Calculate rewards
-    def rewards(self,choice):
-        #Gaussain Reward
-        #return random.gauss(self.means[choice],1)
-        #Bernoulli Reward(1 sample from Binomial Distribution)
-        return sum(numpy.random.binomial(1,self.means[choice],1))/1.0
+    def rewards(self,choice,t):
+        #return sum(numpy.random.binomial(1,self.means[choice],1))/1.0
+        return random.gauss(self.means[choice],self.variance[choice])
     
-    #Count the number of remaining arms
+    
     def remArms(self):
         count=0
         arm=-1
@@ -42,24 +39,30 @@ class medianElim(object):
         return count
         
     def medianElimimation(self,arms,epsilon,delta,wrong,turn):
-
-        #Set the environment
+        
         self.numActions = arms
-        self.horizon=2000000
+        self.horizon=300000
         
         self.bestAction=self.numActions-2
-        self.means =[0.06 for i in range(self.numActions)]
 
-        for i in range(self.numActions/3):
-            self.means[i]=0.01
+        self.means =[0.1 for i in range(self.numActions)]
+        self.variance =[0.7 for i in range(self.numActions)]
+
+
+        i=(1*self.numActions)/3
+        while i<self.numActions:
+            self.means[i]=0.8
+            self.variance[i]=0.1
+            i=i+1
+
         '''
         i=(2*self.numActions)/3
         while i<self.numActions:
-            self.means[i]=0.4
+            self.means[i]=0.03
             i=i+1
         '''
-
-        self.means[self.bestAction]=0.1
+        self.means[self.bestAction]=0.9
+        self.variance[self.bestAction]=0.7
         
 
         print "Means: "+str(self.means)
@@ -90,13 +93,12 @@ class medianElim(object):
             print "\n\nRound: "+str(l)
             self.numRounds = int(math.ceil((1/(epsilon_l*0.5))*math.log(3/delta_l)))
             print "nm: "+str(self.numRounds)
-
-            #Pull all arms equally in the round
+            
             for i in range(self.numActions):
                 for j in range(self.numRounds):
                     
                     if self.B[i]!=-1:
-                        theReward = self.rewards(i)
+                        theReward = self.rewards(i, self.timestep)
                             
                         self.arm_reward[i]=self.arm_reward[i]+theReward
                         self.numPlays[i] += 1
@@ -104,14 +106,13 @@ class medianElim(object):
                         self.avgPayOffSums[i] = self.payoffSums[i] / self.numPlays[i]
                             
                         self.cumulativeReward += theReward
-                        self.bestActionCumulativeReward += theReward if i == self.bestAction else self.rewards(self.bestAction)
+                        self.bestActionCumulativeReward += theReward if i == self.bestAction else self.rewards(self.bestAction, self.timestep)
                         self.regret = self.bestActionCumulativeReward - self.cumulativeReward
 
                         self.actionRegret.append(self.regret)
 
                         self.timestep=self.timestep+1
 
-            #Calculate the median of the remaining arms
             self.avgPayOffSums1=[]
             for i in range(self.numActions):
                 if self.B[i]!=-1:
@@ -121,8 +122,7 @@ class medianElim(object):
             
             print "AvgPayoff: "+str(self.avgPayOffSums)
             print "Median: "+str(median_val)
-
-            #Eliminate arms below median
+            
             for i in range(self.numActions):
                 if self.B[i]!=-1:
                     if self.avgPayOffSums[i]<median_val:
@@ -131,7 +131,7 @@ class medianElim(object):
             print "B: "+str(self.B)
             print "Rem arms: "+str(self.remArms())
             
-            #update parameters
+            
             epsilon_l=0.75*epsilon_l
             delta_l=0.5*delta_l
             l=l+1
@@ -147,11 +147,9 @@ class medianElim(object):
         arm=bestArm
 
         print "last arm:"+str(arm) + " turn:"+str(turn) + " wrong:"+str(wrong)
-
-        #if horizon not reached dpull the best Arm outputed till horizon
         while self.timestep<self.horizon:
 
-            theReward = self.rewards(arm)
+            theReward = self.rewards(arm,self.timestep)
             self.arm_reward[arm]=self.arm_reward[arm]+theReward
             self.numPlays[arm] += 1
             self.payoffSums[arm] += theReward
@@ -159,15 +157,15 @@ class medianElim(object):
             self.avgPayOffSums[arm] = self.payoffSums[arm] / self.numPlays[arm]
 
             self.cumulativeReward += theReward
-            self.bestActionCumulativeReward += theReward if arm == self.bestAction else self.rewards(self.bestAction)
+            self.bestActionCumulativeReward += theReward if arm == self.bestAction else self.rewards(self.bestAction, self.timestep)
             self.regret = self.bestActionCumulativeReward - self.cumulativeReward
             self.actionRegret.append(self.regret)
 
             self.timestep=self.timestep+1
 
 
-        #Print output file for regret for each timestep
-        f = open('expt/testRegretMedElim.txt', 'a')
+
+        f = open('NewExpt1/expt21/testRegretMedElim.txt', 'a')
         for r in range(len(self.actionRegret)):
             f.write(str(self.actionRegret[r])+"\n")
         f.close()
@@ -180,29 +178,21 @@ if __name__ == "__main__":
 
     
     wrong=0
-    arms=100
-    while arms<=100:
+    i=100
+    while i<=100:
         
-        for turn in range(0,100):
+        for j in range(0,100):
 
-            #set the random seed, same for all environment
-            numpy.random.seed(arms+turn)
-
+            numpy.random.seed(i+j)
             me= medianElim()
-            eps=0.03
-            delta=0.1
-            cumulativeReward,bestActionCumulativeReward,regret,bestArm,timestep=me.medianElimimation(arms,eps,delta,wrong,turn)
-            if bestArm!=arms-2:
+            f = open('NewExpt1/expt21/testMedElim.txt', 'a')
+            cumulativeReward,bestActionCumulativeReward,regret,bestArm,timestep=me.medianElimimation(i,0.1,0.1,wrong,j)
+            if bestArm!=i-2:
                 wrong=wrong+1
-
-            print "turn: "+str(turn)+"\twrong: "+str(wrong)+"\tarms: "+str(arms)+"\tbarm: "+str(bestArm)+"\tReward: "+str(cumulativeReward)+"\tbestCumReward: "+str(bestActionCumulativeReward)+"\tregret: "+str(regret)
-
-            #Print final output file for cumulative regret
-            f = open('expt/testMedElim.txt', 'a')
-            f.writelines("arms: %d\tbArm: %d\ttimestep: %d\tregret: %d\tcumulativeReward: %.2f\tbestCumulativeReward: %.2f\n" % (arms, bestArm, timestep, regret, cumulativeReward, bestActionCumulativeReward))
+            f.writelines("arms: %d\tbArms: %d\ttimestep: %d\tregret: %d\tcumulativeReward: %.2f\tbestCumulativeReward: %.2f\n" % (i, bestArm, timestep, regret, cumulativeReward, bestActionCumulativeReward))
             f.close()
-        arms=arms+1
+        i=i+1
     
     
-
+    #ucb= UCBRevisted2()
     

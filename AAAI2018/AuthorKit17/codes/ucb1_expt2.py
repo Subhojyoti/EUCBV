@@ -1,9 +1,8 @@
 '''
-Created on Dec 21, 2016
+Created on Oct 6, 2015
 
 @author: Subhojyoti
 '''
-
 
 import math
 import random
@@ -23,15 +22,13 @@ class ucb1_2(object):
         
     
     def upperBound(self, step, numPlays):
-        self.alpha=2.0
-        self.psi=2.0
-        return math.sqrt((self.alpha * math.log((self.psi*self.numRounds) / (step))) / numPlays)
+        return math.sqrt(2 * math.log(step + 1) / numPlays)
     
      
     def rewards(self,choice):
-        #return random.gauss(self.means[choice],1)
+        return random.gauss(self.means[choice],self.variance[choice])
         #print sum(numpy.random.binomial(1,self.means[choice],200))/200.0
-        return sum(numpy.random.binomial(1,self.means[choice],1))/1.0
+        #return sum(numpy.random.binomial(1,self.means[choice],1))/1.0
         
     def ucb1(self,numActions):
     
@@ -43,34 +40,32 @@ class ucb1_2(object):
         self.ucbs = [0] * self.numActions
         self.upbs = [0] * self.numActions
         #self.numRounds = 3000000
-        #self.numRounds = 300000
+        self.numRounds = 300000
         #numRounds = 250000
-        self.numRounds = self.numActions*self.numActions*self.numActions
         
         self.arm_reward = [0]*numActions
         
         #bestAction=arms/2
         self.bestAction=self.numActions-2
         
-        #biases = [1.0 / k for k in range(5,5+numActions)]
-        #means = [0.5 + b for b in biases]
-        self.means =[0.05 for i in range(self.numActions)]
+        
+        self.means =[0.01 for i in range(self.numActions)]
+        self.variance =[0.25 for i in range(self.numActions)]
+        
 
-        for i in range(0,1*self.numActions/3):
-            self.means[i]=0.01
+        for i in range(self.numActions/3):
+            self.means[i]=0.07
+            self.variance[i]=0.01
+
 
         '''
-        i=(1*self.numActions)/3
-        while i<self.numActions:
-            self.means[i]=0.05
-            i=i+1
-        
         i=(2*self.numActions)/3
         while i<self.numActions:
             self.means[i]=0.03
             i=i+1
         '''
-        self.means[self.bestAction]=0.1
+        self.means[self.bestAction]=0.09
+        self.variance[self.bestAction]=0.25
         
         
         # initialize empirical sums
@@ -111,7 +106,7 @@ class ucb1_2(object):
         #t=1
         while True:
             ucbs = [(self.payoffSums[i] / self.numPlays[i]) + self.upperBound(t, self.numPlays[i]) for i in range(self.numActions)]
-            #upbs = [self.upperBound(t, self.numPlays[i]) for i in range(self.numActions)]
+            upbs = [self.upperBound(t, self.numPlays[i]) for i in range(self.numActions)]
             #print "upbs"
             #print upbs
             #print ucbs
@@ -143,30 +138,30 @@ class ucb1_2(object):
             
             #print t
 
-            if t%100000==0:
-                print t
+            if t%10000==0:
+                print t,regret
 
             
     
         action=max(range(self.numActions), key=lambda i: self.arm_reward[i])
         #print self.arm_reward
         
-        '''
-        f = open('expt3/testRegretOCUCB01.txt', 'a')
+
+        f = open('NewExpt/expt2/testRegretUCB01.txt', 'a')
         for r in range(len(self.actionRegret)):
             f.write(str(self.actionRegret[r])+"\n")
         f.close()
-        '''
+
         return cumulativeReward,bestActionCumulativeReward,regret,action,t
         
 
 if __name__ == "__main__":
     
     wrong=0
-    i=20
-    while i<=50:
+    i=100
+    while i<=100:
         turn=0
-        for j in range(0,100):
+        for j in range(turn,100):
             
             random.seed(i+j)
             
@@ -175,12 +170,11 @@ if __name__ == "__main__":
             if arm!=i-2:
             #if arm!=i/2:
                 wrong=wrong+1
-            print "turn: "+str(turn+1)+"\twrong: "+str(wrong)+"\tarms: "+str(i)+"\tbarm: "+str(arm)+"\tReward: "+str(cumulativeReward)+"\tbestCumReward: "+str(bestActionCumulativeReward)+"\tregret: "+str(regret)
-            '''
-            f = open('expt4/testOCUCB3.txt', 'a')
+            print "turn: "+str(turn)+"\twrong"+str(wrong)+"\tarms: "+str(i)+"\tbarm: "+str(arm)+"\tReward: "+str(cumulativeReward)+"\tbestCumReward: "+str(bestActionCumulativeReward)+"\tregret: "+str(regret)
+            f = open('NewExpt/expt2/testUCB01.txt', 'a')
             f.writelines("arms: %d\tbArms: %d\ttimestep: %d\tregret: %d\tcumulativeReward: %.2f\tbestCumulativeReward: %.2f\n" % (i, arm, timestep, regret, cumulativeReward, bestActionCumulativeReward))
             f.close()
-            '''
+            
             turn=turn+1
-        i=i+10
+        i=i+1
         

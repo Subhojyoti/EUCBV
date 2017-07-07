@@ -20,18 +20,17 @@ class MOSS(object):
         '''
         
         
-    #UpperBound Definition
+    
     def upperBound(self, step, numPlays):
         #return math.sqrt(2 * math.log(step + 1) / numPlays)
-        return math.sqrt(max(math.log((step + 1.0)/(self.numActions*numPlays)),0.0) / numPlays)
+        #return math.sqrt(max(math.log((step + 1.0)/(self.numActions*numPlays)),0.0) / numPlays)
+        return math.sqrt(max(math.log((self.numRounds)/(1.0*self.numActions*numPlays)),0.0) / numPlays)
     
      
-    #Calculate rewards
     def rewards(self,choice):
-        #Gaussain Reward
-        #return random.gauss(self.means[choice],1)
-        #Bernoulli Reward(1 sample from Binomial Distribution)
-        return sum(numpy.random.binomial(1,self.means[choice],1))/1.0
+        
+        #return sum(numpy.random.binomial(1,self.means[choice],1))/1.0
+        return random.gauss(self.means[choice],0.5)
         
     def moss(self,numActions):
     
@@ -43,13 +42,20 @@ class MOSS(object):
         self.ucbs = [0] * self.numActions
         self.upbs = [0] * self.numActions
         #self.numRounds = self.numActions*self.numActions*self.numActions
-        self.numRounds = 10000
+        self.numRounds = 500000
         #self.numRounds = self.numActions*math.pow(10,3)
         
         self.arm_reward = [0]*numActions
-        self.bestAction=self.numActions-2
-        self.means =[0.05 for i in range(self.numActions)]
         
+        #bestAction=arms/2
+        self.bestAction=self.numActions-2
+        
+        
+        self.means =[0.8 for i in range(self.numActions)]
+
+        for i in range(0,1*self.numActions/3):
+            self.means[i]=0.5
+
         '''
         #i=(1*self.numActions)/3
         for i in range(self.numActions/3):
@@ -61,11 +67,11 @@ class MOSS(object):
             self.means[i]=0.4
             i=i+1
         '''
-        self.means[self.bestAction]=0.1
+        self.means[self.bestAction]=0.9
         
         print self.means
         
-        # initialize empirical sums pull each arm once
+        # initialize empirical sums
         
         cumulativeReward = 0
         bestActionCumulativeReward = 0
@@ -73,7 +79,9 @@ class MOSS(object):
         t=1
         
         for i in range(self.numActions):
-
+            theReward = self.rewards(i)
+            #self.numPlays[i]=self.numPlays[i]+1
+            
             action=i
             theReward = self.rewards(action)
             #print theReward,action
@@ -81,77 +89,95 @@ class MOSS(object):
             self.numPlays[action] += 1
             self.payoffSums[action] += theReward
             
+            #f1.writelines("ucbs: (%s)" % (', '.join(["%.8f" % ucb for ucb in ucbs])))
+            #f1.writelines("\tupbs: (%s)\n" %( ', '.join(["%.8f" % upb for upb in upbs])))
+            
+            #yield action, theReward, ucbs
+            
+            
             
             cumulativeReward += theReward
             bestActionCumulativeReward += theReward if action == self.bestAction else self.rewards(self.bestAction)
             regret = bestActionCumulativeReward - cumulativeReward
             
-            self.actionRegret.append(regret)
+            #self.actionRegret.append(regret)
             t=t+1
             
-
+        #t = numActions    
+        
         t=self.numActions
         while True:
             ucbs = [(self.payoffSums[i] / self.numPlays[i]) + self.upperBound(t, self.numPlays[i]) for i in range(self.numActions)]
-
+            #upbs = [self.upperBound(t, self.numPlays[i]) for i in range(self.numActions)]
+            #print "upbs"
+            #print upbs
+            #print ucbs
             #getting the maximum of the ucbs
             action = max(range(self.numActions), key=lambda i: ucbs[i])
-
-            #pulling the arm
-
             theReward = self.rewards(action)
+            #print theReward,action
             self.arm_reward[action]=self.arm_reward[action]+theReward
             self.numPlays[action] += 1
             self.payoffSums[action] += theReward
-
+            
+            #f1.writelines("ucbs: (%s)" % (', '.join(["%.8f" % ucb for ucb in ucbs])))
+            #f1.writelines("\tupbs: (%s)\n" %( ', '.join(["%.8f" % upb for upb in upbs])))
+            
+            #yield action, theReward, ucbs
+            
+            
+            
             cumulativeReward += theReward
             bestActionCumulativeReward += theReward if action == self.bestAction else self.rewards(self.bestAction)
             regret = bestActionCumulativeReward - cumulativeReward
-
+            
             self.actionRegret.append(regret)
             
-            if t%1000==0:
+            
+            if t%100000==0:
                 print t,regret
             
             
             t = t + 1
             
+            #print t
+            
+            
+            
             if t>=self.numRounds:
                 break
     
         action=max(range(self.numActions), key=lambda i: self.arm_reward[i])
+        #print self.arm_reward
 
-        #Print output file for regret for each timestep
-        f = open('expt/testRegretMOSS01.txt', 'a')
+        
+        f = open('expt10/testRegretMOSS01.txt', 'a')
         for r in range(len(self.actionRegret)):
             f.write(str(self.actionRegret[r])+"\n")
         f.close()
-
+        
         return cumulativeReward,bestActionCumulativeReward,regret,action,t
         
 
 if __name__ == "__main__":
     
     wrong=0
-    arms=20
-    while arms<=20:
+    i=100
+    while i<=100:
         turn=0
-        for turn in range(0,100):
-
-            #set the random seed, same for all environment
-            random.seed(arms+turn)
-
+        for j in range(turn,100):
+            
+            random.seed(i+j)
             obj=MOSS()
-            cumulativeReward,bestActionCumulativeReward,regret,bestArm,timestep=obj.moss(arms)
-            if bestArm!=arms-2:
+            cumulativeReward,bestActionCumulativeReward,regret,arm,timestep=obj.moss(i)
+            if arm!=i-2:
+            #if arm!=i/2:
                 wrong=wrong+1
-            print "turn: "+str(turn)+"\twrong: "+str(wrong)+"\tarms: "+str(arms)+"\tbarm: "+str(bestArm)+"\tReward: "+str(cumulativeReward)+"\tbestCumReward: "+str(bestActionCumulativeReward)+"\tregret: "+str(regret)
-
-            #Print final output file for cumulative regret
-            f = open('expt/testMOSS01.txt', 'a')
-            f.writelines("arms: %d\tbArms: %d\ttimestep: %d\tregret: %d\tcumulativeReward: %.2f\tbestCumulativeReward: %.2f\n" % (arms, bestArm, timestep, regret, cumulativeReward, bestActionCumulativeReward))
+            print "turn: "+str(turn)+"\twrong"+str(wrong)+"\tarms: "+str(i)+"\tbarm: "+str(arm)+"\tReward: "+str(cumulativeReward)+"\tbestCumReward: "+str(bestActionCumulativeReward)+"\tregret: "+str(regret)
+            f = open('expt10/testMOSS01.txt', 'a')
+            f.writelines("arms: %d\tbArms: %d\ttimestep: %d\tregret: %d\tcumulativeReward: %.2f\tbestCumulativeReward: %.2f\n" % (i, arm, timestep, regret, cumulativeReward, bestActionCumulativeReward))
             f.close()
             
             turn=turn+1
-        arms=arms+1
+        i=i+10
         

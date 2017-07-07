@@ -22,9 +22,9 @@ class UCBRevisted(object):
     #Calculate rewards
     def rewards(self,choice, timestep):
         #Gaussain Reward
-        #return random.gauss(self.means[choice],1)
+        return random.gauss(self.means[choice],self.variance[choice])
         #Bernoulli Reward(1 sample from Binomial Distribution)
-        return sum(numpy.random.binomial(1,self.means[choice],1))/1.0
+        #return sum(numpy.random.binomial(1,self.means[choice],1))/1.0
 
     #UpperBound Definition
     def upperBound(self, step, numPlays,horizon,delta_tilda):
@@ -39,27 +39,31 @@ class UCBRevisted(object):
 
         #Set the environment
         self.numActions = arms
-        self.horizon=400000
+        self.horizon=300000
         self.bestAction=self.numActions-2
 
         self.numRounds = 0.5*math.floor(math.log10(self.horizon/math.e)/math.log10(2))
 
-        self.means =[0.06 for i in range(self.numActions)]
-        
+        self.means =[0.01 for i in range(self.numActions)]
+        self.variance =[0.25 for i in range(self.numActions)]
 
-        for i in range(self.numActions/3):
-            self.means[i]=0.01
+
+        i=(1*self.numActions)/3
+        while i<self.numActions:
+            self.means[i]=0.07
+            self.variance[i]=0.01
+            i=i+1
 
         '''
-        for i in range(self.numActions/3):
-            self.means[i]=0.47
-        
         i=(2*self.numActions)/3
         while i<self.numActions:
-            self.means[i]=0.46
+            self.means[i]=0.03
             i=i+1
         '''
-        self.means[self.bestAction]=0.1
+        self.means[self.bestAction]=0.09
+        self.variance[self.bestAction]=0.25
+
+
         self.arm_reward = [0]*self.numActions
 
         self.actionRegret=[]
@@ -197,7 +201,7 @@ class UCBRevisted(object):
         
 
         #Print output file for regret for each timestep
-        f = open('expt/testRegretUCBR01.txt', 'a')
+        f = open('NewExpt/expt2/testRegretUCBR01.txt', 'a')
         for r in range(len(self.actionRegret)):
             f.write(str(self.actionRegret[r])+"\n")
         f.close()
@@ -210,10 +214,10 @@ if __name__ == "__main__":
 
     wrong=0
 
-    arms=20
-    while arms<=20:
+    arms=100
+    while arms<=100:
         
-        for turn in range(0,1):
+        for turn in range(0,100):
 
             #set the random seed, same for all environment
             numpy.random.seed(arms+turn)
@@ -227,7 +231,7 @@ if __name__ == "__main__":
             print "turn: "+str(turn)+"\twrong: "+str(wrong)+"\tarms: "+str(arms)+"\tbarm: "+str(bestArm)+"\tReward: "+str(cumulativeReward)+"\tbestCumReward: "+str(bestActionCumulativeReward)+"\tregret: "+str(regret)
 
             #Print final output file for cumulative regret
-            f = open('expt/testUCBR01.txt', 'a')
+            f = open('NewExpt/expt2/testUCBR01.txt', 'a')
             f.writelines("arms: %d\tbArms: %d\ttimestep: %d\tregret: %d\tcumulativeReward: %.2f\tbestCumulativeReward: %.2f\n" % (arms, bestArm, timestep, regret, cumulativeReward, bestActionCumulativeReward))
             f.close()
         arms=arms+1

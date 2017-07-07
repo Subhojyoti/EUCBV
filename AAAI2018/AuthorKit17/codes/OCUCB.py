@@ -43,8 +43,9 @@ class ucb1_2(object):
         self.ucbs = [0] * self.numActions
         self.upbs = [0] * self.numActions
         #self.numRounds = 3000000
-        self.numRounds = 60000
+        #self.numRounds = 300000
         #numRounds = 250000
+        self.numRounds = self.numActions*self.numActions*self.numActions
         
         self.arm_reward = [0]*numActions
         
@@ -53,8 +54,11 @@ class ucb1_2(object):
         
         #biases = [1.0 / k for k in range(5,5+numActions)]
         #means = [0.5 + b for b in biases]
-        self.means =[0.07 for i in range(self.numActions)]
-        
+        self.means =[0.05 for i in range(self.numActions)]
+
+        for i in range(0,1*self.numActions/3):
+            self.means[i]=0.01
+
         '''
         i=(1*self.numActions)/3
         while i<self.numActions:
@@ -138,21 +142,21 @@ class ucb1_2(object):
             t = t + 1
             
             #print t
-            '''
+
             if t%100000==0:
                 print t
-            '''
+
             
     
         action=max(range(self.numActions), key=lambda i: self.arm_reward[i])
         #print self.arm_reward
         
-        
-        f = open('expt/testRegretOCUCB01.txt', 'a')
+        '''
+        f = open('expt3/testRegretOCUCB01.txt', 'a')
         for r in range(len(self.actionRegret)):
             f.write(str(self.actionRegret[r])+"\n")
         f.close()
-        
+        '''
         return cumulativeReward,bestActionCumulativeReward,regret,action,t
         
 
@@ -160,7 +164,7 @@ if __name__ == "__main__":
     
     wrong=0
     i=20
-    while i<=20:
+    while i<=50:
         turn=0
         for j in range(0,100):
             
@@ -172,10 +176,11 @@ if __name__ == "__main__":
             #if arm!=i/2:
                 wrong=wrong+1
             print "turn: "+str(turn+1)+"\twrong: "+str(wrong)+"\tarms: "+str(i)+"\tbarm: "+str(arm)+"\tReward: "+str(cumulativeReward)+"\tbestCumReward: "+str(bestActionCumulativeReward)+"\tregret: "+str(regret)
-            f = open('expt/testOCUCB1.txt', 'a')
+            '''
+            f = open('expt4/testOCUCB3.txt', 'a')
             f.writelines("arms: %d\tbArms: %d\ttimestep: %d\tregret: %d\tcumulativeReward: %.2f\tbestCumulativeReward: %.2f\n" % (i, arm, timestep, regret, cumulativeReward, bestActionCumulativeReward))
             f.close()
-            
+            '''
             turn=turn+1
-        i=i+1
+        i=i+10
         
