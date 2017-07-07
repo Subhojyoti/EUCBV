@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  4 JUL 2017 18:28
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  7 JUL 2017 15:27
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1302,35 +1302,25 @@ PGFPlots: reading {results/NewExpt/Expt2/TS01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2/OCUCB01_comp_subsampled.txt}
 PGFPlots: reading {results/NewExpt/Expt2/BU01_comp_subsampled.txt}
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--89
-[]\OT1/ptm/m/n/9 (b) Expt-$\OT1/cmr/m/n/9 2$\OT1/ptm/m/n/9 : $\OT1/cmr/m/n/9 10
-0$ \OT1/ptm/m/n/9 Gaussian-
- []
-
-
-Overfull \hbox (12.53627pt too wide) in paragraph at lines 5--91
+Overfull \hbox (12.53627pt too wide) in paragraph at lines 5--75
  [][] 
  []
 
 [6]
-PGFPlots: reading {results/NewExpt/Expt4/UCBV01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt4/EUCBV01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt4/MOSS01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt4/TS01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt4/OCUCB01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt4/BU01_comp_subsampled.txt}
-PGFPlots: reading {results/NewExpt/Expt31/plotFinalMOSS20_100.txt}
-PGFPlots: reading {results/NewExpt/Expt31/plotFinalNEUCBV20_100.txt}
-PGFPlots: reading {results/NewExpt/Expt31/plotFinalOCUCB20_100.txt}
-PGFPlots: reading {results/NewExpt/Expt31/plotFinalTS20_100.txt}
+PGFPlots: reading {results/NewExpt/Expt3/UCBV01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt3/EUCBV01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt3/MOSS01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt3/TS01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt3/OCUCB01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt3/BU01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt41/UCBV01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt41/EUCBV01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt41/MOSS01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt41/TS01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt41/OCUCB01_comp_subsampled.txt}
+PGFPlots: reading {results/NewExpt/Expt41/BU01_comp_subsampled.txt}
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--163
-[]\OT1/ptm/m/n/9 (b) Expt-$\OT1/cmr/m/n/9 4$\OT1/ptm/m/n/9 : $\OT1/cmr/m/n/9 20
-$ \OT1/ptm/m/n/9 to $\OT1/cmr/m/n/9 100$
- []
-
-
-Overfull \hbox (4.50179pt too wide) in paragraph at lines 105--167
+Overfull \hbox (4.50116pt too wide) in paragraph at lines 89--154
  [][] 
  []
 
@@ -1452,13 +1442,13 @@ Overfull \hbox (42.75949pt too wide) in paragraph at lines 340--340
 
 ] (./EUCBV.aux) ) 
 Here is how much of TeX's memory you used:
- 22257 strings out of 493848
- 456617 string characters out of 1152823
- 664973 words of memory out of 3000000
+ 22249 strings out of 493848
+ 456533 string characters out of 1152823
+ 664964 words of memory out of 3000000
  24834 multiletter control sequences out of 15000+50000
  34270 words of font info for 78 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 63i,27n,75p,1856b,1758s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,27n,75p,1859b,1758s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/sh
 are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-t
 exlive/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texmf-texlive/
@@ -1481,7 +1471,7 @@ ymbols/msbm10.pfb></usr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb>
 xlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/u
 rw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on EUCBV.pdf (12 pages, 415294 bytes).
+Output written on EUCBV.pdf (12 pages, 415633 bytes).
 PDF statistics:
  488 PDF objects out of 1000 (max. 8388607)
  104 named destinations out of 1000 (max. 500000)
