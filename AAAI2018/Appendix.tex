@@ -136,8 +136,11 @@ Thus, using (\ref{lhs1_equn}) and (\ref{lhs2_equn}) in (\ref{eq:prob_eq3}) we ob
 \begin{lemma}
 %\label{proofTheorem:Lemma:4}
 If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \dfrac{\Delta_i}{4} \rbrace $, $c_{i} =\sqrt{\dfrac{\rho(\hat{v}_i + 2)\log (\psi T\epsilon_{m_{i}})}{4 z_{i}}}$ and $n_{m_i}=\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$ then in the $m_i$-th round, 
+%\begin{align*}
+%\Pb\lbrace c^{*} > c_i \rbrace \leq \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}}. 
+%\end{align*}
 \begin{align*}
-\Pb\lbrace c^{*} > c_i \rbrace \leq \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}}. 
+\Pb\lbrace c^{*} > c_i \rbrace  \leq \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}.
 \end{align*}
 \end{lemma}
 
@@ -175,8 +178,15 @@ Hence, summing everything up,
 &\leq \sum_{m=0}^{m_i}\sum_{z^* =1}^{n_{m_i}}\sum_{z_i =1}^{n_{m_i}}\bigg(\Pb\lbrace \hat{r}^* < r^* - c^{*}\rbrace + \Pb\lbrace \hat{r}_i > r_i + c_i\rbrace\bigg)\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 &\leq \sum_{m=0}^{m_i}\dfrac{32K\log T}{(\psi T\epsilon_{m_i})^{3\rho}\epsilon_{m_i}} \leq 
-\dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}} 
+\dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}} \\
+&\overset{(a)}{\leq} 
+\dfrac{32 K\log T}{(\frac{T^2}{K^2})^{\frac{3}{2}}}\bigg[\left( 1 + \dfrac{2(2^{ \frac{1}{2}\log_{2} \frac{T}{e}}-1)}{2-1} \right)^{\frac{5}{2}}\bigg] \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq \dfrac{182 K^4 T^{\frac{5}{4}}\log T}{T^3} \overset{(b)}{\leq} \dfrac{182 K^4}{T^{\frac{5}{4}}} \overset{(c)}{\leq} \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}
 \end{align*}
+
+where, in $(a)$ we substitute the values of $\rho$ and $\psi$, $(b)$ follows from the inequality $\log T \leq \sqrt{T}$ and $(c)$ is valid for any $\epsilon_{m_i}\in[\sqrt{\frac{e}{T}},1]$. 
+
 \hfill $\blacksquare$	
 \end{proof}
 
@@ -186,8 +196,11 @@ Hence, summing everything up,
 \begin{lemma}
 %\label{proofTheorem:Lemma:5}
 If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \dfrac{\Delta_i}{4} \rbrace $, $c_{i} =\sqrt{\frac{\rho (\hat{v}_i + 2)\log (\psi T\epsilon_{m_{i}})}{4 z_i}}$ and $n_{m_i}=\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$ then in the $m_i$-th round, 
+%\begin{align*}
+%\Pb\lbrace z_i < n_{m_i} \rbrace \leq \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}}.
+%\end{align*}
 \begin{align*}
-\Pb\lbrace z_i < n_{m_i} \rbrace \leq \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}}.
+\Pb\lbrace z_i < n_{m_i} \rbrace \leq \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}.
 \end{align*}
 \end{lemma}
 
@@ -196,86 +209,92 @@ Following a similar argument as in Lemma \ref{proofTheorem:Lemma:4}, we can show
 \begin{align*}
 \Pb\lbrace z_i < n_{m_i} \rbrace &\leq \sum_{m=0}^{m_i}\sum_{z_i =1}^{n_{m_i}}\sum_{z^* =1}^{n_{m_i}}\bigg(\Pb\lbrace \hat{r}^* > r^* - c^{*}\rbrace + \Pb\lbrace \hat{r}_i < r_i + c_i\rbrace\bigg) \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}}.
+&\leq \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}}\leq \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}.
 \end{align*}
 \hfill $\blacksquare$	
 \end{proof}
+
+%\subsection{Proof of Lemma 6}
+%\label{App:Lemma:6}
+%\begin{lemma}
+%%\label{proofTheorem:Lemma:5}
+%For $T\geq K^{2.4}$, $\epsilon_{m_i}\geq \sqrt{\frac{e}{T}}$, $\psi=\frac{T}{K^2}$ and $\rho=\frac{1}{2}$,  
+%\begin{align*}
+%\dfrac{8K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}} \geq \dfrac{K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}}
+%\end{align*}
+%\end{lemma}
+%
+%\begin{proof}
+%%We prove this lemma by contradiction. Suppose,
+%%
+%%\begin{align}
+%%\dfrac{6K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}} < \dfrac{K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}} \label{eq:contra:1}
+%%\end{align}
+%%
+%%Again, we know that 
+%%\begin{align*}
+%%\dfrac{6K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}} \overset{(a)}{\leq} \dfrac{6K}{( \frac{T^2}{K^2} \epsilon_{m_i})^{\frac{3}{4}}} \overset{(b)}{\leq} \dfrac{6K}{( \frac{T^2}{K^2} \sqrt{\frac{e}{T}})^{\frac{3}{4}}}
+%%< \dfrac{6K^{\frac{5}{2}}}{T^{\frac{9}{8}}}
+%%\end{align*}
+%%
+%%where, in $(a)$ we substitute the values of $\rho$ and $\psi$ and $(b)$ happens because $\epsilon_{m_i} \geq \sqrt{\frac{e}{T}}$. 
+%From the conditions stated we can show that,
+%
+%\begin{align*}
+%\dfrac{K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}} &\overset{(a)}{\leq} 
+%\dfrac{K\log T}{(\frac{T^2}{K^2})^{\frac{3}{2}}}\bigg[\left( 1 + \dfrac{2(2^{ \frac{1}{2}\log_{2} \frac{T}{e}}-1)}{2-1} \right)^{\frac{5}{2}}\bigg] \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq \dfrac{12 K^4 T^{\frac{5}{4}}\log T}{T^3} \overset{(b)}{\leq} \dfrac{12 K^4}{T^{\frac{5}{4}}}
+%\end{align*}
+%
+%where, in $(a)$ we substitute the values of $\rho$ and $\psi$ and $(b)$ follows from the inequality $\log T \leq \sqrt{T}$. 
+%%Substituting the values in Equation \ref{eq:contra:1} we get,
+%%\begin{align}
+%%& \dfrac{6K^{\frac{5}{2}}}{T^{\frac{9}{8}}} < \dfrac{6K^4\log T}{T^{\frac{5}{4}}}\nonumber\\
+%%& \dfrac{T^{\frac{11}{8}}}{\log T} < K^{\frac{3}{2}}\nonumber\\
+%%& \dfrac{T^{\frac{11}{8}}}{\sqrt{T}} \overset{(a)}{<} K^{1.5}\nonumber\\
+%%& K^{2.1} \overset{(b)}{<} K^{1.5} \label{eq:ineq1}
+%%\end{align}
+%%
+%%where, $(a)$ occurs because of the inequality $\log T < \sqrt{T}$ and $(b)$ happens because of the condition that $T\geq K^{2.4}$. But the inequality \ref{eq:ineq1} is not possible for any $K\geq 2$. 
+%So clearly we can conclude that,
+%\begin{align*}
+% \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}} \leq \dfrac{12 K^4}{T^{\frac{5}{4}}}
+%\end{align*}
+%%\begin{align*}
+%%\dfrac{6K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}} > \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}}
+%%\end{align*}
+%
+%\hfill $\blacksquare$	
+%\end{proof}
 
 \subsection{Proof of Lemma 6}
 \label{App:Lemma:6}
 \begin{lemma}
-%\label{proofTheorem:Lemma:5}
-For $T\geq K^{2.4}$, $\epsilon_{m_i}\geq \sqrt{\frac{e}{T}}$, $\psi=\frac{T}{K^2}$ and $\rho=\frac{1}{2}$,  
-\begin{align*}
-\dfrac{6K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}} > \dfrac{K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}}
-\end{align*}
+For all bounded rewards in $[0,1]$, $\dfrac{\Delta_i}{4} \geq \dfrac{\Delta_i}{4\sigma_i^2 + 4} $.
 \end{lemma}
 
 \begin{proof}
-We prove this lemma by contradiction. Suppose,
-
-\begin{align}
-\dfrac{6K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}} < \dfrac{K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}} \label{eq:contra:1}
-\end{align}
-
-Again, we know that 
+Since all rewards are bounded in $[0,1]$, we know that $0\leq\sigma_i^2 \leq \frac{1}{4}$. Hence we can show that,
 \begin{align*}
-\dfrac{6K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}} \overset{(a)}{\leq} \dfrac{6K}{( \frac{T^2}{K^2} \epsilon_{m_i})^{\frac{3}{4}}} \overset{(b)}{\leq} \dfrac{6K}{( \frac{T^2}{K^2} \sqrt{\frac{e}{T}})^{\frac{3}{4}}}
-< \dfrac{6K^{\frac{5}{2}}}{T^{\frac{9}{8}}}
-\end{align*}
-
-where, in $(a)$ we substitute the values of $\rho$ and $\psi$ and $(b)$ happens because $\epsilon_{m_i} \geq \sqrt{\frac{e}{T}}$. Similarly we can show that,
-
-\begin{align*}
-\dfrac{K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}} &\overset{(a)}{\leq} 
-\dfrac{K\log T}{(\frac{T^2}{K^2})^{\frac{3}{2}}}\bigg[ 1 + 2^{3\frac{1}{2} + 1}\dfrac{2^{ \frac{1}{2}\log_{2} \frac{T}{e}}-1}{2-1} \bigg] \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq \dfrac{6 K^4\sqrt{T}\log T}{T^3} \leq \dfrac{6 K^4\log T}{T^{\frac{5}{2}}}
-\end{align*}
-
-where, in $(a)$ we substitute the values of $\rho$ and $\psi$. Substituting the values in Equation \ref{eq:contra:1} we get,
-\begin{align}
-& \dfrac{6K^{\frac{5}{2}}}{T^{\frac{9}{8}}} < \dfrac{6K^4\log T}{T^{\frac{5}{2}}}\nonumber\\
-& \dfrac{T^{\frac{11}{8}}}{\log T} < K^{\frac{3}{2}}\nonumber\\
-& \dfrac{T^{\frac{11}{8}}}{\sqrt{T}} \overset{(a)}{<} K^{1.5}\nonumber\\
-& K^{2.1} \overset{(b)}{<} K^{1.5} \label{eq:ineq1}
-\end{align}
-
-where, $(a)$ occurs because of the inequality $\log T < \sqrt{T}$ and $(b)$ happens because of the condition that $T\geq K^{2.4}$. But the inequality \ref{eq:ineq1} is not possible for any $K\geq 2$. So clearly we can conclude that,
-\begin{align*}
-\dfrac{6K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}} > \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}}
-\end{align*}
-
-\hfill $\blacksquare$	
-\end{proof}
-
-\subsection{Proof of Lemma 7}
-\label{App:Lemma:7}
-\begin{lemma}
-For all bounded rewards in $[0,1]$, $\dfrac{\Delta_i}{4} \geq \dfrac{\Delta_i}{16\sigma_i^2 + 1} $.
-\end{lemma}
-
-\begin{proof}
-Since all rewards are bounded in $[0,1]$, we know that $\sigma_i^2 \leq \frac{1}{4}$. Hence we can show that,
-\begin{align*}
-\dfrac{\Delta_i}{16\sigma_i^2 + 1} &\leq \dfrac{\Delta_i}{16.\frac{1}{4} + 1}\\
+\dfrac{\Delta_i}{4\sigma_i^2 + 4} &\leq \dfrac{\Delta_i}{4.\frac{1}{4} + 4}\\
 & \leq \dfrac{\Delta_i}{5}
 \end{align*}
  
 But for all $\Delta_i \in [0,1]$ we know that $\dfrac{\Delta_{i}}{5} \leq \dfrac{\Delta_{i}}{4} $. Hence, 
-$\dfrac{\Delta_i}{4} \geq \dfrac{\Delta_i}{16\sigma_i^2 + 1} $.
+$\dfrac{\Delta_i}{4} \geq \dfrac{\Delta_i}{4\sigma_i^2 + 4} $.
 
 \hfill $\blacksquare$	
 \end{proof}
 
 
 
-\subsection{Proof of Lemma 8}
-\label{App:Lemma:8}
+\subsection{Proof of Lemma 7}
+\label{App:Lemma:7}
 \begin{lemma}
-For two integer constants $c_1$ and $c_2$, if $c_1 < 20 c_2$ then,
+For two integer constants $c_1$ and $c_2$, if $20 c_1 \leq c_2$ then,
 \begin{align*}
-c_1 \dfrac{16\sigma_i^2 + 1}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) < c_2 \dfrac{\sigma_i^2}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg)
+c_1 \dfrac{4\sigma_i^2 + 4}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) \leq c_2 \dfrac{\sigma_i^2}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg)
 \end{align*}
  
 \end{lemma}
@@ -283,65 +302,96 @@ c_1 \dfrac{16\sigma_i^2 + 1}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) < 
 \begin{proof}
 We again prove this by contradiction. Suppose, 
 \begin{align*}
-c_1 \dfrac{16\sigma_i^2 + 1}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) > c_2 \dfrac{\sigma_i^2}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg)
+c_1 \dfrac{4\sigma_i^2 + 4}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) > c_2 \dfrac{\sigma_i^2}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg)
 \end{align*}
 
 Further reducing the above two terms we can show that, 
 
 \begin{align*}
-& 16c_1\sigma_i^2 + c_1 > c_2\sigma_i^2\\
-& 16c_1.\dfrac{1}{4} + c_1 > \dfrac{c_2}{4}\\
-& 20 c_1 > c_2
+& 4c_1\sigma_i^2 + 4c_1 > c_2\sigma_i^2\\
+& \Rightarrow 4c_1.\dfrac{1}{4} + 4c_1 \overset{(a)}{>} \dfrac{c_2}{4}\\
+& \Rightarrow 20 c_1 > c_2
 \end{align*}
 
-But, we already know that $20 c_1 < c_2$. Hence, 
+Here, $(a)$ occurs because $\sigma_i^2 \leq \frac{1}{4}$.
+
+But, we already know that $20 c_1 \leq c_2$. Hence, 
 \begin{align*}
-c_1 \dfrac{16\sigma_i^2 + 1}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) < c_2 \dfrac{\sigma_i^2}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg)
+c_1 \dfrac{4\sigma_i^2 + 4}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) \leq c_2 \dfrac{\sigma_i^2}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg)
 \end{align*}
 
 \hfill $\blacksquare$	
 \end{proof}
 
+%\subsection{Proof of Lemma 8}
+%\label{App:Lemma:8}
+%\begin{lemma}
+%If $m_*$ be the round that the optimal arm $*$ gets eliminated, then we can show that the regret is upper bounded by,
+%
+%\begin{align*}
+%\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{388 K}{(\psi  T\epsilon_{m_{*}})^{\frac{3\rho}{2}}} \bigg).T\max_{j\in \A^{''}:m_{j}\geq m_{*}}{\Delta}_{j} \\
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% \leq\sum_{i\in \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} +\sum_{i\in \A^{''}\setminus \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T b}}
+%\end{align*}
+%
+%\end{lemma}
+%
+%\begin{proof}
+%\begin{align*}
+%&\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{364 K^4}{(T^{\frac{5}{4}}\sqrt{\epsilon_{m_{*}}})} \bigg).T\max_{j\in \A^{''}:m_{j}\geq m_{*}}{\Delta}_{j}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{364 K^4 \sqrt{4}}{(T^{\frac{5}{4}}\sqrt{\epsilon_{m_{*}}})} \bigg).T.4\sqrt{\epsilon_{m_{*}}}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{C_2 K^4}{T^{\frac{1}{4}}\epsilon_{m_{*}}^{\frac{1}{2}-\frac{1}{2}}} \bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq\sum_{i\in \A^{''}:m_{i}>m_{*}}\sum_{m_{*}=0}^{\min{\lbrace m_{i},m_{b}\rbrace}}\bigg(\dfrac{C_2 K^4}{T^{\frac{1}{4}}} \bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{C_2 K^4}{T^{\frac{1}{4}}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_2 K^4}{T^{\frac{1}{4}}} \bigg)\\
+%\end{align*}
+%In the above simplification, $C_2$ is an integer constant.
+%
+%\hfill $\blacksquare$	
+%\end{proof}
 
-\subsection{Proof of Lemma 9}
-\label{App:Lemma:9}
-\begin{lemma}
-If $m_*$ be the round that the optimal arm $*$ gets eliminated, then we can show that the regret is upper bounded by,
-
-\begin{align*}
-\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{388 K}{(\psi  T\epsilon_{m_{*}})^{\frac{3\rho}{2}}} \bigg).T\max_{j\in \A^{''}:m_{j}\geq m_{*}}{\Delta}_{j} \\
-%%%%%%%%%%%%%%%%%%%%%%%%
- \leq\sum_{i\in \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} +\sum_{i\in \A^{''}\setminus \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T b}}
-\end{align*}
-
-\end{lemma}
-
-\begin{proof}
-\begin{align*}
-&\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{388 K}{(\psi  T\epsilon_{m_{*}})^{\frac{3\rho}{2}}} \bigg).T\max_{j\in \A^{''}:m_{j}\geq m_{*}}{\Delta}_{j}\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{388 K\sqrt{4}}{(\psi  T\epsilon_{m_{*}})^{\frac{3\rho}{2}}} \bigg).T.4\sqrt{\epsilon_{m_{*}}}\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}C_2 K\bigg(\dfrac{T^{1-\frac{3\rho}{2}}}{\psi^{\frac{3\rho}{2}}\epsilon_{m_{*}}^{\frac{3\rho}{2}-\frac{1}{2}}} \bigg)\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq\sum_{i\in \A^{''}:m_{i}>m_{*}}\sum_{m_{*}=0}^{\min{\lbrace m_{i},m_{b}\rbrace}}\bigg(\dfrac{C_2 K T^{1-\frac{3\rho}{2}}}{\psi^{\frac{3\rho}{2}}2^{-(\frac{3\rho}{2} -\frac{1}{2})m_{*}}} \bigg)\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{C_2 K T^{1-\frac{3\rho}{2}}}{\psi^{\frac{3\rho}{2}}2^{-(\frac{3\rho}{2} -\frac{1}{2})m_{*}}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_2 K T^{1-\frac{3\rho}{2} }}{\psi^{\frac{3\rho}{2}}2^{-(\frac{3\rho}{2} -\frac{1}{2})m_{b}}} \bigg)\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{C_2 K T^{1-\frac{3\rho}{2}}.2^{\frac{\frac{3\rho}{2}}{2}-\frac{1}{4}}}{\psi^{\frac{3\rho}{2}}\Delta_{i}^{\frac{3\rho}{2} -\frac{1}{2}}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_2 K T^{1-\frac{3\rho}{2}}.2^{\frac{\frac{3\rho}{2}}{2}-\frac{1}{4}}}{\psi^{\frac{3\rho}{2}}b^{\frac{3\rho}{2} -\frac{1}{2}}} \bigg)\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{ C_2 K 2^{\frac{\frac{3\rho}{2}}{2}+\frac{19}{4}}.T^{1-\frac{3\rho}{2} } }{\psi^{\rho}\Delta_{i}^{2\frac{3\rho}{2} -1}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_2 K 2^{\frac{\frac{3\rho}{2}}{2}+\frac{19}{4}}.T^{1-\frac{3\rho}{2}} }{\psi^{\frac{3\rho}{2} }b^{2\frac{3\rho}{2}-1}} \bigg)\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\overset{(a)}{\leq}\sum_{i\in \A^{'}}\bigg(\dfrac{C_2^{'} K .T^{1-\frac{3}{4}}}{(\frac{T}{K^2})^{\frac{3}{4}}\Delta_{i}^{2.\frac{3}{4} -1}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_2^{'} K T^{1-\frac{3}{4}}}{(\frac{T}{K^2})^{\frac{3}{4}}b^{2.\frac{3}{4}-1}} \bigg)\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq\sum_{i\in \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} +\sum_{i\in \A^{''}\setminus \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T b}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%& = \sum_{i\in \A^{'}}\bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_{2}(\rho)T^{1-\rho}}{b^{2\rho -1}} \bigg) \text{, where } C_2(x) = \frac{2^{\frac{x}{2}+\frac{19}{4}}}{\psi^{x}}
-\end{align*}
-In the above simplification, $(a)$ is obtained by substituting the values of $\psi$ and $\rho$.
-
-\hfill $\blacksquare$	
-\end{proof}
+%\subsection{Proof of Lemma 8}
+%\label{App:Lemma:8}
+%\begin{lemma}
+%If $m_*$ be the round that the optimal arm $*$ gets eliminated, then we can show that the regret is upper bounded by,
+%
+%\begin{align*}
+%\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{388 K}{(\psi  T\epsilon_{m_{*}})^{\frac{3\rho}{2}}} \bigg).T\max_{j\in \A^{''}:m_{j}\geq m_{*}}{\Delta}_{j} \\
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% \leq\sum_{i\in \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} +\sum_{i\in \A^{''}\setminus \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T b}}
+%\end{align*}
+%
+%\end{lemma}
+%
+%\begin{proof}
+%\begin{align*}
+%&\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{388 K}{(\psi  T\epsilon_{m_{*}})^{\frac{3\rho}{2}}} \bigg).T\max_{j\in \A^{''}:m_{j}\geq m_{*}}{\Delta}_{j}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{388 K\sqrt{4}}{(\psi  T\epsilon_{m_{*}})^{\frac{3\rho}{2}}} \bigg).T.4\sqrt{\epsilon_{m_{*}}}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}C_2 K\bigg(\dfrac{T^{1-\frac{3\rho}{2}}}{\psi^{\frac{3\rho}{2}}\epsilon_{m_{*}}^{\frac{3\rho}{2}-\frac{1}{2}}} \bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq\sum_{i\in \A^{''}:m_{i}>m_{*}}\sum_{m_{*}=0}^{\min{\lbrace m_{i},m_{b}\rbrace}}\bigg(\dfrac{C_2 K T^{1-\frac{3\rho}{2}}}{\psi^{\frac{3\rho}{2}}2^{-(\frac{3\rho}{2} -\frac{1}{2})m_{*}}} \bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{C_2 K T^{1-\frac{3\rho}{2}}}{\psi^{\frac{3\rho}{2}}2^{-(\frac{3\rho}{2} -\frac{1}{2})m_{*}}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_2 K T^{1-\frac{3\rho}{2} }}{\psi^{\frac{3\rho}{2}}2^{-(\frac{3\rho}{2} -\frac{1}{2})m_{b}}} \bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{C_2 K T^{1-\frac{3\rho}{2}}.2^{\frac{\frac{3\rho}{2}}{2}-\frac{1}{4}}}{\psi^{\frac{3\rho}{2}}\Delta_{i}^{\frac{3\rho}{2} -\frac{1}{2}}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_2 K T^{1-\frac{3\rho}{2}}.2^{\frac{\frac{3\rho}{2}}{2}-\frac{1}{4}}}{\psi^{\frac{3\rho}{2}}b^{\frac{3\rho}{2} -\frac{1}{2}}} \bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{ C_2 K 2^{\frac{\frac{3\rho}{2}}{2}+\frac{19}{4}}.T^{1-\frac{3\rho}{2} } }{\psi^{\rho}\Delta_{i}^{2\frac{3\rho}{2} -1}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_2 K 2^{\frac{\frac{3\rho}{2}}{2}+\frac{19}{4}}.T^{1-\frac{3\rho}{2}} }{\psi^{\frac{3\rho}{2} }b^{2\frac{3\rho}{2}-1}} \bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\overset{(a)}{\leq}\sum_{i\in \A^{'}}\bigg(\dfrac{C_2^{'} K .T^{1-\frac{3}{4}}}{(\frac{T}{K^2})^{\frac{3}{4}}\Delta_{i}^{2.\frac{3}{4} -1}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_2^{'} K T^{1-\frac{3}{4}}}{(\frac{T}{K^2})^{\frac{3}{4}}b^{2.\frac{3}{4}-1}} \bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq\sum_{i\in \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} +\sum_{i\in \A^{''}\setminus \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T b}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%& = \sum_{i\in \A^{'}}\bigg(\dfrac{ C_{2}(\rho) T^{1-\rho}}{\Delta_{i}^{2\rho-1}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_{2}(\rho)T^{1-\rho}}{b^{2\rho -1}} \bigg) \text{, where } C_2(x) = \frac{2^{\frac{x}{2}+\frac{19}{4}}}{\psi^{x}}
+%\end{align*}
+%In the above simplification, $(a)$ is obtained by substituting the values of $\psi$ and $\rho$.
+%
+%\hfill $\blacksquare$	
+%\end{proof}
 
 \subsection{Proof of Corollary 1}
 \label{App:Corollary:1}
@@ -351,36 +401,36 @@ From \cite{bubeck2011pure}  we know that the function $x\in [0,1]\mapsto x\exp(-
 
 First, let us recall the result in Theorem \ref{Result:Theorem:1} below:
 \begin{align*}
-\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace \dfrac{C_0 K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} + \bigg(\Delta_{i}+\dfrac{8\sigma_i^2\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\bigg)\bigg \rbrace\\ 
-  & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T.
+\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace \dfrac{C_0 K^{4}}{T^{\frac{1}{4}}} + \bigg(\Delta_{i}+\dfrac{320\sigma_i^2\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\bigg)\bigg \rbrace\\ 
+  & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2 K^{4}}{T^{\frac{1}{4}}} + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T.
 \end{align*}
 
 Now,  with  $\Delta_i =\Delta = \sqrt{\frac{K\log K}{T}}>\sqrt{\frac{e}{T}}$ we obtain,
 	\begin{align*}
-	&\sum_{i\in \A :\Delta_{i} > b}\dfrac{8\sigma_i^2\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}} \leq  \dfrac{8\sigma_i^2 K\sqrt{T}\log{(T\dfrac{K(\log K)}{T K})}}{\sqrt{K\log K}}\\ 
-	&\leq  \dfrac{8\sigma_i^2\sqrt{KT}\log{(\log K)}}{\sqrt{\log K}}
-	\overset{(a)}{\leq} 2\sigma_i^2\sqrt{KT} 
+	&\sum_{i\in \A :\Delta_{i} > b}\dfrac{14\sigma_i^2\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}} \leq  \dfrac{14\sigma_i^2 K\sqrt{T}\log{(T\dfrac{K(\log K)}{T K})}}{\sqrt{K\log K}}\\ 
+	&\leq  \dfrac{14\sigma_i^2\sqrt{KT}\log{(\log K)}}{\sqrt{\log K}}
+	\overset{(a)}{\leq} 14\sigma_i^2\sqrt{KT} 
 	\end{align*}		
 	where $(a)$ follows from the identity $\dfrac{\log{(\log K)}}{\sqrt{\log K}}\leq 1$ for $K\geq 2$. 
 	
-For the term $\sum\limits_{i\in \A :\Delta_{i} > b}\dfrac{C_0 K^{\frac{5}{2}}}{\sqrt{T\Delta_i}}$ by substituting the value of $\Delta_i=\Delta=\sqrt{\dfrac{K\log K}{T}}$ we get,
-\begin{align*}
-\dfrac{C_0 K^{\frac{5}{2}+1}}{\sqrt{T\Delta_i}} &\leq \dfrac{C_0 K^{\frac{5}{2}}}{\sqrt{T\sqrt{\dfrac{K\log K}{T}}}} \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-\leq \dfrac{C_0 K^{\frac{5}{2}+1}}{(KT\log K)^{\frac{1}{4}}} \leq \dfrac{C_0 K^3}{T^{\frac{1}{4}}}
-\end{align*}	
-	
-Similarly for the term $\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}}$ we can show that,
-\begin{align*}
-\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} &\leq \dfrac{C_2^{'} K^{\frac{5}{2}+1}}{\sqrt{T\sqrt{\dfrac{e}{T}}}} \leq \dfrac{C_2^{'} K^3}{T^{\frac{1}{4}}} 
-\end{align*}
+%For the term $\sum\limits_{i\in \A :\Delta_{i} > b}\dfrac{C_0 K^{\frac{5}{2}}}{\sqrt{T\Delta_i}}$ by substituting the value of $\Delta_i=\Delta=\sqrt{\dfrac{K\log K}{T}}$ we get,
+%\begin{align*}
+%\dfrac{C_0 K^{\frac{5}{2}+1}}{\sqrt{T\Delta_i}} &\leq \dfrac{C_0 K^{\frac{5}{2}}}{\sqrt{T\sqrt{\dfrac{K\log K}{T}}}} \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\leq \dfrac{C_0 K^{\frac{5}{2}+1}}{(KT\log K)^{\frac{1}{4}}} \leq \dfrac{C_0 K^3}{T^{\frac{1}{4}}}
+%\end{align*}	
+%	
+%Similarly for the term $\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}}$ we can show that,
+%\begin{align*}
+%\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} &\leq \dfrac{C_2^{'} K^{\frac{5}{2}+1}}{\sqrt{T\sqrt{\dfrac{e}{T}}}} \leq \dfrac{C_2^{'} K^3}{T^{\frac{1}{4}}} 
+%\end{align*}
 
 Thus, the total worst case gap-independent bound is given by
 	\begin{align*}
-	\E[R_{T}]\leq  \dfrac{C_3 K^3}{T^{\frac{1}{4}}} + 8\sigma_i^2\sqrt{KT}.
+	\E[R_{T}]\leq  \dfrac{C_3 K^5}{T^{\frac{1}{4}}} + 320\sigma_i^2\sqrt{KT}.
 	\end{align*}	
 	
-where $C_3$ is an integer constant such that $C_3= C_0 + C_2^{'} $
+where $C_3$ is an integer constant such that $C_3 = C_0 + C_2 $
 
 \hfill $\blacksquare$	
 \end{proof}

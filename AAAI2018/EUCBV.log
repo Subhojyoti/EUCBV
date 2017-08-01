@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  31 JUL 2017 00:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  1 AUG 2017 12:04
 entering extended mode
 **EUCBV.tex
 (C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\EUCBV.tex
@@ -1349,8 +1349,12 @@ Underfull \hbox (badness 2050) in paragraph at lines 52--62
 \OT1/ptm/m/n/10 elim-i-na-tion tech-nique of the UCB-Improved al-go-rithm
  []
 
-) (C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\results.tex [3])
-(C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\proofTheorem.tex
+) (C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\results.tex
+Overfull \hbox (1.2343pt too wide) in paragraph at lines 9--9
+[] 
+ []
+
+[3]) (C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\proofTheorem.tex
 Underfull \hbox (badness 2096) in paragraph at lines 24--25
 []\OT1/ptm/m/it/10 If $\OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 
 min\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 m\OMS/cmsy/m/n/10 j[] \OML/cmm/m/it/10 < 
@@ -1377,33 +1381,28 @@ $
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--197
-[]\OT1/ptm/m/it/10 Now, ap-ply-ing Lemma []6[] we can show that
- []
-
-
-Underfull \hbox (badness 1342) in paragraph at lines 196--197
-$[] [][] [] \OMS/cmsy/m/n/10  []$\OT1/ptm/m/it/10 . Sum-ming up
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--206
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
  []
 
 
-Overfull \hbox (24.66093pt too wide) in paragraph at lines 229--229
+Overfull \hbox (19.66092pt too wide) in paragraph at lines 248--248
 [] 
  []
 
 
-Overfull \hbox (33.55067pt too wide) in paragraph at lines 240--240
+Overfull \hbox (23.55064pt too wide) in paragraph at lines 259--259
 [] 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 242--243
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
 
+ []
+
+
+Overfull \hbox (1.2343pt too wide) in paragraph at lines 320--320
+[] 
  []
 
 ) (C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\expts.tex
@@ -1490,7 +1489,7 @@ Overfull \hbox (26.15292pt too wide) in paragraph at lines 126--126
 [9
 
 ]
-Underfull \hbox (badness 1292) in paragraph at lines 138--139
+Underfull \hbox (badness 1292) in paragraph at lines 138--142
 []\OT1/ptm/m/it/10 If $\OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 
 min\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 m\OMS/cmsy/m/n/10 j[] \OML/cmm/m/it/10 < 
 []\OMS/cmsy/m/n/10 g$\OT1/ptm/m/it/10 , $\OML/cmm/m/it/10 c[] \OT1/cmr/m/n/10 =
@@ -1498,12 +1497,12 @@ $
  []
 
 
-Overfull \hbox (16.18637pt too wide) in paragraph at lines 162--162
+Overfull \hbox (16.18637pt too wide) in paragraph at lines 165--165
 [] 
  []
 
 
-Underfull \hbox (badness 1292) in paragraph at lines 188--189
+Underfull \hbox (badness 1292) in paragraph at lines 198--202
 []\OT1/ptm/m/it/10 If $\OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 
 min\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 m\OMS/cmsy/m/n/10 j[] \OML/cmm/m/it/10 < 
 []\OMS/cmsy/m/n/10 g$\OT1/ptm/m/it/10 , $\OML/cmm/m/it/10 c[] \OT1/cmr/m/n/10 =
@@ -1511,29 +1510,29 @@ $
  []
 
 
-Overfull \hbox (47.1912pt too wide) in paragraph at lines 200--200
+Overfull \hbox (47.1912pt too wide) in paragraph at lines 213--213
 [] 
  []
 
 
-Overfull \hbox (1.22858pt too wide) in paragraph at lines 234--234
-[] 
- []
-
-
-Underfull \hbox (badness 1394) in paragraph at lines 255--256
+Underfull \hbox (badness 1394) in paragraph at lines 274--275
 []\OT1/ptm/m/it/10 For all bounded re-wards in $\OT1/cmr/m/n/10 [0\OML/cmm/m/it
 /10 ; \OT1/cmr/m/n/10 1]$\OT1/ptm/m/it/10 , $[] \OMS/cmsy/m/n/10 $
  []
 
 [10]
-Overfull \hbox (42.75949pt too wide) in paragraph at lines 340--340
+Overfull \hbox (1.2343pt too wide) in paragraph at lines 406--406
 [] 
  []
 
-[11])
+
+Overfull \hbox (1.5117pt too wide) in paragraph at lines 413--413
+[] 
+ []
+
+)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 86.
- [12
+ [11
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
@@ -1541,14 +1540,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
 Package rerunfilecheck Info: File `EUCBV.out' has not changed.
-(rerunfilecheck)             Checksum: 10BE72FBD2D97AEA1EA0ABAE77BED37C;1165.
+(rerunfilecheck)             Checksum: 2F77668D0FDFF4B3DCB4E8BF3AD86A91;1030.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 86.
  ) 
 Here is how much of TeX's memory you used:
- 31230 strings out of 493921
- 740426 string characters out of 3144861
- 999681 words of memory out of 3000000
- 33789 multiletter control sequences out of 15000+200000
+ 31211 strings out of 493921
+ 740192 string characters out of 3144861
+ 1000350 words of memory out of 3000000
+ 33781 multiletter control sequences out of 15000+200000
  34255 words of font info for 78 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,27n,107p,1859b,2468s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1576,9 +1575,9 @@ sfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 mb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EUCBV.pdf (12 pages, 425020 bytes).
+Output written on EUCBV.pdf (11 pages, 413855 bytes).
 PDF statistics:
- 540 PDF objects out of 1000 (max. 8388607)
- 105 named destinations out of 1000 (max. 500000)
- 165 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 509 PDF objects out of 1000 (max. 8388607)
+ 94 named destinations out of 1000 (max. 500000)
+ 149 words of extra memory for PDF output out of 10000 (max. 10000000)
 

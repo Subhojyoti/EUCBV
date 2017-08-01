@@ -34,7 +34,7 @@ If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \frac{\Delta_i}{4} \rbrace $,  $\
 \label{proofTheorem:Lemma:4}
 If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \frac{\Delta_i}{4} \rbrace $, $c_{i} =\sqrt{\frac{\rho(\hat{v}_i + 2)\log (\psi T\epsilon_{m_{i}})}{4 z_{i}}}$ and $n_{m_i}=\frac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$ then in the $m_i$-th round, 
 \begin{align*}
-\Pb\lbrace c^{*} > c_i \rbrace \leq \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}}. 
+\Pb\lbrace c^{*} > c_i \rbrace  \leq \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}.
 \end{align*}
 \end{lemma}
 
@@ -44,52 +44,52 @@ If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \frac{\Delta_i}{4} \rbrace $, $c_
 \label{proofTheorem:Lemma:5}
 If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \frac{\Delta_i}{4} \rbrace $, $c_{i} =\sqrt{\frac{\rho (\hat{v}_i + 2)\log (\psi T\epsilon_{m_{i}})}{4 z_i}}$ and $n_{m_i}=\frac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$ then in the $m_i$-th round, 
 \begin{align*}
-\Pb\lbrace z_i < n_{m_i} \rbrace \leq \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}}.
+\Pb\lbrace z_i < n_{m_i} \rbrace  \leq \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}.
 \end{align*}
 \end{lemma}
 
 
 
+%\begin{lemma}
+%\label{proofTheorem:Lemma:6}
+%For $T\geq K^{2.4}$, $\epsilon_{m_i}\geq \sqrt{\frac{e}{T}}$, $\psi=\frac{T}{K^2}$ and $\rho=\frac{1}{2}$,  
+%\begin{align*}
+%\dfrac{6K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}} > \dfrac{K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}}
+%\end{align*}
+%\end{lemma}
+
+
+
 \begin{lemma}
 \label{proofTheorem:Lemma:6}
-For $T\geq K^{2.4}$, $\epsilon_{m_i}\geq \sqrt{\frac{e}{T}}$, $\psi=\frac{T}{K^2}$ and $\rho=\frac{1}{2}$,  
-\begin{align*}
-\dfrac{6K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}} > \dfrac{K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}}
-\end{align*}
+For all bounded rewards in $[0,1]$, $\frac{\Delta_i}{4} \geq \frac{\Delta_i}{4\sigma_i^2 + 4} $.
 \end{lemma}
 
 
 
 \begin{lemma}
 \label{proofTheorem:Lemma:7}
-For all bounded rewards in $[0,1]$, $\frac{\Delta_i}{4} \geq \frac{\Delta_i}{16\sigma_i^2 + 1} $.
-\end{lemma}
-
-
-
-\begin{lemma}
-\label{proofTheorem:Lemma:8}
-For two integer constants $c_1$ and $c_2$, if $c_1 < 20 c_2$ then,
+For two integer constants $c_1$ and $c_2$, if $20 c_1 \leq c_2$ then,
 \begin{align*}
-c_1 \frac{4\sigma_i^2 + 1}{\Delta_i}\log\bigg( \frac{T\Delta_i^2}{K}\bigg) < c_2 \frac{\sigma_i^2}{\Delta_i}\log\bigg( \frac{T\Delta_i^2}{K}\bigg)
+c_1 \frac{4\sigma_i^2 + 4}{\Delta_i}\log\bigg( \frac{T\Delta_i^2}{K}\bigg) \leq c_2 \frac{\sigma_i^2}{\Delta_i}\log\bigg( \frac{T\Delta_i^2}{K}\bigg)
 \end{align*}
 \end{lemma}
 
 
-\begin{lemma}
-\label{proofTheorem:Lemma:9}
-If $m_*$ be the first round that the optimal arm $*$ gets eliminated, then we can show that the regret is upper bounded by,
+%\begin{lemma}
+%\label{proofTheorem:Lemma:8}
+%If $m_*$ be the first round that the optimal arm $*$ gets eliminated, then we can show that the regret is upper bounded by,
+%
+%\begin{align*}
+%\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{388 K}{(\psi  T\epsilon_{m_{*}})^{\frac{3\rho}{2}}} \bigg).T\max_{j\in \A^{''}:m_{j}\geq m_{*}}{\Delta}_{j} \\
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% \leq\sum_{i\in \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} +\sum_{i\in \A^{''}\setminus \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T b}}
+%\end{align*}
+%
+%\end{lemma}
 
-\begin{align*}
-\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{388 K}{(\psi  T\epsilon_{m_{*}})^{\frac{3\rho}{2}}} \bigg).T\max_{j\in \A^{''}:m_{j}\geq m_{*}}{\Delta}_{j} \\
-%%%%%%%%%%%%%%%%%%%%%%%%
- \leq\sum_{i\in \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} +\sum_{i\in \A^{''}\setminus \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T b}}
-\end{align*}
 
-\end{lemma}
-
-
-The proofs of lemmas \ref{proofTheorem:Lemma:1} - \ref{proofTheorem:Lemma:9} can be found in Appendix ~\ref{App:Lemma:1}, ~\ref{App:Lemma:2}, ~\ref{App:Lemma:3}, ~\ref{App:Lemma:4}, ~\ref{App:Lemma:5}, ~\ref{App:Lemma:6}, ~\ref{App:Lemma:7}, ~\ref{App:Lemma:8} and ~\ref{App:Lemma:9} respectively.
+The proofs of lemmas \ref{proofTheorem:Lemma:1} - \ref{proofTheorem:Lemma:7} can be found in Appendix ~\ref{App:Lemma:1}, ~\ref{App:Lemma:2}, ~\ref{App:Lemma:3}, ~\ref{App:Lemma:4}, ~\ref{App:Lemma:5}, ~\ref{App:Lemma:6} and ~\ref{App:Lemma:7} respectively.
 
 %The proofs of all the Lemmas can be found in Appendix ~\ref{App:Lemma:1} - Appendix ~\ref{App:Lemma:9} respectively.
 
@@ -190,20 +190,39 @@ From Lemma \ref{proofTheorem:Lemma:3} we can show that $\mathbb{P}\left( \hat{r}
 Again, from Lemma \ref{proofTheorem:Lemma:4} and Lemma \ref{proofTheorem:Lemma:5} we can bound the probability of the  complementary of the event $c_{i} \geq c^* $ and $ z_i \geq n_{m_i}$ is bounded by,
 
 \begin{align*}
-\dfrac{64K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}}
+\dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}} + \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}\leq \dfrac{364 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}.
 \end{align*}
 
-Now, applying Lemma \ref{proofTheorem:Lemma:6} we can show that $\dfrac{64 K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}} \leq \dfrac{ 384 K }{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}}$. Summing up over all arms in $\A^{'}$ and bounding the regret for each arm $i\in \A^{'}$ trivially by $T\Delta_{i}$, we obtain
-   \begin{align*}
-&\sum_{i\in \A^{'}}\bigg(\dfrac{388 K T\Delta_{i}}{(\psi T\epsilon_{m_{i}})^{\frac{3\rho}{2}}}\bigg)
-\leq\sum_{i\in \A^{'}}\bigg(\dfrac{388 K T\Delta_{i}}{(\psi T\dfrac{\Delta_{i}^{2}}{4.16})^{\frac{3\rho}{2}}}\bigg)\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq \sum_{i\in \A^{'}}\bigg(\dfrac{388.2^{2+2\frac{3\rho}{2}}.16^{\frac{3\rho}{2}} K T^{1-\frac{3\rho}{2}}}{\psi^{\frac{3\rho}{2}}\Delta_{i}^{2\frac{3\rho}{2} -1}}\bigg)\\  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-& \overset{(a)}{\leq} \sum_{i\in \A^{'}}\bigg(\dfrac{388.2^{2+\frac{3}{2}}.16^{\frac{3}{4}} K T^{1-\frac{3}{4}}}{(\frac{T}{K^2})^{\frac{3}{4}}\Delta_{i}^{2.\frac{3}{4} -1}}\bigg)\leq \sum_{i\in \A^{'}}\dfrac{C_1 K^{\frac{5}{2}}}{\sqrt{T\Delta_i}}  
-   \end{align*}
-Here in $(a)$ we substitute the values of $\rho$ and $\psi$ and $C_1$ denotes a constant integer value.\\
+Also, we can show that for any $\epsilon_{m_i}\in[\sqrt{\frac{e}{T}},1]$
+\begin{align*}
+\bigg(\dfrac{4}{(\psi T\epsilon_{m_{i}})^{\frac{3\rho}{2}}} \bigg) &\overset{(a)}{\leq} \bigg(\dfrac{4}{(\frac{T^2}{K^2}\epsilon_{m_{i}})^{\frac{3}{4}}} \bigg)\leq \bigg(\dfrac{4 K^{\frac{3}{2}}}{(T^\frac{3}{2} \epsilon_{m_i}^{\frac{1}{4}}\sqrt{\epsilon_{m_{i}}})}\bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%
+ &\overset{(b)}{\leq} \bigg(\dfrac{4 K^{\frac{3}{2}}}{(T^{\frac{3}{2}-\frac{1}{8}}\sqrt{\epsilon_{m_{i}}})}  \bigg)
+\leq \dfrac{4 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}
+\end{align*}
 
+Here, in $(a)$ we substitute the values of $\psi$ and $\rho$ and $(b)$ follows from the identity $\epsilon_{m_i}^{\frac{1}{4}}\geq (\frac{e}{T})^{\frac{1}{8}} $.
+
+Summing up over all arms in $\A^{'}$ and bounding the regret for all the four arm elimination conditions for each arm $i\in \A^{'}$ trivially by $T\Delta_{i}$, we obtain
+	\begin{align*}
+&\sum_{i\in \A^{'}}\bigg(\dfrac{8 K^4 T\Delta_i}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}\bigg) + \sum_{i\in \A^{'}}\bigg(\dfrac{364 K^4 T\Delta_i}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}\bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{372 K^4 T\Delta_{i}}{T^{\frac{5}{4}}\left(\frac{\Delta_{i}^{2}}{4.16}\right)^{\frac{1}{2}}}\bigg)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\leq \sum_{i\in \A^{'}}\bigg(\dfrac{C_1 K^4}{(T)^{\frac{1}{4}}}\bigg)\\  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\end{align*}
+
+%   \begin{align*}
+%&\sum_{i\in \A^{'}}\bigg(\dfrac{388 K T\Delta_{i}}{(\psi T\epsilon_{m_{i}})^{\frac{3\rho}{2}}}\bigg)
+%\leq\sum_{i\in \A^{'}}\bigg(\dfrac{388 K T\Delta_{i}}{(\psi T\dfrac{\Delta_{i}^{2}}{4.16})^{\frac{3\rho}{2}}}\bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq \sum_{i\in \A^{'}}\bigg(\dfrac{388.2^{2+2\frac{3\rho}{2}}.16^{\frac{3\rho}{2}} K T^{1-\frac{3\rho}{2}}}{\psi^{\frac{3\rho}{2}}\Delta_{i}^{2\frac{3\rho}{2} -1}}\bigg)\\  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%& \overset{(a)}{\leq} \sum_{i\in \A^{'}}\bigg(\dfrac{388.2^{2+\frac{3}{2}}.16^{\frac{3}{4}} K T^{1-\frac{3}{4}}}{(\frac{T}{K^2})^{\frac{3}{4}}\Delta_{i}^{2.\frac{3}{4} -1}}\bigg)\leq \sum_{i\in \A^{'}}\dfrac{C_1 K^{\frac{5}{2}}}{\sqrt{T\Delta_i}}  
+%   \end{align*}
+%Here in $(a)$ we substitute the values of $\rho$ and $\psi$ and $C_1$ denotes a constant integer value.\\
+Here $C_1$ denotes a constant integer value.\\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -225,32 +244,48 @@ So, the total contribution of ${i}$  till round $m_{i}$ is given by,
 \overset{(a)}{\leq}    \Delta_{i}\bigg\lceil\dfrac{\log{(\psi T(\dfrac{\Delta_{i}}{16 \times 256})^{4})}}{2(\dfrac{\Delta_{i}}{4\sqrt{4}})^{2}}\bigg\rceil \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 &\leq   \Delta_{i}\bigg(1+\dfrac{32\log{(\psi T(\dfrac{\Delta_{i}^{4}}{16384})}}{\Delta_{i}^{2}}\bigg)
-\leq \Delta_{i}\bigg(1+\dfrac{512\log{(\psi T\Delta_{i}^{4})}}{\Delta_{i}^{2}}\bigg) 
+\leq \Delta_{i}\bigg(1+\dfrac{32\log{(\psi T\Delta_{i}^{4})}}{\Delta_{i}^{2}}\bigg) 
 \end{align*} 
 
 Here, $(a)$ happens because $\sqrt{4\epsilon_{m_{i}}} < \frac{\Delta_{i}}{4}$. Summing over all arms in $\A^{'}$ the total regret is given by, 
 \begin{align*}
-&\sum_{i\in \A^{'}}\Delta_{i}\bigg(1+\dfrac{512\log{(\psi T\Delta_{i}^{4}})}{\Delta_{i}^{2}}\bigg) = \sum_{i\in \A^{'}}\bigg(\Delta_{i} +\dfrac{512\log{(\psi T\Delta_{i}^{4}})}{\Delta_{i}}\bigg) \\
+&\sum_{i\in \A^{'}}\Delta_{i}\bigg(1+\dfrac{32\log{(\psi T\Delta_{i}^{4}})}{\Delta_{i}^{2}}\bigg) = \sum_{i\in \A^{'}}\bigg(\Delta_{i} +\dfrac{32\log{(\psi T\Delta_{i}^{4}})}{\Delta_{i}}\bigg) \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\overset{(a)}{\leq} \sum_{i\in \A^{'}} \Delta_{i}\bigg(1+\dfrac{1024\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}^{2}}\bigg)\\
+&\overset{(a)}{\leq} \sum_{i\in \A^{'}} \left(\Delta_{i}+\dfrac{64\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\right)\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\overset{(b)}{\leq} \sum_{i\in \A^{'}} \left(\Delta_{i} +\dfrac{64(16\sigma_i^2 + 1)\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\right)\\
+&\overset{(b)}{\leq} \sum_{i\in \A^{'}} \left(\Delta_{i} +\dfrac{16(4\sigma_i^2 + 4)\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\right)\\
 &%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\overset{(c)}{\leq} \sum_{i\in \A^{'}} \left(\Delta_{i} +\dfrac{8\sigma_i^2\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\right)\\
+\overset{(c)}{\leq} \sum_{i\in \A^{'}} \left(\Delta_{i} +\dfrac{320\sigma_i^2\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\right)\\
 \end{align*}
 
-We obtain $(a)$ by substituting the value of $\psi$, $(b)$ from Lemma \ref{proofTheorem:Lemma:7} and $(c)$ from Lemma \ref{proofTheorem:Lemma:8}.\\
+We obtain $(a)$ by substituting the value of $\psi$, $(b)$ from Lemma \ref{proofTheorem:Lemma:6} and $(c)$ from Lemma \ref{proofTheorem:Lemma:7}.\\
 
 \noindent
 \textbf{Case $(b2)$ (\textit{Optimal arm ${*}$ is eliminated by a sub-optimal arm):  }} Firstly, if conditions of Case $a$ holds then the optimal arm ${*}$ will not be eliminated in round $m=m_{*}$ or it will lead to the contradiction that $r_{i}>r^{*}$. In any round $m_{*}$, if the optimal arm ${*}$ gets eliminated then for any round from $1$ to $m_{j}$ all arms ${j}$ such that $m_{j}< m_{*}$ were eliminated according to assumption in Case $a$. Let the arms surviving till $m_{*}$ round be denoted by $\A^{'}$. This leaves any arm $a_{b}$ such that $m_{b}\geq m_{*}$ to still survive and eliminate arm ${*}$ in round $m_{*}$. Let such arms that survive ${*}$ belong to $\A^{''}$. Also maximal regret per step after eliminating ${*}$ is the maximal $\Delta_{j}$ among the remaining arms ${j}$ with $m_{j}\geq m_{*}$.  Let $m_{b}=\min\left\lbrace m|\sqrt{4\epsilon_{m}}<\frac{\Delta_{b}}{4}\right\rbrace$. Hence, the maximal regret after eliminating the arm ${*}$ is upper bounded by, 
-\begin{align*}
-\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{388 K}{(\psi  T\epsilon_{m_{*}})^{\frac{3\rho}{2}}} \bigg).T\max_{j\in \A^{''}:m_{j}\geq m_{*}}{\Delta}_{j}
-\end{align*}
 
-Again applying Lemma \ref{proofTheorem:Lemma:9} we can show that the above expression is upper bounded by 
 \begin{align*}
-\sum_{i\in \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} +\sum_{i\in \A^{''}\setminus \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T b}}
+&\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{372 K^4}{(T^{\frac{5}{4}}\sqrt{\epsilon_{m_{*}}})} \bigg).T\max_{j\in \A^{''}:m_{j}\geq m_{*}}{\Delta}_{j}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{372 K^4 \sqrt{4}}{(T^{\frac{5}{4}}\sqrt{\epsilon_{m_{*}}})} \bigg).T.4\sqrt{\epsilon_{m_{*}}}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{C_2 K^4}{T^{\frac{1}{4}}\epsilon_{m_{*}}^{\frac{1}{2}-\frac{1}{2}}} \bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq\sum_{i\in \A^{''}:m_{i}>m_{*}}\sum_{m_{*}=0}^{\min{\lbrace m_{i},m_{b}\rbrace}}\bigg(\dfrac{C_2 K^4}{T^{\frac{1}{4}}} \bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{C_2 K^4}{T^{\frac{1}{4}}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_2 K^4}{T^{\frac{1}{4}}} \bigg)\\
 \end{align*}
+In the above simplification, $C_2$ is an integer constant.
+
+
+
+%\begin{align*}
+%\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{388 K}{(\psi  T\epsilon_{m_{*}})^{\frac{3\rho}{2}}} \bigg).T\max_{j\in \A^{''}:m_{j}\geq m_{*}}{\Delta}_{j}
+%\end{align*}
+%
+%Again applying Lemma \ref{proofTheorem:Lemma:8} we can show that the above expression is upper bounded by 
+%\begin{align*}
+%\sum_{i\in \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} +\sum_{i\in \A^{''}\setminus \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T b}}
+%\end{align*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Moved to Appendix as Lemma 9
@@ -280,11 +315,11 @@ Again applying Lemma \ref{proofTheorem:Lemma:9} we can show that the above expre
 
 Finally, summing up the regrets in \textbf{Case a} and \textbf{Case b}, the total regret is given by
 \begin{align*}
-\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace \dfrac{C_0 K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} + \bigg(\Delta_{i}+\dfrac{8\sigma_i^2\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\bigg)\bigg \rbrace\\ 
-  & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T.
+\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace \dfrac{C_0 K^{4}}{T^{\frac{1}{4}}} + \bigg(\Delta_{i}+\dfrac{320\sigma_i^2\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\bigg)\bigg \rbrace\\ 
+  & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2 K^{4}}{T^{\frac{1}{4}}} + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T.
 \end{align*}
 
-where $C_0, C_2^{'}$ are integer constants and $C_0=C_1 + C_2^{'}$.
+where $C_0, C_1, C_2$ are integer constants and $C_0 = C_1 + C_2$.
 \end{proof}
 
 
