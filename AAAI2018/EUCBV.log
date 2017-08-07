@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  7 AUG 2017 14:33
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  7 AUG 2017 14:44
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1423,7 +1423,7 @@ Overfull \hbox (11.51173pt too wide) in paragraph at lines 415--415
 Here is how much of TeX's memory you used:
  22577 strings out of 493848
  460903 string characters out of 1152823
- 670093 words of memory out of 3000000
+ 669093 words of memory out of 3000000
  25169 multiletter control sequences out of 15000+50000
  34255 words of font info for 78 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
@@ -1450,7 +1450,7 @@ ymbols/msbm10.pfb></usr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb>
 xlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/u
 rw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on EUCBV.pdf (11 pages, 413664 bytes).
+Output written on EUCBV.pdf (11 pages, 413672 bytes).
 PDF statistics:
  507 PDF objects out of 1000 (max. 8388607)
  94 named destinations out of 1000 (max. 500000)
