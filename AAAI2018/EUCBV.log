@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  7 AUG 2017 14:44
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  7 AUG 2017 19:19
 entering extended mode
  %&-line parsing enabled.
 **EUCBV.tex
@@ -1249,22 +1249,6 @@ min\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 m\OMS/cmsy/m/n/10 j[] \OML/cmm/m/it/10 <
 []\OMS/cmsy/m/n/10 g$\OT1/ptm/m/it/10 , $[] \OT1/cmr/m/n/10 =
  []
 
-
-Underfull \hbox (badness 2096) in paragraph at lines 35--36
-[]\OT1/ptm/m/it/10 If $\OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 
-min\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 m\OMS/cmsy/m/n/10 j[] \OML/cmm/m/it/10 < 
-[]\OMS/cmsy/m/n/10 g$\OT1/ptm/m/it/10 , $\OML/cmm/m/it/10 c[] \OT1/cmr/m/n/10 =
-
- []
-
-
-Underfull \hbox (badness 2096) in paragraph at lines 45--46
-[]\OT1/ptm/m/it/10 If $\OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 
-min\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 m\OMS/cmsy/m/n/10 j[] \OML/cmm/m/it/10 < 
-[]\OMS/cmsy/m/n/10 g$\OT1/ptm/m/it/10 , $\OML/cmm/m/it/10 c[] \OT1/cmr/m/n/10 =
-
- []
-
 [4]
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
@@ -1376,24 +1360,8 @@ Overfull \hbox (26.15292pt too wide) in paragraph at lines 126--126
 [9
 
 ]
-Underfull \hbox (badness 1292) in paragraph at lines 138--142
-[]\OT1/ptm/m/it/10 If $\OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 
-min\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 m\OMS/cmsy/m/n/10 j[] \OML/cmm/m/it/10 < 
-[]\OMS/cmsy/m/n/10 g$\OT1/ptm/m/it/10 , $\OML/cmm/m/it/10 c[] \OT1/cmr/m/n/10 =
-
- []
-
-
 Overfull \hbox (18.99625pt too wide) in paragraph at lines 165--165
 [] 
- []
-
-
-Underfull \hbox (badness 1292) in paragraph at lines 200--204
-[]\OT1/ptm/m/it/10 If $\OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 
-min\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 m\OMS/cmsy/m/n/10 j[] \OML/cmm/m/it/10 < 
-[]\OMS/cmsy/m/n/10 g$\OT1/ptm/m/it/10 , $\OML/cmm/m/it/10 c[] \OT1/cmr/m/n/10 =
-
  []
 
 
@@ -1408,12 +1376,12 @@ Underfull \hbox (badness 1394) in paragraph at lines 276--277
  []
 
 [10]
-Overfull \hbox (1.2343pt too wide) in paragraph at lines 408--408
+Overfull \hbox (1.2343pt too wide) in paragraph at lines 419--419
 [] 
  []
 
 
-Overfull \hbox (11.51173pt too wide) in paragraph at lines 415--415
+Overfull \hbox (21.92384pt too wide) in paragraph at lines 426--426
 [] 
  []
 
@@ -1421,8 +1389,8 @@ Overfull \hbox (11.51173pt too wide) in paragraph at lines 415--415
 
 ] (./EUCBV.aux) ) 
 Here is how much of TeX's memory you used:
- 22577 strings out of 493848
- 460903 string characters out of 1152823
+ 22578 strings out of 493848
+ 460914 string characters out of 1152823
  669093 words of memory out of 3000000
  25169 multiletter control sequences out of 15000+50000
  34255 words of font info for 78 fonts, out of 3000000 for 9000
@@ -1450,9 +1418,9 @@ ymbols/msbm10.pfb></usr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb>
 xlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/u
 rw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on EUCBV.pdf (11 pages, 413672 bytes).
+Output written on EUCBV.pdf (11 pages, 414671 bytes).
 PDF statistics:
- 507 PDF objects out of 1000 (max. 8388607)
- 94 named destinations out of 1000 (max. 500000)
+ 508 PDF objects out of 1000 (max. 8388607)
+ 95 named destinations out of 1000 (max. 500000)
  149 words of extra memory for PDF output out of 10000 (max. 10000000)
 
