@@ -161,10 +161,10 @@ Again, we can show that
 &\leq \sum_{m=0}^{m_i}\dfrac{4K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}}\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}} 
 %\leq 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\leq \sum_{m=0}^{m_i}\dfrac{4K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}}\dfrac{2\log(\frac{T}{K})}{\epsilon_{m_i}}
+\overset{(a)}{\leq} \sum_{m=0}^{m_i}\dfrac{4K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}}\dfrac{2\log(\frac{T}{K})}{2\epsilon_{m_i}}
 \end{align*}
 
-Now, applying Bernstein inequality and following the same way as in Lemma \ref{proofTheorem:Lemma:3} we can show that,
+Here, in $(a)$ happens by substituting the value of $\psi$ and considering $\epsilon_{m_i}\in [\sqrt{\frac{e}{T}},1]$. Now, applying Bernstein inequality and following the same way as in Lemma \ref{proofTheorem:Lemma:3} we can show that,
 \begin{align*}
 &\Pb\lbrace \hat{r}^* < r^* - c^{*}\rbrace \leq \exp(- \frac{(c^{*})^2}{2\sigma_*^2 + \frac{2 c^{*}}{3}} z^*)\leq \frac{4}{(\psi T\epsilon_{m_i})^{\frac{3\rho}{2}}} \\ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -177,6 +177,8 @@ Hence, summing everything up,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 &\leq \sum_{m=0}^{m_i}\sum_{z^* =1}^{n_{m_i}}\sum_{z_i =1}^{n_{m_i}}\bigg(\Pb\lbrace \hat{r}^* < r^* - c^{*}\rbrace + \Pb\lbrace \hat{r}_i > r_i + c_i\rbrace\bigg)\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq \sum_{m=0}^{m_i}\dfrac{4K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}}\dfrac{\log(T)}{\epsilon_{m_i}}\bigg[\frac{4}{(\psi T\epsilon_{m_i})^{\frac{3\rho}{2}}} + \frac{4}{(\psi T\epsilon_{m_i})^{\frac{3\rho}{2}}}  \bigg]\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 &\leq \sum_{m=0}^{m_i}\dfrac{32K\log T}{(\psi T\epsilon_{m_i})^{3\rho}\epsilon_{m_i}} \leq 
 \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}} \\
 &\overset{(a)}{\leq} 
@@ -185,7 +187,7 @@ Hence, summing everything up,
 &\leq \dfrac{182 K^4 T^{\frac{5}{4}}\log T}{T^3} \overset{(b)}{\leq} \dfrac{182 K^4}{T^{\frac{5}{4}}} \overset{(c)}{\leq} \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}
 \end{align*}
 
-where, in $(a)$ we substitute the values of $\rho$ and $\psi$, $(b)$ follows from the inequality $\log T \leq \sqrt{T}$ and $(c)$ is valid for any $\epsilon_{m_i}\in[\sqrt{\frac{e}{T}},1]$. 
+where, in $(a)$ substitute the values of $\rho$ and $\psi$, $(b)$ follows from the inequality $\log T \leq \sqrt{T}$ and $(c)$ is valid for any $\epsilon_{m_i}\in[\sqrt{\frac{e}{T}},1]$. 
 
 \hfill $\blacksquare$	
 \end{proof}
