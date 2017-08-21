@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  21 AUG 2017 12:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  21 AUG 2017 13:28
 entering extended mode
 **EUCBV.tex
 (C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\EUCBV.tex
@@ -1532,7 +1532,7 @@ Here is how much of TeX's memory you used:
  33781 multiletter control sequences out of 15000+200000
  34255 words of font info for 78 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 62i,27n,107p,1866b,2468s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,27n,107p,1865b,2468s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Progra
@@ -1557,7 +1557,7 @@ sfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 mb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EUCBV.pdf (11 pages, 414419 bytes).
+Output written on EUCBV.pdf (11 pages, 414448 bytes).
 PDF statistics:
  508 PDF objects out of 1000 (max. 8388607)
  95 named destinations out of 1000 (max. 500000)
