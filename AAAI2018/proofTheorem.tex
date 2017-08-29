@@ -60,15 +60,15 @@ If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \frac{\Delta_i}{4} \rbrace $,$\ps
 
 
 
+%\begin{lemma}
+%\label{proofTheorem:Lemma:6}
+%For all bounded rewards in $[0,1]$, $\frac{\Delta_i}{4} \geq \frac{\Delta_i}{4\sigma_i^2 + 4} $.
+%\end{lemma}
+
+
+
 \begin{lemma}
 \label{proofTheorem:Lemma:6}
-For all bounded rewards in $[0,1]$, $\frac{\Delta_i}{4} \geq \frac{\Delta_i}{4\sigma_i^2 + 4} $.
-\end{lemma}
-
-
-
-\begin{lemma}
-\label{proofTheorem:Lemma:7}
 For two integer constants $c_1$ and $c_2$, if $20 c_1 \leq c_2$ then,
 \begin{align*}
 c_1 \frac{4\sigma_i^2 + 4}{\Delta_i}\log\bigg( \frac{T\Delta_i^2}{K}\bigg) \leq c_2 \frac{\sigma_i^2}{\Delta_i}\log\bigg( \frac{T\Delta_i^2}{K}\bigg)
@@ -89,7 +89,8 @@ c_1 \frac{4\sigma_i^2 + 4}{\Delta_i}\log\bigg( \frac{T\Delta_i^2}{K}\bigg) \leq 
 %\end{lemma}
 
 
-The proofs of lemmas \ref{proofTheorem:Lemma:1} - \ref{proofTheorem:Lemma:7} can be found in Appendix ~\ref{App:Lemma:1}, ~\ref{App:Lemma:2}, ~\ref{App:Lemma:3}, ~\ref{App:Lemma:4}, ~\ref{App:Lemma:5}, ~\ref{App:Lemma:6} and ~\ref{App:Lemma:7} respectively.
+The proofs of lemmas \ref{proofTheorem:Lemma:1} - \ref{proofTheorem:Lemma:6} can be found in Appendix ~\ref{App:Lemma:1}, ~\ref{App:Lemma:2}, ~\ref{App:Lemma:3}, ~\ref{App:Lemma:4}, ~\ref{App:Lemma:5} and
+ ~\ref{App:Lemma:6} respectively.
 
 %The proofs of all the Lemmas can be found in Appendix ~\ref{App:Lemma:1} - Appendix ~\ref{App:Lemma:9} respectively.
 
@@ -258,7 +259,7 @@ Here, $(a)$ happens because $\sqrt{4\epsilon_{m_{i}}} < \frac{\Delta_{i}}{4}$. S
 \overset{(c)}{\leq} \sum_{i\in \A^{'}} \left(\Delta_{i} +\dfrac{320\sigma_i^2\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\right)\\
 \end{align*}
 
-We obtain $(a)$ by substituting the value of $\psi$, $(b)$ from Lemma \ref{proofTheorem:Lemma:6} and $(c)$ from Lemma \ref{proofTheorem:Lemma:7}.\\
+We obtain $(a)$ by substituting the value of $\psi$, $(b)$ comes because $0\leq\sigma_i^2 \leq\frac{1}{4}$ and $(c)$ from Lemma \ref{proofTheorem:Lemma:6}.\\
 
 \noindent
 \textbf{Case $(b2)$ (\textit{Optimal arm ${*}$ is eliminated by a sub-optimal arm):  }} Firstly, if conditions of Case $a$ holds then the optimal arm ${*}$ will not be eliminated in round $m=m_{*}$ or it will lead to the contradiction that $r_{i}>r^{*}$. In any round $m_{*}$, if the optimal arm ${*}$ gets eliminated then for any round from $1$ to $m_{j}$ all arms ${j}$ such that $m_{j}< m_{*}$ were eliminated according to assumption in Case $a$. Let the arms surviving till $m_{*}$ round be denoted by $\A^{'}$. This leaves any arm $a_{b}$ such that $m_{b}\geq m_{*}$ to still survive and eliminate arm ${*}$ in round $m_{*}$. Let such arms that survive ${*}$ belong to $\A^{''}$. Also maximal regret per step after eliminating ${*}$ is the maximal $\Delta_{j}$ among the remaining arms ${j}$ with $m_{j}\geq m_{*}$.  Let $m_{b}=\min\left\lbrace m|\sqrt{4\epsilon_{m}}<\frac{\Delta_{b}}{4}\right\rbrace$. Hence, the maximal regret after eliminating the arm ${*}$ is upper bounded by, 

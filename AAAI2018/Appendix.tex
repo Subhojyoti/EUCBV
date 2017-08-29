@@ -1,5 +1,7 @@
 
-\subsection{Proof of Lemma 1} \label{App:Lemma:1}
+\subsection{Proof of Lemma \ref{proofTheorem:Lemma:1}} 
+
+\label{App:Lemma:1}
 
 \begin{lemma}
 %\label{proofTheorem:Lemma:1}
@@ -26,7 +28,7 @@ where $(a)$ is obtained using $m\leq \dfrac{1}{2} \log_2\left(\dfrac{T}{e}\right
 \hfill $\blacksquare$	
 \end{proof}
 
-\subsection{Proof of Lemma 2}
+\subsection{Proof of Lemma \ref{proofTheorem:Lemma:2}}
 \label{App:Lemma:2}
 \begin{lemma}
 %\label{proofTheorem:Lemma:2}
@@ -59,7 +61,7 @@ In the above simplification, $(a)$ is due to $\hat{v}_i \in [0,1]$, while $(b)$ 
 \end{proof}
 
 
-\subsection{Proof of Lemma 3}
+\subsection{Proof of Lemma \ref{proofTheorem:Lemma:3}}
 \label{App:Lemma:3}
 \begin{lemma}
 If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \dfrac{\Delta_i}{4} \rbrace $,  $\bar{c}_i=\sqrt{\dfrac{\rho (\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 2)\log(\psi T\epsilon_{m_{i}})}{4z_i}}$ and $n_{m_i} = \frac{\log{(\psi T\epsilon_{m_{i}})}}{2\epsilon_{m_{i}}}$ then we can show that,
@@ -131,7 +133,7 @@ Thus, using (\ref{lhs1_equn}) and (\ref{lhs2_equn}) in (\ref{eq:prob_eq3}) we ob
 \end{proof}
 
 
-\subsection{Proof of Lemma 4}
+\subsection{Proof of Lemma \ref{proofTheorem:Lemma:4}}
 \label{App:Lemma:4}
 \begin{lemma}
 %\label{proofTheorem:Lemma:4}
@@ -151,20 +153,22 @@ From the definition of $c_i$ we know that $c_i\propto \frac{1}{z_i}$ as $\psi$ a
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \leq  \Pb\lbrace  z^* < z_i  \rbrace \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq \sum_{m=0}^{m_i}\sum_{z^* =1}^{n_{m_i}}\sum_{z_i =1}^{n_{m_i}}\bigg(\Pb\lbrace \hat{r}^* < r^* - c^{*}\rbrace + \Pb\lbrace \hat{r}_i > r_i + c_i\rbrace\bigg)
+&\leq \sum_{m=0}^{m_i}\sum_{z^* =1}^{n_{m}}\sum_{z_i =1}^{n_{m}}\bigg(\Pb\lbrace \hat{r}^* < r^* - c^{*}\rbrace + \Pb\lbrace \hat{r}_i > r_i + c_i\rbrace\bigg)
 \end{align*}
 
-Again, we can show that
-\begin{align*}
-&\sum_{m=0}^{m_i}\sum_{z^* =1}^{n_{m_i}}\sum_{z_i =1}^{n_{m_i}}\mathbb{I}_{i}\cup\mathbb{I}_{*} \leq \sum_{m=0}^{m_i}|B_{m_i}|n_{m_i} \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq \sum_{m=0}^{m_i}\dfrac{4K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}}\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}} 
-%\leq 
+%Again, we can show that
+%\begin{align*}
+%&\sum_{m=0}^{m_i}\sum_{z^* =1}^{n_{m_i}}\sum_{z_i =1}^{n_{m_i}}\mathbb{I}_{i}\cup\mathbb{I}_{*} \leq \sum_{m=0}^{m_i}|B_{m_i}|n_{m_i} \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\overset{(a)}{\leq} \sum_{m=0}^{m_i}\dfrac{4K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}}\dfrac{2\log(\frac{T}{K})}{2\epsilon_{m_i}}
-\end{align*}
+%&\leq \sum_{m=0}^{m_i}\dfrac{4K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}}\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}} 
+%%\leq 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\overset{(a)}{\leq} \sum_{m=0}^{m_i}\dfrac{4K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}}\dfrac{2\log(\frac{T}{K})}{2\epsilon_{m_i}}
+%\end{align*}
+%
+%Here, in $(a)$ happens by substituting the value of $\psi$ and considering $\epsilon_{m_i}\in [\sqrt{\frac{e}{T}},1]$. 
 
-Here, in $(a)$ happens by substituting the value of $\psi$ and considering $\epsilon_{m_i}\in [\sqrt{\frac{e}{T}},1]$. Now, applying Bernstein inequality and following the same way as in Lemma \ref{proofTheorem:Lemma:3} we can show that,
+Now, applying Bernstein inequality and following the same way as in Lemma \ref{proofTheorem:Lemma:3} we can show that,
 \begin{align*}
 &\Pb\lbrace \hat{r}^* < r^* - c^{*}\rbrace \leq \exp(- \frac{(c^{*})^2}{2\sigma_*^2 + \frac{2 c^{*}}{3}} z^*)\leq \frac{4}{(\psi T\epsilon_{m_i})^{\frac{3\rho}{2}}} \\ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -175,25 +179,31 @@ Hence, summing everything up,
 \begin{align*}
 &\Pb\lbrace c^{*} > c_i \rbrace \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq \sum_{m=0}^{m_i}\sum_{z^* =1}^{n_{m_i}}\sum_{z_i =1}^{n_{m_i}}\bigg(\Pb\lbrace \hat{r}^* < r^* - c^{*}\rbrace + \Pb\lbrace \hat{r}_i > r_i + c_i\rbrace\bigg)\\
+&\leq \sum_{m=0}^{m_i}\sum_{z^* =1}^{n_{m}}\sum_{z_i =1}^{n_{m}}\bigg(\Pb\lbrace \hat{r}^* < r^* - c^{*}\rbrace + \Pb\lbrace \hat{r}_i > r_i + c_i\rbrace\bigg)\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq \sum_{m=0}^{m_i}\dfrac{4K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}}\dfrac{\log(T)}{\epsilon_{m_i}}\bigg[\frac{4}{(\psi T\epsilon_{m_i})^{\frac{3\rho}{2}}} + \frac{4}{(\psi T\epsilon_{m_i})^{\frac{3\rho}{2}}}  \bigg]\\
+&\leq \sum_{m=0}^{m_i}|B_{m}|n_{m}\bigg(\Pb\lbrace \hat{r}^* < r^* - c^{*}\rbrace + \Pb\lbrace \hat{r}_i > r_i + c_i\rbrace\bigg)\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq \sum_{m=0}^{m_i}\dfrac{32K\log T}{(\psi T\epsilon_{m_i})^{3\rho}\epsilon_{m_i}} \leq 
-\dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}} \\
-&\overset{(a)}{\leq} 
+&\overset{(a)}{\leq} \sum_{m=0}^{m_i}\dfrac{4K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}}\dfrac{\log{(\psi T\epsilon_{m}^{2})}}{2\epsilon_{m}}\times 
+\\
+&\bigg(\Pb\lbrace \hat{r}^* < r^* - c^{*}\rbrace + \Pb\lbrace \hat{r}_i > r_i + c_i\rbrace\bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq \sum_{m=0}^{m_i}\dfrac{4K}{(\psi T \epsilon_{m})^{\frac{3\rho}{2}}}\dfrac{\log(T)}{\epsilon_{m}}\bigg[\frac{4}{(\psi T\epsilon_{m})^{\frac{3\rho}{2}}} + \frac{4}{(\psi T\epsilon_{m})^{\frac{3\rho}{2}}}  \bigg]\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq \sum_{m=0}^{m_i}\dfrac{32K\log T}{(\psi T\epsilon_{m})^{3\rho}\epsilon_{m}} \leq 
+\dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m}^{3\rho + 1}} \\
+&\overset{(b)}{\leq} 
 \dfrac{32 K\log T}{(\frac{T^2}{K^2})^{\frac{3}{2}}}\bigg[\left( 1 + \dfrac{2(2^{ \frac{1}{2}\log_{2} \frac{T}{e}}-1)}{2-1} \right)^{\frac{5}{2}}\bigg] \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq \dfrac{182 K^4 T^{\frac{5}{4}}\log T}{T^3} \overset{(b)}{\leq} \dfrac{182 K^4}{T^{\frac{5}{4}}} \overset{(c)}{\leq} \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}
+&\leq \dfrac{182 K^4 T^{\frac{5}{4}}\log T}{T^3} \overset{(c)}{\leq} \dfrac{182 K^4}{T^{\frac{5}{4}}} \overset{(d)}{\leq} \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}
 \end{align*}
 
-where, in $(a)$ substitute the values of $\rho$ and $\psi$, $(b)$ follows from the inequality $\log T \leq \sqrt{T}$ and $(c)$ is valid for any $\epsilon_{m_i}\in[\sqrt{\frac{e}{T}},1]$. 
+where, $(a)$ happens by substituting the value of $\psi$ and considering $\epsilon_{m}\in [\sqrt{\frac{e}{T}},1]$, in $(b)$ we substitute the values of $\rho$ and $\psi$, $(c)$ follows from the inequality $\log T \leq \sqrt{T}$ and $(d)$ is valid for any $\epsilon_{m_i}\in[\sqrt{\frac{e}{T}},1]$. 
 
 \hfill $\blacksquare$	
 \end{proof}
 
 
-\subsection{Proof of Lemma 5}
+\subsection{Proof of Lemma \ref{proofTheorem:Lemma:5}}
 \label{App:Lemma:5}
 \begin{lemma}
 %\label{proofTheorem:Lemma:5}
@@ -209,9 +219,9 @@ If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \dfrac{\Delta_i}{4} \rbrace $, $\
 \begin{proof}
 Following a similar argument as in Lemma \ref{proofTheorem:Lemma:4}, we can show that in the $m_i$-th round,
 \begin{align*}
-\Pb\lbrace z_i < n_{m_i} \rbrace &\leq \sum_{m=0}^{m_i}\sum_{z_i =1}^{n_{m_i}}\sum_{z^* =1}^{n_{m_i}}\bigg(\Pb\lbrace \hat{r}^* > r^* - c^{*}\rbrace + \Pb\lbrace \hat{r}_i < r_i + c_i\rbrace\bigg) \\
+\Pb\lbrace z_i < n_{m_i} \rbrace &\leq \sum_{m=0}^{m_i}\sum_{z_i =1}^{n_{m}}\sum_{z^* =1}^{n_{m}}\bigg(\Pb\lbrace \hat{r}^* > r^* - c^{*}\rbrace + \Pb\lbrace \hat{r}_i < r_i + c_i\rbrace\bigg) \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}}\leq \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}.
+&\leq \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m}^{3\rho + 1}}\leq \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}.
 \end{align*}
 \hfill $\blacksquare$	
 \end{proof}
@@ -270,29 +280,29 @@ Following a similar argument as in Lemma \ref{proofTheorem:Lemma:4}, we can show
 %\hfill $\blacksquare$	
 %\end{proof}
 
-\subsection{Proof of Lemma 6}
+%\subsection{Proof of Lemma 6}
+%\label{App:Lemma:6}
+%\begin{lemma}
+%For all bounded rewards in $[0,1]$, $\dfrac{\Delta_i}{4} \geq \dfrac{\Delta_i}{4\sigma_i^2 + 4} $.
+%\end{lemma}
+%
+%\begin{proof}
+%Since all rewards are bounded in $[0,1]$, we know that $0\leq\sigma_i^2 \leq \frac{1}{4}$. Hence we can show that,
+%\begin{align*}
+%\dfrac{\Delta_i}{4\sigma_i^2 + 4} &\leq \dfrac{\Delta_i}{4.\frac{1}{4} + 4}\\
+%& \leq \dfrac{\Delta_i}{5}
+%\end{align*}
+% 
+%But for all $\Delta_i \in [0,1]$ we know that $\dfrac{\Delta_{i}}{5} \leq \dfrac{\Delta_{i}}{4} $. Hence, 
+%$\dfrac{\Delta_i}{4} \geq \dfrac{\Delta_i}{4\sigma_i^2 + 4} $.
+%
+%\hfill $\blacksquare$	
+%\end{proof}
+
+
+
+\subsection{Proof of Lemma \ref{proofTheorem:Lemma:6}}
 \label{App:Lemma:6}
-\begin{lemma}
-For all bounded rewards in $[0,1]$, $\dfrac{\Delta_i}{4} \geq \dfrac{\Delta_i}{4\sigma_i^2 + 4} $.
-\end{lemma}
-
-\begin{proof}
-Since all rewards are bounded in $[0,1]$, we know that $0\leq\sigma_i^2 \leq \frac{1}{4}$. Hence we can show that,
-\begin{align*}
-\dfrac{\Delta_i}{4\sigma_i^2 + 4} &\leq \dfrac{\Delta_i}{4.\frac{1}{4} + 4}\\
-& \leq \dfrac{\Delta_i}{5}
-\end{align*}
- 
-But for all $\Delta_i \in [0,1]$ we know that $\dfrac{\Delta_{i}}{5} \leq \dfrac{\Delta_{i}}{4} $. Hence, 
-$\dfrac{\Delta_i}{4} \geq \dfrac{\Delta_i}{4\sigma_i^2 + 4} $.
-
-\hfill $\blacksquare$	
-\end{proof}
-
-
-
-\subsection{Proof of Lemma 7}
-\label{App:Lemma:7}
 \begin{lemma}
 For two integer constants $c_1$ and $c_2$, if $20 c_1 \leq c_2$ then,
 \begin{align*}
