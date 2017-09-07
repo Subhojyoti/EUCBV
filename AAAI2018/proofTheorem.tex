@@ -215,9 +215,9 @@ Summing up over all arms in $\A^{'}$ and bounding the regret for all the \textit
 	\begin{align*}
 &\sum_{i\in \A^{'}}\bigg(\dfrac{4 K^4 T\Delta_i}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}\bigg) + \sum_{i\in \A^{'}}\bigg(\dfrac{364 K^4 T\Delta_i}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}\bigg)\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{368 K^4 T\Delta_{i}}{T^{\frac{5}{4}}\left(\frac{\Delta_{i}^{2}}{4.16}\right)^{\frac{1}{2}}}\bigg)
+&\overset{(a)}{\leq}\sum_{i\in \A^{'}}\bigg(\dfrac{368 K^4 T\Delta_{i}}{T^{\frac{5}{4}}\left(\frac{\Delta_{i}^{2}}{4.16}\right)^{\frac{1}{2}}}\bigg)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\overset{(a)}{\leq} \sum_{i\in \A^{'}}\bigg(\dfrac{C_1 K^4}{(T)^{\frac{1}{4}}}\bigg).\\  
+\overset{(b)}{\leq} \sum_{i\in \A^{'}}\bigg(\dfrac{C_1 K^4}{(T)^{\frac{1}{4}}}\bigg).\\  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\end{align*}
 
@@ -230,7 +230,7 @@ Summing up over all arms in $\A^{'}$ and bounding the regret for all the \textit
 %& \overset{(a)}{\leq} \sum_{i\in \A^{'}}\bigg(\dfrac{388.2^{2+\frac{3}{2}}.16^{\frac{3}{4}} K T^{1-\frac{3}{4}}}{(\frac{T}{K^2})^{\frac{3}{4}}\Delta_{i}^{2.\frac{3}{4} -1}}\bigg)\leq \sum_{i\in \A^{'}}\dfrac{C_1 K^{\frac{5}{2}}}{\sqrt{T\Delta_i}}  
 %   \end{align*}
 %Here in $(a)$ we substitute the values of $\rho$ and $\psi$ and $C_1$ denotes a constant integer value.\\
-Here in $(a)$, $C_1$ denotes a constant integer value.\\
+Here, $(a)$ happens because $\sqrt{4\epsilon_{m_i}} < \frac{\Delta_i}{4}$, and in $(b)$, $C_1$ denotes a constant integer value.\\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
