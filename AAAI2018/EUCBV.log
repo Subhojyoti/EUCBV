@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  6 SEP 2017 23:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  7 SEP 2017 14:17
 entering extended mode
 **EUCBV.tex
 (C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\EUCBV.tex
@@ -1367,7 +1367,7 @@ Underfull \hbox (badness 1975) in paragraph at lines 20--21
  []
 
 ) (C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\proofTheorem.tex
-Underfull \hbox (badness 2096) in paragraph at lines 24--25
+Underfull \hbox (badness 2096) in paragraph at lines 27--28
 []\OT1/ptm/m/it/10 If $\OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 
 min\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 m\OMS/cmsy/m/n/10 j[] \OML/cmm/m/it/10 < 
 []\OMS/cmsy/m/n/10 g$\OT1/ptm/m/it/10 , $[] \OT1/cmr/m/n/10 =$
@@ -1375,29 +1375,29 @@ min\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 m\OMS/cmsy/m/n/10 j[] \OML/cmm/m/it/10 <
 
 [4]
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 102.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 105.
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--227
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
 
  []
 
 
-Overfull \hbox (19.66092pt too wide) in paragraph at lines 249--249
+Overfull \hbox (22.4387pt too wide) in paragraph at lines 256--256
 [] 
  []
 
 
-Overfull \hbox (23.55064pt too wide) in paragraph at lines 260--260
+Overfull \hbox (23.55064pt too wide) in paragraph at lines 267--267
 [] 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 262--263
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
 
-Overfull \hbox (1.2343pt too wide) in paragraph at lines 321--321
+Overfull \hbox (1.2343pt too wide) in paragraph at lines 328--328
 [] 
  []
 
@@ -1513,10 +1513,10 @@ Package rerunfilecheck Info: File `EUCBV.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 86.
  ) 
 Here is how much of TeX's memory you used:
- 31205 strings out of 493921
- 740114 string characters out of 3144861
- 1000441 words of memory out of 3000000
- 33778 multiletter control sequences out of 15000+200000
+ 31209 strings out of 493921
+ 740170 string characters out of 3144861
+ 1000534 words of memory out of 3000000
+ 33780 multiletter control sequences out of 15000+200000
  34255 words of font info for 78 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,27n,107p,1865b,2468s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1544,9 +1544,9 @@ sfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 mb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EUCBV.pdf (11 pages, 414126 bytes).
+Output written on EUCBV.pdf (11 pages, 415307 bytes).
 PDF statistics:
- 504 PDF objects out of 1000 (max. 8388607)
- 91 named destinations out of 1000 (max. 500000)
+ 509 PDF objects out of 1000 (max. 8388607)
+ 93 named destinations out of 1000 (max. 500000)
  141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
