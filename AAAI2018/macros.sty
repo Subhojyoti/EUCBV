@@ -17,6 +17,17 @@
 \newtheorem{lemma}{Lemma}
 \newtheorem{proof}{Proof}
 
+\newtheorem{innercustomlem}{Lemma}
+\newenvironment{customlem}[1]
+  {\renewcommand\theinnercustomlem{#1}\innercustomlem}
+  {\endinnercustomlem}
+  
+\newtheorem{innercustomCorollary}{Corollary}
+\newenvironment{customCorollary}[1]
+  {\renewcommand\theinnercustomCorollary{#1}\innercustomCorollary}
+  {\endinnercustomCorollary}
+
+
 \usepackage{graphicx}
 
 %\usepackage{enumitem}
