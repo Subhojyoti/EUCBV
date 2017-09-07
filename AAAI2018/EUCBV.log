@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  7 SEP 2017 17:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  7 SEP 2017 17:56
 entering extended mode
 **EUCBV.tex
 (C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\EUCBV.tex
@@ -1488,17 +1488,17 @@ Overfull \hbox (26.15292pt too wide) in paragraph at lines 128--128
 [9
 
 ]
-Overfull \hbox (47.1912pt too wide) in paragraph at lines 225--225
+Overfull \hbox (47.1912pt too wide) in paragraph at lines 229--229
 [] 
  []
 
 [10]
-Overfull \hbox (1.2343pt too wide) in paragraph at lines 429--429
+Overfull \hbox (1.2343pt too wide) in paragraph at lines 431--431
 [] 
  []
 
 
-Overfull \hbox (21.92384pt too wide) in paragraph at lines 436--436
+Overfull \hbox (21.92384pt too wide) in paragraph at lines 438--438
 [] 
  []
 
@@ -1547,7 +1547,7 @@ sfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 mb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EUCBV.pdf (11 pages, 416046 bytes).
+Output written on EUCBV.pdf (11 pages, 416788 bytes).
 PDF statistics:
  511 PDF objects out of 1000 (max. 8388607)
  93 named destinations out of 1000 (max. 500000)

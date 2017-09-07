@@ -191,13 +191,17 @@ Hence, summing everything up,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 &\leq \sum_{m=0}^{m_i}\dfrac{32K\log T}{(\psi T\epsilon_{m})^{3\rho}\epsilon_{m}} \leq 
 \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m}^{3\rho + 1}} \\
-&\overset{(d)}{\leq} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\overset{(d)}{\leq} \sum_{m=0}^{m_i}\dfrac{32K\log T}{(\psi T\epsilon_{m})^{3\rho}\epsilon_{m}} \leq 
+\dfrac{32K\log T}{(\psi T)^{3\rho}}\left(\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m}}\right)^{3\rho + 1}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\overset{(e)}{\leq} 
 \dfrac{32 K\log T}{(\frac{T^2}{K^2})^{\frac{3}{2}}}\bigg[\left( 1 + \dfrac{2(2^{ \frac{1}{2}\log_{2} \frac{T}{e}}-1)}{2-1} \right)^{\frac{5}{2}}\bigg] \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq \dfrac{182 K^4 T^{\frac{5}{4}}\log T}{T^3} \overset{(e)}{\leq} \dfrac{182 K^4}{T^{\frac{5}{4}}} \overset{(f)}{\leq} \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}
+&\leq \dfrac{182 K^4 T^{\frac{5}{4}}\log T}{T^3} \overset{(f)}{\leq} \dfrac{182 K^4}{T^{\frac{5}{4}}} \overset{(g)}{\leq} \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}
 \end{align*}
 
-where, $(a)$ comes from the total pulls allocated for all $i\in B_m$ till the $m$-th round, in $(b)$ the arm count $|B_m|$ can be bounded by using $(\ref{eq:arm:elim:c1})$ and also we substitute the value of $n_{m}$, $(c)$ happens by substituting the value of $\psi$ and considering $\epsilon_{m}\in [\sqrt{\frac{e}{T}},1]$, in $(d)$ we substitute the values of $\rho$ and $\psi$, $(e)$ follows from the inequality $\log T \leq \sqrt{T}$ and $(f)$ is valid for any $\epsilon_{m_i}\in[\sqrt{\frac{e}{T}},1]$. 
+where, $(a)$ comes from the total pulls allocated for all $i\in B_m$ till the $m$-th round, in $(b)$ the arm count $|B_m|$ can be bounded by using $(\ref{eq:arm:elim:c1})$ and then we substitute the value of $n_{m}$, $(c)$ happens by substituting the value of $\psi$ and considering $\epsilon_{m}\in [\sqrt{\frac{e}{T}},1]$, $(d)$ follows as $\frac{1}{\epsilon_{m}}\geq 1,\forall m $, in $(e)$ we use the standard geometric progression formula and then we substitute the values of $\rho$ and $\psi$, $(f)$ follows from the inequality $\log T \leq \sqrt{T}$ and $(g)$ is valid for any $\epsilon_{m_i}\in[\sqrt{\frac{e}{T}},1]$. 
 
 \hfill $\blacksquare$	
 \end{proof}
@@ -322,14 +326,12 @@ Further reducing the above two terms we can show that,
 \begin{align*}
 & 4c_1\sigma_i^2 + 4c_1 > c_2\sigma_i^2\\
 & \Rightarrow 4c_1.\dfrac{1}{4} + 4c_1 \overset{(a)}{>} \dfrac{c_2}{4}\\
-& \Rightarrow 20 c_1 > c_2
+& \Rightarrow 20 c_1 > c_2.
 \end{align*}
 
-Here, $(a)$ occurs because $\sigma_i^2 \leq \frac{1}{4}$.
-
-But, we already know that $20 c_1 \leq c_2$. Hence, 
+Here, $(a)$ occurs because $\sigma_i^2 \leq \frac{1}{4}$. But, we already know that $20 c_1 \leq c_2$. Hence, 
 \begin{align*}
-c_1 \dfrac{4\sigma_i^2 + 4}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) \leq c_2 \dfrac{\sigma_i^2}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg)
+c_1 \dfrac{4\sigma_i^2 + 4}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) \leq c_2 \dfrac{\sigma_i^2}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg).
 \end{align*}
 
 \hfill $\blacksquare$	
