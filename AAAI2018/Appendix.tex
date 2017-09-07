@@ -181,23 +181,23 @@ Hence, summing everything up,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 &\leq \sum_{m=0}^{m_i}\sum_{z^* =1}^{n_{m}}\sum_{z_i =1}^{n_{m}}\bigg(\Pb\lbrace \hat{r}^* < r^* - c^{*}\rbrace + \Pb\lbrace \hat{r}_i > r_i + c_i\rbrace\bigg)\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq \sum_{m=0}^{m_i}|B_{m}|n_{m}\bigg(\Pb\lbrace \hat{r}^* < r^* - c^{*}\rbrace + \Pb\lbrace \hat{r}_i > r_i + c_i\rbrace\bigg)\\
+&\overset{(a)}{\leq} \sum_{m=0}^{m_i}|B_{m}|n_{m}\bigg(\Pb\lbrace \hat{r}^* < r^* - c^{*}\rbrace + \Pb\lbrace \hat{r}_i > r_i + c_i\rbrace\bigg)\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\overset{(a)}{\leq} \sum_{m=0}^{m_i}\dfrac{4K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}}\dfrac{\log{(\psi T\epsilon_{m}^{2})}}{2\epsilon_{m}}\times 
+&\overset{(b)}{\leq} \sum_{m=0}^{m_i}\dfrac{4K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}}\dfrac{\log{(\psi T\epsilon_{m}^{2})}}{2\epsilon_{m}}\times 
 \\
 &\bigg(\Pb\lbrace \hat{r}^* < r^* - c^{*}\rbrace + \Pb\lbrace \hat{r}_i > r_i + c_i\rbrace\bigg)\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq \sum_{m=0}^{m_i}\dfrac{4K}{(\psi T \epsilon_{m})^{\frac{3\rho}{2}}}\dfrac{\log(T)}{\epsilon_{m}}\bigg[\frac{4}{(\psi T\epsilon_{m})^{\frac{3\rho}{2}}} + \frac{4}{(\psi T\epsilon_{m})^{\frac{3\rho}{2}}}  \bigg]\\
+&\overset{(c)}{\leq} \sum_{m=0}^{m_i}\dfrac{4K}{(\psi T \epsilon_{m})^{\frac{3\rho}{2}}}\dfrac{\log(T)}{\epsilon_{m}}\bigg[\frac{4}{(\psi T\epsilon_{m})^{\frac{3\rho}{2}}} + \frac{4}{(\psi T\epsilon_{m})^{\frac{3\rho}{2}}}  \bigg]\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 &\leq \sum_{m=0}^{m_i}\dfrac{32K\log T}{(\psi T\epsilon_{m})^{3\rho}\epsilon_{m}} \leq 
 \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m}^{3\rho + 1}} \\
-&\overset{(b)}{\leq} 
+&\overset{(d)}{\leq} 
 \dfrac{32 K\log T}{(\frac{T^2}{K^2})^{\frac{3}{2}}}\bigg[\left( 1 + \dfrac{2(2^{ \frac{1}{2}\log_{2} \frac{T}{e}}-1)}{2-1} \right)^{\frac{5}{2}}\bigg] \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\leq \dfrac{182 K^4 T^{\frac{5}{4}}\log T}{T^3} \overset{(c)}{\leq} \dfrac{182 K^4}{T^{\frac{5}{4}}} \overset{(d)}{\leq} \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}
+&\leq \dfrac{182 K^4 T^{\frac{5}{4}}\log T}{T^3} \overset{(e)}{\leq} \dfrac{182 K^4}{T^{\frac{5}{4}}} \overset{(f)}{\leq} \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}
 \end{align*}
 
-where, $(a)$ happens by substituting the value of $\psi$ and considering $\epsilon_{m}\in [\sqrt{\frac{e}{T}},1]$, in $(b)$ we substitute the values of $\rho$ and $\psi$, $(c)$ follows from the inequality $\log T \leq \sqrt{T}$ and $(d)$ is valid for any $\epsilon_{m_i}\in[\sqrt{\frac{e}{T}},1]$. 
+where, $(a)$ comes from the total pulls allocated for all $i\in B_m$ till the $m$-th round, in $(b)$ the arm count $|B_m|$ can be bounded by using $(\ref{eq:arm:elim:c1})$ and also we substitute the value of $n_{m}$, $(c)$ happens by substituting the value of $\psi$ and considering $\epsilon_{m}\in [\sqrt{\frac{e}{T}},1]$, in $(d)$ we substitute the values of $\rho$ and $\psi$, $(e)$ follows from the inequality $\log T \leq \sqrt{T}$ and $(f)$ is valid for any $\epsilon_{m_i}\in[\sqrt{\frac{e}{T}},1]$. 
 
 \hfill $\blacksquare$	
 \end{proof}
