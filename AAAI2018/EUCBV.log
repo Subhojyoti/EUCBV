@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  9 SEP 2017 20:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  9 SEP 2017 21:53
 entering extended mode
 **EUCBV.tex
 (C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\EUCBV.tex
@@ -1384,6 +1384,11 @@ $
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 115.
 
+Overfull \hbox (7.01913pt too wide) in alignment at lines 215--220
+ [][][] []
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
  []
@@ -1521,10 +1526,10 @@ Package rerunfilecheck Info: File `EUCBV.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 86.
  ) 
 Here is how much of TeX's memory you used:
- 31235 strings out of 493921
- 740709 string characters out of 3144861
- 999930 words of memory out of 3000000
- 33806 multiletter control sequences out of 15000+200000
+ 31237 strings out of 493921
+ 740737 string characters out of 3144861
+ 1000974 words of memory out of 3000000
+ 33807 multiletter control sequences out of 15000+200000
  34255 words of font info for 78 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,27n,107p,1865b,2468s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1552,9 +1557,9 @@ sfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 mb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EUCBV.pdf (11 pages, 418116 bytes).
+Output written on EUCBV.pdf (11 pages, 418219 bytes).
 PDF statistics:
- 517 PDF objects out of 1000 (max. 8388607)
- 93 named destinations out of 1000 (max. 500000)
+ 518 PDF objects out of 1000 (max. 8388607)
+ 94 named destinations out of 1000 (max. 500000)
  141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

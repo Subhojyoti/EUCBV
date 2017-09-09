@@ -201,27 +201,27 @@ where
 
 From Lemma \ref{proofTheorem:Lemma:3} we can show that $\mathbb{P}(\hat{r}_{i}> r_{i} + c_{i})\leq\mathbb{P}\left( \hat{r}_{i} > r_{i}+ \bar{c}_i\right) + \mathbb{P}\left( \hat{v}_{i}\geq \sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}}\right) \leq \frac{2}{(\psi  T\epsilon_{m_{i}})^{\frac{3\rho}{2}}}$. Similarly, $\mathbb{P}\lbrace\hat{r}^{*} < r^{*} - c^{*}\rbrace \leq \frac{2}{(\psi  T\epsilon_{m_{i}})^{\frac{3\rho}{2}}}$. Summing the above two contributions, the probability that a sub-optimal arm ${i}$ is not eliminated on or before $m_{i}$-th round by the first two conditions in  (\ref{eq:armelim-casea}) is,  
 \begin{eqnarray}
-\bigg(\dfrac{4}{(\psi T\epsilon_{m_{i}})^{\frac{3\rho}{2}}} \bigg) \label{eq:arm:elim:c1}
+\bigg(\dfrac{4}{(\psi T\epsilon_{m_{i}})^{\frac{3\rho}{2}}} \bigg). \label{eq:arm:elim:c1}
 \end{eqnarray}
  
 
 Again, from Lemma \ref{proofTheorem:Lemma:4} and Lemma \ref{proofTheorem:Lemma:5} we can bound the probability of the  complementary of the event $c_{i} \geq c^* $ and $ z_i \geq n_{m_i}$ by,
 
 \begin{eqnarray}
-\dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}} + \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}\leq \dfrac{364 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}} \label{eq:arm:elim:c2}.
+\dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}} + \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}\leq \dfrac{364 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}. \label{eq:arm:elim:c2}
 \end{eqnarray}
 
 Also, for $(\ref{eq:arm:elim:c1})$ we can show that for any $\epsilon_{m_i}\in[\sqrt{\frac{e}{T}},1]$
-\begin{align*}
-\bigg(\dfrac{4}{(\psi T\epsilon_{m_{i}})^{\frac{3\rho}{2}}} \bigg) &\overset{(a)}{\leq} \bigg(\dfrac{4}{(\frac{T^2}{K^2}\epsilon_{m_{i}})^{\frac{3}{4}}} \bigg)\leq \bigg(\dfrac{4 K^{\frac{3}{2}}}{(T^\frac{3}{2} \epsilon_{m_i}^{\frac{1}{4}}\sqrt{\epsilon_{m_{i}}})}\bigg)\\
+\begin{eqnarray}
+\bigg(\dfrac{4}{(\psi T\epsilon_{m_{i}})^{\frac{3\rho}{2}}} \bigg) &\overset{(a)}{\leq} \bigg(\dfrac{4}{(\frac{T^2}{K^2}\epsilon_{m_{i}})^{\frac{3}{4}}} \bigg)\leq \bigg(\dfrac{4 K^{\frac{3}{2}}}{(T^\frac{3}{2} \epsilon_{m_i}^{\frac{1}{4}}\sqrt{\epsilon_{m_{i}}})}\bigg) \nonumber \\
 %%%%%%%%%%%%%%%%%%%%%%%
  &\overset{(b)}{\leq} \bigg(\dfrac{4 K^{\frac{3}{2}}}{(T^{\frac{3}{2}-\frac{1}{8}}\sqrt{\epsilon_{m_{i}}})}  \bigg)
-\leq \dfrac{4 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}.
-\end{align*}
+\leq \dfrac{4 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}. \label{eq:arm:elim:c3}
+\end{eqnarray}
 
 Here, in $(a)$ we substitute the values of $\psi$ and $\rho$ and $(b)$ follows from the identity $\epsilon_{m_i}^{\frac{1}{4}}\geq (\frac{e}{T})^{\frac{1}{8}} $ as $\epsilon_{m_i}\geq \sqrt{\frac{e}{T}}$.
 
-Summing up over all arms in $\A^{'}$ and bounding the regret for all the \textit{four} arm elimination conditions in (\ref{eq:armelim-casea}) by $(\ref{eq:arm:elim:c1}) + (\ref{eq:arm:elim:c2})$ for each arm $i\in \A^{'}$ trivially by $T\Delta_{i}$, we obtain
+Summing up over all arms in $\A^{'}$ and bounding the regret for all the \textit{four} arm elimination conditions in (\ref{eq:armelim-casea}) by $(\ref{eq:arm:elim:c2}) + (\ref{eq:arm:elim:c3})$ for each arm $i\in \A^{'}$ trivially by $T\Delta_{i}$, we obtain
 	\begin{align*}
 &\sum_{i\in \A^{'}}\bigg(\dfrac{4 K^4 T\Delta_i}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}\bigg) + \sum_{i\in \A^{'}}\bigg(\dfrac{364 K^4 T\Delta_i}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}\bigg)\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -19,7 +19,7 @@
 \State {\bf Initialization:} Set $m:=0$, $B_{0}:=\mathcal{A}$, $\epsilon_{0}:=1$, $M=\big \lfloor \frac{1}{2}\log_{2} \frac{T}{e}\big\rfloor$, $n_{0}=\big\lceil\frac{\log{(\psi T\epsilon_{0}^{2})}}{2\epsilon_{0}}\big\rceil$ and  $N_{0}=Kn_{0}$.
 \State Pull each arm once
 \For{$t=K+1,..,T$}	
-\State Pull arm $i\in \argmax_{j\in B_{m}}\bigg\lbrace \hat{r}_{j} + \sqrt{\frac{\rho(\hat{v}_{j}+2)\log{(\psi T\epsilon_{m})}}{4 z_{j}}} \bigg\rbrace$, where $z_j$ is the number of times arm $j$ has been pulled
+\State Pull arm $i\in \argmax_{j\in B_{m}}\bigg\lbrace \hat{r}_{j} + \sqrt{\frac{\rho(\hat{v}_{j}+2)\log{(\psi T\epsilon_{m})}}{4 z_{j}}} \bigg\rbrace$, where $z_j$ is the number of times arm $j$ has been pulled.
 %\State $t:=t+1$
 \ArmElim
 \State For each arm $i \in B_{m}$, remove arm $i$ from $B_{m}$ if,
