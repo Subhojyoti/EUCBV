@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  9 SEP 2017 21:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  10 SEP 2017 19:01
 entering extended mode
 **EUCBV.tex
 (C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\EUCBV.tex
@@ -1357,10 +1357,7 @@ Overfull \hbox (1.2343pt too wide) in paragraph at lines 9--9
 [] 
  []
 
-
-Underfull \vbox (badness 1038) has occurred while \output is active []
-
- [3]
+[3]
 Underfull \hbox (badness 1688) in paragraph at lines 20--21
 []\OT1/ptm/m/it/10 Discussion: \OT1/ptm/m/n/10 From the above re-sult we see th
 at the
@@ -1528,7 +1525,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 86.
 Here is how much of TeX's memory you used:
  31237 strings out of 493921
  740737 string characters out of 3144861
- 1000974 words of memory out of 3000000
+ 999974 words of memory out of 3000000
  33807 multiletter control sequences out of 15000+200000
  34255 words of font info for 78 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1557,9 +1554,9 @@ sfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 mb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EUCBV.pdf (11 pages, 418219 bytes).
+Output written on EUCBV.pdf (11 pages, 418488 bytes).
 PDF statistics:
- 518 PDF objects out of 1000 (max. 8388607)
+ 519 PDF objects out of 1000 (max. 8388607)
  94 named destinations out of 1000 (max. 500000)
  141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
