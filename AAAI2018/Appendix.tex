@@ -230,7 +230,9 @@ If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \dfrac{\Delta_i}{4} \rbrace $, $\
 \begin{proof}
 Following a similar argument as in Lemma \ref{proofTheorem:Lemma:4}, we can show that in the $m_i$-th round,
 \begin{align*}
-\Pb\lbrace z_i < n_{m_i} \rbrace &\leq \sum_{m=0}^{m_i}\sum_{z_i =1}^{n_{m}}\sum_{z^* =1}^{n_{m}}\bigg(\Pb\lbrace \hat{r}^* > r^* - c^{*}\rbrace + \Pb\lbrace \hat{r}_i < r_i + c_i\rbrace\bigg) \\
+&\Pb\lbrace z_i < n_{m_i} \rbrace \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq \sum_{m=0}^{m_i}\sum_{z_i =1}^{n_{m}}\sum_{z^* =1}^{n_{m}}\bigg(\Pb\lbrace \hat{r}^* > r^* - c^{*}\rbrace + \Pb\lbrace \hat{r}_i < r_i + c_i\rbrace\bigg) \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 &\leq \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m}^{3\rho + 1}}\leq \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}.
 \end{align*}
