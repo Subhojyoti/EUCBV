@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  11 SEP 2017 23:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  12 SEP 2017 01:02
 entering extended mode
 **EUCBV.tex
 (C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\EUCBV.tex
@@ -1510,7 +1510,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 86.
 Here is how much of TeX's memory you used:
  31237 strings out of 493921
  740737 string characters out of 3144861
- 1000969 words of memory out of 3000000
+ 1000968 words of memory out of 3000000
  33807 multiletter control sequences out of 15000+200000
  34255 words of font info for 78 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1539,7 +1539,7 @@ sfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 mb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EUCBV.pdf (11 pages, 417501 bytes).
+Output written on EUCBV.pdf (11 pages, 417500 bytes).
 PDF statistics:
  514 PDF objects out of 1000 (max. 8388607)
  94 named destinations out of 1000 (max. 500000)
