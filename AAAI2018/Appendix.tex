@@ -473,3 +473,27 @@ where, in$(a)$, $C_3$ is an integer constant such that $C_3 = C_0 + C_2 $ and $(
 
 \hfill $\blacksquare$	
 \end{proof}
+
+%\newpage
+%\subsection{OCUCB vs EUCBV}
+%
+%We will illustrate the difference with the following example. Let there be 3 Bernoulli arms, $r^* = 1.0$, $r_2 = 0.6$ and $r_3 = 0$. Then, $H_i=\sum_{j=1}^{K}\min\left\lbrace \frac{1}{\Delta_i^2},\frac{1}{\Delta_j^2}\right\rbrace = \dfrac{1}{0.4^2} + \dfrac{1}{0.4^2} = 12.5$. Let, $T=1000$. Because of the large constant associated with EUCBV, we can ignore the $\sigma_{\max}^{2}\leq \dfrac{1}{4}$. Now, the most significant term in the regret bounds of two algorithms, excluding the constants and variance term, are:-
+%
+%\begin{table}[!th]
+%\begin{center}
+%\begin{tabular}{p{10em}|p{10em}}
+%\hline
+%\textbf{OCUCB} & \textbf{EUCBV}\\
+%\hline
+%$\sum_{i=1}^{K}\dfrac{\log(\frac{T}{H_i})}{\Delta_i}$ & $\sum_{i=1}^{K}\dfrac{\sigma_{\max}^2\log(\frac{T\Delta_i^2}{K})}{\Delta_i}$\\
+%\hline
+%$\dfrac{\log(\frac{1000}{12.5})}{1.0} + \dfrac{\log(\frac{1000}{12.5})}{0.4}$ & $\dfrac{\log(\sigma_{\max}^2\frac{1000 * 1.0^2}{2})}{1.0} + \dfrac{\log(\sigma_{\max}^2\frac{1000 * 0.4^2}{2})}{0.4} $\\
+%\hline
+%$ = 6.66$ & $= 7.4$ \\
+%\hline
+%\end{tabular}
+%\end{center}
+%\caption{Regret calculation in the environment specified}
+%\end{table}
+%
+%Hence, in certain environments, when gaps are non-uniform and large, OCUCB will beat EUCBV, both theoretically and empirically.
