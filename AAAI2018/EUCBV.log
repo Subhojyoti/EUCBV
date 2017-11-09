@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  9 NOV 2017 18:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  10 NOV 2017 01:13
 entering extended mode
 **EUCBV.tex
 (C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\EUCBV.tex
@@ -1335,9 +1335,6 @@ $[][]$\OT1/ptm/m/n/10 , where $\OML/cmm/m/it/10 z[]$ \OT1/ptm/m/n/10 is the num
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 25.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 52--62
 
  []
@@ -1512,7 +1509,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 99.
 Here is how much of TeX's memory you used:
  31241 strings out of 493921
  740818 string characters out of 3144861
- 999997 words of memory out of 3000000
+ 999996 words of memory out of 3000000
  33810 multiletter control sequences out of 15000+200000
  34255 words of font info for 78 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1542,7 +1539,7 @@ urier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8
 a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Fil
 es (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EUCBV.pdf (11 pages, 427700 bytes).
+Output written on EUCBV.pdf (11 pages, 427703 bytes).
 PDF statistics:
  517 PDF objects out of 1000 (max. 8388607)
  95 named destinations out of 1000 (max. 500000)
