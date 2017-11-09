@@ -119,6 +119,14 @@ Liu, Y.-C., and Tsuruoka, Y.
   exploration in monte-carlo tree search.
 \newblock {\em Theoretical Computer Science}.
 
+\bibitem[\protect\citeauthoryear{Mukherjee \bgroup et al\mbox.\egroup
+  }{2017}]{mukherjee2016}
+Mukherjee, S.; Kolar~Purushothama, N.; Sudarsanam, N.; and Ravindran, B.
+\newblock 2017.
+\newblock Thresholding bandits with augmented ucb.
+\newblock In {\em Proceedings of the 26th International Joint Conference on
+  Artificial Intelligence},  2515--2521.
+
 \bibitem[\protect\citeauthoryear{Robbins}{1952}]{robbins1952some}
 Robbins, H.
 \newblock 1952.
