@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  9 NOV 2017 15:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  9 NOV 2017 18:02
 entering extended mode
 **EUCBV.tex
 (C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\EUCBV.tex
@@ -1441,8 +1441,17 @@ Overfull \hbox (4.50116pt too wide) in paragraph at lines 88--150
  [][] 
  []
 
-) (C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\Conclusion.tex) [7]
-(C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\EUCBV.bbl
+) (C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\Conclusion.tex
+Underfull \hbox (badness 2894) in paragraph at lines 1--2
+\OT1/ptm/m/n/10 ag-gres-sive ex-plo-ration pa-ram-e-ters in con-junc-tion with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
+
+) [7] (C:\Users\Subhojyoti\Desktop\github\EUCBV\AAAI2018\EUCBV.bbl
 Underfull \hbox (badness 1769) in paragraph at lines 24--29
 \OT1/ptm/m/n/10 Exploration--exploitation trade-off us-ing vari-ance es-ti-
  []
@@ -1533,7 +1542,7 @@ urier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8
 a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Fil
 es (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EUCBV.pdf (11 pages, 426960 bytes).
+Output written on EUCBV.pdf (11 pages, 426951 bytes).
 PDF statistics:
  514 PDF objects out of 1000 (max. 8388607)
  94 named destinations out of 1000 (max. 500000)
