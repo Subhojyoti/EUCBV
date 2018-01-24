@@ -1,0 +1,47 @@
+\beamer@endinputifotherversion {3.36pt}
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\sectionentry {1}{Stochastic Multi-Armed Bandit Problem}{3}{Stochastic Multi-Armed Bandit Problem}{0}}
+\headcommand {\beamer@sectionpages {1}{2}}
+\headcommand {\beamer@subsectionpages {1}{2}}
+\headcommand {\slideentry {1}{0}{3}{3/5}{}{0}}
+\headcommand {\beamer@framepages {3}{5}}
+\headcommand {\sectionentry {2}{Problem Definition of SMAB}{6}{Problem Definition of SMAB}{0}}
+\headcommand {\beamer@sectionpages {3}{5}}
+\headcommand {\beamer@subsectionpages {3}{5}}
+\headcommand {\slideentry {2}{0}{4}{6/8}{}{0}}
+\headcommand {\beamer@framepages {6}{8}}
+\headcommand {\sectionentry {3}{Contributions in SMAB}{9}{Contributions in SMAB}{0}}
+\headcommand {\beamer@sectionpages {6}{8}}
+\headcommand {\beamer@subsectionpages {6}{8}}
+\headcommand {\slideentry {3}{0}{5}{9/14}{}{0}}
+\headcommand {\beamer@framepages {9}{14}}
+\headcommand {\sectionentry {4}{EUCBV Algorithm for SMAB}{15}{EUCBV Algorithm for SMAB}{0}}
+\headcommand {\beamer@sectionpages {9}{14}}
+\headcommand {\beamer@subsectionpages {9}{14}}
+\headcommand {\slideentry {4}{0}{6}{15/15}{}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\sectionentry {5}{Theoretical Analysis of EUCBV}{16}{Theoretical Analysis of EUCBV}{0}}
+\headcommand {\beamer@sectionpages {15}{15}}
+\headcommand {\beamer@subsectionpages {15}{15}}
+\headcommand {\slideentry {5}{0}{7}{16/16}{}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\sectionentry {6}{Experiments in SMAB}{17}{Experiments in SMAB}{0}}
+\headcommand {\beamer@sectionpages {16}{16}}
+\headcommand {\beamer@subsectionpages {16}{16}}
+\headcommand {\slideentry {6}{0}{8}{17/17}{}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\sectionentry {7}{Conclusions}{18}{Conclusions}{0}}
+\headcommand {\beamer@sectionpages {17}{17}}
+\headcommand {\beamer@subsectionpages {17}{17}}
+\headcommand {\slideentry {7}{0}{9}{18/20}{}{0}}
+\headcommand {\beamer@framepages {18}{20}}
+\headcommand {\slideentry {7}{0}{10}{21/21}{}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\beamer@partpages {1}{21}}
+\headcommand {\beamer@subsectionpages {18}{21}}
+\headcommand {\beamer@sectionpages {18}{21}}
+\headcommand {\beamer@documentpages {21}}
+\headcommand {\def \inserttotalframenumber {10}}

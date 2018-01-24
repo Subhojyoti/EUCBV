@@ -1,0 +1,9 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Stochastic Multi-Armed Bandit Problem}{3}{0}{1}
+\beamer@sectionintoc {2}{Problem Definition of SMAB}{6}{0}{2}
+\beamer@sectionintoc {3}{Contributions in SMAB}{9}{0}{3}
+\beamer@sectionintoc {4}{EUCBV Algorithm for SMAB}{15}{0}{4}
+\beamer@sectionintoc {5}{Theoretical Analysis of EUCBV}{16}{0}{5}
+\beamer@sectionintoc {6}{Experiments in SMAB}{17}{0}{6}
+\beamer@sectionintoc {7}{Conclusions}{18}{0}{7}

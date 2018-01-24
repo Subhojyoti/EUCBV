@@ -1,0 +1,77 @@
+\begin{frame}
+\frametitle{Expected Regret of EUCBV}
+%
+%\begin{theorem}
+%For $T\geq K^{2.4}$, $\rho=\frac{1}{2}$ and $\psi=\frac{T}{K^2}$, the regret $R_T$ for EUCBV satisfies
+%\begin{align*}
+%\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace \dfrac{C_0 K^{4}}{T^{\frac{1}{4}}} + \bigg(\Delta_{i}+\dfrac{320\sigma_i^2\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\bigg)\bigg \rbrace\\ 
+%  & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2 K^{4}}{T^{\frac{1}{4}}} + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T.
+%\end{align*}
+%
+%for all $b\geq\sqrt{\frac{e}{T}}$ and $C_0, C_2$ are integer constants. 
+%
+%\end{theorem}
+
+\begin{corollary}[\textbf{\textit{Gap-Independent Bound}}]
+\label{Result:Corollary:1}
+The regret of EUCBV is upper bounded by the following gap-independent expression:
+\begin{align*}
+	\E[R_{T}]\leq  \frac{C_3 K^5}{T^{\frac{1}{4}}} + 80\sqrt{KT}.
+\end{align*}	
+\end{corollary}
+
+
+\begin{table}[b]
+%\caption{AugUCB vs.\ State of the art}
+\label{tab:comp-bds}
+\begin{center}
+\begin{tabular}{|p{1.5cm}|p{3.1cm}|p{3.1cm}|p{1.0cm}|}
+% \toprule
+\hline
+Algorithm  & GD Bound & GI Bound & Var \\
+% \midrule
+\hline
+%\hline
+EUCBV      &$O\left( \frac{K\sigma_{\max}^{2}\log (\frac{T\Delta^2}{K})}{\Delta}\right)$ & $O\left(\sqrt{KT}\right)$ & Yes\\
+%\hline
+\hline
+UCBV		&$O\left( \frac{K\sigma_{\max}^{2}\log T}{\Delta} \right)$ & $O\left(\sqrt{KT\log T}\right)$ & Yes\\
+%\midrule
+%\hline
+\hline
+MOSS         &$O\left( \frac{K^2\log (T\Delta^2 /K)}{\Delta}\right)$ & $O\left(\sqrt{KT}\right)$ & No\\
+% \midrule
+%\hline
+\hline
+OCUCB		&$O\left( \frac{K\log (T/ H_{i})}{\Delta}\right)$ &  $O\left(\sqrt{KT}\right)$ & No\\
+%\midrule
+\hline
+
+%\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+
+%\begin{table}[tbp]
+%%\caption{Regret upper bound of different algorithms}
+%\label{tab:comp-bds}
+%\begin{center}
+%\begin{tabular}{p{3em}p{9em}p{7em}}
+%\toprule
+%Algorithm  &   \hspace*{1mm}Gap-Dependent & Gap-Independent \\
+%\hline
+%EUCBV		& $O\left( \dfrac{K\sigma_{\max}^{2}\log (\frac{T\Delta^2}{K})}{\Delta}\right)$ & $O\left(\sqrt{KT}\right)$\\
+%%UCB1        & $O\left( \dfrac{K\log T}{\Delta} \right)$ & $O\left(\sqrt{KT\log T}\right)$ \\%\midrule
+%UCBV        & $O\left( \dfrac{K\sigma_{\max}^{2}\log T}{\Delta} \right)$ & $O\left(\sqrt{KT\log T}\right)$ \\
+%%UCB-Imp 		& $O\left( \dfrac{K\log (T\Delta^2)}{\Delta} \right)$ & $O\left(\sqrt{KT\log K}\right)$ \\%\midrule
+%MOSS	     	& $O\left( \dfrac{K^2\log (T\Delta^2 /K)}{\Delta}\right)$ & $O\left(\sqrt{KT}\right)$\\%\midrule
+%OCUCB     	& $O\left( \dfrac{K\log (T/ H_{i})}{\Delta}\right)$ & $O\left(\sqrt{KT}\right)$\\\midrule
+%\end{tabular}
+%\end{center}
+%\vspace*{-2em}
+%\end{table}
+
+
+
+\end{frame}

@@ -1,0 +1,11 @@
+\begin{frame}
+\frametitle{Introduction to Stochastic Multi-armed bandits}
+\begin{itemize}
+\item<1-> The bandit problem is a sequential decision making process where at each timestep we have to choose one action or arm from a set of arms.
+\item<2-> There is a specific reward distribution attached to each arm.  After pulling an arm we receive a reward (without delay) from the reward distribution specific to the arm. 
+\item<3-> After (say) pulling each arm once, we are presented with an \emph{exploration-exploitation}  trade-off, that is whether to continue to pull the arm for which we have observed the highest estimated reward till now(exploitation) or to explore a new arm(exploration). 
+\item<4-> If we become too greedy and always exploit, we may miss the chance of actually finding the optimal arm and get stuck with a sub-optimal arm.
+\end{itemize}
+\end{frame}
+
+

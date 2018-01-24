@@ -1,0 +1,69 @@
+\begin{frame}
+\frametitle{Experiments in SMAB}
+\begin{figure}[tbp]
+    \centering
+    \begin{tabular}{cc}
+    \subfigure[0.25\textwidth][Expt-$3$: Failure of TS]
+    {
+    		\pgfplotsset{
+		tick label style={font=\Large},
+		label style={font=\Large},
+		legend style={font=\Large},
+		ylabel style={yshift=5pt},
+		}
+        \begin{tikzpicture}[scale=0.5]
+      	\begin{axis}[
+		ylabel={Cumulative Regret},
+		xlabel={timestep},
+		grid=major,
+        %clip mode=individual,grid,grid style={gray!30},
+        clip=true,
+        %clip mode=individual,grid,grid style={gray!30},
+  		legend style={at={(0.5,1.2)},anchor=north, legend columns=3} ]
+      	% UCB
+		\addplot table{results1/NewExpt/Expt3/UCBV01_comp_subsampled.txt};
+		\addplot table{results1/NewExpt/Expt3/EUCBV01_comp_subsampled.txt};
+		\addplot table{results1/NewExpt/Expt3/MOSS01_comp_subsampled.txt};
+		\addplot table{results1/NewExpt/Expt3/TS01_comp_subsampled.txt};
+		\addplot table{results1/NewExpt/Expt3/OCUCB01_comp_subsampled.txt};
+		\addplot table{results1/NewExpt/Expt3/BU01_comp_subsampled.txt};
+      	\legend{UCBV,EUCBV,MOSS,TS-G,OCUCB,BU-G} 
+      	\end{axis}
+      	\end{tikzpicture}
+  		\label{fig:3}
+    }
+    &
+    \subfigure[0.25\textwidth][Expt-$4$: $3$ Group Variance]
+    %with $r_{i_{{i}\neq {*}}}=0.05$ and $r^{*}=0.1$
+    {
+    	\pgfplotsset{
+		tick label style={font=\Large},
+		label style={font=\Large},
+		legend style={font=\Large},
+		ylabel style={yshift=5pt},
+		}
+        \begin{tikzpicture}[scale=0.5]
+        \begin{axis}[
+		xlabel={timestep},
+		ylabel={Cumulative Regret},
+        %clip mode=individual,grid,grid style={gray!30},
+		grid=major,
+		clip=true,
+  		legend style={at={(0.5,1.2)},anchor=north, legend columns=3} ]
+        % UCB
+		\addplot table{results1/NewExpt/Expt41/UCBV01_comp_subsampled.txt};
+		\addplot table{results1/NewExpt/Expt41/EUCBV01_comp_subsampled.txt};
+		\addplot table{results1/NewExpt/Expt41/MOSS01_comp_subsampled.txt};
+		\addplot table{results1/NewExpt/Expt41/TS01_comp_subsampled.txt};
+		\addplot table{results1/NewExpt/Expt41/OCUCB01_comp_subsampled.txt};
+		\addplot table{results1/NewExpt/Expt41/BU01_comp_subsampled.txt};
+      	\legend{UCBV,EUCBV,MOSS,TS-G,OCUCB,BU-G} 
+      	\end{axis}
+        \end{tikzpicture}
+        \label{fig:4}
+    }
+	\end{tabular}
+	\label{fig:furtherExpt1}
+    %\caption{Experiments with EUCBV}
+\end{figure}
+\end{frame}

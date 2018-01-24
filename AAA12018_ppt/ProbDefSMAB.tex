@@ -1,0 +1,34 @@
+\begin{frame}
+\frametitle{Problem Definition of SMAB}
+\begin{itemize}
+\item<1-> \textbf{Primary aim:} Minimize the cumulative regret by identifying the arm whose expected mean is $r^*$ such that $r^* > r_i,\forall i\in\A$.
+\item<2-> \textbf{Condition:} This has to be achieved within a finite $T$ timesteps.
+\item<3-> The expected regret of an algorithm after $T$ timesteps is give by,
+\begin{align*}
+\E[R_{T}]= \sum_{i=1}^{K} \E[z_i (T)] \Delta_i,
+\end{align*}
+where $\Delta_{i}=r^{*}-r_{i}$ is the gap.
+\end{itemize}
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Problem Definition of SMAB}
+%\begin{itemize}
+%\item<1-> We define the set $S_{\tau}=\lbrace i\in \mathcal{A}: r_{i}\geq \tau \rbrace$. 
+%%Note that, $S_\tau$ is the set of all arms whose reward mean is greater than $\tau$. Let 
+%\item<2-> $S_\tau^c$ denote the complement of $S_\tau$, i.e.,  $S_{\tau}^{c}=\lbrace i\in \mathcal{A}: r_{i} < \tau \rbrace$. 
+%\item<3-> Let $\hat{S}_{\tau}$ denote the recommendation of a learning algorithm after $T$ time units of exploration, while $\hat{S}_{\tau}^c$ denotes its complement.
+%
+%%\item<4-> The performance of the learning agent is measured by the accuracy with which it can classify the arms into $S_{\tau}$ and $S_{\tau}^{c}$ after time horizon $T$. Equivalently, the \emph{loss} $\mathcal{L}(T)$ is defined as
+%%\begin{align*}
+%%\Ls (T) = \mathbb{I}\big(\lbrace S_{\tau}\cap \hat{S}_{\tau}^{c}\neq \emptyset\rbrace    \cup    \lbrace\hat{S}_{\tau}\cap S_{\tau}^{c}\neq \emptyset\rbrace\big).
+%%\end{align*}			
+%
+%\item<4-> The goal of the learning agent is to minimize the expected loss:
+%\begin{align*}
+%\Ex[\Ls(T)] &= \Pb\big(\underbrace{\lbrace S_{\tau}\cap \hat{S}_{\tau}^{c} \neq \emptyset \rbrace}_{\textbf{Rejected good arms}}  \cup   \underbrace{\lbrace \hat{S}_{\tau}\cap S_{\tau}^{c} \neq \emptyset\rbrace}_{\textbf{Accepted bad arms}}\big) \\
+%%& = 1 - \Pb\big(\lbrace \hat{S}_{\tau}\cap {S}_{\tau}^{c} = \emptyset \rbrace \cap \lbrace \hat{S}_{\tau}^c \cap {S}_{\tau} = \emptyset \rbrace \big )
+%\end{align*}
+%\end{itemize}
+%\end{frame}
+

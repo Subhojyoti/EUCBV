@@ -1,0 +1,65 @@
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{amsfonts}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+%\usepackage{natbib}
+%\usepackage{biblatex}
+%\usepackage{cite}
+
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{remark}{Remark}
+%\newtheorem{proposition}{Proposition}
+%\newtheorem{corollary}{Corollary}
+
+%\usepackage{enumitem}
+
+
+\newcommand{\Ex}{\mathbb{E}}
+\newcommand{\Pb}{\mathbb{P}}
+\newcommand{\Ls}{\mathcal{L}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\A}{\mathbb{A}}
+
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{paralist}
+\usepackage{times}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{subfigure}
+\usetikzlibrary{positioning,shapes,calc,patterns,fit,decorations}
+%\usepackage{caption}
+\usepackage{xspace}
+%\newcommand{\todos}[2][]{\xspace\todo[color=red!20!white,size=\tiny,#1]{#2}}
+\usepackage{makecell}
+%\newcommand{\tabl}[2]{\begin{tabular}{#1} #2 \end{tabular}}
+
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+
+%%%%%%%%%%%%%%%% alg-custom-block %%%%%%%%%%%%
+\algblock{ArmElim}{EndArmElim}
+\algnewcommand\algorithmicArmElim{\textbf{\em Arm Elimination}}
+ \algnewcommand\algorithmicendArmElim{}
+\algrenewtext{ArmElim}[1]{\algorithmicArmElim\ #1}
+\algrenewtext{EndArmElim}{\algorithmicendArmElim}
+
+
+\algblock{ResParam}{EndResParam}
+\algnewcommand\algorithmicResParam{\textbf{\em Reset Parameters}}
+ \algnewcommand\algorithmicendResParam{}
+\algrenewtext{ResParam}[1]{\algorithmicResParam\ #1}
+\algrenewtext{EndResParam}{\algorithmicendResParam}
+
+%\newcommand*{\theorembreak}{\usebeamertemplate{theorem end}\framebreak\usebeamertemplate{theorem begin}}
+%\usepackage{lipsum}
+
+\usepackage{fancyhdr}
