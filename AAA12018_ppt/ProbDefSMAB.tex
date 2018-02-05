@@ -1,3 +1,8 @@
+
+
+
+
+
 \begin{frame}
 \frametitle{Problem Definition of SMAB}
 \begin{itemize}
@@ -8,6 +13,7 @@
 \E[R_{T}]= \sum_{i=1}^{K} \E[z_i (T)] \Delta_i,
 \end{align*}
 where $\Delta_{i}=r^{*}-r_{i}$ is the gap.
+\item<4-> $LB(R_T) \geq \Omega\left( \sqrt{KT}\right)$ and good learner should have atmost $UB(R_T) \leq O\left( \sqrt{KT\log T}\right)$.
 \end{itemize}
 \end{frame}
 
@@ -31,4 +37,13 @@ where $\Delta_{i}=r^{*}-r_{i}$ is the gap.
 %\end{align*}
 %\end{itemize}
 %\end{frame}
+
+\begin{frame}
+\frametitle{Why Study this Problem?}
+\begin{itemize}
+\item<1-> \textbf{General:} The simple SMAB forms the building block to the larger multi-state RL problems.
+\item<2-> \textbf{Algorithmic:} No round-based arm-elimination variance-aware algorithm exists which performs well empirically.
+\item<3-> \textbf{Theoretical:} No round-based arm-elimination variance-aware algorithm exists which reaches order-optimal regret bound of $O\left(\sqrt{KT} \right)$.
+\end{itemize}
+\end{frame}
 

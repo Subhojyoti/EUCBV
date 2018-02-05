@@ -3,9 +3,11 @@
 \begin{itemize}
 %\item<1-> The thresholding bandit problem falls under the broad area of stochastic multi-armed bandit problem.
 \item<1-> A finite set of actions or arms belonging to set $\A$ such that $|\A|=K$. 
-\item<2-> The rewards for each of the arms are i.i.d random variables drawn from distribution specific to the arm which are fixed throughout the time horizon denoted by $T$.
-\item<3-> The learner does not know the mean $r_{i},\forall i\in \A$ of the distribution or the variance $\sigma_i^2$. 
+\item<2-> The rewards for each of the arms, $X_{i,t}\sim^{i.i.d} D_i$. 
+%\item<2-> The rewards for each of the arms are i.i.d random variables drawn from distribution specific to the arm which are fixed throughout the time horizon denoted by $T$.
+\item<3-> The learner does not know the mean $r_{i}$  or the variance $\sigma_i^2$ of the distribution $D_i,\forall i\in \A$. 
 %\item<5-> The distributions for each of the arms are fixed throughout the time horizon denoted by $T$. 
+\item<4-> \textbf{Vital Assumption:} $D_i,\forall i\in\A$ are fixed throughout the time horizon denoted by $T$.
 \end{itemize}
 \end{frame}
 
