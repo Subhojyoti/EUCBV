@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  5 FEB 2018 17:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  5 FEB 2018 22:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1995,7 +1995,7 @@ Overfull \hbox (67.5106pt too wide) has occurred while \output is active
 
 [26
 
-])
+]
 Overfull \hbox (355.17625pt too wide) has occurred while \output is active
  [][]  \OT1/phv/m/n/6 ([])  
  []
@@ -2006,6 +2006,18 @@ Overfull \hbox (67.5106pt too wide) has occurred while \output is active
  []
 
 [27
+
+])
+Overfull \hbox (355.17625pt too wide) has occurred while \output is active
+ [][]  \OT1/phv/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (67.5106pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[28
 
 ]
 \tf@nav=\write6
@@ -2026,9 +2038,9 @@ Package rerunfilecheck Info: File `presentation_bandit.out' has not changed.
 (rerunfilecheck)             Checksum: 15F48AF331D5E5028EF9EBB07C37E9A2;412.
  ) 
 Here is how much of TeX's memory you used:
- 34379 strings out of 492995
- 825483 string characters out of 6132704
- 1098883 words of memory out of 5000000
+ 34381 strings out of 492995
+ 825502 string characters out of 6132704
+ 1098901 words of memory out of 5000000
  37083 multiletter control sequences out of 15000+600000
  43132 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2047,10 +2059,10 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive
 xmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2017/texmf-di
 st/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/font
 s/type1/urw/helvetic/uhvro8a.pfb>
-Output written on presentation_bandit.pdf (27 pages, 272657 bytes).
+Output written on presentation_bandit.pdf (28 pages, 275666 bytes).
 PDF statistics:
- 858 PDF objects out of 1000 (max. 8388607)
- 791 compressed objects within 8 object streams
- 67 named destinations out of 1000 (max. 500000)
+ 885 PDF objects out of 1000 (max. 8388607)
+ 816 compressed objects within 9 object streams
+ 69 named destinations out of 1000 (max. 500000)
  145 words of extra memory for PDF output out of 10000 (max. 10000000)
 
